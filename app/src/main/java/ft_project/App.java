@@ -3,6 +3,9 @@
  */
 package ft_project;
 
+import java.io.*;
+import java.util.*;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,5 +13,56 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        try {
+            // open file input stream
+            FileInputStream fStream = new FileInputStream("src/main/java/ft_project/data/adult.csv");
+            // Get the object of DataInputStream
+            DataInputStream in = new DataInputStream(fStream);
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+            String[] headings; // to store the first row which is the headings
+            String strLine; // to store the currently read line
+
+            // Read first line to get headings
+            if ((strLine = br.readLine()) != null) {
+                headings = strLine.split(",");
+
+                // Read File Line By Line
+                HashMap<String, String> rowMap = new HashMap<String, String>();
+                while ((strLine = br.readLine()) != null) {
+                    String[] row = strLine.split(",");
+                    for (int i = 0; i < row.length && i < headings.length; i++) {
+                        rowMap.put(headings[i], row[i]);
+                    }
+
+                    /*
+                     * TODO:// feed into CASTLE
+                     *
+                     * rowMap contains pairs of (csv heading, row value)
+                     * row is array of values
+                     * 
+                     * This creates input stream S - not sure if we need pairs or not
+                     */
+
+                    // Print the content on the console (warning: 32000 lines)
+                    // System.out.println(strLine);
+                }
+
+                // print headings
+                for (String heading : headings) {
+                    System.out.println(heading);
+                }
+            } else {
+                System.out.println("File is empty");
+            }
+
+            // Close the input stream
+            in.close();
+            System.out.println("Program Finished!");
+        } catch (Exception e) {
+            // Catch exception if any
+            System.err.println("Error: " + e.getMessage());
+        }
     }
 }
