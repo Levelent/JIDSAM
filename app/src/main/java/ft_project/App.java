@@ -50,16 +50,18 @@ public class App {
                 }
 
                 // print headings
-                for (String heading : headings) {
-                    System.out.println(heading);
-                }
+                /*
+                 * for (String heading : headings) {
+                 * System.out.println(heading);
+                 * }
+                 */
             } else {
                 System.out.println("File is empty");
             }
 
             // Close the input stream
             in.close();
-            System.out.println("Program Finished!");
+            System.out.println("File Read!");
         } catch (Exception e) {
             // Catch exception if any
             System.err.println("Error: " + e.getMessage());
