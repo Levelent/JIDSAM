@@ -60,30 +60,61 @@ public class App {
     }
 
     public Cluster bestSelection(Tuple t) {
-        // Let E be initialised empty
-        // for (Tuple C_j : gamma) {
-        //     e = Enlargement(C_j, t);
-        //     E.insert(e);
-        // }
-        //
+        // used to keep track of clusters for a given enlargement value
+        Map<Integer, Set<Cluster>> enlargementMap = new HashMap<>(); 
+
+        for (Cluster C_j : this.gamma) {
+            // get the cluster enlargement value if given t
+            int e = enlargement(C_j, t);
+
+            // if enlargement value is is not already in enlargement map then initialize and empty cluster list
+            Set<Cluster> clusterList = enlargementMap.get(e);
+            if (clusterList == null) {
+                clusterList = new LinkedHashSet<Cluster>();
+                enlargementMap.put(e, clusterList);
+            }
+
+            // add cluster to list inside of map
+            clusterList.add(C_j);
+        }
+
+        // todo:// has been added due to next line will cause an issue if gamma was empty (first tuple and no clusters made)
+        if (enlargementMap.size() == 0) {
+            return null;
+        }
+ 
         // Let min be the minimum element in E;
+        int minEnlargement = Collections.min(enlargementMap.keySet());
+
         // Let SetC_min be the set of clusters C~ in gamma with Enlargement(C~, t) = min;
-        //
-        // for (Tuple C_j : SetC_min) {
-        //     Create a copy of C_j that we push t into
-        //     Calculate information loss, if less than tau threshold insert into SetC_ok
-        // }
-        //
-        // if (SetC_ok is empty) {
-        //     if |gamma| >= beta {
-        //         return 'any cluster in SetC_min with minimum size';
-        //     } else {
-        //         return null;
-        //     }
-        // } else {
-        //   return 'any cluster in SetC_ok with minimum size'; 
-        // }
-        return null;
+        Set<Cluster> SetC_min = enlargementMap.get(minEnlargement);
+
+        // initialize SetC_ok
+        Set<Cluster> SetC_ok = new LinkedHashSet<Cluster>();
+
+        for (Cluster C_j : SetC_min) {
+            // Create a copy of C_j that we push t into
+            Cluster copyOfC_j = C_j;
+            copyOfC_j.add(t);
+
+            // Calculate information loss, if less than tau threshold insert into SetC_ok
+            if (informationLoss(copyOfC_j) < this.tau) {
+                // todo:// does it mean add the copy with t or the original? 
+                SetC_ok.add(copyOfC_j);
+            }
+        }
+
+        if (SetC_ok.size() == 0) {
+            if (this.gamma.size() >= this.beta) { // |gamma| >= beta
+                // return 'any cluster in SetC_min with minimum size';
+                return SetC_min.stream().min(Comparator.comparing(Cluster::size)).orElseThrow(NoSuchElementException::new);
+            } else {
+                return null;
+            }
+        }
+
+        // return 'any cluster in SetC_ok with minimum size';
+        return SetC_ok.stream().min(Comparator.comparing(Cluster::size)).orElseThrow(NoSuchElementException::new);
     }
 
     public void delayConstraint(Tuple t) {
@@ -247,8 +278,9 @@ public class App {
         // Doesn't seem to fully specify what it wants, other than the buckets being disjoint
     }
 
-    public void enlargement() {
+    public int enlargement(Cluster c, Tuple t) {
         // Depends on quantitive and qualative data types
         // Would probably need to pass a bunch of parameters not specified by the paper in here
+        return 0;
     }
 }
