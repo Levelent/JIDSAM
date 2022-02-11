@@ -1,5 +1,7 @@
 package ft_project;
 
+import java.util.*;
+
 public class App {
 
     public static void main(String[] args) {
@@ -25,17 +27,20 @@ public class App {
     }
 
     public void castle(Stream s, int k, int delta, int beta) {
-        // Let gamma be the set of non-k_s anonymised clusters, initialised to be empty
-        // Let omega be the set of k_s anonymised clusters, initialised to be empty
-        // Let rho be initialised to 0
+        Set<Cluster> gamma = new LinkedHashSet<Cluster>(); // set of non-k_s anonymised clusters
+        Set<Cluster> omega = new LinkedHashSet<Cluster>(); // set of k_s anonymised clusters
+        int tau = 0; // Let tau be initialised to 0
+
         Tuple t;
         while ((t = s.next()) != null) {
             Cluster c = bestSelection(t);
             if (c == null) {
                 // create new cluster on t and insert it into gamma
+                gamma.add(new Cluster(t));
             } else {
-                // push t to c
+                c.add(t); // add tuple t to cluster c
             }
+
             // let t2 be the tuple with position equal to t.p - delta
             // if (t2 has not been output) {
             //     delay_constraint(t2);
@@ -55,7 +60,7 @@ public class App {
         //
         // for (Tuple C_j : SetC_min) {
         //     Create a copy of C_j that we push t into
-        //     Calculate information loss, if less than rho threshold insert into SetC_ok
+        //     Calculate information loss, if less than tau threshold insert into SetC_ok
         // }
         //
         // if (SetC_ok is empty) {
@@ -67,7 +72,7 @@ public class App {
         // } else {
         //   return 'any cluster in SetC_ok with minimum size'; 
         // }
-        return new Cluster();
+        return null;
     }
 
     public void delayConstraint(Tuple t) {
@@ -105,8 +110,8 @@ public class App {
         // }
         // for (Cluster c_i : SC) {
         //     output all tuples in C_i with its generalisation;
-        //     Update rho according to informationLoss(C_i);
-        //     if (informationLoss(C_i) < rho) {
+        //     Update tau according to informationLoss(C_i);
+        //     if (informationLoss(C_i) < tau) {
         //         insert C_i into omega;
         //     } else {
         //         delete C_i;
