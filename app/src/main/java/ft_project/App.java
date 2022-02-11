@@ -48,7 +48,7 @@ public class App {
         // } else {
         //   return 'any cluster in SetC_ok with minimum size'; 
         // }
-        return Cluster();
+        return new Cluster();
     }
 
     public void delayConstraint(Tuple t) {
@@ -150,7 +150,7 @@ public class App {
         // return SC;
     }
 
-    public void splitL(Cluster c, a_s) {
+    public void splitL(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
         // BS = generate_buckets(c, a_s)
         // if (BS.size() < l) {
         //     return { c };
@@ -194,7 +194,7 @@ public class App {
         // return SC;
     }
 
-    public void generate_buckets(Cluster c, a_s) {
+    public void generate_buckets(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
         // Doesn't seem to fully specify what it wants, other than the buckets being disjoint
     }
 
@@ -203,17 +203,3 @@ public class App {
         // Would probably need to pass a bunch of parameters not specified by the paper in here
     }
 }
-
-public class Stream {
-    public int length() {
-        return 0;
-    }
-
-    public Tuple next() {
-        return new Tuple();
-    }
-}
-
-public class Tuple {}
-
-public class Cluster {}
