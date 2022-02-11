@@ -1,3 +1,8 @@
+### Java ###
+# Ignore compiled class file
+*.class
+
+### Gradle ###
 # Ignore Gradle project-specific cache directory
 .gradle
 
