@@ -3,7 +3,7 @@ package ft_project;
 import java.util.*;
 
 public class Cluster {
-    List<Tuple> tuples;
+    private List<Tuple> tuples;
 
     public Cluster(Tuple t) {
         tuples = new LinkedList<Tuple>();
@@ -15,6 +15,10 @@ public class Cluster {
 
     public int size() {
         return tuples.size();
+    }
+
+    public List<Tuple> getTuples() {
+        return tuples;
     }
 
     public String toString()

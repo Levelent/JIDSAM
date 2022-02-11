@@ -7,6 +7,8 @@ public class App {
 
     private int k, delta, beta, tau;
 
+    private Set<Cluster> gamma, omega;
+
     public static void main(String[] args) {
         // predefine thresholds/constants
         int k = 2;
@@ -36,8 +38,8 @@ public class App {
         this.beta = beta;
 
         // initializations for algorithm
-        Set<Cluster> gamma = new LinkedHashSet<Cluster>(); // set of non-k_s anonymised clusters
-        Set<Cluster> omega = new LinkedHashSet<Cluster>(); // set of k_s anonymised clusters
+        this.gamma = new LinkedHashSet<Cluster>(); // set of non-k_s anonymised clusters
+        this.omega = new LinkedHashSet<Cluster>(); // set of k_s anonymised clusters
         this.tau = 0; // Let tau be initialised to 0
 
         Tuple t;
@@ -124,20 +126,21 @@ public class App {
             SC.add(c); // SC = { c }; 
         }
 
-        for (Cluster c_i : SC) {
-            System.out.print(c_i.toString()); // output all tuples in C_i with its generalisation;
+        for (Cluster C_i : SC) {
+            System.out.print(C_i.toString()); // output all tuples in C_i with its generalisation;
 
-            // Update tau according to informationLoss(C_i);
-            // if (informationLoss(C_i) < tau) {
-            //   insert C_i into omega;
-            // } else {
-            //   delete C_i;
-            // }
-            // delete C_i from gamma;
+            // todo:// Update tau according to informationLoss(C_i);
+
+            if (informationLoss(C_i) < this.tau) {
+                this.omega.add(C_i);
+            } else {
+                // todo:// delete C_i;
+            }
+            this.gamma.remove(C_i);
         }
     }
 
-    public void informationLoss(Cluster C_j, Tuple t) {
+    public int informationLoss(Cluster C_j) {
         // If tuple generalisation g = (v_1, ..., v_n) then
         // infoLoss(g) = 1/n * sum_{i=1}^n vInfoLoss(v_i)
         // with vInfoloss(I) being either:
@@ -149,10 +152,12 @@ public class App {
         // with S_v set of leaf nodes in subtree rooted at v in DGH_i
         // and S set of all leaf nodes in DGH_i
         // Note: DGH_i is the domain generalisation hierarchy for a quasi-identifier q_i
+        return 0;
     }
 
     public void mergeClusters() {
         // Might not be worth an entire function? Unless long, as it's only done once
+        // its probably a method of the class.. cluster1.merge(cluster2)
     }
 
     public Set<Cluster> split(Cluster c) {
@@ -228,11 +233,11 @@ public class App {
         // }
 
         for (Cluster sc_i : SC) {
-        // for (Tuple t : sc_i) {
-        //   let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
-        //   insert G_t into SC_i;
-        //   delete G_t from C_i;
-        // }
+            for (Tuple t: sc_i.getTuples()) {
+                // let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
+                // insert G_t into SC_i;
+                // delete G_t from C_i;
+            }
         }
 
         return SC;
