@@ -4,6 +4,8 @@ import java.util.*;
 
 public class App {
 
+    private int k, delta, beta, tau;
+
     public static void main(String[] args) {
         // predefine thresholds/constants
         int k = 2;
@@ -27,9 +29,15 @@ public class App {
     }
 
     public void castle(Stream s, int k, int delta, int beta) {
+        // set algorithm parameters
+        this.k = k;
+        this.delta = delta;
+        this.beta = beta;
+
+        // initializations for algorithm
         Set<Cluster> gamma = new LinkedHashSet<Cluster>(); // set of non-k_s anonymised clusters
         Set<Cluster> omega = new LinkedHashSet<Cluster>(); // set of k_s anonymised clusters
-        int tau = 0; // Let tau be initialised to 0
+        this.tau = 0; // Let tau be initialised to 0
 
         Tuple t;
         while ((t = s.next()) != null) {
@@ -103,21 +111,25 @@ public class App {
     }
 
     public void outputCluster(Cluster c) {
-        // if (c.size() >= 2 * k) {
-        //     SC = split(c);
-        // } else {
-        //     SC = { c };  
-        // }
-        // for (Cluster c_i : SC) {
-        //     output all tuples in C_i with its generalisation;
-        //     Update tau according to informationLoss(C_i);
-        //     if (informationLoss(C_i) < tau) {
-        //         insert C_i into omega;
-        //     } else {
-        //         delete C_i;
-        //     }
-        //     delete C_i from gamma;
-        // }
+        Set<Cluster> SC;
+        if (c.size() >= 2 * this.k) {
+            SC = split(c);
+        } else {
+            SC = new LinkedHashSet<Cluster>();
+            SC.add(c); // SC = { c }; 
+        }
+
+        for (Cluster c_i : SC) {
+            System.out.print(c_i.toString()); //output all tuples in C_i with its generalisation;
+
+            // Update tau according to informationLoss(C_i);
+            // if (informationLoss(C_i) < tau) {
+            //   insert C_i into omega;
+            // } else {
+            //   delete C_i;
+            // }
+            // delete C_i from gamma;
+        }
     }
 
     public void informationLoss(Cluster C_j, Tuple t) {
@@ -138,7 +150,7 @@ public class App {
         // Might not be worth an entire function? Unless long, as it's only done once
     }
 
-    public void split(Cluster c) {
+    public Set<Cluster> split(Cluster c) {
         // Initialise SC to be empty;
         // BS = set of buckets created by grouping tuples in C by pid attribute
         // while (BS.size() >= k) {
@@ -172,9 +184,10 @@ public class App {
         //     delete B_i;
         // }
         // return SC;
+        return null;
     }
 
-    public void splitL(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
+    public Set<Cluster> splitL(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
         // BS = generate_buckets(c, a_s)
         // if (BS.size() < l) {
         //     return { c };
@@ -216,6 +229,7 @@ public class App {
         //     }
         // }
         // return SC;
+        return null;
     }
 
     public void generate_buckets(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
