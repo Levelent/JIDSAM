@@ -3,6 +3,7 @@ package ft_project;
 import java.util.*;
 
 public class App {
+    final Boolean lDiversityEnabled = false; 
 
     private int k, delta, beta, tau;
 
@@ -113,14 +114,18 @@ public class App {
     public void outputCluster(Cluster c) {
         Set<Cluster> SC;
         if (c.size() >= 2 * this.k) {
-            SC = split(c);
+            if (lDiversityEnabled) {
+                SC = splitL(c, 0); // todo:// second argument is temporary
+            } else {
+                SC = split(c);
+            }
         } else {
             SC = new LinkedHashSet<Cluster>();
             SC.add(c); // SC = { c }; 
         }
 
         for (Cluster c_i : SC) {
-            System.out.print(c_i.toString()); //output all tuples in C_i with its generalisation;
+            System.out.print(c_i.toString()); // output all tuples in C_i with its generalisation;
 
             // Update tau according to informationLoss(C_i);
             // if (informationLoss(C_i) < tau) {
@@ -151,7 +156,7 @@ public class App {
     }
 
     public Set<Cluster> split(Cluster c) {
-        // Initialise SC to be empty;
+        Set<Cluster> SC = new LinkedHashSet<Cluster>();
         // BS = set of buckets created by grouping tuples in C by pid attribute
         // while (BS.size() >= k) {
         //     randomly select a bucket B from BS, and pick one of its tuples t;
@@ -183,8 +188,7 @@ public class App {
         //     find nearest cluster of t_i in SC, and add all the tuples in B_i to it;
         //     delete B_i;
         // }
-        // return SC;
-        return null;
+        return SC;
     }
 
     public Set<Cluster> splitL(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
@@ -192,7 +196,9 @@ public class App {
         // if (BS.size() < l) {
         //     return { c };
         // }
-        // let SC be an empty set of sub-clusters;
+
+        Set<Cluster> SC = new LinkedHashSet<Cluster>(); // set of sub-clusters;
+        
         // while (BS.size() >= l && sum of bucket sizes >= k) {
         //     randomly select a B from BS;
         //     randomly select a tuple t from B;
@@ -221,15 +227,15 @@ public class App {
         //     delete B;
         // }
 
-        // for (Cluster sc_i : SC) {
-        //     for (Tuple t : sc_i) {
-        //         let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
-        //         insert G_t into SC_i;
-        //         delete G_t from C_i;
-        //     }
+        for (Cluster sc_i : SC) {
+        // for (Tuple t : sc_i) {
+        //   let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
+        //   insert G_t into SC_i;
+        //   delete G_t from C_i;
         // }
-        // return SC;
-        return null;
+        }
+
+        return SC;
     }
 
     public void generate_buckets(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
