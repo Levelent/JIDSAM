@@ -1,6 +1,21 @@
 ### Java ###
 # Ignore compiled class file
 *.class
+*.jar
+*.war
+*.ear
+# generated files
+bin/**
+gen/**
+# project based files
+.idea/
+*.iml
+*.ipr
+*.iws
+.gradletasknamecache
+.gradle/
+build/
+bin/
 
 ### Gradle ###
 # Ignore Gradle project-specific cache directory

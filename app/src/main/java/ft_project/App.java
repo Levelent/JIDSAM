@@ -3,14 +3,21 @@ package ft_project;
 public class App {
 
     public static void main(String[] args) {
+        Stream dataStream = new Stream("src/main/resources/adult.csv");
+
+        // test working by getting the next tuple
+        System.out.println(dataStream.next().toString());
+
+        // close file
+        dataStream.close();
     }
 
     public void castle(Stream s, int k, int delta, int beta) {
         // Let gamma be the set of non-k_s anonymised clusters, initialised to be empty
         // Let omega be the set of k_s anonymised clusters, initialised to be empty
         // Let rho be initialised to 0
-        while (s.length() > 0) {
-            Tuple t = s.next();
+        Tuple t;
+        while ((t = s.next()) != null) {
             Cluster c = bestSelection(t);
             if (c == null) {
                 // create new cluster on t and insert it into gamma
