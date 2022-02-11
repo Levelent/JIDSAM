@@ -3,10 +3,22 @@ package ft_project;
 public class App {
 
     public static void main(String[] args) {
+        // predefine thresholds/constants
+        int k = 2;
+        int delta = 2;
+        int beta = 2;
+
+        // initialize app
+        App app = new App();
+
+        // create data stream
         Stream dataStream = new Stream("src/main/resources/adult.csv");
 
-        // test working by getting the next tuple
-        System.out.println(dataStream.next().toString());
+        // test working by getting the first tuple
+        System.out.println(dataStream.next().toString()); // todo:// remove this
+
+        // run CASTLE
+        app.castle(dataStream, k, delta, beta);
 
         // close file
         dataStream.close();
