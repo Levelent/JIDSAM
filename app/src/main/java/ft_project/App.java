@@ -40,7 +40,7 @@ public class App {
         // initializations for algorithm
         this.nonAnonymisedClusters = new LinkedHashSet<Cluster>(); // set of non-k_s anonymised clusters
         this.anonymisedClusters = new LinkedHashSet<Cluster>(); // set of k_s anonymised clusters
-        this.aveInfoLoss = 0; // Let aveInfoLoss be initialised to 0
+        this.thresholdInfoLoss = 0; // Let be initialised to 0, usually is the average information loss
 
         Tuple t;
         while ((t = s.next()) != null) {
