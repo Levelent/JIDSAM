@@ -5,9 +5,9 @@ import java.util.*;
 public class App {
     final Boolean lDiversityEnabled = false; 
 
-    private int k, delta, beta, tau;
+    private int k, delta, beta, aveInfoLoss;
 
-    private Set<Cluster> gamma, omega;
+    private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
 
     public static void main(String[] args) {
         // predefine thresholds/constants
@@ -38,16 +38,16 @@ public class App {
         this.beta = beta;
 
         // initializations for algorithm
-        this.gamma = new LinkedHashSet<Cluster>(); // set of non-k_s anonymised clusters
-        this.omega = new LinkedHashSet<Cluster>(); // set of k_s anonymised clusters
-        this.tau = 0; // Let tau be initialised to 0
+        this.nonAnonymisedClusters = new LinkedHashSet<Cluster>(); // set of non-k_s anonymised clusters
+        this.anonymisedClusters = new LinkedHashSet<Cluster>(); // set of k_s anonymised clusters
+        this.thresholdInfoLoss = 0; // Let be initialised to 0, usually is the average information loss
 
         Tuple t;
         while ((t = s.next()) != null) {
             Cluster c = bestSelection(t);
             if (c == null) {
-                // create new cluster on t and insert it into gamma
-                gamma.add(new Cluster(t));
+                // create new cluster on t and insert it into nonAnonymisedClusters
+                nonAnonymisedClusters.add(new Cluster(t));
             } else {
                 c.add(t); // add tuple t to cluster c
             }
@@ -63,7 +63,7 @@ public class App {
         // used to keep track of clusters for a given enlargement value
         Map<Integer, Set<Cluster>> enlargementMap = new HashMap<>(); 
 
-        for (Cluster C_j : this.gamma) {
+        for (Cluster C_j : this.nonAnonymisedClusters) {
             // get the cluster enlargement value if given t
             int e = enlargement(C_j, t);
 
@@ -78,7 +78,7 @@ public class App {
             clusterList.add(C_j);
         }
 
-        // todo:// has been added due to next line will cause an issue if gamma was empty (first tuple and no clusters made)
+        // todo:// has been added due to next line will cause an issue if nonAnonymisedClusters was empty (first tuple and no clusters made)
         if (enlargementMap.size() == 0) {
             return null;
         }
@@ -86,7 +86,7 @@ public class App {
         // Let min be the minimum element in E;
         int minEnlargement = Collections.min(enlargementMap.keySet());
 
-        // Let SetC_min be the set of clusters C~ in gamma with Enlargement(C~, t) = min;
+        // Let SetC_min be the set of clusters C~ in nonAnonymisedClusters with Enlargement(C~, t) = min;
         Set<Cluster> SetC_min = enlargementMap.get(minEnlargement);
 
         // initialize SetC_ok
@@ -97,15 +97,15 @@ public class App {
             Cluster copyOfC_j = C_j;
             copyOfC_j.add(t);
 
-            // Calculate information loss, if less than tau threshold insert into SetC_ok
-            if (informationLoss(copyOfC_j) < this.tau) {
+            // Calculate information loss, if less than aveInfoLoss threshold insert into SetC_ok
+            if (informationLoss(copyOfC_j) < this.aveInfoLoss) {
                 // todo:// does it mean add the copy with t or the original? 
                 SetC_ok.add(copyOfC_j);
             }
         }
 
         if (SetC_ok.size() == 0) {
-            if (this.gamma.size() >= this.beta) { // |gamma| >= beta
+            if (this.nonAnonymisedClusters.size() >= this.beta) { // |nonAnonymisedClusters| >= beta
                 // return 'any cluster in SetC_min with minimum size';
                 return SetC_min.stream().min(Comparator.comparing(Cluster::size)).orElseThrow(NoSuchElementException::new);
             } else {
@@ -123,7 +123,7 @@ public class App {
         //     outputCluster(c);
         //     return;
         // }
-        // KC_set = All k_s anonymised clusters in omega containing t;
+        // KC_set = All k_s anonymised clusters in anonymisedClusters containing t;
         // if KC_set is not empty {
         //     let KC be a cluster randomly selected from KC_set;
         //     Output t with the generalisation of KC;
@@ -131,16 +131,16 @@ public class App {
         // }
         //
         // Let m be an integer set to 0;
-        // for (Cluster C_j : gamma) {
+        // for (Cluster C_j : nonAnonymisedClusters) {
         //     if (c.size < c_j.size) {
         //         m = m + 1;   
         //     }
         // }
-        // if (2 * m > |gamma| || sum of all cluster sizes in gamma < k) {
+        // if (2 * m > |nonAnonymisedClusters| || sum of all cluster sizes in nonAnonymisedClusters < k) {
         //     Suppress tuple t;
         //     return;
         // }
-        // MC = mergeClusters(C, gamma \ C);
+        // MC = mergeClusters(C, nonAnonymisedClusters \ C);
         // outputCluster(c);
     }
 
@@ -160,14 +160,14 @@ public class App {
         for (Cluster C_i : SC) {
             System.out.print(C_i.toString()); // output all tuples in C_i with its generalisation;
 
-            // todo:// Update tau according to informationLoss(C_i);
+            // todo:// Update aveInfoLoss according to informationLoss(C_i);
 
-            if (informationLoss(C_i) < this.tau) {
-                this.omega.add(C_i);
+            if (informationLoss(C_i) < this.aveInfoLoss) {
+                this.anonymisedClusters.add(C_i);
             } else {
                 // todo:// delete C_i;
             }
-            this.gamma.remove(C_i);
+            this.nonAnonymisedClusters.remove(C_i);
         }
     }
 
