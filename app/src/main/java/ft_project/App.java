@@ -5,7 +5,7 @@ import java.util.*;
 public class App {
     final Boolean lDiversityEnabled = false; 
 
-    private int k, delta, beta, aveInfoLoss;
+    private int k, delta, beta, aveInfoLoss, thresholdInfoLoss;
 
     private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
 
