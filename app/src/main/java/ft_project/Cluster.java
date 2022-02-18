@@ -21,6 +21,10 @@ public class Cluster implements Cloneable {
         return tuples;
     }
 
+    public void merge(Cluster c) {
+        tuples.addAll(c.getTuples());
+    }
+
     public String toString()
     {
         String out = "Cluster" + System.lineSeparator();

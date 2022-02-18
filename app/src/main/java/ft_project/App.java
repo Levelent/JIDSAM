@@ -206,11 +206,6 @@ public class App {
         return 0;
     }
 
-    public void mergeClusters() {
-        // Might not be worth an entire function? Unless long, as it's only done once
-        // its probably a method of the class.. cluster1.merge(cluster2)
-    }
-
     public Set<Cluster> split(Cluster c) {
         Set<Cluster> SC = new LinkedHashSet<Cluster>();
         // BS = set of buckets created by grouping tuples in C by pid attribute
