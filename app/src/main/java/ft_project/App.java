@@ -94,13 +94,18 @@ public class App {
 
         for (Cluster C_j : SetC_min) {
             // Create a copy of C_j that we push t into
-            Cluster copyOfC_j = C_j;
-            copyOfC_j.add(t);
+            try {
+                Cluster copyOfC_j = C_j.clone();
 
-            // Calculate information loss, if less than aveInfoLoss threshold insert into SetC_ok
-            if (informationLoss(copyOfC_j) < this.aveInfoLoss) {
-                // todo:// does it mean add the copy with t or the original? 
-                SetC_ok.add(copyOfC_j);
+                copyOfC_j.add(t);
+
+                // Calculate information loss, if less than aveInfoLoss threshold insert into SetC_ok
+                if (informationLoss(copyOfC_j) < this.aveInfoLoss) {
+                    // todo:// does it mean add the copy with t or the original? 
+                    SetC_ok.add(copyOfC_j);
+                }
+            } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
             }
         }
 

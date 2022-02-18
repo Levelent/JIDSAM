@@ -17,4 +17,9 @@ public class Tuple {
         }
         return out;
     }
+
+    public Tuple clone() throws CloneNotSupportedException
+    {
+        return (Tuple)super.clone();
+    }
 }

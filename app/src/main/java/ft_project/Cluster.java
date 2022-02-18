@@ -33,4 +33,17 @@ public class Cluster {
         // TODO:// with generalisations
         return out;
     }
+
+    public Cluster clone() throws CloneNotSupportedException
+    {
+        Cluster c = (Cluster)super.clone();
+
+        // deep copy tuples
+        c.tuples = new LinkedList<Tuple>();
+        for (Tuple t : this.tuples){
+            c.tuples.add(t.clone());
+        }
+
+        return c;
+    }
 }
