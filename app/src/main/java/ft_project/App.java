@@ -42,6 +42,9 @@ public class App {
         this.anonymisedClusters = new LinkedHashSet<Cluster>(); // set of k_s anonymised clusters
         this.thresholdInfoLoss = 0; // Let be initialised to 0, usually is the average information loss
 
+        // define array to track tuple positions (most recent -> less recent [head])
+        Queue<Tuple> tupleHistory = new LinkedList<>();
+
         Tuple t;
         while ((t = s.next()) != null) {
             Cluster c = bestSelection(t);
@@ -52,10 +55,16 @@ public class App {
                 c.add(t); // add tuple t to cluster c
             }
 
+            // add tuple to history
+            tupleHistory.add(t);
+            
             // let t2 be the tuple with position equal to t.p - delta
-            // if (t2 has not been output) {
-            //     delay_constraint(t2);
-            // }
+            if (tupleHistory.size() > this.delta) { // keeps list range to t.p to t.(p - delta)
+                Tuple t2 = tupleHistory.remove(); // remove oldest tuple
+                if (!t2.hasBeenOutput()) {
+                    delayConstraint(t2);
+                }
+            }
         }
     }
 

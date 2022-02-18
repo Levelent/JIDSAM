@@ -27,6 +27,7 @@ public class Cluster implements Cloneable {
         
         // output all tuples;
         for (Tuple t : tuples) {
+            t.setAsBeenOutput();
             out += t.toString() + System.lineSeparator();
         }
 
