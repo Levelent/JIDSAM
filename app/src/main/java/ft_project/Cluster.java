@@ -2,7 +2,7 @@ package ft_project;
 
 import java.util.*;
 
-public class Cluster {
+public class Cluster implements Cloneable {
     private List<Tuple> tuples;
 
     public Cluster(Tuple t) {
@@ -34,14 +34,14 @@ public class Cluster {
         return out;
     }
 
-    public Cluster clone() throws CloneNotSupportedException
+    public Object clone() throws CloneNotSupportedException
     {
         Cluster c = (Cluster)super.clone();
 
         // deep copy tuples
         c.tuples = new LinkedList<Tuple>();
         for (Tuple t : this.tuples){
-            c.tuples.add(t.clone());
+            c.tuples.add((Tuple)t.clone());
         }
 
         return c;

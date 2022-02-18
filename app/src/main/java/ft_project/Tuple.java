@@ -1,6 +1,6 @@
 package ft_project;
 
-public class Tuple {
+public class Tuple implements Cloneable {
     private String[] headings;
     private String[] data;
 
@@ -18,8 +18,8 @@ public class Tuple {
         return out;
     }
 
-    public Tuple clone() throws CloneNotSupportedException
+    public Object clone() throws CloneNotSupportedException
     {
-        return (Tuple)super.clone();
+        return super.clone();
     }
 }

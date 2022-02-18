@@ -95,7 +95,7 @@ public class App {
         for (Cluster C_j : SetC_min) {
             // Create a copy of C_j that we push t into
             try {
-                Cluster copyOfC_j = C_j.clone();
+                Cluster copyOfC_j = (Cluster)C_j.clone();
 
                 copyOfC_j.add(t);
 
@@ -124,10 +124,13 @@ public class App {
 
     public void delayConstraint(Tuple t) {
         // Let C be the non-k_s anonymised cluster to which t belongs
-        // if c.size >= k {
-        //     outputCluster(c);
-        //     return;
-        // }
+        Cluster c = new Cluster(t); // todo:// this is wrong but allows rest to be written
+
+        if (c.size() >= this.k) {
+            outputCluster(c);
+            return;
+        }
+
         // KC_set = All k_s anonymised clusters in anonymisedClusters containing t;
         // if KC_set is not empty {
         //     let KC be a cluster randomly selected from KC_set;
@@ -135,18 +138,21 @@ public class App {
         //     return;   
         // }
         //
-        // Let m be an integer set to 0;
-        // for (Cluster C_j : nonAnonymisedClusters) {
-        //     if (c.size < c_j.size) {
-        //         m = m + 1;   
-        //     }
-        // }
+
+        int m = 0;
+        for (Cluster C_j : nonAnonymisedClusters) {
+            if (c.size() < C_j.size()) {
+                m++;
+            }
+        }
+
         // if (2 * m > |nonAnonymisedClusters| || sum of all cluster sizes in nonAnonymisedClusters < k) {
         //     Suppress tuple t;
         //     return;
         // }
         // MC = mergeClusters(C, nonAnonymisedClusters \ C);
-        // outputCluster(c);
+        
+        outputCluster(c);
     }
 
     public void outputCluster(Cluster c) {
