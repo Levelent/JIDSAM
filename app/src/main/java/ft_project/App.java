@@ -133,35 +133,77 @@ public class App {
 
     public void delayConstraint(Tuple t) {
         // Let C be the non-k_s anonymised cluster to which t belongs
-        Cluster c = new Cluster(t); // todo:// this is wrong but allows rest to be written
-
-        if (c.size() >= this.k) {
-            outputCluster(c);
-            return;
-        }
-
-        // KC_set = All k_s anonymised clusters in anonymisedClusters containing t;
-        // if KC_set is not empty {
-        //     let KC be a cluster randomly selected from KC_set;
-        //     Output t with the generalisation of KC;
-        //     return;   
-        // }
-        //
-
-        int m = 0;
-        for (Cluster C_j : nonAnonymisedClusters) {
-            if (c.size() < C_j.size()) {
-                m++;
+        Cluster c = null;
+        for(Cluster cluster : this.nonAnonymisedClusters) {
+            if (cluster.contains(t)) {
+                c = cluster;
+                break;
             }
         }
 
-        // if (2 * m > |nonAnonymisedClusters| || sum of all cluster sizes in nonAnonymisedClusters < k) {
-        //     Suppress tuple t;
-        //     return;
-        // }
-        // MC = mergeClusters(C, nonAnonymisedClusters \ C);
-        
-        outputCluster(c);
+        if (c.size() >= this.k) {
+            outputCluster(c);
+        } else {
+            // KC_set = All k_s anonymised clusters in anonymisedClusters containing t;
+            Set<Cluster> KC_set = new LinkedHashSet<Cluster>();
+            for (Cluster cluster: this.anonymisedClusters) {
+                if (cluster.contains(t)) {
+                    KC_set.add(cluster);
+                }
+            }
+
+            if (KC_set.size() > 0) {
+                // let KC be a cluster randomly selected from KC_set;
+                Cluster KC = getRandomCluster(KC_set);
+
+                // todo:// suppress t => Output t with the generalisation of KC; ??
+                return;
+            }
+
+            int m = 0;
+            for (Cluster C_j : nonAnonymisedClusters) {
+                if (c.size() < C_j.size()) {
+                    m++;
+                }
+            }
+
+            if (2 * m > nonAnonymisedClusters.size() || nonAnonymisedClusters.stream().mapToInt(Cluster::size).sum() < this.k) {
+                // todo:// Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the most generalized QI value"
+                return;
+            }
+            
+            Cluster MC = this.merge_clusters(c, nonAnonymisedClusters);
+            outputCluster(MC);
+        }
+    }
+
+    public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {
+        // This process continues until C’s size is at least k.
+        while (c.size() >= this.k) {
+            for (Cluster toMergeCluster : clusterList) {
+                if (c == toMergeCluster) {
+                    // do not merge c with itself
+                    continue;
+                }
+    
+                // calculate the enlargement of C due to the possible merge with Ci.
+            }
+
+            // Select the cluster, which brings the minimum enlargement to C, and merges C with it. 
+        }
+
+        // Then, the resulting cluster is given in output
+        return c;
+    }
+
+    private Cluster getRandomCluster(Set<Cluster> set) {
+        int random = new Random().nextInt(set.size());
+        for(Cluster item : set) {
+            if (random-- == 0) {
+                return item;
+            }
+        }
+        return set.iterator().next();
     }
 
     public void outputCluster(Cluster c) {

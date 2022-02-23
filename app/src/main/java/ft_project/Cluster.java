@@ -7,6 +7,11 @@ public class Cluster implements Cloneable {
 
     public Cluster(Tuple t) {
         tuples = new LinkedList<Tuple>();
+        this.add(t);
+    }
+
+    public boolean contains(Tuple t) {
+        return tuples.contains(t);
     }
 
     public void add(Tuple t) {
@@ -19,20 +24,6 @@ public class Cluster implements Cloneable {
 
     public List<Tuple> getTuples() {
         return tuples;
-    }
-
-    public void merge(Cluster c) {
-        /** todo://
-         * function receives as input the
-        cluster to be merged, i.e., C, and the set of non-ksanonymized clusters excluding C itself. The procedure,
-for every non-ks-anonymized cluster Ci, calculates the
-enlargement of C due to the possible merge with Ci. Then,
-it selects the cluster, which brings the minimum enlargement to C, and merges C with it. This process continues
-until C’s size is at least k. Then, the resulting cluster is given
-in output
-         */
-
-        tuples.addAll(c.getTuples());
     }
 
     public String toString()
