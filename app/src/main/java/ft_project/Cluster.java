@@ -10,6 +10,11 @@ public class Cluster implements Cloneable {
         this.add(t);
     }
 
+    public void merge(Cluster c) {
+        // todo:// I am sure this needs more than that
+        tuples.addAll(c.getTuples());
+    }
+
     public boolean contains(Tuple t) {
         return tuples.contains(t);
     }

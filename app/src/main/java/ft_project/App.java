@@ -180,6 +180,8 @@ public class App {
     public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {
         // This process continues until C’s size is at least k.
         while (c.size() >= this.k) {
+            int smallestEnlargement = 0;
+            Cluster clusterWithSmallest = null;
             for (Cluster toMergeCluster : clusterList) {
                 if (c == toMergeCluster) {
                     // do not merge c with itself
@@ -187,9 +189,16 @@ public class App {
                 }
     
                 // calculate the enlargement of C due to the possible merge with Ci.
+                // and track which would bring the minimum enlargement
+                int possibleEnlargement = 10; // todo:// need to be able to calculate enlargement tuple to tuple
+                if (clusterWithSmallest == null || possibleEnlargement < smallestEnlargement) {
+                    clusterWithSmallest = toMergeCluster;
+                    smallestEnlargement = possibleEnlargement;
+                }
             }
 
             // Select the cluster, which brings the minimum enlargement to C, and merges C with it. 
+            c.merge(clusterWithSmallest);
         }
 
         // Then, the resulting cluster is given in output
@@ -338,6 +347,12 @@ public class App {
     public int enlargement(Cluster c, Tuple t) {
         // Depends on quantitive and qualative data types
         // Would probably need to pass a bunch of parameters not specified by the paper in here
+        return 0;
+    }
+
+    public int enlargement(Cluster c1, Cluster c2) {
+        // to finish merge clusters, need to be able to know the potential enlargement
+        // if two clusters were to be merged
         return 0;
     }
 }
