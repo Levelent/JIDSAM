@@ -259,37 +259,84 @@ public class App {
 
     public Set<Cluster> split(Cluster c) {
         Set<Cluster> SC = new LinkedHashSet<Cluster>();
+
         // BS = set of buckets created by grouping tuples in C by pid attribute
-        // while (BS.size() >= k) {
-        //     randomly select a bucket B from BS, and pick one of its tuples t;
-        //     Create a new sub-cluster C_new over t;
-        //     if (B is empty) {
-        //         delete B;
-        //     }
-        //     H = heap with k-1 nodes, each with infinite distance to t;
-        //     for (Bucket b : BS \ B) {
-        //         pick one of its tuples t2, and calculate t2 distance to t;
-        //         if (|t - t2| < |t - root of H|) {
-        //             root of H = t;
-        //             adjust H accordingly;
-        //         }
-        //     }
-        //     for (Node n : H) {
-        //         let t be the tuple in the node;
-        //         insert t into C_new
-        //         let B_j be the bucket containing t;
-        //         Delete t from B_j;
-        //         if (B_j.size() == 0) {
-        //             delete B_j;
-        //         }
-        //     }
-        //     Add C_new to SC;
-        // }
-        // for (Bucket B_i : BS) {
-        //     pick a tuple t_i in B_i;
-        //     find nearest cluster of t_i in SC, and add all the tuples in B_i to it;
-        //     delete B_i;
-        // }
+        Map<String, List<Tuple>> BS = new HashMap<>();
+        for (Tuple t: c.getTuples()) {
+            if (!BS.containsKey(t.getPid())) {
+                BS.put(t.getPid(), new ArrayList<Tuple>());
+            }
+
+            BS.get(t.getPid()).add(t);
+        } 
+        
+        
+        while (BS.size() >= this.k) {
+            // randomly select a bucket B from BS, and pick one of its tuples t;
+            Random random = new Random();
+            List<String> keys = new ArrayList<String>(BS.keySet());
+            String randomKey = keys.get( random.nextInt(keys.size()) );
+           
+            // randomly selected bucket and tuple
+            List<Tuple> B = BS.get(randomKey);
+            Tuple t = B.get(random.nextInt(B.size()));
+        
+
+            // Create a new sub-cluster C_new over t;
+            Cluster C_new = new Cluster(t);
+
+            if (B.isEmpty()) {
+                // delete B
+                BS.remove(randomKey);
+            }
+
+
+            // H = heap with k-1 nodes, each with infinite distance to t;
+        
+            // for (Bucket b : BS \ B)
+            Iterator<String> BSKey = BS.keySet().iterator();
+            while(BSKey.hasNext()) {
+                String pid = BSKey.next();
+                if (randomKey == pid) { // handles BS \ B
+                    continue;
+                }
+                List<Tuple> b = BS.get(pid);
+
+                // pick one of its tuples t2, and calculate t2 distance to t;
+                // if (|t - t2| < |t - root of H|) {
+                    // root of H = t;
+                    // adjust H accordingly;
+                // }
+            }        
+        
+            // for (Node n : H) {
+            //   let t be the tuple in the node;
+            //   insert t into C_new
+            //   let B_j be the bucket containing t;
+            //   Delete t from B_j;
+            //   if (B_j.size() == 0) {
+            //       delete B_j;
+            //    }
+            // }
+            // Add C_new to SC;
+        }
+
+        // for (Bucket B_i : BS)
+        Iterator<String> BSKey = BS.keySet().iterator();
+        while(BSKey.hasNext()) {
+            String pid = BSKey.next();
+            List<Tuple> b = BS.get(pid);
+
+            // pick a tuple t_i in B_i;
+            // todo://
+
+            // find nearest cluster of t_i in SC, and add all the tuples in B_i to it;
+            // todo://
+
+            // delete B_i;
+            BS.remove(pid);
+        }       
+
         return SC;
     }
 

@@ -1,6 +1,9 @@
 package ft_project;
 
+import java.util.Arrays;
+
 public class Tuple implements Cloneable {
+    private String pid;
     private String[] headings;
     private String[] data;
     private boolean beenOutputted = false;
@@ -8,6 +11,13 @@ public class Tuple implements Cloneable {
     public Tuple(String[] headings, String[] data) {
         this.headings = headings;
         this.data = data;
+
+        // set pid
+        this.pid = this.data[Arrays.asList(headings).indexOf("pid")];
+    }
+
+    public String getPid() {
+        return this.pid;
     }
 
     public Boolean hasBeenOutput() {
