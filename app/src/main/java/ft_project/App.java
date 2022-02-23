@@ -21,9 +21,6 @@ public class App {
         // create data stream
         Stream dataStream = new Stream("src/main/resources/adult.csv");
 
-        // test working by getting the first tuple
-        System.out.println(dataStream.next().toString()); // todo:// remove this
-
         // run CASTLE
         app.castle(dataStream, k, delta, beta);
 
