@@ -3,7 +3,7 @@ package ft_project;
 import java.util.*;
 
 public class App {
-    final Boolean lDiversityEnabled = false; 
+    final Boolean lDiversityEnabled = false;
 
     private int k, delta, beta, aveInfoLoss, thresholdInfoLoss, l;
 
@@ -57,7 +57,7 @@ public class App {
 
             // add tuple to history
             tupleHistory.add(t);
-            
+
             // let t2 be the tuple with position equal to t.p - delta
             if (tupleHistory.size() > this.delta) { // keeps list range to t.p to t.(p - delta)
                 Tuple t2 = tupleHistory.remove(); // remove oldest tuple
@@ -70,13 +70,14 @@ public class App {
 
     public Cluster bestSelection(Tuple t) {
         // used to keep track of clusters for a given enlargement value
-        Map<Integer, Set<Cluster>> enlargementMap = new HashMap<>(); 
+        Map<Integer, Set<Cluster>> enlargementMap = new HashMap<>();
 
         for (Cluster C_j : this.nonAnonymisedClusters) {
             // get the cluster enlargement value if given t
             int e = enlargement(C_j, t);
 
-            // if enlargement value is is not already in enlargement map then initialize and empty cluster list
+            // if enlargement value is is not already in enlargement map then initialize and
+            // empty cluster list
             Set<Cluster> clusterList = enlargementMap.get(e);
             if (clusterList == null) {
                 clusterList = new LinkedHashSet<Cluster>();
@@ -87,15 +88,16 @@ public class App {
             clusterList.add(C_j);
         }
 
-        // TODO has been added due to next line will cause an issue if nonAnonymisedClusters was empty (first tuple and no clusters made)
+        // if no possible enlargements
         if (enlargementMap.size() == 0) {
             return null;
         }
- 
+
         // Let min be the minimum element in E;
         int minEnlargement = Collections.min(enlargementMap.keySet());
 
-        // Let SetC_min be the set of clusters C~ in nonAnonymisedClusters with Enlargement(C~, t) = min;
+        // Let SetC_min be the set of clusters C~ in nonAnonymisedClusters with
+        // Enlargement(C~, t) = min;
         Set<Cluster> SetC_min = enlargementMap.get(minEnlargement);
 
         // initialize SetC_ok
@@ -104,13 +106,14 @@ public class App {
         for (Cluster C_j : SetC_min) {
             // Create a copy of C_j that we push t into
             try {
-                Cluster copyOfC_j = (Cluster)C_j.clone();
+                Cluster copyOfC_j = (Cluster) C_j.clone();
 
                 copyOfC_j.add(t);
 
-                // Calculate information loss, if less than aveInfoLoss threshold insert into SetC_ok
+                // Calculate information loss, if less than aveInfoLoss threshold insert into
+                // SetC_ok
                 if (informationLoss(copyOfC_j) < this.aveInfoLoss) {
-                    // TODO does it mean add the copy with t or the original? 
+                    // TODO does it mean add the copy with t or the original?
                     SetC_ok.add(copyOfC_j);
                 }
             } catch (CloneNotSupportedException e) {
@@ -121,7 +124,8 @@ public class App {
         if (SetC_ok.size() == 0) {
             if (this.nonAnonymisedClusters.size() >= this.beta) { // |nonAnonymisedClusters| >= beta
                 // return 'any cluster in SetC_min with minimum size';
-                return SetC_min.stream().min(Comparator.comparing(Cluster::size)).orElseThrow(NoSuchElementException::new);
+                return SetC_min.stream().min(Comparator.comparing(Cluster::size))
+                        .orElseThrow(NoSuchElementException::new);
             } else {
                 return null;
             }
@@ -134,7 +138,7 @@ public class App {
     public void delayConstraint(Tuple t) {
         // Let C be the non-k_s anonymised cluster to which t belongs
         Cluster c = null;
-        for(Cluster cluster : this.nonAnonymisedClusters) {
+        for (Cluster cluster : this.nonAnonymisedClusters) {
             if (cluster.contains(t)) {
                 c = cluster;
                 break;
@@ -146,7 +150,7 @@ public class App {
         } else {
             // KC_set = All k_s anonymised clusters in anonymisedClusters containing t;
             Set<Cluster> KC_set = new LinkedHashSet<Cluster>();
-            for (Cluster cluster: this.anonymisedClusters) {
+            for (Cluster cluster : this.anonymisedClusters) {
                 if (cluster.contains(t)) {
                     KC_set.add(cluster);
                 }
@@ -169,11 +173,13 @@ public class App {
                 }
             }
 
-            if (2 * m > nonAnonymisedClusters.size() || nonAnonymisedClusters.stream().mapToInt(Cluster::size).sum() < this.k) {
-                // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the most generalized QI value"
+            if (2 * m > nonAnonymisedClusters.size()
+                    || nonAnonymisedClusters.stream().mapToInt(Cluster::size).sum() < this.k) {
+                // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
+                // most generalized QI value"
                 return;
             }
-            
+
             Cluster MC = this.merge_clusters(c, nonAnonymisedClusters);
             outputCluster(MC);
         }
@@ -189,7 +195,7 @@ public class App {
                     // do not merge c with itself
                     continue;
                 }
-    
+
                 // calculate the enlargement of C due to the possible merge with Ci.
                 // and track which would bring the minimum enlargement
                 int possibleEnlargement = enlargement(c, toMergeCluster);
@@ -199,7 +205,8 @@ public class App {
                 }
             }
 
-            // Select the cluster, which brings the minimum enlargement to C, and merges C with it. 
+            // Select the cluster, which brings the minimum enlargement to C, and merges C
+            // with it.
             c.merge(clusterWithSmallest);
         }
 
@@ -209,7 +216,7 @@ public class App {
 
     private Cluster getRandomCluster(Set<Cluster> set) {
         int random = new Random().nextInt(set.size());
-        for(Cluster item : set) {
+        for (Cluster item : set) {
             if (random-- == 0) {
                 return item;
             }
@@ -221,12 +228,12 @@ public class App {
         Set<Cluster> SC;
         if (c.size() >= 2 * this.k) {
             if (lDiversityEnabled) {
-                SC = splitL(c, 0); // TODO second argument is temporary
+                SC = splitL(c, 0);
             } else {
                 SC = split(c);
             }
         } else {
-            // SC = { c }; 
+            // SC = { c };
             SC = new LinkedHashSet<Cluster>();
             SC.add(c);
         }
@@ -255,7 +262,7 @@ public class App {
         // infoLoss(g) = 1/n * sum_{i=1}^n vInfoLoss(v_i)
         // with vInfoLoss(I) being either:
         //
-        // (u - l) / (U - L) for numerical range 
+        // (u - l) / (U - L) for numerical range
         // with interval I = [l, u] and domain [L, U]
         //
         // (|S_v| - 1) / (|S| - 1) for qualitative feature
@@ -270,24 +277,23 @@ public class App {
 
         // BS = set of buckets created by grouping tuples in C by pid attribute
         Map<String, List<Tuple>> BS = new HashMap<>();
-        for (Tuple t: c.getTuples()) {
+        for (Tuple t : c.getTuples()) {
             if (!BS.containsKey(t.getPid())) {
                 BS.put(t.getPid(), new ArrayList<Tuple>());
             }
 
             BS.get(t.getPid()).add(t);
-        } 
-        
+        }
+
         while (BS.size() >= this.k) {
             // randomly select a bucket B from BS, and pick one of its tuples t;
             Random random = new Random();
             List<String> keys = new ArrayList<String>(BS.keySet());
-            String randomKey = keys.get( random.nextInt(keys.size()) );
-           
+            String randomKey = keys.get(random.nextInt(keys.size()));
+
             // randomly selected bucket and tuple
             List<Tuple> B = BS.get(randomKey);
             Tuple t = B.get(random.nextInt(B.size()));
-        
 
             // Create a new sub-cluster C_new over t;
             Cluster C_new = new Cluster(t);
@@ -298,11 +304,11 @@ public class App {
             }
 
             // H = heap with k-1 nodes, each with infinite distance to t;
-            Tuple[] H = new Tuple[this.k-1];
+            Tuple[] H = new Tuple[this.k - 1];
 
             // for (Bucket b : BS \ B)
             Iterator<String> BSKey = BS.keySet().iterator();
-            while(BSKey.hasNext()) {
+            while (BSKey.hasNext()) {
                 String pid = BSKey.next();
                 if (randomKey == pid) { // handles BS \ B
                     continue;
@@ -321,23 +327,24 @@ public class App {
                     // Insert t2 into end of list
                     H[H.length + 1] = t2;
 
-                    // adjust H accordingly - this moves t2 to head as it is know to have smallest distance to t
+                    // adjust H accordingly - this moves t2 to head as it is know to have smallest
+                    // distance to t
                     int current = H.length;
-                    while (enlargement(H[current], t) < enlargement(H[this.heapParent(H, current)],t)) {
+                    while (enlargement(H[current], t) < enlargement(H[this.heapParent(H, current)], t)) {
                         H = this.heapSwap(H, current, this.heapParent(H, current));
                         current = this.heapParent(H, current);
                     }
                 }
-            }        
-        
+            }
+
             // for each node in the heap
-            for (Tuple n: H) {
+            for (Tuple n : H) {
                 // insert n into C_new
                 C_new.add(t);
- 
+
                 // let B_j be the bucket containing n;
                 List<Tuple> B_j = BS.get(n.getPid());
-                
+
                 // Delete n from B_j;
                 B_j.remove(n);
 
@@ -353,7 +360,7 @@ public class App {
 
         // for (Bucket B_i : BS)
         Iterator<String> BSKey = BS.keySet().iterator();
-        while(BSKey.hasNext()) {
+        while (BSKey.hasNext()) {
             String pid = BSKey.next();
             List<Tuple> b_i = BS.get(pid);
 
@@ -378,13 +385,13 @@ public class App {
 
             // delete B_i;
             BS.remove(pid);
-        }       
+        }
 
         return SC;
     }
 
     private int heapParent(Tuple[] H, int index) {
-        return index/2;
+        return index / 2;
     }
 
     private Tuple[] heapSwap(Tuple[] H, int t1, int t2) {
@@ -395,9 +402,9 @@ public class App {
         return H;
     }
 
-    public Set<Cluster> splitL(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
+    public Set<Cluster> splitL(Cluster c, Integer a_s) {
         Map<String, List<Tuple>> BS = generate_buckets(c, a_s);
-        
+
         // set of sub clusters initialized empty
         Set<Cluster> SC = new HashSet<>();
 
@@ -405,36 +412,36 @@ public class App {
             SC.add(c);
             return SC;
         }
-        
+
         // size of bs > l and sum of bucket sizes > k
         while (BS.size() >= this.l && BS.values().stream().mapToInt(List::size).sum() >= this.k) {
             // randomly select a B from BS;
             Random random = new Random();
             List<String> keys = new ArrayList<String>(BS.keySet());
-            String randomKey = keys.get( random.nextInt(keys.size()) );
-                   
+            String randomKey = keys.get(random.nextInt(keys.size()));
+
             // randomly select a tuple t from B;
             List<Tuple> B = BS.get(randomKey);
             Tuple t = B.get(random.nextInt(B.size()));
-        
+
             // generate a sub-cluster C_sub over t;
             Cluster C_sub = new Cluster(t);
 
             // delete t from B;
             B.remove(t);
 
-
             // for (Bucket B_j : BS)
             Iterator<String> BSKey = BS.keySet().iterator();
-            while(BSKey.hasNext()) {
+            while (BSKey.hasNext()) {
                 String pid = BSKey.next();
                 List<Tuple> B_j = BS.get(pid);
 
                 // for (Tuple t_i : B_j) {
-                //    let e_i be enlargement(C_sub, t_i);
+                // let e_i be enlargement(C_sub, t_i);
                 // }
                 // Sort tuples of B_j by ascending order of their enlargement e_i;
-                // Let T_j be the set of the first k * (B_j.size() / sum of bucket sizes) tuples in B_j;
+                // Let T_j be the set of the first k * (B_j.size() / sum of bucket sizes) tuples
+                // in B_j;
                 // Insert T_j into C_sub;
                 // delete T_j from B_j;
 
@@ -446,15 +453,15 @@ public class App {
             SC.add(C_sub);
         }
 
-        // for (Bucket B : BS) 
+        // for (Bucket B : BS)
         Iterator<String> BSKey = BS.keySet().iterator();
-        while(BSKey.hasNext()) {
+        while (BSKey.hasNext()) {
             String pid = BSKey.next();
             List<Tuple> B = BS.get(pid);
 
             for (Tuple t_i : B) {
-            //     C_near = nearest subCluster of t_i in SC;
-            //     insert t_i into c_near;
+                // C_near = nearest subCluster of t_i in SC;
+                // insert t_i into c_near;
             }
 
             // delete B;
@@ -462,18 +469,18 @@ public class App {
         }
 
         for (Cluster sc_i : SC) {
-            for (Tuple t_bar: sc_i.getTuples()) {
+            for (Tuple t_bar : sc_i.getTuples()) {
                 // let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
                 Set<Tuple> G_t = new LinkedHashSet<>();
-                for (Tuple t: c.getTuples()) {
+                for (Tuple t : c.getTuples()) {
                     if (t.getPid() == t_bar.getPid()) {
                         G_t.add(t);
                     }
                 }
-            
+
                 // insert G_t into SC_i;
                 sc_i.add(G_t);
-                
+
                 // delete G_t from C;
                 c.removeSet(G_t);
             }
@@ -482,21 +489,29 @@ public class App {
         return SC;
     }
 
-    public Map<String, List<Tuple>> generate_buckets(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
-        // TODO Doesn't seem to fully specify what it wants, other than the buckets being disjoint
+    public Map<String, List<Tuple>> generate_buckets(Cluster c, Integer a_s) {
+        // TODO Doesn't seem to fully specify what it wants, other than the buckets
+        // being disjoint
         Map<String, List<Tuple>> BS = new HashMap<>();
         return BS;
     }
 
     public int enlargement(Cluster c, Tuple t) {
         // Depends on quantitative and qualitative data types
-        // Would probably need to pass a bunch of parameters not specified by the paper in here
+        // Would probably need to pass a bunch of parameters not specified by the paper
+        // in here
+
+        // TODO
+
         return 0;
     }
 
     public int enlargement(Cluster c1, Cluster c2) {
         // to finish merge clusters, need to be able to know the potential enlargement
         // if two clusters were to be merged
+
+        // TODO
+
         return 0;
     }
 
@@ -504,6 +519,8 @@ public class App {
         if (c1 == null || c2 == null) {
             return 0;
         }
+
+        // TODO
 
         // used in split to find "distance" between two tuples
         return 0;

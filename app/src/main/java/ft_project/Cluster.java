@@ -24,13 +24,13 @@ public class Cluster implements Cloneable {
     }
 
     public void add(Collection<Tuple> s) {
-        for (Tuple t: s) {
+        for (Tuple t : s) {
             this.add(t);
         }
     }
 
     public void removeSet(Set<Tuple> s) {
-        for(Tuple t: s) {
+        for (Tuple t : s) {
             tuples.remove(t);
         }
     }
@@ -43,10 +43,9 @@ public class Cluster implements Cloneable {
         return tuples;
     }
 
-    public String toString()
-    {
+    public String toString() {
         String out = "Cluster" + System.lineSeparator();
-        
+
         // output all tuples;
         for (Tuple t : tuples) {
             t.setAsBeenOutput();
@@ -57,14 +56,13 @@ public class Cluster implements Cloneable {
         return out;
     }
 
-    public Object clone() throws CloneNotSupportedException
-    {
-        Cluster c = (Cluster)super.clone();
+    public Object clone() throws CloneNotSupportedException {
+        Cluster c = (Cluster) super.clone();
 
         // deep copy tuples
         c.tuples = new LinkedList<Tuple>();
-        for (Tuple t : this.tuples){
-            c.tuples.add((Tuple)t.clone());
+        for (Tuple t : this.tuples) {
+            c.tuples.add((Tuple) t.clone());
         }
 
         return c;

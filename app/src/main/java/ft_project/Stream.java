@@ -36,7 +36,7 @@ public class Stream {
         // close the file stream
         try {
             in.close();
-        } catch(Exception e) {
+        } catch (Exception e) {
             // Catch exception if any
             System.err.println("Error: " + e.getMessage());
         }
@@ -50,7 +50,7 @@ public class Stream {
                 String[] row = strLine.split(",");
                 return new Tuple(headings, row);
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             // Catch exception if any
             System.err.println("Error: " + e.getMessage());
         }

@@ -25,7 +25,7 @@ public class Tuple implements Cloneable {
     }
 
     public void setAsBeenOutput() {
-        this.beenOutputted =true;
+        this.beenOutputted = true;
     }
     
     public String toString()
