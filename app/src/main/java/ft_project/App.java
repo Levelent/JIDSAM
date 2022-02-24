@@ -156,7 +156,9 @@ public class App {
                 // let KC be a cluster randomly selected from KC_set;
                 Cluster KC = getRandomCluster(KC_set);
 
-                // todo:// Output t with the generalisation of KC; ??
+                // Output t with the generalisation of KC;
+                // KC_set is set of clusters that contain t so just output KC
+                System.out.print(KC.toString());
                 return;
             }
 
@@ -296,9 +298,9 @@ public class App {
                 BS.remove(randomKey);
             }
 
-
             // H = heap with k-1 nodes, each with infinite distance to t;
-        
+            Tuple[] H = new Tuple[this.k-1];
+
             // for (Bucket b : BS \ B)
             Iterator<String> BSKey = BS.keySet().iterator();
             while(BSKey.hasNext()) {
@@ -308,23 +310,39 @@ public class App {
                 }
                 List<Tuple> b = BS.get(pid);
 
-                // pick one of its tuples t2, and calculate t2 distance to t;
-                // if (|t - t2| < |t - root of H|) {
-                    // root of H = t;
+                // pick one of its tuples t2 and calculate t2 distance to t;
+                Tuple t2 = b.get(random.nextInt(b.size()));
+                int t2TotDistance = 0; // todo://
+                int t2ToRootDistance = 0; // todo:// 
+
+                if (t2TotDistance < t2ToRootDistance) {
+                    // root of H = t2;
+                    H[0] = t2;
+
                     // adjust H accordingly;
-                // }
+                    // todo:// want to make it min-heap so root has smallest distance
+                }
             }        
         
-            // for (Node n : H) {
-            //   let t be the tuple in the node;
-            //   insert t into C_new
-            //   let B_j be the bucket containing t;
-            //   Delete t from B_j;
-            //   if (B_j.size() == 0) {
-            //       delete B_j;
-            //    }
-            // }
+            // for each node in the heap
+            for (Tuple n: H) {
+                // insert n into C_new
+                C_new.add(t);
+ 
+                // let B_j be the bucket containing n;
+                List<Tuple> B_j = BS.get(n.getPid());
+                
+                // Delete n from B_j;
+                B_j.remove(n);
+
+                if (B_j.size() == 0) {
+                    // delete B_j;
+                    BS.remove(n.getPid());
+                }
+            }
+
             // Add C_new to SC;
+            SC.add(C_new);
         }
 
         // for (Bucket B_i : BS)
