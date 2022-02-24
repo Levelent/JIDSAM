@@ -257,21 +257,6 @@ public class App {
         }
     }
 
-    public int informationLoss(Cluster C_j) {
-        // If tuple generalisation g = (v_1, ..., v_n) then
-        // infoLoss(g) = 1/n * sum_{i=1}^n vInfoLoss(v_i)
-        // with vInfoLoss(I) being either:
-        //
-        // (u - l) / (U - L) for numerical range
-        // with interval I = [l, u] and domain [L, U]
-        //
-        // (|S_v| - 1) / (|S| - 1) for qualitative feature
-        // with S_v set of leaf nodes in subtree rooted at v in DGH_i
-        // and S set of all leaf nodes in DGH_i
-        // Note: DGH_i is the domain generalisation hierarchy for a quasi-identifier q_i
-        return 0;
-    }
-
     public Set<Cluster> split(Cluster c) {
         Set<Cluster> SC = new LinkedHashSet<Cluster>();
 
@@ -514,6 +499,21 @@ public class App {
         // being disjoint
         Map<String, List<Tuple>> BS = new HashMap<>();
         return BS;
+    }
+
+    public int informationLoss(Cluster C_j) {
+        // If tuple generalisation g = (v_1, ..., v_n) then
+        // infoLoss(g) = 1/n * sum_{i=1}^n vInfoLoss(v_i)
+        // with vInfoLoss(I) being either:
+        //
+        // (u - l) / (U - L) for numerical range
+        // with interval I = [l, u] and domain [L, U]
+        //
+        // (|S_v| - 1) / (|S| - 1) for qualitative feature
+        // with S_v set of leaf nodes in subtree rooted at v in DGH_i
+        // and S set of all leaf nodes in DGH_i
+        // Note: DGH_i is the domain generalisation hierarchy for a quasi-identifier q_i
+        return 0;
     }
 
     public int enlargement(Cluster c, Tuple t) {
