@@ -331,13 +331,26 @@ public class App {
         Iterator<String> BSKey = BS.keySet().iterator();
         while(BSKey.hasNext()) {
             String pid = BSKey.next();
-            List<Tuple> b = BS.get(pid);
+            List<Tuple> b_i = BS.get(pid);
 
             // pick a tuple t_i in B_i;
-            // todo://
+            Random random = new Random();
+            Tuple t_i = b_i.get(random.nextInt(b_i.size()));
 
             // find nearest cluster of t_i in SC, and add all the tuples in B_i to it;
-            // todo://
+            Cluster nearestCluster = null;
+            int smallestEnlargement = 0;
+            for (Cluster c_possible : SC) {
+                // nearest is cluster that requires min enlargement to enclose
+                int enlargementRequired = enlargement(c_possible, t_i);
+                if (nearestCluster == null || enlargementRequired < smallestEnlargement) {
+                    nearestCluster = c_possible;
+                    smallestEnlargement = enlargementRequired;
+                }
+            }
+
+            // add all the tuples in B_i to nearest cluster
+            nearestCluster.add(b_i);
 
             // delete B_i;
             BS.remove(pid);
@@ -403,18 +416,30 @@ public class App {
             String pid = BSKey.next();
             List<Tuple> B = BS.get(pid);
 
-            // for (Tuple t_i : B) {
+            for (Tuple t_i : B) {
             //     C_near = nearest subcluster of t_i in SC;
             //     insert t_i into c_near;
-            // }
+            }
+
             // delete B;
+            BS.remove(pid);
         }
 
         for (Cluster sc_i : SC) {
-            for (Tuple t: sc_i.getTuples()) {
+            for (Tuple t_bar: sc_i.getTuples()) {
                 // let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
+                Set<Tuple> G_t = new LinkedHashSet<>();
+                for (Tuple t: c.getTuples()) {
+                    if (t.getPid() == t_bar.getPid()) {
+                        G_t.add(t);
+                    }
+                }
+            
                 // insert G_t into SC_i;
-                // delete G_t from C_i;
+                sc_i.add(G_t);
+                
+                // delete G_t from C;
+                c.removeSet(G_t);
             }
         }
 
@@ -422,9 +447,7 @@ public class App {
     }
 
     public Map<String, List<Tuple>> generate_buckets(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
-        // todo:// write
-        
-        // Doesn't seem to fully specify what it wants, other than the buckets being disjoint
+        // todo:// Doesn't seem to fully specify what it wants, other than the buckets being disjoint
         Map<String, List<Tuple>> BS = new HashMap<>();
         return BS;
     }

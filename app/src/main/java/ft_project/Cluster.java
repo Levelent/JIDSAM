@@ -23,6 +23,18 @@ public class Cluster implements Cloneable {
         tuples.add(t);
     }
 
+    public void add(Collection<Tuple> s) {
+        for (Tuple t: s) {
+            this.add(t);
+        }
+    }
+
+    public void removeSet(Set<Tuple> s) {
+        for(Tuple t: s) {
+            tuples.remove(t);
+        }
+    }
+
     public int size() {
         return tuples.size();
     }
