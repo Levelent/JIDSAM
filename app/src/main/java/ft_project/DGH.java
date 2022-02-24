@@ -14,8 +14,8 @@ public class DGH {
 
     public Boolean add(String localRootName, String data) {
         if (nodeValues.contains(data) || !nodeValues.contains(localRootName)) {
-            // Should probably deliniate between whether it cant be added because
-            // it already exists or because the localRoot couldnt be found
+            // Should probably delineate between whether it cant be added because
+            // it already exists or because the localRoot could not be found
             return false;
         }
         Node localRoot = root.find(localRootName); // Find the correct node to add a child to... relying on this working
