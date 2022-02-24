@@ -5,7 +5,7 @@ import java.util.*;
 public class App {
     final Boolean lDiversityEnabled = false; 
 
-    private int k, delta, beta, aveInfoLoss, thresholdInfoLoss;
+    private int k, delta, beta, aveInfoLoss, thresholdInfoLoss, l;
 
     private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
 
@@ -29,6 +29,9 @@ public class App {
     }
 
     public void castle(Stream s, int k, int delta, int beta) {
+        // set l todo:// work out better way to set this
+        this.l = 2;
+
         // set algorithm parameters
         this.k = k;
         this.delta = delta;
@@ -344,40 +347,68 @@ public class App {
     }
 
     public Set<Cluster> splitL(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
-        // BS = generate_buckets(c, a_s)
-        // if (BS.size() < l) {
-        //     return { c };
-        // }
-
-        Set<Cluster> SC = new LinkedHashSet<Cluster>(); // set of sub-clusters;
+        Map<String, List<Tuple>> BS = generate_buckets(c, a_s);
         
-        // while (BS.size() >= l && sum of bucket sizes >= k) {
-        //     randomly select a B from BS;
-        //     randomly select a tuple t from B;
-        //     generate a sub-cluster C_sub over t;
-        //     delete t from B;
-        //     for (Bucket B_j : BS) {
-        //         for (Tuple t_i : B_j) {
-        //             let e_i be enlargement(C_sub, t_i);
-        //         }
-        //         Sort tuples of B_j by ascending order of their enlargement e_i;
-        //         Let T_j be the set of the first k * (B_j.size() / sum of bucket sizes) tuples in B_j;
-        //         Insert T_j into C_sub;
-        //         delete T_j from B_j;
-        //         if (B_j.size() == 0) {
-        //             delete B_j from BS;
-        //         }
-        //     }
-        //     Add C_sub to SC;
-        // }
+        // set of sub clusters initialized empty
+        Set<Cluster> SC = new HashSet<>();
 
-        // for (Bucket B : BS) {
-        //     for (Tuple t_i : B) {
-        //         C_near = nearest subcluster of t_i in SC;
-        //         insert t_i into c_near;
-        //     }
-        //     delete B;
-        // }
+        if (BS.size() < this.l) {
+            SC.add(c);
+            return SC;
+        }
+        
+        // size of bs > l and sum of bucket sizes > k
+        while (BS.size() >= this.l && BS.values().stream().mapToInt(List::size).sum() >= this.k) {
+            // randomly select a B from BS;
+            Random random = new Random();
+            List<String> keys = new ArrayList<String>(BS.keySet());
+            String randomKey = keys.get( random.nextInt(keys.size()) );
+                   
+            // randomly select a tuple t from B;
+            List<Tuple> B = BS.get(randomKey);
+            Tuple t = B.get(random.nextInt(B.size()));
+        
+            // generate a sub-cluster C_sub over t;
+            Cluster C_sub = new Cluster(t);
+
+            // delete t from B;
+            B.remove(t);
+
+
+            // for (Bucket B_j : BS)
+            Iterator<String> BSKey = BS.keySet().iterator();
+            while(BSKey.hasNext()) {
+                String pid = BSKey.next();
+                List<Tuple> B_j = BS.get(pid);
+
+                // for (Tuple t_i : B_j) {
+                //    let e_i be enlargement(C_sub, t_i);
+                // }
+                // Sort tuples of B_j by ascending order of their enlargement e_i;
+                // Let T_j be the set of the first k * (B_j.size() / sum of bucket sizes) tuples in B_j;
+                // Insert T_j into C_sub;
+                // delete T_j from B_j;
+
+                if (B_j.size() == 0) {
+                    // delete B_j from BS
+                    BS.remove(pid);
+                }
+            }
+            SC.add(C_sub);
+        }
+
+        // for (Bucket B : BS) 
+        Iterator<String> BSKey = BS.keySet().iterator();
+        while(BSKey.hasNext()) {
+            String pid = BSKey.next();
+            List<Tuple> B = BS.get(pid);
+
+            // for (Tuple t_i : B) {
+            //     C_near = nearest subcluster of t_i in SC;
+            //     insert t_i into c_near;
+            // }
+            // delete B;
+        }
 
         for (Cluster sc_i : SC) {
             for (Tuple t: sc_i.getTuples()) {
@@ -390,8 +421,12 @@ public class App {
         return SC;
     }
 
-    public void generate_buckets(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
+    public Map<String, List<Tuple>> generate_buckets(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
+        // todo:// write
+        
         // Doesn't seem to fully specify what it wants, other than the buckets being disjoint
+        Map<String, List<Tuple>> BS = new HashMap<>();
+        return BS;
     }
 
     public int enlargement(Cluster c, Tuple t) {
