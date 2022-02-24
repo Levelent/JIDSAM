@@ -436,14 +436,23 @@ public class App {
                 String pid = BSKey.next();
                 List<Tuple> B_j = BS.get(pid);
 
-                // for (Tuple t_i : B_j) {
-                // let e_i be enlargement(C_sub, t_i);
-                // }
                 // Sort tuples of B_j by ascending order of their enlargement e_i;
+                Comparator<Tuple> sortByEnlargementComparator = (Tuple t1,
+                        Tuple t2) -> Integer.compare(enlargement(C_sub, t1), enlargement(C_sub, t2));
+                Collections.sort(B_j, sortByEnlargementComparator);
+
                 // Let T_j be the set of the first k * (B_j.size() / sum of bucket sizes) tuples
                 // in B_j;
+                Set<Tuple> T_j = new LinkedHashSet<>();
+                for (int i = 0; i < k * (B_j.size() / BS.values().stream().mapToInt(List::size).sum()); i++) {
+                    T_j.add(B_j.get(i));
+                }
+
                 // Insert T_j into C_sub;
+                C_sub.add(T_j);
+
                 // delete T_j from B_j;
+                B_j.removeAll(T_j);
 
                 if (B_j.size() == 0) {
                     // delete B_j from BS
@@ -461,7 +470,18 @@ public class App {
 
             for (Tuple t_i : B) {
                 // C_near = nearest subCluster of t_i in SC;
+                Cluster C_near = null;
+                int smallestEnlargement = 0;
+                for (Cluster possibleCluster : SC) {
+                    int distanceFromT_iToPossible = enlargement(possibleCluster, t_i);
+                    if (C_near == null || distanceFromT_iToPossible < smallestEnlargement) {
+                        C_near = possibleCluster;
+                        smallestEnlargement = distanceFromT_iToPossible;
+                    }
+                }
+
                 // insert t_i into c_near;
+                C_near.add(t_i);
             }
 
             // delete B;
