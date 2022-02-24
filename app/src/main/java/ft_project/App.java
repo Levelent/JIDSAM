@@ -153,7 +153,7 @@ public class App {
                 // let KC be a cluster randomly selected from KC_set;
                 Cluster KC = getRandomCluster(KC_set);
 
-                // todo:// suppress t => Output t with the generalisation of KC; ??
+                // todo:// Output t with the generalisation of KC; ??
                 return;
             }
 
@@ -187,7 +187,7 @@ public class App {
     
                 // calculate the enlargement of C due to the possible merge with Ci.
                 // and track which would bring the minimum enlargement
-                int possibleEnlargement = 10; // todo:// need to be able to calculate enlargement tuple to tuple
+                int possibleEnlargement = enlargement(c, toMergeCluster);
                 if (clusterWithSmallest == null || possibleEnlargement < smallestEnlargement) {
                     clusterWithSmallest = toMergeCluster;
                     smallestEnlargement = possibleEnlargement;
@@ -221,19 +221,25 @@ public class App {
                 SC = split(c);
             }
         } else {
+            // SC = { c }; 
             SC = new LinkedHashSet<Cluster>();
-            SC.add(c); // SC = { c }; 
+            SC.add(c);
         }
 
         for (Cluster C_i : SC) {
             System.out.print(C_i.toString()); // output all tuples in C_i with its generalisation;
 
             // todo:// Update aveInfoLoss according to informationLoss(C_i);
+            // aveInfoLoss is updated to be the average information loss of
+            // the most recent k-anonymized clusters including the new ones
+            // todo:// this is not right what does it mean?
+            this.aveInfoLoss = informationLoss(C_i);
 
             if (informationLoss(C_i) < this.aveInfoLoss) {
                 this.anonymisedClusters.add(C_i);
             } else {
-                // todo:// delete C_i;
+                // delete C_i from non-k anonymised clusters;
+                this.nonAnonymisedClusters.remove(C_i);
             }
             this.nonAnonymisedClusters.remove(C_i);
         }
