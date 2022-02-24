@@ -29,7 +29,7 @@ public class App {
     }
 
     public void castle(Stream s, int k, int delta, int beta) {
-        // set l todo:// work out better way to set this
+        // set l TODO work out better way to set this
         this.l = 2;
 
         // set algorithm parameters
@@ -87,7 +87,7 @@ public class App {
             clusterList.add(C_j);
         }
 
-        // todo:// has been added due to next line will cause an issue if nonAnonymisedClusters was empty (first tuple and no clusters made)
+        // TODO has been added due to next line will cause an issue if nonAnonymisedClusters was empty (first tuple and no clusters made)
         if (enlargementMap.size() == 0) {
             return null;
         }
@@ -110,7 +110,7 @@ public class App {
 
                 // Calculate information loss, if less than aveInfoLoss threshold insert into SetC_ok
                 if (informationLoss(copyOfC_j) < this.aveInfoLoss) {
-                    // todo:// does it mean add the copy with t or the original? 
+                    // TODO does it mean add the copy with t or the original? 
                     SetC_ok.add(copyOfC_j);
                 }
             } catch (CloneNotSupportedException e) {
@@ -170,7 +170,7 @@ public class App {
             }
 
             if (2 * m > nonAnonymisedClusters.size() || nonAnonymisedClusters.stream().mapToInt(Cluster::size).sum() < this.k) {
-                // todo:// Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the most generalized QI value"
+                // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the most generalized QI value"
                 return;
             }
             
@@ -221,7 +221,7 @@ public class App {
         Set<Cluster> SC;
         if (c.size() >= 2 * this.k) {
             if (lDiversityEnabled) {
-                SC = splitL(c, 0); // todo:// second argument is temporary
+                SC = splitL(c, 0); // TODO second argument is temporary
             } else {
                 SC = split(c);
             }
@@ -234,10 +234,10 @@ public class App {
         for (Cluster C_i : SC) {
             System.out.print(C_i.toString()); // output all tuples in C_i with its generalisation;
 
-            // todo:// Update aveInfoLoss according to informationLoss(C_i);
+            // TODO Update aveInfoLoss according to informationLoss(C_i);
             // aveInfoLoss is updated to be the average information loss of
             // the most recent k-anonymized clusters including the new ones
-            // todo:// this is not right what does it mean?
+            // TODO this is not right what does it mean?
             this.aveInfoLoss = informationLoss(C_i);
 
             if (informationLoss(C_i) < this.aveInfoLoss) {
@@ -253,7 +253,7 @@ public class App {
     public int informationLoss(Cluster C_j) {
         // If tuple generalisation g = (v_1, ..., v_n) then
         // infoLoss(g) = 1/n * sum_{i=1}^n vInfoLoss(v_i)
-        // with vInfoloss(I) being either:
+        // with vInfoLoss(I) being either:
         //
         // (u - l) / (U - L) for numerical range 
         // with interval I = [l, u] and domain [L, U]
@@ -312,15 +312,15 @@ public class App {
 
                 // pick one of its tuples t2 and calculate t2 distance to t;
                 Tuple t2 = b.get(random.nextInt(b.size()));
-                int t2TotDistance = 0; // todo://
-                int t2ToRootDistance = 0; // todo:// 
+                int t2TotDistance = 0; // TODO
+                int t2ToRootDistance = 0; // TODO 
 
                 if (t2TotDistance < t2ToRootDistance) {
                     // root of H = t2;
                     H[0] = t2;
 
                     // adjust H accordingly;
-                    // todo:// want to make it min-heap so root has smallest distance
+                    // TODO want to make it min-heap so root has smallest distance
                 }
             }        
         
@@ -435,7 +435,7 @@ public class App {
             List<Tuple> B = BS.get(pid);
 
             for (Tuple t_i : B) {
-            //     C_near = nearest subcluster of t_i in SC;
+            //     C_near = nearest subCluster of t_i in SC;
             //     insert t_i into c_near;
             }
 
@@ -465,13 +465,13 @@ public class App {
     }
 
     public Map<String, List<Tuple>> generate_buckets(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
-        // todo:// Doesn't seem to fully specify what it wants, other than the buckets being disjoint
+        // TODO Doesn't seem to fully specify what it wants, other than the buckets being disjoint
         Map<String, List<Tuple>> BS = new HashMap<>();
         return BS;
     }
 
     public int enlargement(Cluster c, Tuple t) {
-        // Depends on quantitive and qualative data types
+        // Depends on quantitative and qualitative data types
         // Would probably need to pass a bunch of parameters not specified by the paper in here
         return 0;
     }

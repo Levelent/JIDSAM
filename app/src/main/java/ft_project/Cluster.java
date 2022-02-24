@@ -11,7 +11,7 @@ public class Cluster implements Cloneable {
     }
 
     public void merge(Cluster c) {
-        // todo:// I am sure this needs more than that
+        // TODO I am sure this needs more than that
         tuples.addAll(c.getTuples());
     }
 
@@ -53,7 +53,7 @@ public class Cluster implements Cloneable {
             out += t.toString() + System.lineSeparator();
         }
 
-        // TODO:// with generalisations
+        // TODO with generalisations
         return out;
     }
 
