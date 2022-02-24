@@ -278,7 +278,6 @@ public class App {
             BS.get(t.getPid()).add(t);
         } 
         
-        
         while (BS.size() >= this.k) {
             // randomly select a bucket B from BS, and pick one of its tuples t;
             Random random = new Random();
@@ -312,15 +311,22 @@ public class App {
 
                 // pick one of its tuples t2 and calculate t2 distance to t;
                 Tuple t2 = b.get(random.nextInt(b.size()));
-                int t2TotDistance = 0; // TODO
-                int t2ToRootDistance = 0; // TODO 
+                int t2TotDistance = enlargement(t2, t);
+                int t2ToRootDistance = enlargement(t2, H[0]);
 
-                if (t2TotDistance < t2ToRootDistance) {
-                    // root of H = t2;
-                    H[0] = t2;
+                if (t2TotDistance < t2ToRootDistance || H[0] == null) {
+                    // goal is for a min-distance-heap
+                    // t2 should end up at the top
 
-                    // adjust H accordingly;
-                    // TODO want to make it min-heap so root has smallest distance
+                    // Insert t2 into end of list
+                    H[H.length + 1] = t2;
+
+                    // adjust H accordingly - this moves t2 to head as it is know to have smallest distance to t
+                    int current = H.length;
+                    while (enlargement(H[current], t) < enlargement(H[this.heapParent(H, current)],t)) {
+                        H = this.heapSwap(H, current, this.heapParent(H, current));
+                        current = this.heapParent(H, current);
+                    }
                 }
             }        
         
@@ -375,6 +381,18 @@ public class App {
         }       
 
         return SC;
+    }
+
+    private int heapParent(Tuple[] H, int index) {
+        return index/2;
+    }
+
+    private Tuple[] heapSwap(Tuple[] H, int t1, int t2) {
+        Tuple tmp = H[t1];
+
+        H[t1] = H[t2];
+        H[t2] = tmp;
+        return H;
     }
 
     public Set<Cluster> splitL(Cluster c, Integer a_s) { // TODO a_s type of integer is temporary
@@ -479,6 +497,15 @@ public class App {
     public int enlargement(Cluster c1, Cluster c2) {
         // to finish merge clusters, need to be able to know the potential enlargement
         // if two clusters were to be merged
+        return 0;
+    }
+
+    public int enlargement(Tuple c1, Tuple c2) {
+        if (c1 == null || c2 == null) {
+            return 0;
+        }
+
+        // used in split to find "distance" between two tuples
         return 0;
     }
 }
