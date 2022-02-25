@@ -1,0 +1,72 @@
+$education
+Any
+    Secondary
+        Primary School
+        Secondary School
+    University
+        Bachelors
+        Masters
+        PhD
+$workclass
+Any
+    Non-Gov
+        Private
+        Self-Employed
+    Gov
+        Federal-Gov
+        State-Gov
+        Local-Gov
+$sex
+Any
+    Male
+    Female
+$marital-status
+Any
+    Partnered
+        Married
+        Married-civ-spouse
+    Single
+        Never-Married
+        Divorced
+        Widowed
+$occupation
+Any
+    Office
+        Clerical
+        Managerial
+        Sales
+    Labourer
+        Cleaners
+        Craft-Repair
+        Farming-Fising
+    Services
+        Protective
+        Armed-Forces
+        Private-House
+$relationsip
+Any
+    Immediate
+        Husband
+        Wife
+        Own-Child
+    Other
+        Other-Relative
+        Not-in-Family
+        Unmarried
+$race
+Any
+    White
+    Black
+    Asian
+$location
+World-Wide 
+    North-America
+        United-States
+        Canada
+    Europe
+        UnitedKingdom
+            Scotland
+            England
+        Germany
+        Eu-Other
+    WW-Other
