@@ -32,16 +32,6 @@ public class App {
         dataStream.close();
     }
 
-    public void castle(Stream s, int k, int delta, int beta, int l, int a_s) {
-        // set l diversity based parameters
-        this.l = l;
-        this.a_s = a_s; // index of the l diversity sensitive attribute
-        this.lDiversityEnabled = true;
-
-        // call castle
-        this.castle(s, k, delta, beta);
-    }
-
     public void castle(Stream s, int k, int delta, int beta) {
         // set default algorithm parameters
         this.k = k;
@@ -77,6 +67,16 @@ public class App {
                 }
             }
         }
+    }
+
+    public void castle(Stream s, int k, int delta, int beta, int l, int a_s) {
+        // set l diversity based parameters
+        this.l = l;
+        this.a_s = a_s; // index of the l diversity sensitive attribute
+        this.lDiversityEnabled = true;
+
+        // call castle
+        this.castle(s, k, delta, beta);
     }
 
     public Cluster bestSelection(Tuple t) {
