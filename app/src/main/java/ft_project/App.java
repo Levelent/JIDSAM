@@ -118,14 +118,12 @@ public class App {
             // Create a copy of C_j that we push t into
             try {
                 Cluster copyOfC_j = (Cluster) C_j.clone();
-
                 copyOfC_j.add(t);
 
                 // Calculate information loss, if less than aveInfoLoss threshold insert into
                 // SetC_ok
                 if (informationLoss(copyOfC_j) < this.aveInfoLoss) {
-                    // TODO does it mean add the copy with t or the original?
-                    SetC_ok.add(copyOfC_j);
+                    SetC_ok.add(C_j);
                 }
             } catch (CloneNotSupportedException e) {
                 e.printStackTrace();
@@ -186,8 +184,7 @@ public class App {
             }
 
             if (2 * m > nonAnonymisedClusters.size()) {
-                // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
-                // most generalized QI value"
+                suppress(t);
                 return;
             }
 
@@ -205,21 +202,24 @@ public class App {
                     }
 
                     if (distinctValues.size() >= this.l) {
-                        // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
-                        // most generalized QI value"
+                        suppress(t);
+                        return;
                     }
                 } else {
                     // default part of algorithm
-                    // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
-                    // most generalized QI value"
+                    suppress(t);
+                    return;
                 }
-
-                return;
             }
 
             Cluster MC = this.merge_clusters(c, nonAnonymisedClusters);
             outputCluster(MC);
         }
+    }
+
+    public void suppress(Tuple t) {
+        // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
+        // most generalized QI value"
     }
 
     public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {

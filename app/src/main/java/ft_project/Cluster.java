@@ -11,7 +11,8 @@ public class Cluster implements Cloneable {
     }
 
     public void merge(Cluster c) {
-        // TODO I am sure this needs more than that
+        // TODO update generalisations on insert?
+
         tuples.addAll(c.getTuples());
     }
 
