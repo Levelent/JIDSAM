@@ -23,4 +23,8 @@ public class CategoryGeneralisation implements GeneralisationInterface {
         return false;
     }
 
+    public String toString(){
+        return localRoot;
+    }
+
 }

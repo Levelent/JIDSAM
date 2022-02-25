@@ -14,6 +14,22 @@ public class ContinuousGeneralisation implements GeneralisationInterface {
         this.lb = lb;
     }
 
+    ContinuousGeneralisation(float LB, float UB) {
+        this.UB = UB;
+        this.LB = LB;
+
+        this.ub = UB;
+        this.lb = LB;
+    }
+
+    ContinuousGeneralisation(float value) {
+        this.UB = 9999999;
+        this.LB = 0;
+
+        this.ub = value;
+        this.lb = value;
+    }
+
     public float infoLoss() {
         return (this.ub - this.lb) / (this.UB - this.LB);
     }
@@ -25,5 +41,9 @@ public class ContinuousGeneralisation implements GeneralisationInterface {
             return true;
         }
         return false;
+    }
+
+    public String toString(){
+        return "[ " +Float.toString(lb) + " " +Float.toString(ub) +" ]";
     }
 }

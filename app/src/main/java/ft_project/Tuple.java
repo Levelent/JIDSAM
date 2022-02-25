@@ -8,7 +8,7 @@ public class Tuple implements Cloneable {
     private static final String ANSI_YELLOW = "\u001B[33m";
 
     private String pid;
-    private String[] headings;
+    public final String[] headings;
     private String[] data;
     private boolean beenOutputted = false;
 
@@ -43,6 +43,15 @@ public class Tuple implements Cloneable {
 
     public String getValue(int index) {
         return data[index];
+    }
+
+    public String getValue(String fieldName){
+        for(int i = 0; i<headings.size();i++){
+            if(fn.equals(fieldName)){
+                return data[i];
+            }
+        }
+        return null;
     }
 
     public Boolean hasBeenOutput() {

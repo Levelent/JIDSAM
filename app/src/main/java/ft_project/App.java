@@ -8,6 +8,7 @@ public class App {
     private int k, delta, beta, aveInfoLoss, thresholdInfoLoss, l, a_s;
 
     private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
+    
 
     public static void main(String[] args) {
         // predefine thresholds/constants
@@ -24,6 +25,7 @@ public class App {
 
         // create data stream
         Stream dataStream = new Stream("src/main/resources/adult.csv");
+        Map<String, DGH> DGHs = new DGHReader("src/main/resources/dgh").DGHs;
 
         // run CASTLE
         app.castle(dataStream, k, delta, beta, l, a_s);
@@ -554,6 +556,8 @@ public class App {
         // with S_v set of leaf nodes in subtree rooted at v in DGH_i
         // and S set of all leaf nodes in DGH_i
         // Note: DGH_i is the domain generalisation hierarchy for a quasi-identifier q_i
+
+        
         return 0;
     }
 

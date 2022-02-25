@@ -57,8 +57,8 @@ $race
 Any
     White
     Black
-    Asian
-$location
+    Asian-Pac-Islander
+$country
 World-Wide 
     North-America
         United-States
@@ -70,3 +70,7 @@ World-Wide
         Germany
         Eu-Other
     WW-Other
+$salary
+Any
+    <=50K
+    >50K

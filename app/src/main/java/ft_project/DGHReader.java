@@ -17,10 +17,10 @@ public class DGHReader {
         return count / 4;
     }
 
-    public final List<DGH> DGHs;
+    public final Map<String, DGH> DGHs;
 
     DGHReader(String filename){
-        ArrayList<DGH> DGHs = new ArrayList<DGH>();
+        HashMap<String, DGH> DGHs = new HashMap<String, DGH>();
         try{
             FileInputStream fStream;
             // Get the object of DataInputStream
@@ -47,7 +47,7 @@ public class DGHReader {
                         System.out.println(latestDGH);
                     }
                     DGH newDGH = new DGH(strLine.substring(1).strip() );
-                    DGHs.add(newDGH);
+                    DGHs.put(newDGH.name, newDGH);
                     latestDGH = newDGH;
                     stack = new Stack<String>();
                 }else{
