@@ -1,4 +1,5 @@
 package ft_project;
+
 import java.util.*;
 
 public class DGH {
@@ -58,15 +59,15 @@ public class DGH {
         return nodeValues.contains(nodeName);
     }
 
-    public Node find(String data){
+    public Node find(String data) {
         return root.find(data);
     }
 
-    public int countNodes(){
+    public int countNodes() {
         return nodeValues.size();
     }
 
-    public int countNodes(String localRootName){
+    public int countNodes(String localRootName) {
         return find(localRootName).countNodes(0);
     }
 
@@ -79,26 +80,25 @@ public class DGH {
         private Node parent;
         private List<Node> children;
 
-        Node(String data){
+        Node(String data) {
             this.data = data;
             this.children = new ArrayList<Node>();
         }
-        
-        public void add(String data){
-            children.add( new Node(data));
+
+        public void add(String data) {
+            children.add(new Node(data));
         }
 
-        
         /**
          * Count all nodes rooted at this node
          */
-        public int countNodes(int count){
-            for(Node n : this.children){
+        public int countNodes(int count) {
+            for (Node n : this.children) {
                 count = n.countNodes(count);
             }
-            return count+1;
+            return count + 1;
         }
-        
+
         /**
          * Find the node with value: data
          */
