@@ -281,7 +281,7 @@ public class App {
             // TODO Update aveInfoLoss according to informationLoss(C_i);
             // aveInfoLoss is updated to be the average information loss of
             // the most recent k-anonymized clusters including the new ones
-            // TODO this is not right what does it mean?
+            // note below is not right what does it mean?
             this.aveInfoLoss = informationLoss(C_i);
 
             if (informationLoss(C_i) < this.aveInfoLoss) {

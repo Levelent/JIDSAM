@@ -3,6 +3,10 @@ package ft_project;
 import java.util.*;
 
 public class Cluster implements Cloneable {
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_CYAN = "\u001B[36m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
+
     private List<Tuple> tuples;
 
     public Cluster(Tuple t) {
@@ -59,15 +63,20 @@ public class Cluster implements Cloneable {
     }
 
     public String toString() {
-        String out = "Cluster" + System.lineSeparator();
+        String out = ANSI_YELLOW + "Cluster" + ANSI_RESET + System.lineSeparator();
+
+        // output generalisations
+        out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
+
+        // TODO with generalisations
 
         // output all tuples;
+        out += ANSI_CYAN + "Tuples" + ANSI_RESET + System.lineSeparator();
         for (Tuple t : tuples) {
             t.setAsBeenOutput();
             out += t.toString() + System.lineSeparator();
         }
 
-        // TODO with generalisations
         return out;
     }
 
