@@ -3,6 +3,10 @@ package ft_project;
 import java.util.Arrays;
 
 public class Tuple implements Cloneable {
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_CYAN = "\u001B[36m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
+
     private String pid;
     private String[] headings;
     private String[] data;
@@ -14,6 +18,23 @@ public class Tuple implements Cloneable {
 
         // set pid
         this.pid = this.data[Arrays.asList(headings).indexOf("pid")];
+    }
+
+    public void suppress() {
+        // it outputs t with the most generalized QI value
+        String out = ANSI_YELLOW + "Suppress" + ANSI_RESET + System.lineSeparator();
+
+        // output generalisations
+        out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
+
+        // TODO with generalisations ~ "most generalized QI value"
+
+        // output tuple;
+        out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
+        this.setAsBeenOutput();
+        out += this.toString() + System.lineSeparator();
+
+        System.out.println(out);
     }
 
     public String getPid() {

@@ -184,7 +184,7 @@ public class App {
             }
 
             if (2 * m > nonAnonymisedClusters.size()) {
-                suppress(t);
+                t.suppress();
                 return;
             }
 
@@ -202,12 +202,12 @@ public class App {
                     }
 
                     if (distinctValues.size() >= this.l) {
-                        suppress(t);
+                        t.suppress();
                         return;
                     }
                 } else {
                     // default part of algorithm
-                    suppress(t);
+                    t.suppress();
                     return;
                 }
             }
@@ -215,11 +215,6 @@ public class App {
             Cluster MC = this.merge_clusters(c, nonAnonymisedClusters);
             outputCluster(MC);
         }
-    }
-
-    public void suppress(Tuple t) {
-        // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
-        // most generalized QI value"
     }
 
     public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {
