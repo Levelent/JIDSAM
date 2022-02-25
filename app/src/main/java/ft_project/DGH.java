@@ -4,24 +4,54 @@ import java.util.*;
 public class DGH {
     private Node root;
     private AbstractSet<String> nodeValues;
+    public final String name;
 
-    DGH(String rootData){
+
+    DGH(String rootData, String name){
         this.root = new Node(rootData);
         this.root.children = new ArrayList<Node>();
+        this.nodeValues = new HashSet<String>();
         nodeValues.add(rootData);
+        this.name = name;
+    }
+
+    DGH(String name){
+        this.root = null;
+        this.nodeValues = new HashSet<String>();
+        this.name = name;
     }
 
     public Boolean add(String localRootName, String  data){
         if(nodeValues.contains(data) || !nodeValues.contains(localRootName)){ 
             //Should probably deliniate between whether it cant be added because
             //it already exists or because the localRoot couldnt be found
+            System.out.println(localRootName+" Cannot be found");
             return false;
         }
+        
         Node localRoot = root.find(localRootName); //Find the correct node to add a child to... relying on this working if localRootName exists in our set
+        if(localRoot == null){
+            System.out.println(this.root);
+            System.out.println("---");
+            System.out.println(localRootName);
+            System.out.println(data);
+        }
         localRoot.add(data); //add the child
         nodeValues.add(data) ;
 
         return true;
+    }
+
+    public Boolean add(String data){
+        if(this.root == null){
+            this.root = new Node(data);
+            this.root.children = new ArrayList<Node>();
+            nodeValues.add(data);
+            return true;
+        }else{
+            return this.add(this.root.data, data);
+
+        }
     }
 
     public Boolean contains(String nodeName){
@@ -38,6 +68,10 @@ public class DGH {
 
     public int countNodes(String localRootName){
         return find(localRootName).countNodes(0);
+    }
+
+    public String toString(){
+        return this.root.toString();
     }
 
     public static class Node {
@@ -69,15 +103,36 @@ public class DGH {
          * Find the node with value: data
          */
         public Node find(String data){
-            if(this.data == data){
+            if(this.data.equals(data)){
                 return this;
             }
             for(Node n: this.children){
-                if(n.data == data){
-                    return n;
+                Node found = n.find(data);
+                if(found != null){
+                    return found;
                 }
             }
             return null;
+        }
+
+        private String tsHelper(int depth, String str){
+            String tmp = "";
+            for(int i = 0; i<depth;i++){
+                tmp += "\t";
+            }
+            tmp =tmp+this.data+"\n";
+            for(Node child : children){
+                tmp = child.tsHelper(depth+1, tmp);
+            }
+            return str+tmp;
+        }
+    
+        public String toString(){
+            String str = this.data+"\n";
+            for(Node child : children){
+                str = child.tsHelper(1, str);
+            }
+            return str;
         }
     }
 }
