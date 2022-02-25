@@ -3,7 +3,7 @@ package ft_project;
 import java.util.*;
 
 public class App {
-    final Boolean lDiversityEnabled = false;
+    private Boolean lDiversityEnabled = false;
 
     private int k, delta, beta, aveInfoLoss, thresholdInfoLoss, l, a_s;
 
@@ -15,6 +15,10 @@ public class App {
         int delta = 2;
         int beta = 2;
 
+        // l diversity thresholds/constants
+        int l = 2;
+        int a_s = 2;
+
         // initialize app
         App app = new App();
 
@@ -22,18 +26,24 @@ public class App {
         Stream dataStream = new Stream("src/main/resources/adult.csv");
 
         // run CASTLE
-        app.castle(dataStream, k, delta, beta);
+        app.castle(dataStream, k, delta, beta, l, a_s);
 
         // close file
         dataStream.close();
     }
 
-    public void castle(Stream s, int k, int delta, int beta) {
-        // set l TODO work out better way to set this
-        this.l = 2;
-        this.a_s = 2;
+    public void castle(Stream s, int k, int delta, int beta, int l, int a_s) {
+        // set l diversity based parameters
+        this.l = l;
+        this.a_s = a_s; // index of the l diversity sensitive attribute
+        this.lDiversityEnabled = true;
 
-        // set algorithm parameters
+        // call castle
+        this.castle(s, k, delta, beta);
+    }
+
+    public void castle(Stream s, int k, int delta, int beta) {
+        // set default algorithm parameters
         this.k = k;
         this.delta = delta;
         this.beta = beta;
