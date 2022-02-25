@@ -8,9 +8,25 @@ public class Cluster implements Cloneable {
     private static final String ANSI_YELLOW = "\u001B[33m";
 
     private List<Tuple> tuples;
+    private List<Generalisation> generalisations;
 
-    public Cluster(Tuple t) {
+    public Cluster(Tuple t, Map<String, DGH> d) {
         tuples = new LinkedList<Tuple>();
+        // Create our list of generalisations. Everything that doesn't exist as a DGH is continuous, except pid and tid
+        gens = new ArrayList<Generalisation>();
+        for(String heading: t.headings){
+            if(heading == "pid" || heading == "tid"){
+                continue;
+            }
+            DGH dgh = d.get(heading);
+            if(dgh == null){
+                //Must be a continuous generalisation
+                gens.add( new ContinuousGeneralisation( Float.parseFloat(t.getValue(heading)) ) );
+            }else{
+                gens.add( new CategoryGeneralisation( dgh ));
+            }
+        }
+
         this.add(t);
     }
 
