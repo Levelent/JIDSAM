@@ -542,6 +542,7 @@ public class App {
     }
 
     public int informationLoss(Cluster C_j) {
+        // TODO
         // If tuple generalisation g = (v_1, ..., v_n) then
         // infoLoss(g) = 1/n * sum_{i=1}^n vInfoLoss(v_i)
         // with vInfoLoss(I) being either:
