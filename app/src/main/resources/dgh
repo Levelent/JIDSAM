@@ -11,11 +11,14 @@ $workclass
 Any
     Non-Gov
         Private
-        Self-Employed
+        Self-employed
+            Self-emp-not-inc
+            Self-emp-inc
     Gov
-        Federal-Gov
-        State-Gov
-        Local-Gov
+        Federal-gov
+        State-gov
+        Local-gov
+    Without-pay
 $sex
 Any
     Male
@@ -32,17 +35,22 @@ Any
 $occupation
 Any
     Office
-        Clerical
-        Managerial
+        Adm-Clerical
+        Exec-Managerial
         Sales
     Labourer
-        Cleaners
-        Craft-Repair
-        Farming-Fising
+        Handlers-cleaners
+        Craft-repair
+        Farming-fising
+        Transport-moving
+        Machine-op-inspct
+        Armed-forces
     Services
-        Protective
-        Armed-Forces
-        Private-House
+        Protective-serv
+        Priv-jouse-serv
+        Prof-speciality
+        Other-Service
+        Tech-support
 $relationsip
 Any
     Immediate
@@ -57,7 +65,10 @@ $race
 Any
     White
     Black
+    Asian
+    Amer-Indian-Eskimo
     Asian-Pac-Islander
+
 $country
 World-Wide 
     North-America
