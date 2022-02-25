@@ -20,6 +20,10 @@ public class Tuple implements Cloneable {
         return this.pid;
     }
 
+    public String getValue(int index) {
+        return data[index];
+    }
+
     public Boolean hasBeenOutput() {
         return beenOutputted;
     }
@@ -27,9 +31,8 @@ public class Tuple implements Cloneable {
     public void setAsBeenOutput() {
         this.beenOutputted = true;
     }
-    
-    public String toString()
-    {
+
+    public String toString() {
         String out = "";
         for (String item : data) {
             out += item + " ";
@@ -37,8 +40,7 @@ public class Tuple implements Cloneable {
         return out;
     }
 
-    public Object clone() throws CloneNotSupportedException
-    {
+    public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 }

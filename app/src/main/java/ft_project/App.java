@@ -5,7 +5,7 @@ import java.util.*;
 public class App {
     final Boolean lDiversityEnabled = false;
 
-    private int k, delta, beta, aveInfoLoss, thresholdInfoLoss, l;
+    private int k, delta, beta, aveInfoLoss, thresholdInfoLoss, l, a_s;
 
     private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
 
@@ -31,6 +31,7 @@ public class App {
     public void castle(Stream s, int k, int delta, int beta) {
         // set l TODO work out better way to set this
         this.l = 2;
+        this.a_s = 2;
 
         // set algorithm parameters
         this.k = k;
@@ -145,7 +146,8 @@ public class App {
             }
         }
 
-        if (c.size() >= this.k) {
+        if (c.size() >= this.k
+                && (!this.lDiversityEnabled || c.diversity(this.a_s) >= this.l)) {
             outputCluster(c);
         } else {
             // KC_set = All k_s anonymised clusters in anonymisedClusters containing t;
@@ -173,10 +175,35 @@ public class App {
                 }
             }
 
-            if (2 * m > nonAnonymisedClusters.size()
-                    || nonAnonymisedClusters.stream().mapToInt(Cluster::size).sum() < this.k) {
+            if (2 * m > nonAnonymisedClusters.size()) {
                 // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
                 // most generalized QI value"
+                return;
+            }
+
+            // line 17 of delay_constraint
+            if (nonAnonymisedClusters.stream().mapToInt(Cluster::size).sum() < this.k) {
+                // check for l diversity enabled
+                if (this.lDiversityEnabled) {
+                    // as on page 9 top of right column
+                    // it must also be checked that there is at least l distinct values for a_s
+                    // among all non anonymised clusters
+
+                    Set<String> distinctValues = new HashSet<>();
+                    for (Cluster c_i : nonAnonymisedClusters) {
+                        distinctValues.addAll(c.distinctValues(this.a_s));
+                    }
+
+                    if (distinctValues.size() >= this.l) {
+                        // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
+                        // most generalized QI value"
+                    }
+                } else {
+                    // default part of algorithm
+                    // TODO Suppress tuple t; "CASTLE suppresses t, that is, it outputs t with the
+                    // most generalized QI value"
+                }
+
                 return;
             }
 
@@ -226,9 +253,9 @@ public class App {
 
     public void outputCluster(Cluster c) {
         Set<Cluster> SC;
-        if (c.size() >= 2 * this.k) {
+        if (c.size() >= 2 * this.k && (!this.lDiversityEnabled || c.diversity(this.a_s) >= this.l)) {
             if (lDiversityEnabled) {
-                SC = splitL(c, 0);
+                SC = splitL(c, this.a_s);
             } else {
                 SC = split(c);
             }
@@ -495,9 +522,17 @@ public class App {
     }
 
     public Map<String, List<Tuple>> generate_buckets(Cluster c, Integer a_s) {
-        // TODO Doesn't seem to fully specify what it wants, other than the buckets
-        // being disjoint
+        // group C's tuples into distinct buckets BS on the basis of
+        // the values for the sensitive attribute
         Map<String, List<Tuple>> BS = new HashMap<>();
+        for (Tuple t : c.getTuples()) {
+            if (!BS.containsKey(t.getValue(a_s))) {
+                BS.put(t.getValue(a_s), new ArrayList<Tuple>());
+            }
+
+            BS.get(t.getValue(a_s)).add(t);
+        }
+
         return BS;
     }
 

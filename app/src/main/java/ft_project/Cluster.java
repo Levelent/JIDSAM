@@ -15,6 +15,20 @@ public class Cluster implements Cloneable {
         tuples.addAll(c.getTuples());
     }
 
+    public Set<String> distinctValues(int a_s) {
+        // get all distinct values in cluster for a_s index
+        Set<String> distinctValues = new HashSet<>();
+        for (Tuple t : tuples) {
+            distinctValues.add(t.getValue(a_s));
+        }
+        return distinctValues;
+    }
+
+    public int diversity(int a_s) {
+        // C.diversity the number of distinct values of a_s for tuples in C
+        return this.distinctValues(a_s).size();
+    }
+
     public boolean contains(Tuple t) {
         return tuples.contains(t);
     }
