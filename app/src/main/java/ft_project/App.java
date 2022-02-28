@@ -10,7 +10,6 @@ public class App {
 
     private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
     private Map<String, DGH> DGHs;
-    
 
     public static void main(String[] args) {
         // predefine thresholds/constants
@@ -26,8 +25,8 @@ public class App {
         App app = new App();
 
         // create data stream
-        Stream dataStream = new Stream("src/main/resources/adult.csv");
-        app.setDGHs( new DGHReader("src/main/resources/dgh").DGHs);
+        Stream dataStream = new Stream("./app/src/main/resources/adult-100.csv");
+        app.setDGHs(new DGHReader("./app/src/main/resources/dgh").DGHs);
 
         // run CASTLE
         app.castle(dataStream, k, delta, beta, l, a_s);
@@ -36,10 +35,10 @@ public class App {
         dataStream.close();
     }
 
-    public void setDGHs(Map<String, DGH> dghs){
+    public void setDGHs(Map<String, DGH> dghs) {
         DGHs = dghs;
     }
-    
+
     public void castle(Stream s, int k, int delta, int beta) {
         // set default algorithm parameters
         this.k = k;
@@ -563,19 +562,18 @@ public class App {
         // and S set of all leaf nodes in DGH_i
         // Note: DGH_i is the domain generalisation hierarchy for a quasi-identifier q_i
 
-        
         return 0;
     }
 
     public float enlargement(Cluster c, Tuple t) {
-        
-        try{
+
+        try {
             Cluster clone = (Cluster) c.clone();
             clone.add(t);
 
             return clone.informationLoss() - c.informationLoss();
 
-        }catch(CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
 
@@ -586,14 +584,15 @@ public class App {
         // to finish merge clusters, need to be able to know the potential enlargement
         // if two clusters were to be merged
 
-        // I Assume this is what they want... as if all tuples from one were added to the other
-        try{
+        // I Assume this is what they want... as if all tuples from one were added to
+        // the other
+        try {
             Cluster clone = (Cluster) c1.clone();
             clone.add(c2.getTuples());
 
             return clone.informationLoss() - c1.informationLoss();
 
-        }catch(CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
 
@@ -606,12 +605,11 @@ public class App {
         }
 
         // TODO
-        //This feels like a dirty solution
+        // This feels like a dirty solution
         Cluster c1 = new Cluster(t1, DGHs);
         Cluster c2 = new Cluster(t2, DGHs);
 
-        return enlargement(c1,c2);
-
+        return enlargement(c1, c2);
 
     }
 }
