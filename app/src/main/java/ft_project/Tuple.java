@@ -46,8 +46,8 @@ public class Tuple implements Cloneable {
     }
 
     public String getValue(String fieldName){
-        for(int i = 0; i<headings.size();i++){
-            if(fn.equals(fieldName)){
+        for(int i = 0; i<headings.length;i++){
+            if(headings[i].equals(fieldName)){
                 return data[i];
             }
         }
