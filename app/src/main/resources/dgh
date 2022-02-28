@@ -1,12 +1,26 @@
 $education
 Any
+    Preschool
+    Gradeschool
+        1st-4th
+        5th-6th
+        7th-8th
+        9th
+        10th
+        11th
+        12th
     Secondary
         Primary School
-        Secondary School
-    University
-        Bachelors
-        Masters
-        PhD
+        HS-grad
+    Higher Education
+        Prof-school
+        Assoc-voc
+        Assoc-acdm
+        University
+            Some-college
+            Bachelors
+            Masters
+            Doctorate
 $workclass
 Any
     Non-Gov
@@ -27,8 +41,11 @@ $marital-status
 Any
     Partnered
         Married
-        Married-civ-spouse
+            Married-civ-spouse
+            Married-spouse-absent
+            Married-AF-spouse
     Single
+        Separated
         Never-married
         Divorced
         Widowed
@@ -41,15 +58,15 @@ Any
     Labourer
         Handlers-cleaners
         Craft-repair
-        Farming-fising
+        Farming-fishing
         Transport-moving
         Machine-op-inspct
         Armed-forces
     Services
         Protective-serv
         Priv-jouse-serv
-        Prof-speciality
-        Other-Service
+        Prof-specialty
+        Other-service
         Tech-support
 $relationship
 Any
@@ -68,18 +85,59 @@ Any
     Asian
     Amer-Indian-Eskimo
     Asian-Pac-Islander
+    Other
 $country
 World-Wide 
     North-America
         United-States
+            Outlying-US(Guam-USVI-etc)
         Canada
+    South-America
+        Cuba
+        Mexico
+        Puerto-Rico
+        Honduras
+        Columbia
+        El-Salvador
+        Peru
+    Central-America
+        Guatemala
+        Jamaica
+        Haiti
+        Dominican-Republic
+        Trinadad&Tobago
+        Nicaragua
+    Asia
+        India
+        Philippines
+        Cambodia
+        Thailand
+        Laos
+        Taiwan
+        China
+        Japan
+        Vietnam
+        Hong
+    Africa
+        Ecuador
     Europe
+        Ireland
+        Hungary
+        Holand-Netherlands
         UnitedKingdom
             Scotland
             England
+        Italy
+        France
         Germany
-        Eu-Other
+        Poland
+        Portugal
+        Yogoslavia
+        Greece
+    Middle-East
+        Iran
     WW-Other
+        South
 $salary
 Any
     <=50K
