@@ -129,7 +129,7 @@ public class App {
 
                 // Calculate information loss, if less than aveInfoLoss threshold insert into
                 // SetC_ok
-                if (informationLoss(copyOfC_j) < this.aveInfoLoss) {
+                if (copyOfC_j.informationLoss() < this.aveInfoLoss) {
                     SetC_ok.add(C_j);
                 }
             } catch (CloneNotSupportedException e) {
@@ -284,9 +284,9 @@ public class App {
             // aveInfoLoss is updated to be the average information loss of
             // the most recent k-anonymized clusters including the new ones
             // note below is not right what does it mean?
-            this.aveInfoLoss = informationLoss(C_i);
+            this.aveInfoLoss = C_i.informationLoss();
 
-            if (informationLoss(C_i) < this.aveInfoLoss) {
+            if (C_i.informationLoss() < this.aveInfoLoss) {
                 this.anonymisedClusters.add(C_i);
             } else {
                 // delete C_i from non-k anonymised clusters;
