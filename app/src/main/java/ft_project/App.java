@@ -8,6 +8,7 @@ public class App {
     private int k, delta, beta, aveInfoLoss, thresholdInfoLoss, l, a_s;
 
     private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
+    private Map<String, DGH> DGHs;
     
 
     public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class App {
 
         // create data stream
         Stream dataStream = new Stream("src/main/resources/adult.csv");
-        Map<String, DGH> DGHs = new DGHReader("src/main/resources/dgh").DGHs;
+        app.setDGHs( new DGHReader("src/main/resources/dgh").DGHs);
 
         // run CASTLE
         app.castle(dataStream, k, delta, beta, l, a_s);
@@ -34,6 +35,10 @@ public class App {
         dataStream.close();
     }
 
+    public void setDGHs(Map<String, DGH> dghs){
+        DGHs = dghs;
+    }
+    
     public void castle(Stream s, int k, int delta, int beta) {
         // set default algorithm parameters
         this.k = k;
@@ -53,7 +58,7 @@ public class App {
             Cluster c = bestSelection(t);
             if (c == null) {
                 // create new cluster on t and insert it into nonAnonymisedClusters
-                nonAnonymisedClusters.add(new Cluster(t));
+                nonAnonymisedClusters.add(new Cluster(t, DGHs));
             } else {
                 c.add(t); // add tuple t to cluster c
             }
@@ -315,7 +320,7 @@ public class App {
             Tuple t = B.get(random.nextInt(B.size()));
 
             // Create a new sub-cluster C_new over t;
-            Cluster C_new = new Cluster(t);
+            Cluster C_new = new Cluster(t, DGHs);
 
             if (B.isEmpty()) {
                 // delete B
@@ -444,7 +449,7 @@ public class App {
             Tuple t = B.get(random.nextInt(B.size()));
 
             // generate a sub-cluster C_sub over t;
-            Cluster C_sub = new Cluster(t);
+            Cluster C_sub = new Cluster(t, DGHs);
 
             // delete t from B;
             B.remove(t);
