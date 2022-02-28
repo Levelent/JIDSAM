@@ -29,14 +29,14 @@ Any
         Married
         Married-civ-spouse
     Single
-        Never-Married
+        Never-married
         Divorced
         Widowed
 $occupation
 Any
     Office
-        Adm-Clerical
-        Exec-Managerial
+        Adm-clerical
+        Exec-managerial
         Sales
     Labourer
         Handlers-cleaners
@@ -51,15 +51,15 @@ Any
         Prof-speciality
         Other-Service
         Tech-support
-$relationsip
+$relationship
 Any
     Immediate
         Husband
         Wife
-        Own-Child
+        Own-child
     Other
-        Other-Relative
-        Not-in-Family
+        Other-relative
+        Not-in-family
         Unmarried
 $race
 Any
@@ -68,7 +68,6 @@ Any
     Asian
     Amer-Indian-Eskimo
     Asian-Pac-Islander
-
 $country
 World-Wide 
     North-America
