@@ -44,7 +44,7 @@ public class DGHReader {
                 if(strLine.charAt(0) == '$'){
                     //New tree needs created
                     if(latestDGH != null){
-                        System.out.println(latestDGH);
+                        //System.out.println(latestDGH);
                     }
                     DGH newDGH = new DGH(strLine.substring(1).strip() );
                     DGHs.put(newDGH.name, newDGH);

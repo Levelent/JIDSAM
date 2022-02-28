@@ -26,16 +26,13 @@ public class DGH {
         if(nodeValues.contains(data) || !nodeValues.contains(localRootName)){ 
             //Should probably deliniate between whether it cant be added because
             //it already exists or because the localRoot couldnt be found
-            System.out.println(localRootName+" Cannot be found");
+
             return false;
         }
         
         Node localRoot = root.find(localRootName); //Find the correct node to add a child to... relying on this working if localRootName exists in our set
         if(localRoot == null){
-            System.out.println(this.root);
-            System.out.println("---");
-            System.out.println(localRootName);
-            System.out.println(data);
+
         }
         localRoot.add(data); //add the child
         nodeValues.add(data) ;
@@ -71,22 +68,64 @@ public class DGH {
         return find(localRootName).countNodes(0);
     }
 
+    public String findCommonAncestor(String rootA, String rootB){
+        Node a = root.find(rootA);
+        Node b = root.find(rootB);
+
+        if(a == null || b == null){
+            return null;
+        }
+
+        if(rootA.equals(rootB)){
+            return rootA;
+        }
+
+        HashSet<String> found = new HashSet<String>();
+        String lastA = a.data;
+        String lastB = b.data;
+        while(!(a == null && b == null)){
+            
+            lastA = (a==null)? lastA : a.data;
+            lastB = (b==null)? lastB : b.data;
+
+            found.add(lastA);
+            if(found.contains(lastB)){
+                return lastB;
+            }else{
+                found.add(lastB);
+            }
+
+            a = (a == null) ? null : a.parent;
+            b = (b == null) ? null : b.parent;
+        }
+        
+        return null;
+
+    }
+
     public String toString(){
         return this.root.toString();
     }
 
     public static class Node {
-        private String data;
-        private Node parent;
+        public final String data;
+        public final Node parent;
         private List<Node> children;
 
         Node(String data) {
             this.data = data;
             this.children = new ArrayList<Node>();
+            parent = null;
+        }
+
+        Node(String data, Node parent) {
+            this.data = data;
+            this.children = new ArrayList<Node>();
+            this.parent = parent;
         }
 
         public void add(String data) {
-            children.add(new Node(data));
+            children.add(new Node(data, this));
         }
 
         /**
