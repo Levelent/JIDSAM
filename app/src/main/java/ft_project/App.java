@@ -5,7 +5,8 @@ import java.util.*;
 public class App {
     private Boolean lDiversityEnabled = false;
 
-    private int k, delta, beta, aveInfoLoss, thresholdInfoLoss, l, a_s;
+    private int k, delta, beta, l, a_s;
+    private float aveInfoLoss, thresholdInfoLoss;
 
     private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
     private Map<String, DGH> DGHs;
@@ -88,11 +89,11 @@ public class App {
 
     public Cluster bestSelection(Tuple t) {
         // used to keep track of clusters for a given enlargement value
-        Map<Integer, Set<Cluster>> enlargementMap = new HashMap<>();
+        Map<Float, Set<Cluster>> enlargementMap = new HashMap<>();
 
         for (Cluster C_j : this.nonAnonymisedClusters) {
             // get the cluster enlargement value if given t
-            int e = enlargement(C_j, t);
+            float e = enlargement(C_j, t);
 
             // if enlargement value is is not already in enlargement map then initialize and
             // empty cluster list
@@ -112,7 +113,7 @@ public class App {
         }
 
         // Let min be the minimum element in E;
-        int minEnlargement = Collections.min(enlargementMap.keySet());
+        float minEnlargement = Collections.min(enlargementMap.keySet());
 
         // Let SetC_min be the set of clusters C~ in nonAnonymisedClusters with
         // Enlargement(C~, t) = min;
@@ -227,7 +228,7 @@ public class App {
     public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {
         // This process continues until C’s size is at least k.
         while (c.size() >= this.k) {
-            int smallestEnlargement = 0;
+            float smallestEnlargement = 0;
             Cluster clusterWithSmallest = null;
             for (Cluster toMergeCluster : clusterList) {
                 if (c == toMergeCluster) {
@@ -237,7 +238,7 @@ public class App {
 
                 // calculate the enlargement of C due to the possible merge with Ci.
                 // and track which would bring the minimum enlargement
-                int possibleEnlargement = enlargement(c, toMergeCluster);
+                float possibleEnlargement = enlargement(c, toMergeCluster);
                 if (clusterWithSmallest == null || possibleEnlargement < smallestEnlargement) {
                     clusterWithSmallest = toMergeCluster;
                     smallestEnlargement = possibleEnlargement;
@@ -341,8 +342,8 @@ public class App {
 
                 // pick one of its tuples t2 and calculate t2 distance to t;
                 Tuple t2 = b.get(random.nextInt(b.size()));
-                int t2TotDistance = enlargement(t2, t);
-                int t2ToRootDistance = enlargement(t2, H[0]);
+                float t2TotDistance = enlargement(t2, t);
+                float t2ToRootDistance = enlargement(t2, H[0]);
 
                 if (t2TotDistance < t2ToRootDistance || H[0] == null) {
                     // goal is for a min-distance-heap
@@ -394,10 +395,10 @@ public class App {
 
             // find nearest cluster of t_i in SC, and add all the tuples in B_i to it;
             Cluster nearestCluster = null;
-            int smallestEnlargement = 0;
+            float smallestEnlargement = 0;
             for (Cluster c_possible : SC) {
                 // nearest is cluster that requires min enlargement to enclose
-                int enlargementRequired = enlargement(c_possible, t_i);
+                float enlargementRequired = enlargement(c_possible, t_i);
                 if (nearestCluster == null || enlargementRequired < smallestEnlargement) {
                     nearestCluster = c_possible;
                     smallestEnlargement = enlargementRequired;
@@ -462,7 +463,7 @@ public class App {
 
                 // Sort tuples of B_j by ascending order of their enlargement e_i;
                 Comparator<Tuple> sortByEnlargementComparator = (Tuple t1,
-                        Tuple t2) -> Integer.compare(enlargement(C_sub, t1), enlargement(C_sub, t2));
+                        Tuple t2) -> Float.compare(enlargement(C_sub, t1), enlargement(C_sub, t2));
                 Collections.sort(B_j, sortByEnlargementComparator);
 
                 // Let T_j be the set of the first k * (B_j.size() / sum of bucket sizes) tuples
@@ -495,9 +496,9 @@ public class App {
             for (Tuple t_i : B) {
                 // C_near = nearest subCluster of t_i in SC;
                 Cluster C_near = null;
-                int smallestEnlargement = 0;
+                float smallestEnlargement = 0;
                 for (Cluster possibleCluster : SC) {
-                    int distanceFromT_iToPossible = enlargement(possibleCluster, t_i);
+                    float distanceFromT_iToPossible = enlargement(possibleCluster, t_i);
                     if (C_near == null || distanceFromT_iToPossible < smallestEnlargement) {
                         C_near = possibleCluster;
                         smallestEnlargement = distanceFromT_iToPossible;
@@ -566,33 +567,51 @@ public class App {
         return 0;
     }
 
-    public int enlargement(Cluster c, Tuple t) {
-        // Depends on quantitative and qualitative data types
-        // Would probably need to pass a bunch of parameters not specified by the paper
-        // in here
+    public float enlargement(Cluster c, Tuple t) {
+        
+        try{
+            Cluster clone = (Cluster) c.clone();
+            clone.add(t);
 
-        // TODO
+            return clone.informationLoss() - c.informationLoss();
+
+        }catch(CloneNotSupportedException e){
+            e.printStackTrace();
+        }
 
         return 0;
     }
 
-    public int enlargement(Cluster c1, Cluster c2) {
+    public float enlargement(Cluster c1, Cluster c2) {
         // to finish merge clusters, need to be able to know the potential enlargement
         // if two clusters were to be merged
 
-        // TODO
+        // I Assume this is what they want... as if all tuples from one were added to the other
+        try{
+            Cluster clone = (Cluster) c1.clone();
+            clone.add(c2.getTuples());
+
+            return clone.informationLoss() - c1.informationLoss();
+
+        }catch(CloneNotSupportedException e){
+            e.printStackTrace();
+        }
 
         return 0;
     }
 
-    public int enlargement(Tuple c1, Tuple c2) {
-        if (c1 == null || c2 == null) {
+    public float enlargement(Tuple t1, Tuple t2) {
+        if (t1 == null || t2 == null) {
             return 0;
         }
 
         // TODO
+        //This feels like a dirty solution
+        Cluster c1 = new Cluster(t1, DGHs);
+        Cluster c2 = new Cluster(t2, DGHs);
 
-        // used in split to find "distance" between two tuples
-        return 0;
+        return enlargement(c1,c2);
+
+
     }
 }
