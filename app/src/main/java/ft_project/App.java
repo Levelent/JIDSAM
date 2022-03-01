@@ -292,6 +292,7 @@ public class App {
             if (C_i.informationLoss() < this.aveInfoLoss) {
                 this.anonymisedClusters.add(C_i);
             } else {
+                // TODO is this right? doesn't look like it on the paper
                 // delete C_i from non-k anonymised clusters;
                 this.nonAnonymisedClusters.remove(C_i);
             }
