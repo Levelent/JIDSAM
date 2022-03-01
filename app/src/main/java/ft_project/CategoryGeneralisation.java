@@ -1,7 +1,5 @@
 package ft_project;
 
-import ft_project.DGH;
-
 public class CategoryGeneralisation extends Generalisation implements Cloneable {
 
     private DGH dgh;
@@ -13,7 +11,7 @@ public class CategoryGeneralisation extends Generalisation implements Cloneable 
 
     CategoryGeneralisation(DGH dgh, String localRoot) {
         this.dgh = dgh;
-        this.localRoot = localRoot; // TODO: Throw an error if localRoot doesnt exist in the dgh
+        this.localRoot = localRoot; // TODO: Throw an error if localRoot does not exist in the dgh
     }
 
     public float infoLoss() {
