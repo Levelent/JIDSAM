@@ -34,9 +34,10 @@ public class Cluster implements Cloneable {
     }
 
     public void merge(Cluster c) {
-        // TODO update generalisations on insert?
-
-        tuples.addAll(c.getTuples());
+        // add all tuples in c to t
+        for (Tuple t : c.getTuples()) {
+            this.add(t);
+        }
     }
 
     public Set<String> distinctValues(int a_s) {
