@@ -25,8 +25,8 @@ public class App {
         App app = new App();
 
         // create data stream
-        Stream dataStream = new Stream("./app/src/main/resources/adult-100.csv");
-        app.setDGHs(new DGHReader("./app/src/main/resources/dgh").DGHs);
+        Stream dataStream = new Stream("./src/main/resources/adult-100.csv");
+        app.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
 
         // run CASTLE
         app.castle(dataStream, k, delta, beta, l, a_s);

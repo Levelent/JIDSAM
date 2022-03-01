@@ -26,7 +26,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'coursework.App'
+    mainClass = 'ft_project.App'
 }
 
 tasks.named('test') {
