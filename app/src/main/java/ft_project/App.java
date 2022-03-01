@@ -226,7 +226,7 @@ public class App {
 
     public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {
         // This process continues until C’s size is at least k.
-        while (c.size() >= this.k) {
+        while (c.size() < this.k) {
             float smallestEnlargement = 0;
             Cluster clusterWithSmallest = null;
             for (Cluster toMergeCluster : clusterList) {
