@@ -1,6 +1,6 @@
 package ft_project;
 
-public class CategoryGeneralisation extends Generalisation implements Cloneable {
+public class CategoryGeneralisation extends Generalisation {
 
     private DGH dgh;
     private String localRoot; // The name of the node the generalisation is locally rooted

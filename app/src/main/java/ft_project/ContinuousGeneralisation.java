@@ -1,6 +1,6 @@
 package ft_project;
 
-public class ContinuousGeneralisation extends Generalisation implements Cloneable {
+public class ContinuousGeneralisation extends Generalisation {
     private float UB;
     private float LB;
     private float ub;
