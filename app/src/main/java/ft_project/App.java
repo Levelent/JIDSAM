@@ -471,6 +471,8 @@ public class App {
                 // Let T_j be the set of the first k * (B_j.size() / sum of bucket sizes) tuples
                 // in B_j;
                 Set<Tuple> T_j = new LinkedHashSet<>();
+
+                // TODO this line is causing the issues as B_j size is 1 and i < 2
                 for (int i = 0; i < this.k * (B_j.size() / BS.values().stream().mapToInt(List::size).sum()); i++) {
                     T_j.add(B_j.get(i));
                 }
