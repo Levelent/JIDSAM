@@ -1,6 +1,6 @@
 package ft_project;
 
-public class ContinuousGeneralisation extends Generalisation implements Cloneable{
+public class ContinuousGeneralisation extends Generalisation implements Cloneable {
     private float UB;
     private float LB;
     private float ub;
@@ -44,21 +44,21 @@ public class ContinuousGeneralisation extends Generalisation implements Cloneabl
     }
 
     public Boolean updateGeneralisation(float data) {
-        if(data<=lb && data>=LB){
+        if (data <= lb && data >= LB) {
             lb = data;
             return true;
-        }else if(data>=ub && data <=UB){
+        } else if (data >= ub && data <= UB) {
             ub = data;
             return true;
         }
         return false;
     }
 
-    public String toString(){
-        return "[ " +Float.toString(lb) + " " +Float.toString(ub) +" ]";
+    public String toString() {
+        return "[ " + Float.toString(lb) + " " + Float.toString(ub) + " ]";
     }
 
-    public Object clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException {
         ContinuousGeneralisation cg = (ContinuousGeneralisation) super.clone();
         cg.UB = UB;
         cg.LB = LB;

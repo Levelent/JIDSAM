@@ -2,7 +2,7 @@ package ft_project;
 
 import ft_project.DGH;
 
-public class CategoryGeneralisation extends Generalisation implements Cloneable{
+public class CategoryGeneralisation extends Generalisation implements Cloneable {
 
     private DGH dgh;
     private String localRoot; // The name of the node the generalisation is locally rooted
@@ -13,7 +13,7 @@ public class CategoryGeneralisation extends Generalisation implements Cloneable{
 
     CategoryGeneralisation(DGH dgh, String localRoot) {
         this.dgh = dgh;
-        this.localRoot = localRoot; //TODO: Throw an error if localRoot doesnt exist in the dgh
+        this.localRoot = localRoot; // TODO: Throw an error if localRoot doesnt exist in the dgh
     }
 
     public float infoLoss() {
@@ -23,19 +23,19 @@ public class CategoryGeneralisation extends Generalisation implements Cloneable{
     public Boolean updateGeneralisation(String gen) {
         String newLocalRoot = dgh.findCommonAncestor(localRoot, gen);
 
-        if(newLocalRoot == null){
-            return false; 
+        if (newLocalRoot == null) {
+            return false;
         }
         localRoot = newLocalRoot;
         return true;
     }
 
-    public String toString(){
+    public String toString() {
         return localRoot;
 
     }
 
-    public Object clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException {
         CategoryGeneralisation cg = (CategoryGeneralisation) super.clone();
 
         cg.dgh = dgh;

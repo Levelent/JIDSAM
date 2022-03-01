@@ -1,26 +1,27 @@
 package ft_project;
 
-public class Generalisation implements Cloneable{
+public class Generalisation implements Cloneable {
 
-    Generalisation(){};
+    Generalisation() {
+    };
 
-    public float infoLoss(){ // Needs to be overridden in extended class
+    public float infoLoss() { // Needs to be overridden in extended class
         return 0;
     }
 
-    public Boolean updateGeneralisation(){
+    public Boolean updateGeneralisation() {
         return false;
     }
 
-    public Boolean updateGeneralisation(String s){
+    public Boolean updateGeneralisation(String s) {
         return false;
     }
 
-    public Boolean updateGeneralisation(float f){
+    public Boolean updateGeneralisation(float f) {
         return false;
     }
 
-    public Object clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException {
         Generalisation g = (Generalisation) super.clone();
 
         return g;

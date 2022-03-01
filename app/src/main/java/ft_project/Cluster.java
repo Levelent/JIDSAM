@@ -12,21 +12,21 @@ public class Cluster implements Cloneable {
 
     public Cluster(Tuple t, Map<String, DGH> d) {
         tuples = new LinkedList<Tuple>();
-        // Create our list of generalisations. Everything that doesn't exist as a DGH is continuous, except pid and tid
+        // Create our list of generalisations. Everything that doesn't exist as a DGH is
+        // continuous, except pid and tid
         generalisations = new HashMap<String, Generalisation>();
-        for(String heading: t.headings){
-            
-            if(heading.equals( "pid") || heading.equals("tid")){
+        for (String heading : t.headings) {
+
+            if (heading.equals("pid") || heading.equals("tid")) {
                 continue;
             }
             DGH dgh = d.get(heading);
 
-
-            if(dgh == null){
-                //Must be a continuous generalisation
-                generalisations.put(heading, new ContinuousGeneralisation( Float.parseFloat( t.getValue(heading) ) ) );
-            }else{
-                generalisations.put(heading, new CategoryGeneralisation( dgh, t.getValue(heading) ));
+            if (dgh == null) {
+                // Must be a continuous generalisation
+                generalisations.put(heading, new ContinuousGeneralisation(Float.parseFloat(t.getValue(heading))));
+            } else {
+                generalisations.put(heading, new CategoryGeneralisation(dgh, t.getValue(heading)));
             }
         }
 
@@ -59,20 +59,19 @@ public class Cluster implements Cloneable {
 
     public void add(Tuple t) {
         tuples.add(t);
-        for(String h:t.headings){
+        for (String h : t.headings) {
             Generalisation generalisation = generalisations.get(h);
-            if(generalisation == null){
+            if (generalisation == null) {
                 continue;
             }
 
-            //Test if the value is a number
-            try{
+            // Test if the value is a number
+            try {
                 float num = Float.parseFloat(t.getValue(h));
                 generalisation.updateGeneralisation(num);
-            }catch(NumberFormatException e){
+            } catch (NumberFormatException e) {
                 generalisation.updateGeneralisation(t.getValue(h));
             }
-
 
         }
     }
@@ -83,12 +82,12 @@ public class Cluster implements Cloneable {
         }
     }
 
-    public float informationLoss(){
+    public float informationLoss() {
         float average = 0;
-        for(Generalisation g: generalisations.values()){
+        for (Generalisation g : generalisations.values()) {
             average += g.infoLoss();
         }
-        return average/generalisations.size();
+        return average / generalisations.size();
     }
 
     public void removeSet(Set<Tuple> s) {
@@ -111,11 +110,11 @@ public class Cluster implements Cloneable {
         // output generalisations
         out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
         for (String h : tuples.get(0).headings) {
-            //TODO: Add the heading the generalisation belongs to
+            // TODO: Add the heading the generalisation belongs to
             Generalisation g = generalisations.get(h);
-            out += (g == null) ? "" : g.toString()+" ";
+            out += (g == null) ? "" : g.toString() + " ";
         }
-        out+=System.lineSeparator();
+        out += System.lineSeparator();
 
         // output all tuples;
         out += ANSI_CYAN + "Tuples" + ANSI_RESET + System.lineSeparator();
@@ -137,7 +136,7 @@ public class Cluster implements Cloneable {
         }
 
         c.generalisations = new HashMap<String, Generalisation>();
-        for(String key : generalisations.keySet()){
+        for (String key : generalisations.keySet()) {
             Generalisation cloned = (Generalisation) generalisations.get(key).clone();
             c.generalisations.put(key, cloned);
         }
