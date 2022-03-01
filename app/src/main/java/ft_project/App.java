@@ -208,7 +208,7 @@ public class App {
 
                     Set<String> distinctValues = new HashSet<>();
                     for (Cluster c_i : nonAnonymisedClusters) {
-                        distinctValues.addAll(c.distinctValues(this.a_s));
+                        distinctValues.addAll(c_i.distinctValues(this.a_s));
                     }
 
                     if (distinctValues.size() >= this.l) {
