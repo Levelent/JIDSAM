@@ -29,6 +29,9 @@ public class App {
         app.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
 
         // run CASTLE
+        // app.castle(dataStream, k, delta, beta);
+
+        // run CASTLE with l diversity
         app.castle(dataStream, k, delta, beta, l, a_s);
 
         // close file
@@ -383,10 +386,10 @@ public class App {
         }
 
         // for (Bucket B_i : BS)
-        Iterator<String> BSKey = BS.keySet().iterator();
-        while (BSKey.hasNext()) {
-            String pid = BSKey.next();
-            List<Tuple> b_i = BS.get(pid);
+        Iterator<Map.Entry<String, List<Tuple>>> iterator = BS.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, List<Tuple>> entry = iterator.next();
+            List<Tuple> b_i = entry.getValue();
 
             // pick a tuple t_i in B_i;
             Random random = new Random();
@@ -408,7 +411,7 @@ public class App {
             nearestCluster.add(b_i);
 
             // delete B_i;
-            BS.remove(pid);
+            iterator.remove();
         }
 
         return SC;
@@ -455,10 +458,10 @@ public class App {
             B.remove(t);
 
             // for (Bucket B_j : BS)
-            Iterator<String> BSKey = BS.keySet().iterator();
-            while (BSKey.hasNext()) {
-                String pid = BSKey.next();
-                List<Tuple> B_j = BS.get(pid);
+            Iterator<Map.Entry<String, List<Tuple>>> iterator = BS.entrySet().iterator();
+            while (iterator.hasNext()) {
+                Map.Entry<String, List<Tuple>> entry = iterator.next();
+                List<Tuple> B_j = entry.getValue();
 
                 // Sort tuples of B_j by ascending order of their enlargement e_i;
                 Comparator<Tuple> sortByEnlargementComparator = (Tuple t1,
@@ -468,7 +471,7 @@ public class App {
                 // Let T_j be the set of the first k * (B_j.size() / sum of bucket sizes) tuples
                 // in B_j;
                 Set<Tuple> T_j = new LinkedHashSet<>();
-                for (int i = 0; i < k * (B_j.size() / BS.values().stream().mapToInt(List::size).sum()); i++) {
+                for (int i = 0; i < this.k * (B_j.size() / BS.values().stream().mapToInt(List::size).sum()); i++) {
                     T_j.add(B_j.get(i));
                 }
 
@@ -480,17 +483,18 @@ public class App {
 
                 if (B_j.size() == 0) {
                     // delete B_j from BS
-                    BS.remove(pid);
+                    // iterator last returned pid the key for B_j so removes B_j from BS
+                    iterator.remove();
                 }
             }
             SC.add(C_sub);
         }
 
         // for (Bucket B : BS)
-        Iterator<String> BSKey = BS.keySet().iterator();
-        while (BSKey.hasNext()) {
-            String pid = BSKey.next();
-            List<Tuple> B = BS.get(pid);
+        Iterator<Map.Entry<String, List<Tuple>>> iterator = BS.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, List<Tuple>> entry = iterator.next();
+            List<Tuple> B = entry.getValue();
 
             for (Tuple t_i : B) {
                 // C_near = nearest subCluster of t_i in SC;
@@ -509,7 +513,7 @@ public class App {
             }
 
             // delete B;
-            BS.remove(pid);
+            iterator.remove();
         }
 
         for (Cluster sc_i : SC) {
