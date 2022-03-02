@@ -29,10 +29,10 @@ public class App {
         app.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
 
         // run CASTLE
-        // app.castle(dataStream, k, delta, beta);
+        app.castle(dataStream, k, delta, beta);
 
         // run CASTLE with l diversity
-        app.castle(dataStream, k, delta, beta, l, a_s);
+        // app.castle(dataStream, k, delta, beta, l, a_s);
 
         // close file
         dataStream.close();
@@ -353,12 +353,13 @@ public class App {
                     // t2 should end up at the top
 
                     // Insert t2 into end of list
-                    H[H.length + 1] = t2;
+                    H[H.length - 1] = t2;
 
                     // adjust H accordingly - this moves t2 to head as it is know to have smallest
                     // distance to t
-                    int current = H.length;
-                    while (enlargement(H[current], t) < enlargement(H[this.heapParent(H, current)], t)) {
+                    int current = H.length - 1;
+                    while (H[this.heapParent(H, current)] == null
+                            || enlargement(H[current], t) < enlargement(H[this.heapParent(H, current)], t)) {
                         H = this.heapSwap(H, current, this.heapParent(H, current));
                         current = this.heapParent(H, current);
                     }
@@ -367,6 +368,10 @@ public class App {
 
             // for each node in the heap
             for (Tuple n : H) {
+                if (n == null) {
+                    continue;
+                }
+
                 // insert n into C_new
                 C_new.add(t);
 
