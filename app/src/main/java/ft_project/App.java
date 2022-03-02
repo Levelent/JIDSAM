@@ -13,8 +13,8 @@ public class App {
 
     public static void main(String[] args) {
         // predefine thresholds/constants
-        int k = 2;
-        int delta = 2;
+        int k = 10;
+        int delta = 100;
         int beta = 2;
 
         // l diversity thresholds/constants
@@ -25,14 +25,14 @@ public class App {
         App app = new App();
 
         // create data stream
-        Stream dataStream = new Stream("./src/main/resources/adult-100.csv");
-        app.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
+        Stream dataStream = new Stream("./app/src/main/resources/adult-100000.csv");
+        app.setDGHs(new DGHReader("./app/src/main/resources/dgh").DGHs);
 
         // run CASTLE
-        // app.castle(dataStream, k, delta, beta);
+        app.castle(dataStream, k, delta, beta);
 
         // run CASTLE with l diversity
-        app.castle(dataStream, k, delta, beta, l, a_s);
+        // app.castle(dataStream, k, delta, beta, l, a_s);
 
         // close file
         dataStream.close();
@@ -353,12 +353,13 @@ public class App {
                     // t2 should end up at the top
 
                     // Insert t2 into end of list
-                    H[H.length + 1] = t2;
+                    H[H.length - 1] = t2;
 
                     // adjust H accordingly - this moves t2 to head as it is know to have smallest
                     // distance to t
-                    int current = H.length;
-                    while (enlargement(H[current], t) < enlargement(H[this.heapParent(H, current)], t)) {
+                    int current = H.length - 1;
+                    while (H[this.heapParent(H, current)] == null
+                            || enlargement(H[current], t) < enlargement(H[this.heapParent(H, current)], t)) {
                         H = this.heapSwap(H, current, this.heapParent(H, current));
                         current = this.heapParent(H, current);
                     }
@@ -367,6 +368,9 @@ public class App {
 
             // for each node in the heap
             for (Tuple n : H) {
+                if (n == null) {
+                    continue;
+                }
                 // insert n into C_new
                 C_new.add(t);
 
@@ -442,7 +446,8 @@ public class App {
         }
 
         // size of bs > l and sum of bucket sizes > k
-        while (BS.size() >= this.l && BS.values().stream().mapToInt(List::size).sum() >= this.k) {
+        int sum;
+        while (BS.size() >= this.l && (sum = BS.values().stream().mapToInt(List::size).sum()) >= this.k) {
             // randomly select a B from BS;
             Random random = new Random();
             List<String> keys = new ArrayList<String>(BS.keySet());
@@ -474,7 +479,7 @@ public class App {
                 Set<Tuple> T_j = new LinkedHashSet<>();
 
                 // TODO this line is causing the issues as B_j size is 1 and i < 2
-                for (int i = 0; i < this.k * (B_j.size() / BS.values().stream().mapToInt(List::size).sum()); i++) {
+                for (int i = 0; i < this.k * (B_j.size() / sum); i++) {
                     T_j.add(B_j.get(i));
                 }
 
@@ -520,21 +525,29 @@ public class App {
         }
 
         for (Cluster sc_i : SC) {
-            for (Tuple t_bar : sc_i.getTuples()) {
-                // let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
-                Set<Tuple> G_t = new LinkedHashSet<>();
-                for (Tuple t : c.getTuples()) {
-                    if (t.getPid() == t_bar.getPid()) {
-                        G_t.add(t);
+
+            try {
+                Cluster clone = (Cluster) sc_i.clone();
+                for (Tuple t_bar : clone.getTuples()) {
+                    // let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
+                    Set<Tuple> G_t = new LinkedHashSet<>();
+                    for (Tuple t : c.getTuples()) {
+                        if (t.getPid() == t_bar.getPid()) {
+                            G_t.add(t);
+                        }
                     }
+
+                    // insert G_t into SC_i;
+                    sc_i.add(G_t);
+
+                    // delete G_t from C;
+                    c.removeSet(G_t);
                 }
 
-                // insert G_t into SC_i;
-                sc_i.add(G_t);
-
-                // delete G_t from C;
-                c.removeSet(G_t);
+            } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
             }
+
         }
 
         return SC;
@@ -591,6 +604,7 @@ public class App {
 
     public float enlargement(Tuple t1, Tuple t2) {
         if (t1 == null || t2 == null) {
+
             return 0;
         }
 

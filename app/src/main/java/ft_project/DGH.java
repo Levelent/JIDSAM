@@ -65,7 +65,13 @@ public class DGH {
     }
 
     public int countNodes(String localRootName) {
-        return find(localRootName).countNodes(0);
+        try {
+            return find(localRootName).countNodes(0);
+        } catch (NullPointerException e) {
+            System.out.println(localRootName);
+            return find(root.data).countNodes(0);
+        }
+
     }
 
     public String findCommonAncestor(String rootA, String rootB) {
