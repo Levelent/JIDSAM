@@ -525,7 +525,6 @@ public class App {
         }
 
         for (Cluster sc_i : SC) {
-
             try {
                 Cluster clone = (Cluster) sc_i.clone();
                 for (Tuple t_bar : clone.getTuples()) {
@@ -543,7 +542,6 @@ public class App {
                     // delete G_t from C;
                     c.removeSet(G_t);
                 }
-
             } catch (CloneNotSupportedException e) {
                 e.printStackTrace();
             }
