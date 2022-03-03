@@ -303,7 +303,7 @@ public class App {
             if (C_i.informationLoss() < this.aveInfoLoss) {
                 this.anonymisedClusters.add(C_i);
             }
-            // It seesm line 11 of output_cluster in the paper is redundant... technically
+            // It seems line 11 of output_cluster in the paper is redundant... technically
             // it will be handled by garbage collection
             this.nonAnonymisedClusters.remove(C_i);
         }
@@ -345,7 +345,7 @@ public class App {
 
             // for (Bucket b : BS \ B) calculate how close it is to our randomly selected
             // tuple
-            // and ensure that the clostest bucket is at the head of our heap
+            // and ensure that the closest bucket is at the head of our heap
             Iterator<String> BSKey = BS.keySet().iterator();
             List<Tuple> sortedTuples = new ArrayList<Tuple>();
             while (BSKey.hasNext()) {
@@ -418,18 +418,6 @@ public class App {
         }
 
         return SC;
-    }
-
-    private int heapParent(Tuple[] H, int index) {
-        return index / 2;
-    }
-
-    private Tuple[] heapSwap(Tuple[] H, int t1, int t2) {
-        Tuple tmp = H[t1];
-
-        H[t1] = H[t2];
-        H[t2] = tmp;
-        return H;
     }
 
     public Set<Cluster> splitL(Cluster c, Integer a_s) {
