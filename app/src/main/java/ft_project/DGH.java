@@ -165,7 +165,7 @@ public class DGH {
             for (int i = 0; i < depth; i++) {
                 tmp += "\t";
             }
-            tmp = tmp + this.data + "\n";
+            tmp = tmp + this.data + System.lineSeparator();
             for (Node child : children) {
                 tmp = child.tsHelper(depth + 1, tmp);
             }
@@ -173,7 +173,7 @@ public class DGH {
         }
 
         public String toString() {
-            String str = this.data + "\n";
+            String str = this.data + System.lineSeparator();
             for (Node child : children) {
                 str = child.tsHelper(1, str);
             }
