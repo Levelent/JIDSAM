@@ -106,7 +106,7 @@ public class Cluster implements Cloneable {
     }
 
     public String toString() {
-        String out = ANSI_YELLOW + "Cluster" + ANSI_RESET + System.lineSeparator();
+        String out = ANSI_YELLOW + "\nCluster" + ANSI_RESET + System.lineSeparator();
 
         // output generalisations
         out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();

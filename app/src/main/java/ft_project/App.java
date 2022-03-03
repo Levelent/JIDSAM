@@ -13,8 +13,8 @@ public class App {
 
     public static void main(String[] args) {
         // predefine thresholds/constants
-        int k = 10;
-        int delta = 100;
+        int k = 5;
+        int delta = 10;
         int beta = 2;
 
         // l diversity thresholds/constants
@@ -25,8 +25,11 @@ public class App {
         App app = new App();
 
         // create data stream
-        Stream dataStream = new Stream("./app/src/main/resources/adult-100000.csv");
-        app.setDGHs(new DGHReader("./app/src/main/resources/dgh").DGHs);
+        Stream dataStream = new Stream("../../resources/adult-100.csv");
+        app.setDGHs(new DGHReader("../../resources/dgh").DGHs);
+
+        // Stream dataStream = new Stream("./app/src/main/resources/adult-100.csv");
+        // app.setDGHs(new DGHReader("./app/src/main/resources/dgh").DGHs);
 
         // run CASTLE
         app.castle(dataStream, k, delta, beta);
@@ -287,15 +290,21 @@ public class App {
             // aveInfoLoss is updated to be the average information loss of
             // the most recent k-anonymized clusters including the new ones
             // note below is not right what does it mean?
-            this.aveInfoLoss = C_i.informationLoss();
+
+            float aveSum = 0;
+            HashSet<Cluster> cToAverage = new HashSet<Cluster>();
+            cToAverage.addAll(anonymisedClusters);
+            cToAverage.addAll(SC);
+            for (Cluster cl : cToAverage) {
+                aveSum += cl.informationLoss();
+            }
+            this.aveInfoLoss = aveSum / cToAverage.size();
 
             if (C_i.informationLoss() < this.aveInfoLoss) {
                 this.anonymisedClusters.add(C_i);
-            } else {
-                // TODO is this right? doesn't look like it on the paper
-                // delete C_i from non-k anonymised clusters;
-                this.nonAnonymisedClusters.remove(C_i);
             }
+            // It seesm line 11 of output_cluster in the paper is redundant... technically
+            // it will be handled by garbage collection
             this.nonAnonymisedClusters.remove(C_i);
         }
     }
@@ -316,11 +325,11 @@ public class App {
         while (BS.size() >= this.k) {
             // randomly select a bucket B from BS, and pick one of its tuples t;
             Random random = new Random();
-            List<String> keys = new ArrayList<String>(BS.keySet());
-            String randomKey = keys.get(random.nextInt(keys.size()));
+            List<String> uniquePIDs = new ArrayList<String>(BS.keySet());
+            String randomPID = uniquePIDs.get(random.nextInt(uniquePIDs.size()));
 
             // randomly selected bucket and tuple
-            List<Tuple> B = BS.get(randomKey);
+            List<Tuple> B = BS.get(randomPID);
             Tuple t = B.get(random.nextInt(B.size()));
 
             // Create a new sub-cluster C_new over t;
@@ -328,43 +337,32 @@ public class App {
 
             if (B.isEmpty()) {
                 // delete B
-                BS.remove(randomKey);
+                BS.remove(randomPID);
             }
 
             // H = heap with k-1 nodes, each with infinite distance to t;
             Tuple[] H = new Tuple[this.k - 1];
 
-            // for (Bucket b : BS \ B)
+            // for (Bucket b : BS \ B) calculate how close it is to our randomly selected
+            // tuple
+            // and ensure that the clostest bucket is at the head of our heap
             Iterator<String> BSKey = BS.keySet().iterator();
+            List<Tuple> sortedTuples = new ArrayList<Tuple>();
             while (BSKey.hasNext()) {
                 String pid = BSKey.next();
-                if (randomKey == pid) { // handles BS \ B
+                if (randomPID == pid) { // handles BS \ B... helps ensures k-anonymity
                     continue;
                 }
+
                 List<Tuple> b = BS.get(pid);
 
                 // pick one of its tuples t2 and calculate t2 distance to t;
                 Tuple t2 = b.get(random.nextInt(b.size()));
-                float t2TotDistance = enlargement(t2, t);
-                float t2ToRootDistance = enlargement(t2, H[0]);
-
-                if (t2TotDistance < t2ToRootDistance || H[0] == null) {
-                    // goal is for a min-distance-heap
-                    // t2 should end up at the top
-
-                    // Insert t2 into end of list
-                    H[H.length - 1] = t2;
-
-                    // adjust H accordingly - this moves t2 to head as it is know to have smallest
-                    // distance to t
-                    int current = H.length - 1;
-                    while (H[this.heapParent(H, current)] == null
-                            || enlargement(H[current], t) < enlargement(H[this.heapParent(H, current)], t)) {
-                        H = this.heapSwap(H, current, this.heapParent(H, current));
-                        current = this.heapParent(H, current);
-                    }
-                }
+                sortedTuples.add(t2);
             }
+            // the order of the comparison matters here
+            sortedTuples.sort((Tuple t1, Tuple t2) -> Float.compare(enlargement(t, t1), enlargement(t, t2)));
+            System.arraycopy(sortedTuples.toArray(), 0, H, 0, H.length);
 
             // for each node in the heap
             for (Tuple n : H) {
@@ -372,7 +370,7 @@ public class App {
                     continue;
                 }
                 // insert n into C_new
-                C_new.add(t);
+                C_new.add(n);
 
                 // let B_j be the bucket containing n;
                 List<Tuple> B_j = BS.get(n.getPid());
