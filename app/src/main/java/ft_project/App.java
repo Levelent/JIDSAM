@@ -286,11 +286,9 @@ public class App {
         for (Cluster C_i : SC) {
             System.out.print(C_i.toString()); // output all tuples in C_i with its generalisation;
 
-            // TODO Update aveInfoLoss according to informationLoss(C_i);
+            // Update aveInfoLoss according to informationLoss(C_i);
             // aveInfoLoss is updated to be the average information loss of
             // the most recent k-anonymized clusters including the new ones
-            // note below is not right what does it mean?
-
             float aveSum = 0;
             HashSet<Cluster> cToAverage = new HashSet<Cluster>();
             cToAverage.addAll(anonymisedClusters);
@@ -464,7 +462,6 @@ public class App {
                 // in B_j;
                 Set<Tuple> T_j = new LinkedHashSet<>();
 
-                // TODO this line is causing the issues as B_j size is 1 and i < 2
                 for (int i = 0; i < this.k * (B_j.size() / sum); i++) {
                     T_j.add(B_j.get(i));
                 }
@@ -553,7 +550,6 @@ public class App {
     }
 
     public float enlargement(Cluster c, Tuple t) {
-
         try {
             Cluster clone = (Cluster) c.clone();
             clone.add(t);
@@ -592,8 +588,6 @@ public class App {
             return 0;
         }
 
-        // TODO
-        // This feels like a dirty solution
         Cluster c1 = new Cluster(t1, DGHs);
         Cluster c2 = new Cluster(t2, DGHs);
 
