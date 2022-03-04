@@ -44,6 +44,7 @@ public class Tuple implements Cloneable {
             } else {
                 out += new CategoryGeneralisation(dgh, value);
             }
+            out += " ";
         }
 
         // output tuple;
