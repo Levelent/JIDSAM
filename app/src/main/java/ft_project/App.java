@@ -25,6 +25,11 @@ public class App {
         App app = new App();
 
         // create data stream
+
+        // Davids ones
+        // Stream dataStream = new Stream("./src/main/resources/adult-100.csv");
+        // app.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
+
         Stream dataStream = new Stream("../../resources/adult-100.csv");
         app.setDGHs(new DGHReader("../../resources/dgh").DGHs);
 
@@ -303,7 +308,9 @@ public class App {
             }
             // It seems line 11 of output_cluster in the paper is redundant... technically
             // it will be handled by garbage collection
-            this.nonAnonymisedClusters.remove(C_i);
+
+            // TODO this line does not make sense.. split never adds the sub clusters?
+            nonAnonymisedClusters.remove(C_i);
         }
     }
 
