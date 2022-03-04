@@ -469,7 +469,7 @@ public class App {
                 // in B_j;
                 Set<Tuple> T_j = new LinkedHashSet<>();
 
-                for (int i = 0; i < this.k * (B_j.size() / sum); i++) {
+                for (int i = 0; i < this.k * ((double) B_j.size() / sum); i++) {
                     T_j.add(B_j.get(i));
                 }
 
