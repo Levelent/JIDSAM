@@ -109,6 +109,10 @@ public class DGH {
 
     }
 
+    public String getRootValue() {
+        return this.root.data;
+    }
+
     public String toString() {
         return this.root.toString();
     }

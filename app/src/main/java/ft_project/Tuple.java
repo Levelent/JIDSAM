@@ -36,13 +36,13 @@ public class Tuple implements Cloneable {
                 continue;
             }
 
-            // TODO make this the most generalised possible
+            // suppress -> output most generalised possible
             DGH dgh = d.get(heading);
             if (dgh == null) {
                 // Must be a continuous generalisation
-                out += new ContinuousGeneralisation(Float.parseFloat(value));
+                out += (new ContinuousGeneralisation(Float.parseFloat(value))).getMaxGeneralisation();
             } else {
-                out += new CategoryGeneralisation(dgh, value);
+                out += dgh.getRootValue();
             }
             out += " ";
         }

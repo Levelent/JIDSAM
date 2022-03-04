@@ -30,6 +30,10 @@ public class ContinuousGeneralisation extends Generalisation {
         this.lb = value;
     }
 
+    public String getMaxGeneralisation() {
+        return "[ " + Float.toString(this.LB) + " " + Float.toString(this.UB) + " ]";
+    }
+
     public float infoLoss() {
         return (this.ub - this.lb) / (this.UB - this.LB);
     }
