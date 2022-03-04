@@ -27,20 +27,20 @@ public class App {
         // create data stream
 
         // Davids ones
-        // Stream dataStream = new Stream("./src/main/resources/adult-100.csv");
-        // app.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
+        Stream dataStream = new Stream("./src/main/resources/adult-100.csv");
+        app.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
 
-        Stream dataStream = new Stream("../../resources/adult-100.csv");
-        app.setDGHs(new DGHReader("../../resources/dgh").DGHs);
+        // Stream dataStream = new Stream("../../resources/adult-100.csv");
+        // app.setDGHs(new DGHReader("../../resources/dgh").DGHs);
 
         // Stream dataStream = new Stream("./app/src/main/resources/adult-100.csv");
         // app.setDGHs(new DGHReader("./app/src/main/resources/dgh").DGHs);
 
         // run CASTLE
-        app.castle(dataStream, k, delta, beta);
+        // app.castle(dataStream, k, delta, beta);
 
         // run CASTLE with l diversity
-        // app.castle(dataStream, k, delta, beta, l, a_s);
+        app.castle(dataStream, k, delta, beta, l, a_s);
 
         // close file
         dataStream.close();
@@ -514,28 +514,24 @@ public class App {
             iterator.remove();
         }
 
+        // line 25
         for (Cluster sc_i : SC) {
-            try {
-                Cluster clone = (Cluster) sc_i.clone();
-                for (Tuple t_bar : clone.getTuples()) {
-                    // let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
-                    Set<Tuple> G_t = new LinkedHashSet<>();
-                    for (Tuple t : c.getTuples()) {
-                        if (t.getPid() == t_bar.getPid()) {
-                            G_t.add(t);
-                        }
+            for (int i = 0; i < sc_i.getTuples().size(); i++) {
+                Tuple t_bar = sc_i.getTuples().get(i);
+                // let G_t be the set of tuples in C such that G_t = {t2 in C | t.pid = t2.pid}
+                Set<Tuple> G_t = new LinkedHashSet<>();
+                for (Tuple t : c.getTuples()) {
+                    if (t.getPid() == t_bar.getPid() && t != t_bar) {
+                        G_t.add(t);
                     }
-
-                    // insert G_t into SC_i;
-                    sc_i.add(G_t);
-
-                    // delete G_t from C;
-                    c.removeSet(G_t);
                 }
-            } catch (CloneNotSupportedException e) {
-                e.printStackTrace();
-            }
 
+                // insert G_t into SC_i;
+                sc_i.add(G_t);
+
+                // delete G_t from C;
+                c.removeSet(G_t);
+            }
         }
 
         return SC;
