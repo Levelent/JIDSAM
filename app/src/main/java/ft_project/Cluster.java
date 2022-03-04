@@ -98,7 +98,12 @@ public class Cluster implements Cloneable {
     }
 
     public int size() {
-        return tuples.size();
+        // bottom of page 4 - size is number of distinct values of pid
+        Set<String> pids = new LinkedHashSet<>();
+        for (Tuple t : tuples) {
+            pids.add(t.getPid());
+        }
+        return pids.size();
     }
 
     public List<Tuple> getTuples() {
