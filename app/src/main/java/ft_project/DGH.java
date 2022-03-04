@@ -68,7 +68,7 @@ public class DGH {
         try {
             return find(localRootName).countNodes(0);
         } catch (NullPointerException e) {
-            System.out.println(localRootName);
+            // System.out.println(localRootName);
             return find(root.data).countNodes(0);
         }
 

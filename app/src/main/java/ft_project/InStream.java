@@ -2,7 +2,7 @@ package ft_project;
 
 import java.io.*;
 
-public class Stream {
+public class InStream {
     private FileInputStream fStream;
     // Get the object of DataInputStream
     private DataInputStream in;
@@ -10,7 +10,7 @@ public class Stream {
 
     private String[] headings; // to store the first row (file headings)
 
-    public Stream(String filepath) {
+    public InStream(String filepath) {
         try {
             // open file input stream
             fStream = new FileInputStream(filepath);

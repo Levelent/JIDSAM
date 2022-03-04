@@ -21,13 +21,15 @@ public class Tuple implements Cloneable {
         this.pid = this.data[Arrays.asList(headings).indexOf("pid")];
     }
 
-    public void suppress(Map<String, DGH> d) {
-        // it outputs t with the most generalized QI value
+    public void suppress(OutStream outputStream, Map<String, DGH> d) {
+        // "internal" output
+        // output t with the most generalized QI value
         String out = System.lineSeparator() + ANSI_YELLOW + "Suppress" + ANSI_RESET + System.lineSeparator();
 
         // output generalisations
         out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
 
+        String generalisations = "";
         for (int i = 0; i < headings.length; i++) {
             String heading = headings[i];
             String value = data[i];
@@ -40,12 +42,13 @@ public class Tuple implements Cloneable {
             DGH dgh = d.get(heading);
             if (dgh == null) {
                 // Must be a continuous generalisation
-                out += (new ContinuousGeneralisation(Float.parseFloat(value))).getMaxGeneralisation();
+                generalisations += (new ContinuousGeneralisation(Float.parseFloat(value))).getMaxGeneralisation();
             } else {
-                out += dgh.getRootValue();
+                generalisations += dgh.getRootValue();
             }
-            out += " ";
+            generalisations += " ";
         }
+        out += generalisations;
 
         // output tuple;
         out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
@@ -53,6 +56,9 @@ public class Tuple implements Cloneable {
         out += this.toString() + System.lineSeparator();
 
         System.out.println(out);
+
+        // external output
+        outputStream.out.println(generalisations);
     }
 
     public String getPid() {

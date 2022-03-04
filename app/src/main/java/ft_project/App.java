@@ -10,6 +10,7 @@ public class App {
 
     private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
     private Map<String, DGH> DGHs;
+    private OutStream outputStream;
 
     public static void main(String[] args) {
         // predefine thresholds/constants
@@ -27,14 +28,18 @@ public class App {
         // create data stream
 
         // Davids ones
-        Stream dataStream = new Stream("./src/main/resources/adult-100.csv");
+        InStream dataStream = new InStream("./src/main/resources/adult-100.csv");
         app.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
 
-        // Stream dataStream = new Stream("../../resources/adult-100.csv");
+        // Stream dataStream = new InStream("../../resources/adult-100.csv");
         // app.setDGHs(new DGHReader("../../resources/dgh").DGHs);
 
-        // Stream dataStream = new Stream("./app/src/main/resources/adult-100.csv");
+        // Stream dataStream = new InStream("./app/src/main/resources/adult-100.csv");
         // app.setDGHs(new DGHReader("./app/src/main/resources/dgh").DGHs);
+
+        // create data out stream
+        OutStream outputStream = new OutStream("output.txt");
+        app.setOutputStream(outputStream);
 
         // run CASTLE
         // app.castle(dataStream, k, delta, beta);
@@ -44,13 +49,18 @@ public class App {
 
         // close file
         dataStream.close();
+        outputStream.close();
     }
 
     public void setDGHs(Map<String, DGH> dghs) {
         DGHs = dghs;
     }
 
-    public void castle(Stream s, int k, int delta, int beta) {
+    public void setOutputStream(OutStream stream) {
+        this.outputStream = stream;
+    }
+
+    public void castle(InStream s, int k, int delta, int beta) {
         // set default algorithm parameters
         this.k = k;
         this.delta = delta;
@@ -87,7 +97,7 @@ public class App {
         }
     }
 
-    public void castle(Stream s, int k, int delta, int beta, int l, int a_s) {
+    public void castle(InStream s, int k, int delta, int beta, int l, int a_s) {
         // set l diversity based parameters
         this.l = l;
         this.a_s = a_s; // index of the l diversity sensitive attribute
@@ -190,7 +200,7 @@ public class App {
 
                 // Output t with the generalisation of KC;
                 // KC_set is set of clusters that contain t so just output KC
-                System.out.print(KC.toString());
+                KC.output(outputStream);
                 return;
             }
 
@@ -202,7 +212,7 @@ public class App {
             }
 
             if (2 * m > nonAnonymisedClusters.size()) {
-                t.suppress(this.DGHs);
+                t.suppress(this.outputStream, this.DGHs);
                 return;
             }
 
@@ -220,12 +230,12 @@ public class App {
                     }
 
                     if (distinctValues.size() >= this.l) {
-                        t.suppress(this.DGHs);
+                        t.suppress(this.outputStream, this.DGHs);
                         return;
                     }
                 } else {
                     // default part of algorithm
-                    t.suppress(this.DGHs);
+                    t.suppress(this.outputStream, this.DGHs);
                     return;
                 }
             }
@@ -289,7 +299,7 @@ public class App {
         }
 
         for (Cluster C_i : SC) {
-            System.out.print(C_i.toString()); // output all tuples in C_i with its generalisation;
+            C_i.output(this.outputStream); // output all tuples in C_i with its generalisation;
 
             // Update aveInfoLoss according to informationLoss(C_i);
             // aveInfoLoss is updated to be the average information loss of

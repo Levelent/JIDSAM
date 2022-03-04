@@ -110,26 +110,36 @@ public class Cluster implements Cloneable {
         return tuples;
     }
 
-    public String toString() {
+    public void output(OutStream outputStream) {
+        // "internal" output
         String out = System.lineSeparator() + ANSI_YELLOW + "Cluster" + ANSI_RESET + System.lineSeparator();
 
         // output generalisations
         out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
+
+        String generalisations = "";
         for (String h : tuples.get(0).headings) {
             // TODO: Add the heading the generalisation belongs to
-            Generalisation g = generalisations.get(h);
-            out += (g == null) ? "" : g.toString() + " ";
+            Generalisation g = this.generalisations.get(h);
+            generalisations += (g == null) ? "" : g.toString() + " ";
         }
-        out += System.lineSeparator();
+        out += generalisations + System.lineSeparator();
 
         // output all tuples;
         out += ANSI_CYAN + "Tuples" + ANSI_RESET + System.lineSeparator();
         for (Tuple t : tuples) {
-            t.setAsBeenOutput();
             out += t.toString() + System.lineSeparator();
         }
 
-        return out;
+        System.out.println(out);
+
+        // external output
+        for (Tuple t : tuples) {
+            if (!t.hasBeenOutput()) {
+                outputStream.out.println(generalisations);
+                t.setAsBeenOutput();
+            }
+        }
     }
 
     public Object clone() throws CloneNotSupportedException {

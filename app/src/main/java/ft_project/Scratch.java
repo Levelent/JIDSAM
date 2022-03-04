@@ -9,7 +9,7 @@ public class Scratch {
     public static void main(String[] args) {
 
         // create data stream
-        Stream dataStream = new Stream("./app/src/main/resources/adult.csv");
+        InStream dataStream = new InStream("./app/src/main/resources/adult.csv");
         Map<String, DGH> DGHs = new DGHReader("./app/src/main/resources/dgh").DGHs;
         Scratch s = new Scratch();
         s.setDGH(DGHs);
