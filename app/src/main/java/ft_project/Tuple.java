@@ -23,7 +23,7 @@ public class Tuple implements Cloneable {
 
     public void suppress(Map<String, DGH> d) {
         // it outputs t with the most generalized QI value
-        String out = ANSI_YELLOW + "Suppress" + ANSI_RESET + System.lineSeparator();
+        String out = System.lineSeparator() + "Suppress" + ANSI_RESET + System.lineSeparator();
 
         // output generalisations
         out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
