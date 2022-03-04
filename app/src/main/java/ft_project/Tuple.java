@@ -1,5 +1,6 @@
 package ft_project;
 
+import java.util.Map;
 import java.util.Arrays;
 
 public class Tuple implements Cloneable {
@@ -20,14 +21,30 @@ public class Tuple implements Cloneable {
         this.pid = this.data[Arrays.asList(headings).indexOf("pid")];
     }
 
-    public void suppress() {
+    public void suppress(Map<String, DGH> d) {
         // it outputs t with the most generalized QI value
         String out = ANSI_YELLOW + "Suppress" + ANSI_RESET + System.lineSeparator();
 
         // output generalisations
         out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
 
-        // TODO with generalisations ~ "most generalized QI value"
+        for (int i = 0; i < headings.length; i++) {
+            String heading = headings[i];
+            String value = data[i];
+
+            if (heading.equals("pid") || heading.equals("tid")) {
+                continue;
+            }
+
+            // TODO make this the most generalised possible
+            DGH dgh = d.get(heading);
+            if (dgh == null) {
+                // Must be a continuous generalisation
+                out += new ContinuousGeneralisation(Float.parseFloat(value));
+            } else {
+                out += new CategoryGeneralisation(dgh, value);
+            }
+        }
 
         // output tuple;
         out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();

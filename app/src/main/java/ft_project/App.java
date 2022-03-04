@@ -202,7 +202,7 @@ public class App {
             }
 
             if (2 * m > nonAnonymisedClusters.size()) {
-                t.suppress();
+                t.suppress(this.DGHs);
                 return;
             }
 
@@ -220,12 +220,12 @@ public class App {
                     }
 
                     if (distinctValues.size() >= this.l) {
-                        t.suppress();
+                        t.suppress(this.DGHs);
                         return;
                     }
                 } else {
                     // default part of algorithm
-                    t.suppress();
+                    t.suppress(this.DGHs);
                     return;
                 }
             }
