@@ -91,33 +91,41 @@ public class BCastle extends Castle {
     }
 
     public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {
-        // TODO implement - below is old one
-
-        // This process continues until C’s size is at least k.
+        // implemented from bottom right of page 3
         while (c.size() < this.k) {
-            float smallestEnlargement = 0;
-            Cluster clusterWithSmallest = null;
-            for (Cluster toMergeCluster : clusterList) {
-                if (c == toMergeCluster) {
-                    // do not merge c with itself
+            Set<Cluster> SetC_low = new LinkedHashSet<>();
+
+            float lowestCorrelationDistance = 0;
+            for (Cluster c_i : clusterList) {
+                if (c == c_i) {
+                    // not including self
                     continue;
                 }
 
-                // calculate the enlargement of C due to the possible merge with Ci.
-                // and track which would bring the minimum enlargement
-                float possibleEnlargement = enlargement(c, toMergeCluster);
-                if (clusterWithSmallest == null || possibleEnlargement < smallestEnlargement) {
-                    clusterWithSmallest = toMergeCluster;
-                    smallestEnlargement = possibleEnlargement;
+                // find lowest correlation distance of c_i into setC_low
+                float correlatedDistance = getCorrelatedDistance(c, c_i);
+                if (SetC_low.size() == 0 || correlatedDistance < lowestCorrelationDistance) {
+                    // new lowest found so clear SetC_low
+                    SetC_low = new LinkedHashSet<>();
+                    SetC_low.add(c_i);
+                    lowestCorrelationDistance = correlatedDistance;
+                } else if (SetC_low.size() > 0 || correlatedDistance == lowestCorrelationDistance) {
+                    // same as lowest distance so add to SetC_low
+                    SetC_low.add(c_i);
                 }
+
             }
 
-            // Select the cluster, which brings the minimum enlargement to C, and merges C
-            // with it.
-            c.merge(clusterWithSmallest);
+            Cluster c_j = getRandomCluster(SetC_low);
+            c.merge(c_j);
+            this.nonAnonymisedClusters.remove(c_j);
         }
 
-        // Then, the resulting cluster is given in output
         return c;
+    }
+
+    protected float getCorrelatedDistance(Cluster C1, Cluster C2) {
+        // TODO implement page 2 rhs
+        return 0;
     }
 }
