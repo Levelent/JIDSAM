@@ -1,17 +1,6 @@
 package ft_project;
 
-import java.util.*;
-
 public class App {
-    private Boolean lDiversityEnabled = false;
-
-    private int k, delta, beta, l, a_s;
-    private float aveInfoLoss, thresholdInfoLoss;
-
-    private Set<Cluster> nonAnonymisedClusters, anonymisedClusters;
-    private Map<String, DGH> DGHs;
-    private OutStream outputStream;
-
     public static void main(String[] args) {
         // predefine thresholds/constants
         int k = 5;
@@ -34,7 +23,10 @@ public class App {
         // Castle castle = new Castle(dataStream, k, delta, beta);
 
         // run CASTLE with l diversity
-        Castle castle = new CastleL(dataStream, k, delta, beta, l, a_s);
+        // Castle castle = new CastleL(dataStream, k, delta, beta, l, a_s);
+
+        // run B-CASTLE
+        Castle castle = new BCastle(dataStream, k, delta, beta);
 
         // set DGHs and output stream
         castle.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);

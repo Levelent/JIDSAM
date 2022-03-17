@@ -249,8 +249,6 @@ public class Castle {
             }
             // It seems line 11 of output_cluster in the paper is redundant... technically
             // it will be handled by garbage collection
-
-            // TODO this line does not make sense.. split never adds the sub clusters?
             nonAnonymisedClusters.remove(C_i);
         }
     }
