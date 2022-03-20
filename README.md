@@ -8,6 +8,12 @@ Uses gradle version 7.3.3 and java openjdk 11.0.14
 
 In the project's root run the command: `gradle run`
 
+| Version  | Execution command                   |
+| -------- | ----------------------------------- |
+| Castle   | `gradle run castle` or `gradle run` |
+| Castle-L | `gradle run castlel`                |
+| B-Castle | `gradle run bcastle`                |
+
 ### Output
 
 Development/Internal output occurs to the terminal where you can see the cluster generalisations and the tuples included.

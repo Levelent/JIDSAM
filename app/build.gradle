@@ -29,7 +29,36 @@ application {
     mainClass = 'ft_project.App'
 }
 
+jar {
+    manifest {
+        attributes(
+            "Main-Class": 'ft_project.App'
+        )
+    }
+}
+
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+task castle(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run the output executable jar with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get(), ""
+}
+
+task castlel(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run the output executable jar with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get(), "l"
+}
+
+task bcastle(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run the output executable jar with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get(), "b"
 }

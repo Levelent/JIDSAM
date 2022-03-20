@@ -7,31 +7,33 @@ public class App {
         int delta = 10;
         int beta = 2;
 
-        // l diversity thresholds/constants
-        int l = 2;
-        int a_s = 2;
-
         // create data stream
         InStream dataStream = new InStream("./src/main/resources/adult-100.csv");
-        // InStream dataStream = new InStream("../../resources/adult-100.csv");
-        // InStream dataStream = new InStream("./app/src/main/resources/adult-100.csv");
 
         // create data out stream
         OutStream outputStream = new OutStream("output.txt");
 
         // initialise CASTLE
-        // Castle castle = new Castle(dataStream, k, delta, beta);
-
-        // run CASTLE with l diversity
-        // Castle castle = new CastleL(dataStream, k, delta, beta, l, a_s);
-
-        // run B-CASTLE
-        Castle castle = new BCastle(dataStream, k, delta, beta);
+        Castle castle;
+        switch (args.length > 0 ? args[0] : "") {
+            case "l":
+                // l diversity thresholds/constants
+                int l = 2;
+                int a_s = 2;
+                // run CASTLE with l diversity
+                castle = new CastleL(dataStream, k, delta, beta, l, a_s);
+                break;
+            case "2":
+                // run B-CASTLE
+                castle = new BCastle(dataStream, k, delta, beta);
+                break;
+            default:
+                // run normal castle
+                castle = new Castle(dataStream, k, delta, beta);
+        }
 
         // set DGHs and output stream
         castle.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
-        // app.setDGHs(new DGHReader("../../resources/dgh").DGHs);
-        // app.setDGHs(new DGHReader("./app/src/main/resources/dgh").DGHs);
 
         castle.setOutputStream(outputStream);
 
