@@ -1,10 +1,10 @@
 package ft_project;
 
 public class ContinuousGeneralisation extends Generalisation {
-    private float UB;
-    private float LB;
-    private float ub;
-    private float lb;
+    public float UB;
+    public float LB;
+    public float ub;
+    public float lb;
 
     ContinuousGeneralisation(float LB, float UB, float lb, float ub) {
         this.UB = UB;

@@ -67,6 +67,10 @@ public class BCastle extends Castle {
             // let num(c) be the number of tuples in cluster c
             while (c_j.size() > this.alpha) {
                 // TODO quadratic probing hash search of Cj from Set C ok
+                // recursively select the next cluster of Cj from SetC_ok
+
+                // basically select the next cluster from setC_ok in quadatic fashion based on
+                // hash order - I think
             }
             return c_j;
         }
@@ -80,6 +84,7 @@ public class BCastle extends Castle {
                 for (Cluster c_i : enlargementMap.get(enlargementValue)) {
                     if (c_i.size() > this.alpha) {
                         // TODO linear probing hash search of Ci from E+
+
                     } else {
                         return c_i;
                     }
@@ -125,7 +130,35 @@ public class BCastle extends Castle {
     }
 
     protected float getCorrelatedDistance(Cluster C1, Cluster C2) {
-        // TODO implement page 2 rhs
-        return 0;
+        Map<String, Generalisation> c1Generalisation = C1.getGeneralisations();
+        Map<String, Generalisation> c2Generalisation = C2.getGeneralisations();
+
+        float correlatedDistance = 0;
+
+        for (Map.Entry<String, Generalisation> entry : c1Generalisation.entrySet()) {
+            // name of attribute associated with generalisation
+            String key = entry.getKey();
+
+            // generalisation from c1 an c2
+            Generalisation gen1 = entry.getValue();
+            Generalisation gen2 = c2Generalisation.get(key);
+
+            // handle ranges and DGH
+            DGH dgh1 = C1.getDGH().get(key);
+            DGH dgh2 = C2.getDGH().get(key);
+            if (dgh1 == null || dgh2 == null) {
+                // Must be a continuous generalisation
+                ContinuousGeneralisation cGen1 = (ContinuousGeneralisation) gen1;
+                ContinuousGeneralisation cGen2 = (ContinuousGeneralisation) gen2;
+
+                correlatedDistance += ((cGen1.lb - cGen2.lb) + (cGen1.ub - cGen2.ub)) / (cGen1.LB - cGen1.UB);
+            } else {
+                // Must be category based generalisation
+                correlatedDistance += dgh1.countNodes(dgh1.findCommonAncestor(gen1.toString(), gen2.toString()))
+                        / dgh1.countNodes();
+            }
+
+        }
+        return correlatedDistance;
     }
 }

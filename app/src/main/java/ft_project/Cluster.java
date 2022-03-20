@@ -9,8 +9,10 @@ public class Cluster implements Cloneable {
 
     private List<Tuple> tuples;
     private Map<String, Generalisation> generalisations;
+    private Map<String, DGH> DGH;
 
     public Cluster(Tuple t, Map<String, DGH> d) {
+        DGH = d;
         tuples = new LinkedList<Tuple>();
         // Create our list of generalisations. Everything that doesn't exist as a DGH is
         // continuous, except pid and tid
@@ -108,6 +110,14 @@ public class Cluster implements Cloneable {
 
     public List<Tuple> getTuples() {
         return tuples;
+    }
+
+    public Map<String, Generalisation> getGeneralisations() {
+        return generalisations;
+    }
+
+    public Map<String, DGH> getDGH() {
+        return DGH;
     }
 
     public void output(OutStream outputStream) {
