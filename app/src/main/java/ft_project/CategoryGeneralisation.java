@@ -11,7 +11,7 @@ public class CategoryGeneralisation extends Generalisation {
 
     CategoryGeneralisation(DGH dgh, String localRoot) {
         this.dgh = dgh;
-        this.localRoot = localRoot; // TODO: Throw an error if localRoot does not exist in the dgh
+        this.localRoot = localRoot;
     }
 
     public float infoLoss() {

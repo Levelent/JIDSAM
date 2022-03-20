@@ -129,7 +129,6 @@ public class Cluster implements Cloneable {
 
         String generalisations = "";
         for (String h : tuples.get(0).headings) {
-            // TODO: Add the heading the generalisation belongs to
             Generalisation g = this.generalisations.get(h);
             generalisations += (g == null) ? "" : g.toString() + " ";
         }
