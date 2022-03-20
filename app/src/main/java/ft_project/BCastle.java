@@ -65,14 +65,24 @@ public class BCastle extends Castle {
         if (SetC_ok.size() > 0) {
             Cluster c_j = getRandomCluster(SetC_ok);
             // let num(c) be the number of tuples in cluster c
-            while (c_j.size() > this.alpha) {
-                // TODO quadratic probing hash search of Cj from Set C ok
-                // recursively select the next cluster of Cj from SetC_ok
+            ArrayList<Cluster> ArrayC_ok = new ArrayList<>();
+            ArrayC_ok.addAll(SetC_ok);
 
-                // basically select the next cluster from setC_ok in quadatic fashion based on
-                // hash order - I think
+            int start = ArrayC_ok.indexOf(c_j);
+            int quadStep, linearStep = 0;
+            while ((quadStep = start + linearStep ^ 2) < ArrayC_ok.size()) {
+                // quadratic search of Cj from Set C ok
+                c_j = ArrayC_ok.get(quadStep);
+
+                // check stopping condition
+                if (c_j.size() < this.alpha) {
+                    return c_j;
+                } else {
+                    c_j = ArrayC_ok.get(start + linearStep ^ 2);
+                }
+
+                linearStep++;
             }
-            return c_j;
         }
 
         if (this.nonAnonymisedClusters.size() >= this.beta) {
@@ -81,11 +91,9 @@ public class BCastle extends Castle {
             Collections.sort(Eplus);
 
             for (Float enlargementValue : Eplus) {
+                // linear probing hash search of cluster until size < alpha
                 for (Cluster c_i : enlargementMap.get(enlargementValue)) {
-                    if (c_i.size() > this.alpha) {
-                        // TODO linear probing hash search of Ci from E+
-
-                    } else {
+                    if (c_i.size() < this.alpha) {
                         return c_i;
                     }
                 }
