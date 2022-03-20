@@ -1,12 +1,12 @@
 /*
- * Test case for the App class
+ * Test case for the DGHReader class
  */
 package ft_project;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {
+class DGHReaderTest {
     @Test
     public void testTrue() {
         assertTrue(true);
