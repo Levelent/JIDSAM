@@ -7,8 +7,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DGHReaderTest {
+    // TODO constructor
+
     @Test
-    public void testTrue() {
-        assertTrue(true);
+    public void testIndentCount() {
+        assertEquals(DGHReader.indentCount("        "), 2);
     }
 }
