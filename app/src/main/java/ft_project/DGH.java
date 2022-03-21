@@ -23,17 +23,10 @@ public class DGH {
 
     public Boolean add(String localRootName, String data) {
         if (nodeValues.contains(data) || !nodeValues.contains(localRootName)) {
-            // Should probably delineate between whether it cant be added because
-            // it already exists or because the localRoot could not be found
-
             return false;
         }
 
-        Node localRoot = root.find(localRootName); // Find the correct node to add a child to... relying on this working
-                                                   // if localRootName exists in our set
-        if (localRoot == null) {
-
-        }
+        Node localRoot = root.find(localRootName); // Find the correct node to add a child to
         localRoot.add(data); // add the child
         nodeValues.add(data);
 
@@ -46,10 +39,8 @@ public class DGH {
             this.root.children = new ArrayList<Node>();
             nodeValues.add(data);
             return true;
-        } else {
-            return this.add(this.root.data, data);
-
         }
+        return this.add(this.root.data, data);
     }
 
     public Boolean contains(String nodeName) {
@@ -68,10 +59,8 @@ public class DGH {
         try {
             return find(localRootName).countNodes(0);
         } catch (NullPointerException e) {
-            // System.out.println(localRootName);
             return find(root.data).countNodes(0);
         }
-
     }
 
     public String findCommonAncestor(String rootA, String rootB) {
@@ -106,7 +95,6 @@ public class DGH {
         }
 
         return null;
-
     }
 
     public String getRootValue() {

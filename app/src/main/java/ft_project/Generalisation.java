@@ -5,7 +5,7 @@ public class Generalisation implements Cloneable {
     Generalisation() {
     };
 
-    public float infoLoss() { // Needs to be overridden in extended class
+    public float infoLoss() { // should be overridden in extended class
         return 0;
     }
 

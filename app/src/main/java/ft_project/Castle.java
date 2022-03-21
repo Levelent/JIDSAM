@@ -33,7 +33,6 @@ public class Castle {
     }
 
     public void run() {
-
         // define array to track tuple positions (most recent -> less recent [head])
         Queue<Tuple> tupleHistory = new LinkedList<>();
 
@@ -403,6 +402,7 @@ public class Castle {
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
+
         return 0;
     }
 

@@ -4,11 +4,11 @@ import java.io.*;
 import java.util.*;
 
 public class DGHReader {
+    public final Map<String, DGH> DGHs;
 
     public static int indentCount(String string) {
         int count = 0;
         for (int i = 0; i < string.length(); i++) {
-
             if (string.charAt(i) == ' ') {
                 count++;
             } else {
@@ -17,8 +17,6 @@ public class DGHReader {
         }
         return count / 4;
     }
-
-    public final Map<String, DGH> DGHs;
 
     DGHReader(String filename) {
         HashMap<String, DGH> DGHs = new HashMap<String, DGH>();

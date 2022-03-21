@@ -9,10 +9,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
 class ClusterTest {
-    private static final String ANSI_RESET = "\u001B[0m";
-    private static final String ANSI_CYAN = "\u001B[36m";
-    private static final String ANSI_YELLOW = "\u001B[33m";
-
     private String[] headings = { "pid", "salary" };
     private String[] data = { "1", "100" };
 
