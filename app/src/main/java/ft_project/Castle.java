@@ -394,34 +394,25 @@ public class Castle {
     }
 
     public float enlargement(Cluster c1, Cluster c2) {
-        // to finish merge clusters, need to be able to know the potential enlargement
-        // if two clusters were to be merged
-
-        // I Assume this is what they want... as if all tuples from one were added to
-        // the other
+        // potential enlargement if two clusters were to be merged
         try {
             Cluster clone = (Cluster) c1.clone();
             clone.add(c2.getTuples());
-
             return clone.informationLoss() - c1.informationLoss();
 
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-
         return 0;
     }
 
     public float enlargement(Tuple t1, Tuple t2) {
         if (t1 == null || t2 == null) {
-
             return 0;
         }
 
         Cluster c1 = new Cluster(t1, DGHs);
         Cluster c2 = new Cluster(t2, DGHs);
-
         return enlargement(c1, c2);
-
     }
 }

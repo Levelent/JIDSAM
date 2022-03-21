@@ -17,7 +17,7 @@ class TupleTest {
     private Tuple t;
     private String[] headings = { "pid", "location" };
     private String[] data = { "1", "coventry" };
-    private Map<String, DGH> d = new HashMap();
+    private Map<String, DGH> d = new HashMap<>();
 
     @BeforeEach
     public void beforeEach() {
