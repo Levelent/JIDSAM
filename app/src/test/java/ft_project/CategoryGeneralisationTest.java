@@ -13,15 +13,23 @@ class CategoryGeneralisationTest {
     @BeforeEach
     public void beforeEach() {
         d = new DGH("location");
-        d.add("location", "west midlands");
-        d.add("west midlands", "coventry");
-        d.add("west midlands", "birmingham");
+        d.add("west midlands");
+        d.add("coventry");
+        d.add("birmingham");
         g = new CategoryGeneralisation(d, "coventry");
     }
 
-    // TODO test info loss
+    @Test
+    public void testInfoLoss() {
+        g = new CategoryGeneralisation(d, "west midlands");
+        assertEquals(g.infoLoss(), 1.0);
+    }
 
-    // TODO test updateGeneralisation
+    @Test
+    public void testUpdateGeneralisation() {
+        assertTrue(g.updateGeneralisation("birmingham"));
+        assertTrue(g.toString().contains("west midlands"));
+    }
 
     @Test
     public void testToString() {

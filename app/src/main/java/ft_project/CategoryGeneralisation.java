@@ -20,17 +20,16 @@ public class CategoryGeneralisation extends Generalisation {
 
     public Boolean updateGeneralisation(String gen) {
         String newLocalRoot = dgh.findCommonAncestor(localRoot, gen);
-
         if (newLocalRoot == null) {
             return false;
         }
+
         localRoot = newLocalRoot;
         return true;
     }
 
     public String toString() {
         return localRoot;
-
     }
 
     public Object clone() throws CloneNotSupportedException {
@@ -41,5 +40,4 @@ public class CategoryGeneralisation extends Generalisation {
 
         return cg;
     }
-
 }
