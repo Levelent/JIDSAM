@@ -7,6 +7,11 @@ public class OutStream {
     private FileOutputStream fos;
     public PrintWriter out; // use to output to file
 
+    /**
+     * Constructor to generate out stream to a file
+     * 
+     * @param filepath of file to for output to be written to
+     */
     OutStream(String filepath) {
         try {
             this.file = new File(filepath);
@@ -17,6 +22,9 @@ public class OutStream {
         }
     }
 
+    /**
+     * Close the file writer
+     */
     public void close() {
         try {
             out.flush();

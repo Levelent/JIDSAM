@@ -30,7 +30,5 @@ class CastleTest {
 
     // TODO split
 
-    // TODO generate_buckets
-
     // TODO enlargement (c, t), (c, c), (t, t)
 }

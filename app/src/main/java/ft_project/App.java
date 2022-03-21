@@ -1,6 +1,11 @@
 package ft_project;
 
 public class App {
+    /**
+     * App main function
+     * 
+     * @param args provided by command line interface
+     */
     public static void main(String[] args) {
         // predefine thresholds/constants
         int k = 5;

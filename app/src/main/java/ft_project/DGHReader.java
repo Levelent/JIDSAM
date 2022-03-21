@@ -6,6 +6,12 @@ import java.util.*;
 public class DGHReader {
     public final Map<String, DGH> DGHs;
 
+    /**
+     * Helper function to count the given indent of string
+     * 
+     * @param string to count indent of
+     * @return the number of repeated 4 spaces
+     */
     public static int indentCount(String string) {
         int count = 0;
         for (int i = 0; i < string.length(); i++) {
@@ -18,6 +24,11 @@ public class DGHReader {
         return count / 4;
     }
 
+    /**
+     * Constructor used to read the DGH from a given file and generate the tree
+     * 
+     * @param filename name of file to read the information from
+     */
     DGHReader(String filename) {
         HashMap<String, DGH> DGHs = new HashMap<String, DGH>();
         try {

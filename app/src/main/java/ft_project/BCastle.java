@@ -5,12 +5,25 @@ import java.util.*;
 public class BCastle extends Castle {
     protected double alpha;
 
+    /**
+     * B-Castle Constructor
+     * 
+     * @param s     data stream
+     * @param k     threshold
+     * @param delta threshold
+     * @param beta  threshold
+     */
     public BCastle(InStream s, int k, int delta, int beta) {
         super(s, k, delta, beta);
 
         alpha = Math.ceil(delta / Math.sqrt(k + beta));
     }
 
+    /**
+     * Pick the best cluster to add a given tuple to
+     * 
+     * @param t tuple to pick selection for
+     */
     public Cluster bestSelection(Tuple t) {
         // used to keep track of clusters for a given enlargement value
         Map<Float, Set<Cluster>> enlargementMap = new HashMap<>();
@@ -103,6 +116,13 @@ public class BCastle extends Castle {
         return null;
     }
 
+    /**
+     * Merge a cluster with a given cluster set taking into account the correlated
+     * distance
+     * 
+     * @param c           the cluster to merge into
+     * @param clusterList list of clusters that can be used to merge
+     */
     public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {
         // implemented from bottom right of page 3
         while (c.size() < this.k) {
@@ -137,6 +157,13 @@ public class BCastle extends Castle {
         return c;
     }
 
+    /**
+     * Get the correlated distance between two clusters
+     * 
+     * @param C1 first cluster
+     * @param C2 second cluster
+     * @return correlated distance
+     */
     protected float getCorrelatedDistance(Cluster C1, Cluster C2) {
         Map<String, Generalisation> c1Generalisation = C1.getGeneralisations();
         Map<String, Generalisation> c2Generalisation = C2.getGeneralisations();

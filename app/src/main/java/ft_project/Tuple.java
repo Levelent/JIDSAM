@@ -13,6 +13,12 @@ public class Tuple implements Cloneable {
     private String[] data;
     private boolean beenOutputted = false;
 
+    /**
+     * Constructor create tuple with given headings and data
+     * 
+     * @param headings of the data
+     * @param data     associated with headings
+     */
     public Tuple(String[] headings, String[] data) {
         this.headings = headings;
         this.data = data;
@@ -21,6 +27,12 @@ public class Tuple implements Cloneable {
         this.pid = this.data[Arrays.asList(headings).indexOf("pid")];
     }
 
+    /**
+     * Method to suppress the tuple and output it
+     * 
+     * @param outputStream stream to output the tuple to
+     * @param d            DGHs used to calculate category generalisations
+     */
     public void suppress(OutStream outputStream, Map<String, DGH> d) {
         // "internal" output
         // output t with the most generalized QI value
@@ -61,14 +73,31 @@ public class Tuple implements Cloneable {
         outputStream.out.println(generalisations);
     }
 
+    /**
+     * Get the id of the tuple
+     * 
+     * @return id of tuple
+     */
     public String getPid() {
         return this.pid;
     }
 
+    /**
+     * Get the value of a given attribute in the tuple by its index
+     * 
+     * @param index of value
+     * @return data value at given index
+     */
     public String getValue(int index) {
         return data[index];
     }
 
+    /**
+     * Get the value of a given attribute in the tuple by the name of the tuple
+     * 
+     * @param fieldName name of field to get the value of
+     * @return value associated with given heading
+     */
     public String getValue(String fieldName) {
         for (int i = 0; i < headings.length; i++) {
             if (headings[i].equals(fieldName)) {
@@ -78,14 +107,23 @@ public class Tuple implements Cloneable {
         return null;
     }
 
+    /**
+     * @return if the tuple has been outputted
+     */
     public Boolean hasBeenOutput() {
         return beenOutputted;
     }
 
+    /**
+     * Set the tuple as outputted
+     */
     public void setAsBeenOutput() {
         this.beenOutputted = true;
     }
 
+    /**
+     * @return string representation of the tuple
+     */
     public String toString() {
         String out = "";
         for (String item : data) {
@@ -94,6 +132,9 @@ public class Tuple implements Cloneable {
         return out;
     }
 
+    /**
+     * @return deep clone of tuple
+     */
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
