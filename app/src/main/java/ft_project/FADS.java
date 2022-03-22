@@ -36,9 +36,6 @@ public class FADS extends Castle {
             // Read a tuple t_n from S and insert into Set_tp
             set_tp.add(t_n);
 
-            // Update the ranges of the numeric QIDs with respect to t_n;
-            // TODO what?
-
             // Remove the k-anonymised clusters in Set_kc that exist longer than or equal to
             // T_kc;
             set_kc.removeIf(c -> (c.size() >= beta));
@@ -105,9 +102,18 @@ public class FADS extends Castle {
      * @param t tuple to be outputted
      */
     public void outputWithKCorNC(Tuple t) {
-        // Find the k-1 nearest neighbours of t with unique pid in Set_tp and create a
-        // new cluster C_nc on t and its neighbours TODO
-        Cluster c_nc = null;
+        // nearest neighbours of t with unique pid in Set_tp
+        PriorityQueue<Tuple> neighbours = new PriorityQueue<>(
+                (t1, t2) -> Float.compare(enlargement(t1, t), enlargement(t2, t)));
+        for (Tuple t_i : set_tp) {
+            neighbours.add(t_i);
+        }
+
+        // create a new cluster C_nc on t and its k-1 nearest neighbours
+        Cluster c_nc = new Cluster(t, DGHs);
+        for (int i = 1; i <= k - 1; i++) {
+            c_nc.add(neighbours.remove());
+        }
 
         // Find a k-anonymised cluster C_kc in Set_kc that covers t and incurs least
         // info loss increase after adding tuple to cluster TODO

@@ -99,7 +99,6 @@ public class FADSL extends FADS {
             }
 
             if (Set_t.size() > Math.floor(c_kc.size() / l)) {
-
                 t.suppress(outputStream, DGHs);
             } else {
                 t.outputWith(outputStream, DGHs, c_kc);
@@ -136,7 +135,6 @@ public class FADSL extends FADS {
                 }
             }
 
-            // TODO should not be c_kc it should be c
             if (set_t.size() > Math.floor(c_kc.size() / l)) {
                 t.outputWith(outputStream, DGHs, c_nc);
                 set_kc.add(c_nc);
