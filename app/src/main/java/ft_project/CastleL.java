@@ -1,5 +1,6 @@
 package ft_project;
 
+import java.security.SecureRandom;
 import java.util.*;
 
 public class CastleL extends Castle {
@@ -154,7 +155,7 @@ public class CastleL extends Castle {
         int sum;
         while (BS.size() >= this.l && (sum = BS.values().stream().mapToInt(List::size).sum()) >= this.k) {
             // randomly select a B from BS;
-            Random random = new Random();
+            Random random = new SecureRandom();
             List<String> keys = new ArrayList<String>(BS.keySet());
             String randomKey = keys.get(random.nextInt(keys.size()));
 

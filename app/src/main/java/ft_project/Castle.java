@@ -1,5 +1,6 @@
 package ft_project;
 
+import java.security.SecureRandom;
 import java.util.*;
 
 public class Castle {
@@ -255,7 +256,7 @@ public class Castle {
      * @return randomly selected cluster
      */
     protected Cluster getRandomCluster(Set<Cluster> set) {
-        int random = new Random().nextInt(set.size());
+        int random = new SecureRandom().nextInt(set.size());
         for (Cluster item : set) {
             if (random-- == 0) {
                 return item;
@@ -324,7 +325,7 @@ public class Castle {
 
         while (BS.size() >= this.k) {
             // randomly select a bucket B from BS, and pick one of its tuples t;
-            Random random = new Random();
+            Random random = new SecureRandom();
             List<String> uniquePIDs = new ArrayList<String>(BS.keySet());
             String randomPID = uniquePIDs.get(random.nextInt(uniquePIDs.size()));
 
@@ -395,7 +396,7 @@ public class Castle {
             List<Tuple> b_i = entry.getValue();
 
             // pick a tuple t_i in B_i;
-            Random random = new Random();
+            Random random = new SecureRandom();
             Tuple t_i = b_i.get(random.nextInt(b_i.size()));
 
             // find nearest cluster of t_i in SC, and add all the tuples in B_i to it;
