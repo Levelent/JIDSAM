@@ -71,7 +71,6 @@ public class FADSL extends FADS {
         if (H_tp.keySet().size() < l || H_tp.values().size() < k) {
             outputWithKCorSuppress(t);
         } else {
-            // TODO not sure correct
             Cluster c_nc = new Cluster(t, DGHs);
             for (Set<Tuple> bucket : H_tp.values()) {
                 c_nc.add(bucket);
