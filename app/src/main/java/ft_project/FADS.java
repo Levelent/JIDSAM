@@ -119,7 +119,7 @@ public class FADS extends Castle {
         // info loss increase after adding tuple to cluster
         Cluster c_kc = getClusterWhichCoversWithSmallestLoss(t, set_kc);
 
-        // if the nearest neighbours are fewer than k-1 then
+        // if the nearest neighbours are fewer than k-1 then TODO
         if (0 < k - 1) {
             if (c_kc != null) {
                 // Publish t with C_kc's generalisation
@@ -134,7 +134,8 @@ public class FADS extends Castle {
             // publish t with C_nc's generalisation
             t.outputWith(outputStream, DGHs, c_nc);
             set_kc.add(c_nc);
-            // remove the k-1 nearest neighbours of t from Set_tp
+
+            // remove the k-1 nearest neighbours of t from Set_tp TODO
         }
 
         set_tp.remove(t);
