@@ -74,6 +74,45 @@ public class Tuple implements Cloneable {
     }
 
     /**
+     * Method to output a tuple with the generalisation of a cluster
+     * 
+     * @param outputStream stream to output the tuple to
+     * @param d            DGHs used to calculate category generalisations
+     * @param c            cluster to use the generalisation of
+     */
+    public void outputWith(OutStream outputStream, Map<String, DGH> d, Cluster c) {
+        // "internal" output
+        // output t with the c generalisation
+        String out = System.lineSeparator() + ANSI_YELLOW + "Publish" + ANSI_RESET + System.lineSeparator();
+
+        // output generalisations
+        out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
+
+        String generalisations = "";
+
+        Map<String, Generalisation> generalisation = c.getGeneralisations();
+        for (Map.Entry<String, Generalisation> entry : generalisation.entrySet()) {
+            String heading = entry.getKey();
+            if (heading.equals("pid") || heading.equals("tid")) {
+                continue;
+            }
+
+            generalisations += entry.getValue().toString() + " ";
+        }
+        out += generalisations;
+
+        // output tuple;
+        out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
+        this.setAsBeenOutput();
+        out += this.toString() + System.lineSeparator();
+
+        System.out.println(out);
+
+        // external output
+        outputStream.out.println(generalisations);
+    }
+
+    /**
      * Get the id of the tuple
      * 
      * @return id of tuple

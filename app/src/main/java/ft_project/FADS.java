@@ -37,9 +37,11 @@ public class FADS extends Castle {
             set_tp.add(t_n);
 
             // Update the ranges of the numeric QIDs with respect to t_n;
+            // TODO what?
+
             // Remove the k-anonymised clusters in Set_kc that exist longer than or equal to
             // T_kc;
-            // TODO
+            set_kc.removeIf(c -> (c.size() >= beta));
 
             if (set_tp.size() > delta) {
                 // Remove the earliest arrived tuple t from Set_tp;
@@ -63,8 +65,14 @@ public class FADS extends Castle {
     public void publishTuple(Tuple t) {
         if (set_tp.size() < k - 1) {
             set_tp.add(t);
-            for (Tuple t_i : set_tp) {
-                outputWithKCorSuppress(t_i);
+
+            Iterator<Tuple> iter = set_tp.iterator();
+            while (iter.hasNext()) {
+                outputWithKCorSuppress(iter.next());
+
+                // remove taken from end of outputWithKCorSuppress to allow removal while
+                // iterating
+                iter.remove();
             }
         } else {
             outputWithKCorNC(t);
@@ -83,11 +91,11 @@ public class FADS extends Castle {
 
         if (C_kc != null) {
             // Publish t with C_kc's generalisation
+            t.outputWith(outputStream, DGHs, C_kc);
         } else {
-            // suppress and publish t
+            // suppress t
+            t.suppress(outputStream, DGHs);
         }
-
-        set_tp.remove(t);
     }
 
     /**
@@ -98,24 +106,27 @@ public class FADS extends Castle {
      */
     public void outputWithKCorNC(Tuple t) {
         // Find the k-1 nearest neighbours of t with unique pid in Set_tp and create a
-        // new cluster C_nc on t and its neighbours
+        // new cluster C_nc on t and its neighbours TODO
         Cluster c_nc = null;
 
         // Find a k-anonymised cluster C_kc in Set_kc that covers t and incurs least
-        // info loss increase after adding tuple to cluster
+        // info loss increase after adding tuple to cluster TODO
         Cluster c_kc = null;
 
         // if the nearest neighbours are fewer than k-1 then
         if (0 < k - 1) {
             if (c_kc != null) {
                 // Publish t with C_kc's generalisation
+                t.outputWith(outputStream, DGHs, c_kc);
             } else {
-                // suppress and publish t
+                t.suppress(outputStream, DGHs);
             }
         } else if (c_kc != null && c_kc.informationLoss() < c_nc.informationLoss()) {
             // publish t with C_kc's generalisation
+            t.outputWith(outputStream, DGHs, c_kc);
         } else {
             // publish t with C_nc's generalisation
+            t.outputWith(outputStream, DGHs, c_nc);
             set_kc.add(c_nc);
             // remove the k-1 nearest neighbours of t from Set_tp
         }
