@@ -53,8 +53,8 @@ public class FADSL extends FADS {
 
         while (Q_tp.size() > 0) {
             Tuple t_prime = Q_tp.remove();
-
-            if (H_tp.get(t_prime.getValue(a_s)).size() < Math.floor(Math.max(k, H_tp.values().size()) / l)) {
+            if (H_tp.get(t_prime.getValue(a_s)) == null // if not defined then size 0 so will be less than
+                    || H_tp.get(t_prime.getValue(a_s)).size() < Math.floor(Math.max(k, H_tp.values().size()) / l)) {
                 // insert t_prime into H_tp
                 if ((insertInto = H_tp.get(t_prime.getValue(a_s))) == null) {
                     insertInto = new LinkedHashSet<>();
@@ -71,8 +71,13 @@ public class FADSL extends FADS {
         if (H_tp.keySet().size() < l || H_tp.values().size() < k) {
             outputWithKCorSuppress(t);
         } else {
-            // TODO type error
-            // outputWithKCorNC(t, H_tp.values());
+            // TODO not sure correct
+            Cluster c_nc = new Cluster(t, DGHs);
+            for (Set<Tuple> bucket : H_tp.values()) {
+                c_nc.add(bucket);
+            }
+
+            outputWithKCorNC(t, c_nc);
         }
     }
 
