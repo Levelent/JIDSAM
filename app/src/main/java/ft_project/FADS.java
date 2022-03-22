@@ -1,6 +1,7 @@
 package ft_project;
 
 import java.util.*;
+import static java.lang.Math.min;
 
 public class FADS extends Castle {
     protected float aveInfoLoss;
@@ -112,8 +113,9 @@ public class FADS extends Castle {
         int numOfNearestNeighbours = neighbours.size();
 
         // create a new cluster C_nc on t and its k-1 nearest neighbours
+        // min is used in case numOfNearestNeighbours < k-1
         Cluster c_nc = new Cluster(t, DGHs);
-        for (int i = 1; i <= k - 1; i++) {
+        for (int i = 1; i <= min(k - 1, numOfNearestNeighbours); i++) {
             c_nc.add(neighbours.remove());
         }
 
