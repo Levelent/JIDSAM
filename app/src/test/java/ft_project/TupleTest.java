@@ -18,13 +18,6 @@ class TupleTest {
     }
 
     @Test
-    public void testTrue() {
-        assertTrue(true);
-    }
-
-    // TODO test suppress
-
-    @Test
     public void testGetPID() {
         assertEquals(t.getPid(), "1");
     }
