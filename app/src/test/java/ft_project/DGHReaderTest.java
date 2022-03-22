@@ -47,7 +47,7 @@ class DGHReaderTest {
 
     @BeforeEach
     public void beforeEach() {
-        DGHReader DGHr = new DGHReader(".src/test/resources/dgh-indents");
+        DGHReader DGHr = new DGHReader("./src/test/resources/dgh-indents");
         DghMap = DGHr.DGHs;
     }
 
@@ -55,7 +55,6 @@ class DGHReaderTest {
     public void testIndents() {
         DGH indents = DghMap.get("dgh-indents");
 
-        assertTrue(indents.countNodes("1") == 1);
         assertTrue(indents.countNodes("1.1") == 6);
         assertTrue(indents.countNodes("1.2") == 1);
         assertTrue(indents.countNodes("1.3") == 7);
