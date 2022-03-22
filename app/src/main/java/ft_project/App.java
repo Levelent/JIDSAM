@@ -21,7 +21,7 @@ public class App {
         // initialise CASTLE
         Castle castle;
         switch (args.length > 0 ? args[0] : "") {
-            case "l":
+            case "1":
                 // l diversity thresholds/constants
                 int l = 2;
                 int a_s = 2;
