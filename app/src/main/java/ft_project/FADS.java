@@ -143,6 +143,7 @@ public class FADS extends Castle {
                     continue;
                 }
 
+                // TODO line means that these ones never get output...
                 set_tp.remove(t_i);
             }
         }
@@ -150,6 +151,13 @@ public class FADS extends Castle {
         set_tp.remove(t);
     }
 
+    /**
+     * Get the cluster which covers tuple t with the smallest information loss
+     * 
+     * @param t          tuple to cover
+     * @param collection of clusters which can be used to cover t
+     * @return cluster which covers tuple t with smallest information loss
+     */
     protected Cluster getClusterWhichCoversWithSmallestLoss(Tuple t, Collection<Cluster> collection) {
         Cluster minCluster = null;
         float minLoss = 0;
