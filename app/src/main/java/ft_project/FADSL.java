@@ -40,7 +40,7 @@ public class FADSL extends FADS {
         }
 
         // Let H_tp be a hash table that stores tuples by their sensitive attribute
-        // values, initialised to phi
+        // values
         Hashtable<String, Set<Tuple>> H_tp = new Hashtable<>();
 
         // insert t into H_tp
@@ -84,7 +84,7 @@ public class FADSL extends FADS {
      */
     public void outputWithKCorSuppress(Tuple t) {
         // Find a k-anonymised cluster C_kc in Set_kc that covers t and has the smallest
-        // generalisation information loss
+        // generalisation information loss TODO
         Cluster c_kc = null;
 
         if (c_kc != null) {
@@ -99,12 +99,14 @@ public class FADSL extends FADS {
             }
 
             if (Set_t.size() > Math.floor(c_kc.size() / l)) {
-                // Suppress and publish t
+
+                t.suppress(outputStream, DGHs);
             } else {
-                // Publish t with C_kc's generalisation
+                t.outputWith(outputStream, DGHs, c_kc);
             }
         } else {
             // suppress and publish t
+            t.suppress(outputStream, DGHs);
         }
         set_tp.remove(t);
     }
@@ -118,7 +120,7 @@ public class FADSL extends FADS {
      */
     public void outputWithKCorNC(Tuple t, Cluster c_nc) {
         // Find a k-anonymised cluster C_kc in Set_kc that covers t and has the smallest
-        // generalisation information loss
+        // generalisation information loss TODO
         Cluster c_kc = null;
 
         // if C_kc exists and its generalisation info loss is smaller than C_nc's then
@@ -136,13 +138,13 @@ public class FADSL extends FADS {
 
             // TODO should not be c_kc it should be c
             if (set_t.size() > Math.floor(c_kc.size() / l)) {
-                // Publish t with C_nc's generalisation
+                t.outputWith(outputStream, DGHs, c_nc);
                 set_kc.add(c_nc);
             } else {
-                // publish t with C_kc's generalisation
+                t.outputWith(outputStream, DGHs, c_kc);
             }
         } else {
-            // Publish t with C_nc's generalisation
+            t.outputWith(outputStream, DGHs, c_nc);
             set_kc.add(c_nc);
         }
 
