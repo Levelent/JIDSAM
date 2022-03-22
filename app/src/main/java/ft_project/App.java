@@ -32,6 +32,14 @@ public class App {
                 // run B-CASTLE
                 castle = new BCastle(dataStream, k, delta, beta);
                 break;
+            case "3":
+                // run FADS (note beta is t_kc)
+                castle = new FADS(dataStream, k, delta, beta);
+                break;
+            case "4":
+                // run FADS with l diversity (note beta is t_kc)
+                castle = new FADSL(dataStream, k, delta, beta);
+                break;
             default:
                 // run normal castle
                 castle = new Castle(dataStream, k, delta, beta);
