@@ -111,7 +111,7 @@ public class DGH {
     }
 
     /**
-     * Find the first common ancestor between to data points in the tree
+     * Find the first common ancestor between two data points in the tree
      * 
      * @param rootA data point one
      * @param rootB data point two
@@ -212,7 +212,7 @@ public class DGH {
          */
         public int countNodes(int count) {
             for (Node n : this.children) {
-                count += n.countNodes(count);
+                count += n.countNodes(0);
             }
             return count + 1;
         }
