@@ -11,6 +11,12 @@ public class Cluster implements Cloneable {
     private Map<String, Generalisation> generalisations;
     private Map<String, DGH> DGH;
 
+    /**
+     * Constructor to create a cluster with given tuple and DGHs
+     * 
+     * @param t tuple to start the cluster with
+     * @param d associated DGH trees
+     */
     public Cluster(Tuple t, Map<String, DGH> d) {
         DGH = d;
         tuples = new LinkedList<Tuple>();
@@ -35,6 +41,11 @@ public class Cluster implements Cloneable {
         this.add(t);
     }
 
+    /**
+     * Merger a given cluster into this cluster by adding all tuples
+     * 
+     * @param c cluster to merge
+     */
     public void merge(Cluster c) {
         // add all tuples in c to t
         for (Tuple t : c.getTuples()) {
@@ -42,6 +53,12 @@ public class Cluster implements Cloneable {
         }
     }
 
+    /**
+     * Get a set of distinctValues for a given index
+     * 
+     * @param a_s index to get the distinct values for
+     * @return set of distinct values
+     */
     public Set<String> distinctValues(int a_s) {
         // get all distinct values in cluster for a_s index
         Set<String> distinctValues = new HashSet<>();
@@ -51,15 +68,32 @@ public class Cluster implements Cloneable {
         return distinctValues;
     }
 
+    /**
+     * Get the number of distinct values for a given index
+     * 
+     * @param a_s index to get the number of distinct values for
+     * @return number of distinct values
+     */
     public int diversity(int a_s) {
         // C.diversity the number of distinct values of a_s for tuples in C
         return this.distinctValues(a_s).size();
     }
 
+    /**
+     * Check if the cluster contains a given tuple
+     * 
+     * @param t the tuple to see if the cluster contains
+     * @return if the cluster contains the given tuple
+     */
     public boolean contains(Tuple t) {
         return tuples.contains(t);
     }
 
+    /**
+     * Add a given tuple to the cluster
+     * 
+     * @param t tuple to add
+     */
     public void add(Tuple t) {
         tuples.add(t);
         for (String h : t.headings) {
@@ -75,16 +109,25 @@ public class Cluster implements Cloneable {
             } catch (NumberFormatException e) {
                 generalisation.updateGeneralisation(t.getValue(h));
             }
-
         }
     }
 
+    /**
+     * Add a collection of tuples to the cluster
+     * 
+     * @param s collection of tuples to add
+     */
     public void add(Collection<Tuple> s) {
         for (Tuple t : s) {
             this.add(t);
         }
     }
 
+    /**
+     * Calculate the information loss due to the cluster generalisations
+     * 
+     * @return the information loss
+     */
     public float informationLoss() {
         float average = 0;
         for (Generalisation g : generalisations.values()) {
@@ -93,14 +136,24 @@ public class Cluster implements Cloneable {
         return average / generalisations.size();
     }
 
+    /**
+     * Remove a set of tuple from the cluster
+     * 
+     * @param s the set of clusters to remove from the cluster
+     */
     public void removeSet(Set<Tuple> s) {
         for (Tuple t : s) {
             tuples.remove(t);
         }
     }
 
+    /**
+     * Get the size of the cluster where the size is the number of distinct values
+     * of pid
+     * 
+     * @return size of cluster
+     */
     public int size() {
-        // bottom of page 4 - size is number of distinct values of pid
         Set<String> pids = new LinkedHashSet<>();
         for (Tuple t : tuples) {
             pids.add(t.getPid());
@@ -108,18 +161,38 @@ public class Cluster implements Cloneable {
         return pids.size();
     }
 
+    /**
+     * Getter for list of tuples contained in cluster
+     * 
+     * @return list of tuples
+     */
     public List<Tuple> getTuples() {
         return tuples;
     }
 
+    /**
+     * Getter for generalisations
+     * 
+     * @return generalisation associated with cluster
+     */
     public Map<String, Generalisation> getGeneralisations() {
         return generalisations;
     }
 
+    /**
+     * Get the DGH associated with cluster
+     * 
+     * @return the set DGH
+     */
     public Map<String, DGH> getDGH() {
         return DGH;
     }
 
+    /**
+     * Output the cluster to the console and given output stream
+     * 
+     * @param outputStream the stream to output to
+     */
     public void output(OutStream outputStream) {
         // "internal" output
         String out = System.lineSeparator() + ANSI_YELLOW + "Cluster" + ANSI_RESET + System.lineSeparator();
@@ -151,6 +224,11 @@ public class Cluster implements Cloneable {
         }
     }
 
+    /**
+     * Deep clone the cluster
+     * 
+     * @return cloned cluster
+     */
     public Object clone() throws CloneNotSupportedException {
         Cluster c = (Cluster) super.clone();
 

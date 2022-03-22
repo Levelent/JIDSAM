@@ -1,10 +1,21 @@
 package ft_project;
 
+import java.security.SecureRandom;
 import java.util.*;
 
 public class CastleL extends Castle {
     protected int l, a_s;
 
+    /**
+     * Constructor for castle-l
+     * 
+     * @param s     data stream
+     * @param k     threshold
+     * @param delta threshold
+     * @param beta  threshold
+     * @param l     l diversity threshold
+     * @param a_s   sensitive attribute index
+     */
     public CastleL(InStream s, int k, int delta, int beta, int l, int a_s) {
         super(s, k, delta, beta);
 
@@ -13,6 +24,11 @@ public class CastleL extends Castle {
         this.a_s = a_s; // index of the l diversity sensitive attribute
     }
 
+    /**
+     * Handles the delay output constraint for a given tuple
+     * 
+     * @param t tuple that is being constrained
+     */
     public void delayConstraint(Tuple t) {
         // Let C be the non-k_s anonymised cluster to which t belongs
         Cluster c = null;
@@ -78,6 +94,11 @@ public class CastleL extends Castle {
         }
     }
 
+    /**
+     * Output a given cluster
+     * 
+     * @param c cluster to output
+     */
     public void outputCluster(Cluster c) {
         Set<Cluster> SC;
         if (c.size() >= 2 * this.k && c.diversity(this.a_s) >= this.l) {
@@ -112,6 +133,13 @@ public class CastleL extends Castle {
         }
     }
 
+    /**
+     * Split function with l diversity
+     * 
+     * @param c   cluster to split
+     * @param a_s index of sensitivity attribute
+     * @return set of sub clusters
+     */
     public Set<Cluster> splitL(Cluster c, Integer a_s) {
         Map<String, List<Tuple>> BS = generate_buckets(c, a_s);
 
@@ -127,7 +155,7 @@ public class CastleL extends Castle {
         int sum;
         while (BS.size() >= this.l && (sum = BS.values().stream().mapToInt(List::size).sum()) >= this.k) {
             // randomly select a B from BS;
-            Random random = new Random();
+            Random random = new SecureRandom();
             List<String> keys = new ArrayList<String>(BS.keySet());
             String randomKey = keys.get(random.nextInt(keys.size()));
 
@@ -222,5 +250,27 @@ public class CastleL extends Castle {
         }
 
         return SC;
+    }
+
+    /**
+     * Generate distinct buckets where the sensitive attribute groups them
+     * 
+     * @param c   cluster whose tuples are to be split into buckets
+     * @param a_s index of sensitivity attribute
+     * @return map of sensitivity attribute to list of associated tuples
+     */
+    public Map<String, List<Tuple>> generate_buckets(Cluster c, Integer a_s) {
+        // group C's tuples into distinct buckets BS on the basis of
+        // the values for the sensitive attribute
+        Map<String, List<Tuple>> BS = new HashMap<>();
+        for (Tuple t : c.getTuples()) {
+            if (!BS.containsKey(t.getValue(a_s))) {
+                BS.put(t.getValue(a_s), new ArrayList<Tuple>());
+            }
+
+            BS.get(t.getValue(a_s)).add(t);
+        }
+
+        return BS;
     }
 }

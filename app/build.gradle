@@ -53,12 +53,26 @@ task castlel(type: Exec) {
     dependsOn jar
     group = "Execution"
     description = "Run the output executable jar with ExecTask"
-    commandLine "java", "-jar", jar.archiveFile.get(), "l"
+    commandLine "java", "-jar", jar.archiveFile.get(), "1"
 }
 
 task bcastle(type: Exec) {
     dependsOn jar
     group = "Execution"
     description = "Run the output executable jar with ExecTask"
-    commandLine "java", "-jar", jar.archiveFile.get(), "b"
+    commandLine "java", "-jar", jar.archiveFile.get(), "2"
+}
+
+task fads(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run the output executable jar with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get(), "3"
+}
+
+task fadsl(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run the output executable jar with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get(), "4"
 }

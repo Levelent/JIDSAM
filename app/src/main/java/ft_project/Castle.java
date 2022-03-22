@@ -1,5 +1,6 @@
 package ft_project;
 
+import java.security.SecureRandom;
 import java.util.*;
 
 public class Castle {
@@ -11,6 +12,14 @@ public class Castle {
     protected InStream s;
     protected OutStream outputStream;
 
+    /**
+     * Initialise the Castle algorithm
+     * 
+     * @param s     data stream
+     * @param k     threshold
+     * @param delta threshold
+     * @param beta  threshold
+     */
     public Castle(InStream s, int k, int delta, int beta) {
         // set default algorithm parameters
         this.k = k;
@@ -24,16 +33,28 @@ public class Castle {
         this.aveInfoLoss = 0; // Let be initialised to 0, usually is the average information loss
     }
 
+    /**
+     * Set the DGH used in the algorithm
+     * 
+     * @param dghs DGH graph
+     */
     public void setDGHs(Map<String, DGH> dghs) {
         DGHs = dghs;
     }
 
+    /**
+     * Set the output stream
+     * 
+     * @param stream output stream
+     */
     public void setOutputStream(OutStream stream) {
         this.outputStream = stream;
     }
 
+    /**
+     * run the Castle algorithm
+     */
     public void run() {
-
         // define array to track tuple positions (most recent -> less recent [head])
         Queue<Tuple> tupleHistory = new LinkedList<>();
 
@@ -60,6 +81,12 @@ public class Castle {
         }
     }
 
+    /**
+     * Select the best cluster for a given tuple
+     * 
+     * @param t tuple to select the cluster for
+     * @return cluster that is most suited for tuple t
+     */
     public Cluster bestSelection(Tuple t) {
         // used to keep track of clusters for a given enlargement value
         Map<Float, Set<Cluster>> enlargementMap = new HashMap<>();
@@ -125,6 +152,11 @@ public class Castle {
         return SetC_ok.stream().min(Comparator.comparing(Cluster::size)).orElseThrow(NoSuchElementException::new);
     }
 
+    /**
+     * Handle the constraint of maximum delay before a tuple is outputted
+     * 
+     * @param t tuple that requires to be output
+     */
     public void delayConstraint(Tuple t) {
         // Let C be the non-k_s anonymised cluster to which t belongs
         Cluster c = null;
@@ -180,6 +212,14 @@ public class Castle {
         }
     }
 
+    /**
+     * Merge clusters from a given list into a given cluster while minimising
+     * enlargement
+     * 
+     * @param c           cluster to merge into
+     * @param clusterList possible clusters that can be used to merge
+     * @return the merged version of c
+     */
     public Cluster merge_clusters(Cluster c, Set<Cluster> clusterList) {
         // This process continues until C’s size is at least k.
         while (c.size() < this.k) {
@@ -209,8 +249,14 @@ public class Castle {
         return c;
     }
 
+    /**
+     * Select a random cluster from a set of clusters
+     * 
+     * @param set the set of clusters to select from
+     * @return randomly selected cluster
+     */
     protected Cluster getRandomCluster(Set<Cluster> set) {
-        int random = new Random().nextInt(set.size());
+        int random = new SecureRandom().nextInt(set.size());
         for (Cluster item : set) {
             if (random-- == 0) {
                 return item;
@@ -219,6 +265,11 @@ public class Castle {
         return set.iterator().next();
     }
 
+    /**
+     * Output a given cluster
+     * 
+     * @param c the cluster to output
+     */
     public void outputCluster(Cluster c) {
         Set<Cluster> SC;
         if (c.size() >= 2 * this.k) {
@@ -253,6 +304,12 @@ public class Castle {
         }
     }
 
+    /**
+     * Split cluster into sub k-anonymised clusters
+     * 
+     * @param c cluster to split
+     * @return set of sub clusters
+     */
     public Set<Cluster> split(Cluster c) {
         Set<Cluster> SC = new LinkedHashSet<Cluster>();
 
@@ -268,7 +325,7 @@ public class Castle {
 
         while (BS.size() >= this.k) {
             // randomly select a bucket B from BS, and pick one of its tuples t;
-            Random random = new Random();
+            Random random = new SecureRandom();
             List<String> uniquePIDs = new ArrayList<String>(BS.keySet());
             String randomPID = uniquePIDs.get(random.nextInt(uniquePIDs.size()));
 
@@ -339,7 +396,7 @@ public class Castle {
             List<Tuple> b_i = entry.getValue();
 
             // pick a tuple t_i in B_i;
-            Random random = new Random();
+            Random random = new SecureRandom();
             Tuple t_i = b_i.get(random.nextInt(b_i.size()));
 
             // find nearest cluster of t_i in SC, and add all the tuples in B_i to it;
@@ -364,21 +421,13 @@ public class Castle {
         return SC;
     }
 
-    public Map<String, List<Tuple>> generate_buckets(Cluster c, Integer a_s) {
-        // group C's tuples into distinct buckets BS on the basis of
-        // the values for the sensitive attribute
-        Map<String, List<Tuple>> BS = new HashMap<>();
-        for (Tuple t : c.getTuples()) {
-            if (!BS.containsKey(t.getValue(a_s))) {
-                BS.put(t.getValue(a_s), new ArrayList<Tuple>());
-            }
-
-            BS.get(t.getValue(a_s)).add(t);
-        }
-
-        return BS;
-    }
-
+    /**
+     * Calculate the enlargement for if a tuple was to be added to a cluster
+     * 
+     * @param c cluster that the tuple would be added to
+     * @param t the tuple to add
+     * @return enlargement due to addition
+     */
     public float enlargement(Cluster c, Tuple t) {
         try {
             Cluster clone = (Cluster) c.clone();
@@ -393,16 +442,18 @@ public class Castle {
         return 0;
     }
 
+    /**
+     * Calculate the enlargement for if a cluster was to be added to another cluster
+     * 
+     * @param c1 first cluster
+     * @param c2 second cluster
+     * @return enlargement due to merging of both clusters
+     */
     public float enlargement(Cluster c1, Cluster c2) {
-        // to finish merge clusters, need to be able to know the potential enlargement
-        // if two clusters were to be merged
-
-        // I Assume this is what they want... as if all tuples from one were added to
-        // the other
+        // potential enlargement if two clusters were to be merged
         try {
             Cluster clone = (Cluster) c1.clone();
             clone.add(c2.getTuples());
-
             return clone.informationLoss() - c1.informationLoss();
 
         } catch (CloneNotSupportedException e) {
@@ -412,16 +463,20 @@ public class Castle {
         return 0;
     }
 
+    /**
+     * Calculate the enlargement for if a tuple was to be added to another tuple
+     * 
+     * @param t1 first tuple
+     * @param t2 second tuple
+     * @return enlargement between the two tuples
+     */
     public float enlargement(Tuple t1, Tuple t2) {
         if (t1 == null || t2 == null) {
-
             return 0;
         }
 
         Cluster c1 = new Cluster(t1, DGHs);
         Cluster c2 = new Cluster(t2, DGHs);
-
         return enlargement(c1, c2);
-
     }
 }

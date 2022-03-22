@@ -1,6 +1,6 @@
 # CS347 Fault Tolerant Systems
 
-## CASTLE: Continuously Anonymizing Data Streams
+## JIDSAM: Java Implementations of Data Stream Anonymisation Methods
 
 Uses gradle version 7.3.3 and java openjdk 11.0.14
 
@@ -13,6 +13,8 @@ In the project's root run the command: `gradle run`
 | Castle   | `gradle run castle` or `gradle run` |
 | Castle-L | `gradle run castlel`                |
 | B-Castle | `gradle run bcastle`                |
+| FADS     | `gradle run fads`                   |
+| FADS-L   | `gradle run fadsl`                  |
 
 ### Output
 
