@@ -12,6 +12,10 @@ public class App {
         int delta = 10;
         int beta = 2;
 
+        // l diversity thresholds/constants
+        int l = 2;
+        int a_s = 2;
+
         // create data stream
         InStream dataStream = new InStream("./src/main/resources/adult-100.csv");
 
@@ -22,9 +26,6 @@ public class App {
         Castle castle;
         switch (args.length > 0 ? args[0] : "") {
             case "1":
-                // l diversity thresholds/constants
-                int l = 2;
-                int a_s = 2;
                 // run CASTLE with l diversity
                 castle = new CastleL(dataStream, k, delta, beta, l, a_s);
                 break;
@@ -38,7 +39,7 @@ public class App {
                 break;
             case "4":
                 // run FADS with l diversity (note beta is t_kc)
-                castle = new FADSL(dataStream, k, delta, beta);
+                castle = new FADSL(dataStream, k, delta, beta, l, a_s);
                 break;
             default:
                 // run normal castle
