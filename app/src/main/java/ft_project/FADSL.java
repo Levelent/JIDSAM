@@ -84,8 +84,8 @@ public class FADSL extends FADS {
      */
     public void outputWithKCorSuppress(Tuple t) {
         // Find a k-anonymised cluster C_kc in Set_kc that covers t and has the smallest
-        // generalisation information loss TODO
-        Cluster c_kc = null;
+        // generalisation information loss
+        Cluster c_kc = getClusterWhichCoversWithSmallestLoss(t, set_kc);
 
         if (c_kc != null) {
             Set<Tuple> Set_t = new LinkedHashSet<>();
@@ -119,8 +119,8 @@ public class FADSL extends FADS {
      */
     public void outputWithKCorNC(Tuple t, Cluster c_nc) {
         // Find a k-anonymised cluster C_kc in Set_kc that covers t and has the smallest
-        // generalisation information loss TODO
-        Cluster c_kc = null;
+        // generalisation information loss
+        Cluster c_kc = getClusterWhichCoversWithSmallestLoss(t, set_kc);
 
         // if C_kc exists and its generalisation info loss is smaller than C_nc's then
         // initialise Set_t

@@ -83,8 +83,8 @@ public class FADS extends Castle {
      */
     public void outputWithKCorSuppress(Tuple t) {
         // Find a k-anonymised cluster C_kc in Set_kc that covers t and incurs least
-        // info loss increase after adding tuple to cluster TODO
-        Cluster C_kc = null;
+        // info loss increase after adding tuple to cluster
+        Cluster C_kc = getClusterWhichCoversWithSmallestLoss(t, set_kc);
 
         if (C_kc != null) {
             // Publish t with C_kc's generalisation
@@ -116,8 +116,8 @@ public class FADS extends Castle {
         }
 
         // Find a k-anonymised cluster C_kc in Set_kc that covers t and incurs least
-        // info loss increase after adding tuple to cluster TODO
-        Cluster c_kc = null;
+        // info loss increase after adding tuple to cluster
+        Cluster c_kc = getClusterWhichCoversWithSmallestLoss(t, set_kc);
 
         // if the nearest neighbours are fewer than k-1 then
         if (0 < k - 1) {
@@ -138,5 +138,20 @@ public class FADS extends Castle {
         }
 
         set_tp.remove(t);
+    }
+
+    protected Cluster getClusterWhichCoversWithSmallestLoss(Tuple t, Collection<Cluster> collection) {
+        Cluster minCluster = null;
+        float minLoss = 0;
+
+        for (Cluster c : collection) {
+            float loss = enlargement(c, t);
+            if (minCluster == null || loss < minLoss) {
+                minCluster = c;
+                minLoss = loss;
+            }
+        }
+
+        return minCluster;
     }
 }
