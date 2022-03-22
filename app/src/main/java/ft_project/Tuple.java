@@ -65,7 +65,7 @@ public class Tuple implements Cloneable {
         // output tuple;
         out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
         this.setAsBeenOutput();
-        out += this.toString() + System.lineSeparator();
+        out += this.toString();
 
         System.out.println(out);
 
@@ -99,12 +99,12 @@ public class Tuple implements Cloneable {
 
             generalisations += entry.getValue().toString() + " ";
         }
-        out += generalisations;
+        out += generalisations + System.lineSeparator();
 
         // output tuple;
         out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
         this.setAsBeenOutput();
-        out += this.toString() + System.lineSeparator();
+        out += this.toString();
 
         System.out.println(out);
 
