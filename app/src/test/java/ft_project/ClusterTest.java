@@ -103,8 +103,6 @@ class ClusterTest {
         assertEquals(d, c.getDGH());
     }
 
-    // TODO output
-
     @Test
     public void testClone() {
         try {
