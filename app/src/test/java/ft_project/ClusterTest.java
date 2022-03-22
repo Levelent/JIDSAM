@@ -75,8 +75,6 @@ class ClusterTest {
         assertEquals(c.size(), 2);
     }
 
-    // TODO information loss
-
     @Test
     public void testRemoveSet() {
         Set<Tuple> s = new LinkedHashSet<>();
@@ -96,7 +94,13 @@ class ClusterTest {
         assertEquals(c.getTuples().get(0), t);
     }
 
-    // TODO getGeneralisation
+    @Test
+    public void testGetGeneralisation() {
+        String[] headings = { "pid", "salary" };
+        String[] data = { "2", "200" };
+        c.add(new Tuple(headings, data));
+        assertEquals("{salary=[ 100.0 200.0 ]}", c.getGeneralisations().toString());
+    }
 
     @Test
     public void testGetDGH() {
