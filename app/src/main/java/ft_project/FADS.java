@@ -143,6 +143,7 @@ public class FADS extends Castle {
                     continue;
                 }
 
+                // TODO line means that these ones never get output...
                 set_tp.remove(t_i);
             }
         }
