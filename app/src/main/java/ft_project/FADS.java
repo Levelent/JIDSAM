@@ -145,8 +145,6 @@ public class FADS extends Castle {
                 if (t_i == t) {
                     continue;
                 }
-
-                // TODO line means that these ones never get output...
                 set_tp.remove(t_i);
             }
         }

@@ -89,15 +89,9 @@ public class Tuple implements Cloneable {
         out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
 
         String generalisations = "";
-
-        Map<String, Generalisation> generalisation = c.getGeneralisations();
-        for (Map.Entry<String, Generalisation> entry : generalisation.entrySet()) {
-            String heading = entry.getKey();
-            if (heading.equals("pid") || heading.equals("tid")) {
-                continue;
-            }
-
-            generalisations += entry.getValue().toString() + " ";
+        for (String h : headings) {
+            Generalisation g = c.getGeneralisations().get(h);
+            generalisations += (g == null) ? "" : g.toString() + " ";
         }
         out += generalisations + System.lineSeparator();
 
