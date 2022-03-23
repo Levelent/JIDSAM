@@ -15,12 +15,17 @@ In the project's root run the command: `gradle run`
 | B-Castle | `gradle run bcastle`                |
 | FADS     | `gradle run fads`                   |
 | FADS-L   | `gradle run fadsl`                  |
+| XBAND    | `gradle run xband`                  |
 
 ### Output
 
 Development/Internal output occurs to the terminal where you can see the cluster generalisations and the tuples included.
 
 External output can be seen in [output.txt](./app/output.txt).
+
+### Compare Algorithms
+
+To generate graphs comparing the algorithms run `gradle compare`
 
 ### Automated Tests
 

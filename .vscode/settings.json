@@ -2,5 +2,13 @@
   "java.configuration.updateBuildConfiguration": "automatic",
   "cSpell.language": "en-GB",
   "editor.formatOnSave": true,
-  "cSpell.words": ["bcastle", "castlel", "dghs", "Eplus", "FADSL"]
+  "cSpell.words": [
+    "bcastle",
+    "castlel",
+    "dghs",
+    "Eplus",
+    "FADSL",
+    "JIDSAM",
+    "XBAND"
+  ]
 }

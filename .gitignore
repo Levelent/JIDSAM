@@ -30,3 +30,6 @@ output.txt
 
 # Large datasets
 app/src/main/resources/2/yellow_tripdata_2021-01.csv
+
+# Output datasets
+compare-*.csv
