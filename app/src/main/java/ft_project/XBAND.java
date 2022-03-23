@@ -12,6 +12,16 @@ public class XBAND extends Castle {
     private int omega;
     private int expirationBand;
 
+    /**
+     * Constructor to initialise XBAND
+     * 
+     * @param s              data stream
+     * @param k              threshold
+     * @param delta          threshold
+     * @param beta           threshold
+     * @param omega          threshold
+     * @param expirationBand threshold
+     */
     public XBAND(InStream s, int k, int delta, int beta, int omega, int expirationBand) {
         // set default algorithm parameters
         // expirationBand may be refered to as Gamma
@@ -20,6 +30,9 @@ public class XBAND extends Castle {
         this.expirationBand = expirationBand;
     }
 
+    /**
+     * Run the XBAND algorithm
+     */
     public void run() {
         set_t = new LinkedHashSet<>();
         set_k = new LinkedHashSet<>();
@@ -55,6 +68,9 @@ public class XBAND extends Castle {
 
     }
 
+    /**
+     * Trigger the publish of a given tuple or suppress where necessary
+     */
     private void triggerPublish() {
         c_gen = new PriorityQueue<Cluster>((c1, c2) -> Float.compare(c1.informationLoss(), c2.informationLoss()));
         if (set_t.size() > k + expirationBand) {
@@ -115,8 +131,10 @@ public class XBAND extends Castle {
         }
     }
 
+    /**
+     * Generate the clusters in the expiration band
+     */
     private void generateExpirationBandClusters() {
-
         Iterator<Pair<Tuple, Integer>> iterator = set_t.iterator();
         int i = 0;
         Pair<Tuple, Integer> element = null;
@@ -148,6 +166,12 @@ public class XBAND extends Castle {
         }
     }
 
+    /**
+     * Suppers the anonymization of tuple t with minimal enlargement or completely
+     * if no possible cluster
+     * 
+     * @param t tuple to suppress
+     */
     private void suppressAnonymization(Tuple t) {
         PriorityQueue<Cluster> potentialClusters = new PriorityQueue<>(
                 (c1, c2) -> Float.compare(enlargement(c1, t), enlargement(c2, t)));
@@ -160,7 +184,6 @@ public class XBAND extends Castle {
             Cluster best = potentialClusters.poll();
             t.outputWith(outputStream, DGHs, best);
         }
-
     }
 
     public static class Pair<X, Y> {
