@@ -24,8 +24,9 @@ gradle.properties
 
 # Ignore Gradle build output directory
 build
-
-# vscpde
 .vscode
 
 output.txt
+
+# Large datasets
+app/src/main/resources/2/yellow_tripdata_2021-01.csv
