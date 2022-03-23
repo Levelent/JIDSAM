@@ -208,6 +208,8 @@ public class App {
                 // output comparison data
                 value.add(version + "," + k + "," + castle.aveInfoLoss);
             }
+
+            System.out.println(version + " varying k done");
         }
 
         public ArrayList<String> getValue() {
@@ -281,6 +283,8 @@ public class App {
                 // output comparison data
                 value.add(version + "," + delta + "," + castle.aveInfoLoss);
             }
+
+            System.out.println(version + " varying delta done");
         }
 
         public ArrayList<String> getValue() {
