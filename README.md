@@ -20,7 +20,7 @@ In the project's root run the command: `gradle run`
 
 Development/Internal output occurs to the terminal where you can see the cluster generalisations and the tuples included.
 
-External output can be seen in ![output.txt](./app/output.txt).
+External output can be seen in [output.txt](./app/output.txt).
 
 ### Automated Tests
 
