@@ -142,12 +142,14 @@ public class FADSL extends FADS {
             if (set_t.size() > Math.floor(c_kc.size() / l)) {
                 t.outputWith(outputStream, DGHs, c_nc);
                 set_kc.add(c_nc);
+                set_published.add(c_nc);
             } else {
                 t.outputWith(outputStream, DGHs, c_kc);
             }
         } else {
             t.outputWith(outputStream, DGHs, c_nc);
             set_kc.add(c_nc);
+            set_published.add(c_nc);
         }
 
         set_tp.remove(t);
