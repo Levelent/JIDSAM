@@ -66,7 +66,7 @@ public class App {
      * Helper function to run all comparison tasks
      */
     public static void compare() {
-        String dataSet = "./src/main/resources/adult-1000.csv";
+        String dataSet = "./src/main/resources/adult-100.csv";
         varyK(dataSet);
         varyDelta(dataSet);
     }

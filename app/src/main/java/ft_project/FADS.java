@@ -5,7 +5,7 @@ import static java.lang.Math.min;
 
 public class FADS extends Castle {
     protected Set<Tuple> set_tp;
-    protected Set<Cluster> set_kc;
+    protected Set<Cluster> set_kc, set_published;
 
     /**
      * Initialise the FADS algorithm
@@ -31,6 +31,9 @@ public class FADS extends Castle {
         // than t_kc
         set_kc = new LinkedHashSet<>();
 
+        // let set_published be the set of all published k-anonymised clusters
+        set_published = new LinkedHashSet<>();
+
         Tuple t_n;
         while ((t_n = s.next()) != null) {
             // Read a tuple t_n from S and insert into Set_tp
@@ -52,6 +55,15 @@ public class FADS extends Castle {
             Tuple t = set_tp.iterator().next();
             publishTuple(t);
         }
+
+        // calculate avgInfoLoss
+        float aveSum = 0;
+        HashSet<Cluster> cToAverage = new HashSet<Cluster>();
+        cToAverage.addAll(set_published);
+        for (Cluster cl : cToAverage) {
+            aveSum += cl.informationLoss();
+        }
+        this.aveInfoLoss = aveSum / cToAverage.size();
     }
 
     /**
@@ -138,6 +150,7 @@ public class FADS extends Castle {
             t.outputWith(outputStream, DGHs, c_nc);
             c_nc.output(outputStream);
             set_kc.add(c_nc);
+            set_published.add(c_nc);
 
             // remove the k-1 nearest neighbours of t from Set_tp
             for (Tuple t_i : c_nc.getTuples()) {
