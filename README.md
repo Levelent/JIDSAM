@@ -15,6 +15,7 @@ In the project's root run the command: `gradle run`
 | B-Castle | `gradle run bcastle`                |
 | FADS     | `gradle run fads`                   |
 | FADS-L   | `gradle run fadsl`                  |
+| XBAND    | `gradle run xband`                  |
 
 ### Output
 

@@ -78,6 +78,14 @@ task fadsl(type: Exec) {
     commandLine "java", "-jar", jar.archiveFile.get(), "4"
 }
 
+task xband(type: Exec) {
+    dependsOn jar
+    group = "Execution"
+    description = "Run the output executable jar with ExecTask"
+    commandLine "java", "-jar", jar.archiveFile.get(), "5"
+}
+
+
 task compare(type: Exec) {
     dependsOn jar
     group = "Execution"
