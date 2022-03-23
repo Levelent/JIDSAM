@@ -57,9 +57,10 @@ public class Castle {
     public void run() {
         // define array to track tuple positions (most recent -> less recent [head])
         Queue<Tuple> tupleHistory = new LinkedList<>();
-
+        System.out.println(Constants.variant);
         Tuple t;
         while ((t = s.next()) != null) {
+            Constants.outputProgress();
             Cluster c = bestSelection(t);
             if (c == null) {
                 // create new cluster on t and insert it into nonAnonymisedClusters
@@ -78,7 +79,9 @@ public class Castle {
                     delayConstraint(t2);
                 }
             }
+
         }
+
     }
 
     /**

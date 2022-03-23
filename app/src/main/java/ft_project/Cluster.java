@@ -213,14 +213,17 @@ public class Cluster implements Cloneable {
             out += t.toString() + System.lineSeparator();
         }
 
-        System.out.print(out);
-
         // external output
         for (Tuple t : tuples) {
             if (!t.hasBeenOutput()) {
                 outputStream.out.println(generalisations);
                 t.setAsBeenOutput();
+                Constants.incrementOut(1, this);
             }
+        }
+
+        if (Constants.verbose) {
+            System.out.print(out);
         }
     }
 

@@ -3,6 +3,7 @@ package ft_project;
 import java.lang.reflect.Array;
 import java.util.*;
 
+//TODO add proper comments
 public class XBAND extends Castle {
     protected Set<Pair<Tuple, Integer>> set_t;
     protected Set<Cluster> set_k;
@@ -22,6 +23,7 @@ public class XBAND extends Castle {
     }
 
     public void run() {
+        System.out.println(Constants.variant);
         set_t = new LinkedHashSet<>();
         set_k = new LinkedHashSet<>();
         pocket_t = new LinkedHashSet<>();
@@ -29,6 +31,7 @@ public class XBAND extends Castle {
         Tuple t_n;
         int time = 0;
         while ((t_n = s.next()) != null) {
+            Constants.outputProgress();
             Pair<Tuple, Integer> timeStamped = new Pair<Tuple, Integer>(t_n, time);
             set_t.add(timeStamped);
             if (set_k.size() >= omega) {
@@ -51,6 +54,7 @@ public class XBAND extends Castle {
             // We need to empty the pocket too
             for (Pair<Tuple, Integer> p : pocket_t) {
                 suppressAnonymization(p.x);
+                pocket_t.remove(p);
             }
         }
 
@@ -63,7 +67,7 @@ public class XBAND extends Castle {
             generateExpirationBandClusters();
             // The following is as per algorithm description rather than the psuedocode
             // displayed in the paper
-            Cluster c_best = c_gen.poll(); // priority queues should be min first be default
+            Cluster c_best = c_gen.poll(); // priority queues should be min first by default
             c_best.output(outputStream);
             set_k.add(c_best);
             for (Tuple t_best : c_best.getTuples()) {
@@ -89,7 +93,7 @@ public class XBAND extends Castle {
 
             // Find all tuples in the expiration band *before* those we just published and
             // add them to the pocket
-            int earliestTime = set_t.stream().reduce(new Pair<Tuple, Integer>(null, 999999),
+            int earliestTime = set_t.stream().reduce(new Pair<Tuple, Integer>(null, 99999),
                     (a, b) -> a.y < b.y ? a : b).y; // Set the identity to the newest time possible
 
             Iterator<Pair<Tuple, Integer>> iterator = set_t.iterator();
@@ -111,7 +115,9 @@ public class XBAND extends Castle {
             // Suppress the tuple to be expired
             Optional<Pair<Tuple, Integer>> found = set_t.stream().findFirst();
             Pair<Tuple, Integer> toSuppress = found.isPresent() ? found.get() : null;
+
             suppressAnonymization(toSuppress.x);
+            set_t.remove(toSuppress);
 
         }
     }

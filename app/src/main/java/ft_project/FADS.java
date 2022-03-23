@@ -24,6 +24,7 @@ public class FADS extends Castle {
      * Run the FADS algorithm
      */
     public void run() {
+        System.out.println(Constants.variant);
         // Let Set_tp be the set of tuples waiting for release
         set_tp = new LinkedHashSet<>();
 
@@ -36,6 +37,7 @@ public class FADS extends Castle {
 
         Tuple t_n;
         while ((t_n = s.next()) != null) {
+            Constants.outputProgress();
             // Read a tuple t_n from S and insert into Set_tp
             set_tp.add(t_n);
 
