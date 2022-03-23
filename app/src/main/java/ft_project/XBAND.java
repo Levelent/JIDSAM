@@ -1,6 +1,5 @@
 package ft_project;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class XBAND extends Castle {
@@ -15,7 +14,7 @@ public class XBAND extends Castle {
 
     public XBAND(InStream s, int k, int delta, int beta, int omega, int expirationBand) {
         // set default algorithm parameters
-        // expirationBand may be reffered to as Gamma
+        // expirationBand may be refered to as Gamma
         super(s, k, delta, beta);
         this.omega = omega;
         this.expirationBand = expirationBand;
@@ -61,7 +60,7 @@ public class XBAND extends Castle {
         if (set_t.size() > k + expirationBand) {
             // For every tuple in the expiration band (the oldest Gamma tuples)
             generateExpirationBandClusters();
-            // The following is as per algorithm description rather than the psuedocode
+            // The following is as per algorithm description rather than the pseudocode
             // displayed in the paper
             Cluster c_best = c_gen.poll(); // priority queues should be min first be default
             c_best.output(outputStream);
@@ -150,15 +149,15 @@ public class XBAND extends Castle {
     }
 
     private void suppressAnonymization(Tuple t) {
-        PriorityQueue<Cluster> potentialCluseters = new PriorityQueue<>(
+        PriorityQueue<Cluster> potentialClusters = new PriorityQueue<>(
                 (c1, c2) -> Float.compare(enlargement(c1, t), enlargement(c2, t)));
         for (Cluster c : set_k) {
-            potentialCluseters.add(c);
+            potentialClusters.add(c);
         }
         if (set_k.size() == 0) {
             t.suppress(outputStream, DGHs);
         } else {
-            Cluster best = potentialCluseters.poll();
+            Cluster best = potentialClusters.poll();
             t.outputWith(outputStream, DGHs, best);
         }
 
