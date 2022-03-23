@@ -34,43 +34,45 @@ public class Tuple implements Cloneable {
      * @param d            DGHs used to calculate category generalisations
      */
     public void suppress(OutStream outputStream, Map<String, DGH> d) {
-        // "internal" output
-        // output t with the most generalized QI value
-        String out = System.lineSeparator() + ANSI_YELLOW + "Suppress" + ANSI_RESET + System.lineSeparator();
-
-        // output generalisations
-        out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
-
-        String generalisations = "";
-        for (int i = 0; i < headings.length; i++) {
-            String heading = headings[i];
-            String value = data[i];
-
-            if (heading.equals("pid") || heading.equals("tid")) {
-                continue;
-            }
-
-            // suppress -> output most generalised possible
-            DGH dgh = d.get(heading);
-            if (dgh == null) {
-                // Must be a continuous generalisation
-                generalisations += (new ContinuousGeneralisation(Float.parseFloat(value))).getMaxGeneralisation();
-            } else {
-                generalisations += dgh.getRootValue();
-            }
-            generalisations += " ";
-        }
-        out += generalisations;
-
-        // output tuple;
-        out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
         this.setAsBeenOutput();
-        out += this.toString();
+        if (!App.silent) {
+            // "internal" output
+            // output t with the most generalized QI value
+            String out = System.lineSeparator() + ANSI_YELLOW + "Suppress" + ANSI_RESET + System.lineSeparator();
 
-        System.out.println(out);
+            // output generalisations
+            out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
 
-        // external output
-        outputStream.out.println(generalisations);
+            String generalisations = "";
+            for (int i = 0; i < headings.length; i++) {
+                String heading = headings[i];
+                String value = data[i];
+
+                if (heading.equals("pid") || heading.equals("tid")) {
+                    continue;
+                }
+
+                // suppress -> output most generalised possible
+                DGH dgh = d.get(heading);
+                if (dgh == null) {
+                    // Must be a continuous generalisation
+                    generalisations += (new ContinuousGeneralisation(Float.parseFloat(value))).getMaxGeneralisation();
+                } else {
+                    generalisations += dgh.getRootValue();
+                }
+                generalisations += " ";
+            }
+            out += generalisations;
+
+            // output tuple;
+            out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
+            out += this.toString();
+
+            System.out.print(out);
+
+            // external output
+            outputStream.out.println(generalisations);
+        }
     }
 
     /**
@@ -81,29 +83,31 @@ public class Tuple implements Cloneable {
      * @param c            cluster to use the generalisation of
      */
     public void outputWith(OutStream outputStream, Map<String, DGH> d, Cluster c) {
-        // "internal" output
-        // output t with the c generalisation
-        String out = System.lineSeparator() + ANSI_YELLOW + "Publish" + ANSI_RESET + System.lineSeparator();
-
-        // output generalisations
-        out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
-
-        String generalisations = "";
-        for (String h : headings) {
-            Generalisation g = c.getGeneralisations().get(h);
-            generalisations += (g == null) ? "" : g.toString() + " ";
-        }
-        out += generalisations + System.lineSeparator();
-
-        // output tuple;
-        out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
         this.setAsBeenOutput();
-        out += this.toString();
+        if (!App.silent) {
+            // "internal" output
+            // output t with the c generalisation
+            String out = System.lineSeparator() + ANSI_YELLOW + "Publish" + ANSI_RESET + System.lineSeparator();
 
-        System.out.println(out);
+            // output generalisations
+            out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
 
-        // external output
-        outputStream.out.println(generalisations);
+            String generalisations = "";
+            for (String h : headings) {
+                Generalisation g = c.getGeneralisations().get(h);
+                generalisations += (g == null) ? "" : g.toString() + " ";
+            }
+            out += generalisations + System.lineSeparator();
+
+            // output tuple;
+            out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
+            out += this.toString();
+
+            System.out.print(out);
+
+            // external output
+            outputStream.out.println(generalisations);
+        }
     }
 
     /**

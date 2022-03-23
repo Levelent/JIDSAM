@@ -3,6 +3,8 @@ package ft_project;
 import java.util.*;
 
 public class App {
+    static boolean silent = false;
+
     /**
      * App main function
      * 
@@ -72,6 +74,9 @@ public class App {
      * Helper function to run all comparison tasks
      */
     public static void compare() {
+        silent = true;
+
+        Map<String, DGH> dghs = new DGHReader("./src/main/resources/dgh").DGHs;
         String dataSet = "./src/main/resources/adult-1000.csv";
         String[] versions = { "castle", "castlel", "bcastle", "FADS", "FADSl" };
         ArrayList<VaryDelta> instances_d = new ArrayList<>();
@@ -81,11 +86,11 @@ public class App {
 
         for (String version : versions) {
             // k
-            VaryK k = new VaryK(dataSet, version);
+            VaryK k = new VaryK(dataSet, version, dghs);
             Thread t_k = new Thread(k);
 
             // delta
-            VaryDelta d = new VaryDelta(dataSet, version);
+            VaryDelta d = new VaryDelta(dataSet, version, dghs);
             Thread t_d = new Thread(d);
 
             // add
@@ -141,11 +146,13 @@ public class App {
         private volatile ArrayList<String> value;
 
         private String dataSet, version;
+        private Map<String, DGH> dghs;
 
-        public VaryK(String dataSet, String version) {
+        public VaryK(String dataSet, String version, Map<String, DGH> dghs) {
             value = new ArrayList<>();
             this.dataSet = dataSet;
             this.version = version;
+            this.dghs = dghs;
         }
 
         @Override
@@ -163,9 +170,6 @@ public class App {
                 // create data stream
                 InStream dataStream = new InStream(dataSet);
 
-                // create data out stream
-                OutStream outputStream = new OutStream("output.txt");
-
                 // initialise CASTLE
                 Castle castle;
                 switch (version) {
@@ -191,16 +195,15 @@ public class App {
                 }
 
                 // set DGHs and output stream
-                castle.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
+                castle.setDGHs(dghs);
 
-                castle.setOutputStream(outputStream);
+                castle.setOutputStream(null);
 
                 // run CASTLE
                 castle.run();
 
                 // close file
                 dataStream.close();
-                outputStream.close();
 
                 // output comparison data
                 value.add(version + "," + k + "," + castle.aveInfoLoss);
@@ -216,11 +219,13 @@ public class App {
         private volatile ArrayList<String> value;
 
         private String dataSet, version;
+        private Map<String, DGH> dghs;
 
-        public VaryDelta(String dataSet, String version) {
+        public VaryDelta(String dataSet, String version, Map<String, DGH> dghs) {
             value = new ArrayList<>();
             this.dataSet = dataSet;
             this.version = version;
+            this.dghs = dghs;
         }
 
         @Override
@@ -238,9 +243,6 @@ public class App {
                 // create data stream
                 InStream dataStream = new InStream(dataSet);
 
-                // create data out stream
-                OutStream outputStream = new OutStream("output.txt");
-
                 // initialise CASTLE
                 Castle castle;
                 switch (version) {
@@ -266,16 +268,15 @@ public class App {
                 }
 
                 // set DGHs and output stream
-                castle.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
+                castle.setDGHs(dghs);
 
-                castle.setOutputStream(outputStream);
+                castle.setOutputStream(null);
 
                 // run CASTLE
                 castle.run();
 
                 // close file
                 dataStream.close();
-                outputStream.close();
 
                 // output comparison data
                 value.add(version + "," + delta + "," + castle.aveInfoLoss);

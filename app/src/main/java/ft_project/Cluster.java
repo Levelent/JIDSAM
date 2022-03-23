@@ -194,32 +194,40 @@ public class Cluster implements Cloneable {
      * @param outputStream the stream to output to
      */
     public void output(OutStream outputStream) {
-        // "internal" output
-        String out = System.lineSeparator() + ANSI_YELLOW + "Cluster" + ANSI_RESET + System.lineSeparator();
+        if (!App.silent) {
+            // "internal" output
+            String out = System.lineSeparator() + ANSI_YELLOW + "Cluster" + ANSI_RESET + System.lineSeparator();
 
-        // output generalisations
-        out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
+            // output generalisations
+            out += ANSI_CYAN + "Generalisations" + ANSI_RESET + System.lineSeparator();
 
-        String generalisations = "";
-        for (String h : tuples.get(0).headings) {
-            Generalisation g = this.generalisations.get(h);
-            generalisations += (g == null) ? "" : g.toString() + " ";
-        }
-        out += generalisations + System.lineSeparator();
+            String generalisations = "";
+            for (String h : tuples.get(0).headings) {
+                Generalisation g = this.generalisations.get(h);
+                generalisations += (g == null) ? "" : g.toString() + " ";
+            }
+            out += generalisations + System.lineSeparator();
 
-        // output all tuples;
-        out += ANSI_CYAN + "Tuples" + ANSI_RESET + System.lineSeparator();
-        for (Tuple t : tuples) {
-            out += t.toString() + System.lineSeparator();
-        }
+            // output all tuples;
+            out += ANSI_CYAN + "Tuples" + ANSI_RESET + System.lineSeparator();
+            for (Tuple t : tuples) {
+                out += t.toString() + System.lineSeparator();
+            }
 
-        System.out.print(out);
+            System.out.print(out);
 
-        // external output
-        for (Tuple t : tuples) {
-            if (!t.hasBeenOutput()) {
-                outputStream.out.println(generalisations);
-                t.setAsBeenOutput();
+            // external output
+            for (Tuple t : tuples) {
+                if (!t.hasBeenOutput()) {
+                    outputStream.out.println(generalisations);
+                    t.setAsBeenOutput();
+                }
+            }
+        } else {
+            for (Tuple t : tuples) {
+                if (!t.hasBeenOutput()) {
+                    t.setAsBeenOutput();
+                }
             }
         }
     }
