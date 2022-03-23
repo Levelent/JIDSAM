@@ -137,6 +137,7 @@ public class FADS extends Castle {
         } else {
             // publish t with C_nc's generalisation
             t.outputWith(outputStream, DGHs, c_nc);
+            c_nc.output(outputStream);
             set_kc.add(c_nc);
 
             // remove the k-1 nearest neighbours of t from Set_tp
