@@ -19,7 +19,7 @@ public class App {
         int a_s = 2;
 
         // create data stream
-        InStream dataStream = new InStream("./src/main/resources/adult-100.csv");
+        InStream dataStream = new InStream("./src/main/resources/1/adult-100.csv");
 
         // create data out stream
         OutStream outputStream = new OutStream("output.txt");
@@ -54,7 +54,7 @@ public class App {
         }
 
         // set DGHs and output stream
-        castle.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
+        castle.setDGHs(new DGHReader("./src/main/resources/1/dgh.txt").DGHs);
 
         castle.setOutputStream(outputStream);
 
