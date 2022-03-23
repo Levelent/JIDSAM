@@ -4,7 +4,6 @@ import java.util.*;
 import static java.lang.Math.min;
 
 public class FADS extends Castle {
-    protected float aveInfoLoss;
     protected Set<Tuple> set_tp;
     protected Set<Cluster> set_kc;
 
