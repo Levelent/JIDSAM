@@ -6,6 +6,7 @@ public class DGH {
     private Node root;
     private AbstractSet<String> nodeValues;
     private AbstractMap<String, Integer> countCache;
+    private AbstractMap<String, String> commonAncestorCache;
     public final String name;
 
     /**
@@ -19,6 +20,7 @@ public class DGH {
         this.root.children = new ArrayList<Node>();
         this.nodeValues = new HashSet<String>();
         this.countCache = new HashMap<>();
+        this.commonAncestorCache = new HashMap<>();
         nodeValues.add(rootData);
         this.name = name;
     }
@@ -33,6 +35,7 @@ public class DGH {
         this.nodeValues = new HashSet<String>();
         this.name = name;
         this.countCache = new HashMap<>();
+        this.commonAncestorCache = new HashMap<>();
     }
 
     /**
@@ -128,6 +131,13 @@ public class DGH {
      * @return ancestor of root a and root b
      */
     public String findCommonAncestor(String rootA, String rootB) {
+
+        String key = rootA + rootB;
+        String commonAncestor = commonAncestorCache.get(key);
+        if (commonAncestor != null) {
+            return commonAncestor;
+        }
+
         Node a = root.find(rootA);
         Node b = root.find(rootB);
 
@@ -149,6 +159,7 @@ public class DGH {
 
             found.add(lastA);
             if (found.contains(lastB)) {
+                commonAncestorCache.put(key, lastB);
                 return lastB;
             } else {
                 found.add(lastB);

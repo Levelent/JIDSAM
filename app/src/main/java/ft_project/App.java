@@ -33,7 +33,7 @@ public class App {
         OutStream outputStream = new OutStream("output.txt");
 
         // initialise CASTLE
-        Castle castle = new Castle(dataStream, k, delta, beta);
+        Castle castle = new FADSL(dataStream, k, delta, beta, l, a_s);
 
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
@@ -249,6 +249,7 @@ public class App {
         compareOutStream.out.println("version,delta,avgInfoLoss");
 
         // run each version
+        System.out.println("------ Vary Delta ----------");
         for (String version : versions) {
             int[] deltas = { 10, 25, 50, 75, 100, 150, 200 };
             for (int delta : deltas) {
