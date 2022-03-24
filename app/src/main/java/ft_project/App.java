@@ -11,7 +11,9 @@ public class App {
      * @param args provided by command line interface
      */
     public static void main(String[] args) {
-        Constants.setV(true);
+        Constants.streamSize = 10000;
+
+        Constants.setV(false);
         // predefine thresholds/constants
         int k = 3;
         int delta = 15;
@@ -24,8 +26,8 @@ public class App {
         int a_s = 2;
 
         // create data stream
-        Constants.streamSize = 10000;
-        InStream dataStream = new InStream("./src/main/resources/1/adult-10000.csv");
+
+        InStream dataStream = new InStream(String.format("%s%s", dataFolder, dataName));
 
         // create data out stream
         OutStream outputStream = new OutStream("output.txt");
@@ -119,7 +121,7 @@ public class App {
         }
 
         // set DGHs and output stream
-        castle.setDGHs(new DGHReader("./src/main/resources/1/dgh.txt").DGHs);
+        castle.setDGHs(new DGHReader(String.format("%sdgh.txt", dataFolder)).DGHs);
 
         castle.setOutputStream(outputStream);
 
@@ -135,8 +137,7 @@ public class App {
      * Helper function to run all comparison tasks
      */
     public static void compare() {
-        Constants.streamSize = 10000;
-        String dataSet = "./src/main/resources/1/adult-10000.csv";
+        String dataSet = String.format("%s%s", dataFolder, dataName);
         varyK(dataSet);
         varyDelta(dataSet);
     }
@@ -150,7 +151,7 @@ public class App {
         String[] versions = { "castlel", "bcastle", "FADS", "XBAND", "FADSl", "castle" };
 
         // create comparison output
-        OutStream compareOutStream = new OutStream("compare-k.csv");
+        OutStream compareOutStream = new OutStream(String.format("out_data/compare-k-%s", dataName));
         compareOutStream.out.println("version,k,avgInfoLoss");
 
         // run each version
@@ -160,7 +161,6 @@ public class App {
             System.out.println("----------- New Version -----------");
             for (int i = 0; i < ks.length; i++) {
                 System.out.println("");
-
                 Constants.tOutCount = 0;
                 Constants.infoLossSum = 0;
                 // predefine thresholds/constants
@@ -245,7 +245,7 @@ public class App {
         String[] versions = { "castle", "castlel", "bcastle", "FADS", "FADSl", "XBAND" };
 
         // create comparison output
-        OutStream compareOutStream = new OutStream("compare-delta.csv");
+        OutStream compareOutStream = new OutStream(String.format("out_data/compare-delta-%s", dataName));
         compareOutStream.out.println("version,delta,avgInfoLoss");
 
         // run each version
