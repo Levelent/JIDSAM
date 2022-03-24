@@ -50,11 +50,13 @@ df["payment_type"] = df["payment_type"].map(pay_type_dict.get)
 
 # 1271413 available to sample
 
-df.sample(n=1000000).to_csv("taxi-1000000.csv", index=False)
-df.sample(n=100000).to_csv("taxi-100000.csv", index=False)
-df.sample(n=10000).to_csv("taxi-10000.csv", index=False)
-df.sample(n=1000).to_csv("taxi-1000.csv", index=False)
-df.sample(n=100).to_csv("taxi-100.csv", index=False)
+df.index.name = "pid"
+
+df.sample(n=1000000).to_csv("taxi-1000000.csv")
+df.sample(n=100000).to_csv("taxi-100000.csv")
+df.sample(n=10000).to_csv("taxi-10000.csv")
+df.sample(n=1000).to_csv("taxi-1000.csv")
+df.sample(n=100).to_csv("taxi-100.csv")
 
 # Create DGH file with correct format
 
@@ -65,7 +67,8 @@ for borough in borough_dict.keys():
         dgh_zones.append(f"        {zone}")
 
 # Awkward, but no easy way to automate
-dgh_pay_type = "$payment_type\nAny\n    Paid\n        Credit Card\n        Cash\n    Unpaid\n        No charge\n        Dispute\n        Voided trip\n    Unknown"
+s = "    "
+dgh_pay_type = f"$payment_type\nAny\n{s}Paid\n{s*2}Credit Card\n{s*2}Cash\n{s}Unpaid\n{s*2}No charge\n{s*2}Dispute\n{s*2}Voided trip\n{s}Unknown"
 
 with open("dgh.txt", "w") as file:
     file.writelines("\n".join(
