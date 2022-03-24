@@ -14,6 +14,7 @@ public class Castle {
     protected InStream s;
     protected OutStream outputStream;
     protected Map<String, Generalisation> baseGeneralisations;
+    private int clusterOutCount;
 
     /**
      * Initialise the Castle algorithm
@@ -29,6 +30,7 @@ public class Castle {
         this.delta = delta;
         this.beta = beta;
         this.s = s;
+        this.clusterOutCount = 0;
 
         // initializations for algorithm
         this.nonAnonymisedClusters = new LinkedHashSet<Cluster>(); // set of non-k_s anonymised clusters
@@ -304,21 +306,15 @@ public class Castle {
             SC = new LinkedHashSet<Cluster>();
             SC.add(c);
         }
-
+        float aveSum = clusterOutCount * aveInfoLoss;
         for (Cluster C_i : SC) {
             C_i.output(this.outputStream); // output all tuples in C_i with its generalisation;
-
+            clusterOutCount += 1;
             // Update aveInfoLoss according to informationLoss(C_i);
             // aveInfoLoss is updated to be the average information loss of
             // the most recent k-anonymized clusters including the new ones
-            float aveSum = 0;
-            HashSet<Cluster> cToAverage = new HashSet<Cluster>();
-            cToAverage.addAll(anonymisedClusters);
-            cToAverage.addAll(SC);
-            for (Cluster cl : cToAverage) {
-                aveSum += cl.informationLoss();
-            }
-            this.aveInfoLoss = aveSum / cToAverage.size();
+
+            aveSum += C_i.informationLoss();
 
             if (C_i.informationLoss() < this.aveInfoLoss) {
                 this.anonymisedClusters.add(C_i);
@@ -327,6 +323,8 @@ public class Castle {
             // it will be handled by garbage collection
             nonAnonymisedClusters.remove(C_i);
         }
+        aveInfoLoss = aveSum / clusterOutCount;
+
     }
 
     /**
@@ -341,6 +339,9 @@ public class Castle {
         // BS = set of buckets created by grouping tuples in C by pid attribute
         Map<String, List<Tuple>> BS = new HashMap<>();
         for (Tuple t : c.getTuples()) {
+            if (t.hasBeenOutput()) {
+                continue;
+            }
             if (!BS.containsKey(t.getPid())) {
                 BS.put(t.getPid(), new ArrayList<Tuple>());
             }

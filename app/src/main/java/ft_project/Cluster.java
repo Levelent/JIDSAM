@@ -156,6 +156,9 @@ public class Cluster implements Cloneable {
     public int size() {
         Set<String> pids = new LinkedHashSet<>();
         for (Tuple t : tuples) {
+            if (t.hasBeenOutput()) {
+                continue;
+            }
             pids.add(t.getPid());
         }
         return pids.size();
