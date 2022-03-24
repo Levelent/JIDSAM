@@ -1,6 +1,10 @@
 package ft_project;
 
 public class App {
+
+    static String dataFolder = "./src/main/resources/2/";
+    static String dataName = "taxi-100.csv";
+
     /**
      * App main function
      * 
@@ -207,7 +211,7 @@ public class App {
                 }
 
                 // set DGHs and output stream
-                castle.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
+                castle.setDGHs(new DGHReader(String.format("%sdgh.txt", dataFolder)).DGHs);
 
                 castle.setOutputStream(outputStream);
 
@@ -289,7 +293,7 @@ public class App {
                 }
 
                 // set DGHs and output stream
-                castle.setDGHs(new DGHReader("./src/main/resources/dgh").DGHs);
+                castle.setDGHs(new DGHReader(String.format("%sdgh.txt", dataFolder)).DGHs);
 
                 castle.setOutputStream(outputStream);
 
