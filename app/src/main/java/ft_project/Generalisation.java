@@ -36,12 +36,20 @@ public class Generalisation implements Cloneable {
         return false;
     }
 
+    public Boolean setGeneralisation(String s) {
+        return false;
+    }
+
     /**
      * Update the generalisation
      * 
      * @return true if generalisation widen
      */
     public Boolean updateGeneralisation(float f) {
+        return false;
+    }
+
+    public Boolean setGeneralisation(float f) {
         return false;
     }
 

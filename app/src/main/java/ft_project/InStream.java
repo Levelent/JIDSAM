@@ -8,7 +8,7 @@ public class InStream {
     private DataInputStream in;
     private BufferedReader br;
 
-    private String[] headings; // to store the first row (file headings)
+    public String[] headings; // to store the first row (file headings)
 
     /**
      * Constructor to set up reading from file to data stream
@@ -69,4 +69,5 @@ public class InStream {
         }
         return null;
     }
+
 }

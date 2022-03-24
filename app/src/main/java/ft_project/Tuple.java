@@ -67,10 +67,15 @@ public class Tuple implements Cloneable {
         this.setAsBeenOutput();
         out += this.toString();
 
-        System.out.println(out);
-
-        // external output
-        outputStream.out.println(generalisations);
+        if (!this.beenOutputted) {
+            Constants.incrementOut(1);
+            Constants.addInfoLoss(1);
+            if (Constants.verbose) {
+                System.out.println(out);
+            }
+            // external output
+            outputStream.out.println(generalisations);
+        }
     }
 
     /**
@@ -100,10 +105,15 @@ public class Tuple implements Cloneable {
         this.setAsBeenOutput();
         out += this.toString();
 
-        System.out.println(out);
-
-        // external output
-        outputStream.out.println(generalisations);
+        if (!this.beenOutputted) {
+            Constants.incrementOut(1, c);
+            Constants.addInfoLoss(1);
+            if (Constants.verbose) {
+                System.out.println(out);
+            }
+            // external output
+            outputStream.out.println(generalisations);
+        }
     }
 
     /**

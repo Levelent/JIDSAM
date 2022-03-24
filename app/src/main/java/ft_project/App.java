@@ -11,6 +11,7 @@ public class App {
      * @param args provided by command line interface
      */
     public static void main(String[] args) {
+        Constants.setV(false);
         // predefine thresholds/constants
         int k = 3;
         int delta = 15;
@@ -23,43 +24,96 @@ public class App {
         int a_s = 2;
 
         // create data stream
-        InStream dataStream = new InStream(String.format("%s%s", dataFolder, dataName));
+        Constants.streamSize = 1000;
+        InStream dataStream = new InStream("./app/src/main/resources/1/adult-1000.csv");
 
         // create data out stream
         OutStream outputStream = new OutStream("output.txt");
 
         // initialise CASTLE
-        Castle castle;
-        switch (args.length > 0 ? args[0] : "") {
-            case "1":
-                // run CASTLE with l diversity
-                castle = new CastleL(dataStream, k, delta, beta, l, a_s);
-                break;
-            case "2":
-                // run B-CASTLE
-                castle = new BCastle(dataStream, k, delta, beta);
-                break;
-            case "3":
-                // run FADS (note beta is t_kc)
-                castle = new FADS(dataStream, k, delta, beta);
-                break;
-            case "4":
-                // run FADS with l diversity (note beta is t_kc)
-                castle = new FADSL(dataStream, k, delta, beta, l, a_s);
-                break;
-            case "5":
-                castle = new XBAND(dataStream, k, delta, beta, omega, expirationBand);
-                break;
-            case "compare":
-                compare();
-                return;
-            default:
-                // run normal castle
-                castle = new Castle(dataStream, k, delta, beta);
+        Castle castle = new Castle(dataStream, k, delta, beta);
+
+        for (int i = 0; i < args.length; i++) {
+            String arg = args[i];
+
+            switch (arg) {
+                case "-k":
+                    if (i + 1 < args.length) {
+                        k = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-d":
+                    if (i + 1 < args.length) {
+                        delta = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-o":
+                    if (i + 1 < args.length) {
+                        omega = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-g":
+                    if (i + 1 < args.length) {
+                        expirationBand = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-b":
+                    if (i + 1 < args.length) {
+                        beta = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-c":
+
+                    if (i + 1 >= args.length) {
+                        break;
+                    }
+
+                    switch (args[i + 1]) {
+                        case "1":
+                            // run CASTLE with l diversity
+                            Constants.variant = "CASTLE - L";
+                            castle = new CastleL(dataStream, k, delta, beta, l, a_s);
+                            break;
+                        case "2":
+                            // run B-CASTLE
+                            Constants.variant = "B-CASTLE";
+                            castle = new BCastle(dataStream, k, delta, beta);
+                            break;
+                        case "3":
+                            // run FADS (note beta is t_kc)
+                            Constants.variant = "FADS";
+                            castle = new FADS(dataStream, k, delta, beta);
+                            break;
+                        case "4":
+                            // run FADS with l diversity (note beta is t_kc)
+                            Constants.variant = "FADSL";
+                            castle = new FADSL(dataStream, k, delta, beta, l, a_s);
+                            break;
+                        case "5":
+                            Constants.variant = "XBAND";
+
+                            castle = new XBAND(dataStream, k, delta, beta, omega, expirationBand);
+                            break;
+                        case "compare":
+                            compare();
+                            break;
+                        default:
+                            // run normal castle
+
+                            Constants.variant = "CASTLE";
+                            castle = new Castle(dataStream, k, delta, beta);
+                    }
+
+            }
         }
 
         // set DGHs and output stream
-        castle.setDGHs(new DGHReader(String.format("%sdgh.txt", dataFolder)).DGHs);
+        castle.setDGHs(new DGHReader("./app/src/main/resources/1/dgh.txt").DGHs);
 
         castle.setOutputStream(outputStream);
 
@@ -75,7 +129,8 @@ public class App {
      * Helper function to run all comparison tasks
      */
     public static void compare() {
-        String dataSet = String.format("%s%s", dataFolder, dataName);
+
+        String dataSet = "./src/main/resources/adult-1000.csv";
         varyK(dataSet);
         varyDelta(dataSet);
     }
@@ -86,7 +141,7 @@ public class App {
      * @param dataSet to use for testing
      */
     public static void varyK(String dataSet) {
-        String[] versions = { "castle", "castlel", "bcastle", "FADS", "FADSl" };
+        String[] versions = { "castlel", "bcastle", "FADS", "XBAND", "FADSl", "castle" };
 
         // create comparison output
         OutStream compareOutStream = new OutStream("compare-k.csv");
@@ -95,14 +150,26 @@ public class App {
         // run each version
         for (String version : versions) {
             int[] ks = { 10, 50, 100, 200 };
-            for (int k : ks) {
+            int[] deltas = { 20, 100, 200, 400 };
+            System.out.println("----------- New Version -----------");
+            for (int i = 0; i < ks.length; i++) {
+                System.out.println("");
+                Constants.streamSize = 1000;
+                Constants.tOutCount = 0;
+                Constants.infoLossSum = 0;
                 // predefine thresholds/constants
-                int delta = 10;
+
+                int k = ks[i];
+                int delta = deltas[i];
                 int beta = 2;
 
                 // l diversity thresholds/constants
                 int l = 2;
                 int a_s = 2;
+
+                // XBAND
+                int omega = 100; //
+                int expirationBand = 5;//
 
                 // create data stream
                 InStream dataStream = new InStream(dataSet);
@@ -115,22 +182,31 @@ public class App {
                 switch (version) {
                     case "castlel":
                         // run CASTLE with l diversity
+                        Constants.variant = "CASTLE - L";
                         castle = new CastleL(dataStream, k, delta, beta, l, a_s);
                         break;
                     case "bcastle":
                         // run B-CASTLE
+                        Constants.variant = "B-CASTLE";
                         castle = new BCastle(dataStream, k, delta, beta);
                         break;
                     case "FADS":
                         // run FADS (note beta is t_kc)
+                        Constants.variant = "FADS";
                         castle = new FADS(dataStream, k, delta, beta);
                         break;
                     case "FADSl":
                         // run FADS with l diversity (note beta is t_kc)
+                        Constants.variant = "FADSL";
                         castle = new FADSL(dataStream, k, delta, beta, l, a_s);
+                        break;
+                    case "XBAND":
+                        Constants.variant = "XBAND";
+                        castle = new XBAND(dataStream, k, delta, beta, omega, expirationBand);
                         break;
                     default:
                         // run normal castle
+                        Constants.variant = "CASTLE";
                         castle = new Castle(dataStream, k, delta, beta);
                 }
 
@@ -170,6 +246,10 @@ public class App {
         for (String version : versions) {
             int[] deltas = { 10, 50, 100, 200 };
             for (int delta : deltas) {
+                System.out.println("");
+                Constants.streamSize = 1000;
+                Constants.tOutCount = 0;
+                Constants.infoLossSum = 0;
                 // predefine thresholds/constants
                 int k = 10;
                 int beta = 2;
@@ -189,18 +269,22 @@ public class App {
                 switch (version) {
                     case "castlel":
                         // run CASTLE with l diversity
+                        Constants.variant = "CASTLE - L";
                         castle = new CastleL(dataStream, k, delta, beta, l, a_s);
                         break;
                     case "bcastle":
                         // run B-CASTLE
+                        Constants.variant = "B-CASTLE";
                         castle = new BCastle(dataStream, k, delta, beta);
                         break;
                     case "FADS":
                         // run FADS (note beta is t_kc)
+                        Constants.variant = "FADS";
                         castle = new FADS(dataStream, k, delta, beta);
                         break;
                     case "FADSl":
                         // run FADS with l diversity (note beta is t_kc)
+                        Constants.variant = "FADSL";
                         castle = new FADSL(dataStream, k, delta, beta, l, a_s);
                         break;
                     default:

@@ -11,6 +11,7 @@ public class Castle {
     protected Map<String, DGH> DGHs;
     protected InStream s;
     protected OutStream outputStream;
+    protected Map<String, Generalisation> baseGeneralisations;
 
     /**
      * Initialise the Castle algorithm
@@ -40,6 +41,23 @@ public class Castle {
      */
     public void setDGHs(Map<String, DGH> dghs) {
         DGHs = dghs;
+
+        baseGeneralisations = new HashMap<String, Generalisation>();
+        for (String heading : s.headings) {
+
+            if (heading.equals("pid") || heading.equals("tid")) {
+                continue;
+            }
+            DGH dgh = dghs.get(heading);
+
+            if (dgh == null) {
+                // Must be a continuous generalisation
+                baseGeneralisations.put(heading, new ContinuousGeneralisation(0));
+            } else {
+                baseGeneralisations.put(heading, new CategoryGeneralisation(dgh, dgh.getRootValue()));
+            }
+        }
+
     }
 
     /**
@@ -57,9 +75,10 @@ public class Castle {
     public void run() {
         // define array to track tuple positions (most recent -> less recent [head])
         Queue<Tuple> tupleHistory = new LinkedList<>();
-
+        System.out.println(Constants.variant);
         Tuple t;
         while ((t = s.next()) != null) {
+            Constants.outputProgress();
             Cluster c = bestSelection(t);
             if (c == null) {
                 // create new cluster on t and insert it into nonAnonymisedClusters
@@ -78,7 +97,10 @@ public class Castle {
                     delayConstraint(t2);
                 }
             }
+
         }
+        System.out.print('\n');
+
     }
 
     /**
@@ -475,8 +497,28 @@ public class Castle {
             return 0;
         }
 
-        Cluster c1 = new Cluster(t1, DGHs);
-        Cluster c2 = new Cluster(t2, DGHs);
-        return enlargement(c1, c2);
+        // Cluster c1 = new Cluster(t1, DGHs);
+        // Cluster c2 = new Cluster(t2, DGHs);
+        // return enlargement(c1, c2);
+
+        float initialLoss = 0;
+        for (String h : baseGeneralisations.keySet()) {
+            Generalisation g = baseGeneralisations.get(h);
+            g.setGeneralisation(t1.getValue(h));
+            initialLoss += g.infoLoss();
+
+        }
+        initialLoss = initialLoss / baseGeneralisations.size();
+
+        float eLoss = 0;
+        for (String h : baseGeneralisations.keySet()) {
+            Generalisation g = baseGeneralisations.get(h);
+            g.updateGeneralisation(t2.getValue(h));
+            eLoss += g.infoLoss();
+
+        }
+        eLoss = eLoss / baseGeneralisations.size();
+
+        return eLoss - initialLoss;
     }
 }
