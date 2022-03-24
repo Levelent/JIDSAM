@@ -100,6 +100,15 @@ public class ContinuousGeneralisation extends Generalisation {
         return false;
     }
 
+    public Boolean setGeneralisation(float value) {
+        this.UB = 9999999;
+        this.LB = 0;
+
+        this.ub = value;
+        this.lb = value;
+        return true;
+    }
+
     /**
      * Get the string representation of the generalisation
      * 

@@ -1,0 +1,558 @@
+$PULocationID
+New York
+	EWR
+		Newark Airport
+	Queens
+		Jamaica Bay
+		Astoria
+		Astoria Park
+		Auburndale
+		Baisley Park
+		Bay Terrace/Fort Totten
+		Bayside
+		Bellerose
+		Breezy Point/Fort Tilden/Riis Beach
+		Briarwood/Jamaica Hills
+		Broad Channel
+		Cambria Heights
+		College Point
+		Corona
+		Corona
+		Douglaston
+		East Elmhurst
+		East Flushing
+		Elmhurst
+		Elmhurst/Maspeth
+		Far Rockaway
+		Flushing
+		Flushing Meadows-Corona Park
+		Forest Hills
+		Forest Park/Highland Park
+		Fresh Meadows
+		Glen Oaks
+		Glendale
+		Hammels/Arverne
+		Hillcrest/Pomonok
+		Hollis
+		Howard Beach
+		Jackson Heights
+		Jamaica
+		Jamaica Estates
+		JFK Airport
+		Kew Gardens
+		Kew Gardens Hills
+		LaGuardia Airport
+		Laurelton
+		Long Island City/Hunters Point
+		Long Island City/Queens Plaza
+		Maspeth
+		Middle Village
+		Murray Hill-Queens
+		North Corona
+		Oakland Gardens
+		Old Astoria
+		Ozone Park
+		Queens Village
+		Queensboro Hill
+		Queensbridge/Ravenswood
+		Rego Park
+		Richmond Hill
+		Ridgewood
+		Rockaway Park
+		Rosedale
+		Saint Albans
+		Saint Michaels Cemetery/Woodside
+		South Jamaica
+		South Ozone Park
+		Springfield Gardens North
+		Springfield Gardens South
+		Steinway
+		Sunnyside
+		Whitestone
+		Willets Point
+		Woodhaven
+		Woodside
+	Bronx
+		Allerton/Pelham Gardens
+		Bedford Park
+		Belmont
+		Bronx Park
+		Bronxdale
+		City Island
+		Claremont/Bathgate
+		Co-Op City
+		Country Club
+		Crotona Park
+		Crotona Park East
+		East Concourse/Concourse Village
+		East Tremont
+		Eastchester
+		Fordham South
+		Highbridge
+		Hunts Point
+		Kingsbridge Heights
+		Longwood
+		Melrose South
+		Morrisania/Melrose
+		Mott Haven/Port Morris
+		Mount Hope
+		Norwood
+		Parkchester
+		Pelham Bay
+		Pelham Bay Park
+		Pelham Parkway
+		Rikers Island
+		Riverdale/North Riverdale/Fieldston
+		Schuylerville/Edgewater Park
+		Soundview/Bruckner
+		Soundview/Castle Hill
+		Spuyten Duyvil/Kingsbridge
+		University Heights/Morris Heights
+		Van Cortlandt Park
+		Van Cortlandt Village
+		Van Nest/Morris Park
+		West Concourse
+		West Farms/Bronx River
+		Westchester Village/Unionport
+		Williamsbridge/Olinville
+		Woodlawn/Wakefield
+	Manhattan
+		Alphabet City
+		Battery Park
+		Battery Park City
+		Bloomingdale
+		Central Harlem
+		Central Harlem North
+		Central Park
+		Chinatown
+		Clinton East
+		Clinton West
+		East Chelsea
+		East Harlem North
+		East Harlem South
+		East Village
+		Financial District North
+		Financial District South
+		Flatiron
+		Garment District
+		Governor's Island/Ellis Island/Liberty Island
+		Governor's Island/Ellis Island/Liberty Island
+		Governor's Island/Ellis Island/Liberty Island
+		Gramercy
+		Greenwich Village North
+		Greenwich Village South
+		Hamilton Heights
+		Highbridge Park
+		Hudson Sq
+		Inwood
+		Inwood Hill Park
+		Kips Bay
+		Lenox Hill East
+		Lenox Hill West
+		Lincoln Square East
+		Lincoln Square West
+		Little Italy/NoLiTa
+		Lower East Side
+		Manhattan Valley
+		Manhattanville
+		Marble Hill
+		Meatpacking/West Village West
+		Midtown Center
+		Midtown East
+		Midtown North
+		Midtown South
+		Morningside Heights
+		Murray Hill
+		Penn Station/Madison Sq West
+		Randalls Island
+		Roosevelt Island
+		Seaport
+		SoHo
+		Stuy Town/Peter Cooper Village
+		Sutton Place/Turtle Bay North
+		Times Sq/Theatre District
+		TriBeCa/Civic Center
+		Two Bridges/Seward Park
+		UN/Turtle Bay South
+		Union Sq
+		Upper East Side North
+		Upper East Side South
+		Upper West Side North
+		Upper West Side South
+		Washington Heights North
+		Washington Heights South
+		West Chelsea/Hudson Yards
+		West Village
+		World Trade Center
+		Yorkville East
+		Yorkville West
+	Staten Island
+		Arden Heights
+		Arrochar/Fort Wadsworth
+		Bloomfield/Emerson Hill
+		Charleston/Tottenville
+		Eltingville/Annadale/Prince's Bay
+		Freshkills Park
+		Great Kills
+		Great Kills Park
+		Grymes Hill/Clifton
+		Heartland Village/Todt Hill
+		Mariners Harbor
+		New Dorp/Midland Beach
+		Oakwood
+		Port Richmond
+		Rossville/Woodrow
+		Saint George/New Brighton
+		South Beach/Dongan Hills
+		Stapleton
+		West Brighton
+		Westerleigh
+	Brooklyn
+		Bath Beach
+		Bay Ridge
+		Bedford
+		Bensonhurst East
+		Bensonhurst West
+		Boerum Hill
+		Borough Park
+		Brighton Beach
+		Brooklyn Heights
+		Brooklyn Navy Yard
+		Brownsville
+		Bushwick North
+		Bushwick South
+		Canarsie
+		Carroll Gardens
+		Clinton Hill
+		Cobble Hill
+		Columbia Street
+		Coney Island
+		Crown Heights North
+		Crown Heights South
+		Cypress Hills
+		Downtown Brooklyn/MetroTech
+		DUMBO/Vinegar Hill
+		Dyker Heights
+		East Flatbush/Farragut
+		East Flatbush/Remsen Village
+		East New York
+		East New York/Pennsylvania Avenue
+		East Williamsburg
+		Erasmus
+		Flatbush/Ditmas Park
+		Flatlands
+		Fort Greene
+		Gowanus
+		Gravesend
+		Green-Wood Cemetery
+		Greenpoint
+		Homecrest
+		Kensington
+		Madison
+		Manhattan Beach
+		Marine Park/Floyd Bennett Field
+		Marine Park/Mill Basin
+		Midwood
+		Ocean Hill
+		Ocean Parkway South
+		Park Slope
+		Prospect-Lefferts Gardens
+		Prospect Heights
+		Prospect Park
+		Red Hook
+		Sheepshead Bay
+		South Williamsburg
+		Starrett City
+		Stuyvesant Heights
+		Sunset Park East
+		Sunset Park West
+		Williamsburg (North Side)
+		Williamsburg (South Side)
+		Windsor Terrace
+	Unknown
+		NV
+		NA
+$DOLocationID
+New York
+	EWR
+		Newark Airport
+	Queens
+		Jamaica Bay
+		Astoria
+		Astoria Park
+		Auburndale
+		Baisley Park
+		Bay Terrace/Fort Totten
+		Bayside
+		Bellerose
+		Breezy Point/Fort Tilden/Riis Beach
+		Briarwood/Jamaica Hills
+		Broad Channel
+		Cambria Heights
+		College Point
+		Corona
+		Corona
+		Douglaston
+		East Elmhurst
+		East Flushing
+		Elmhurst
+		Elmhurst/Maspeth
+		Far Rockaway
+		Flushing
+		Flushing Meadows-Corona Park
+		Forest Hills
+		Forest Park/Highland Park
+		Fresh Meadows
+		Glen Oaks
+		Glendale
+		Hammels/Arverne
+		Hillcrest/Pomonok
+		Hollis
+		Howard Beach
+		Jackson Heights
+		Jamaica
+		Jamaica Estates
+		JFK Airport
+		Kew Gardens
+		Kew Gardens Hills
+		LaGuardia Airport
+		Laurelton
+		Long Island City/Hunters Point
+		Long Island City/Queens Plaza
+		Maspeth
+		Middle Village
+		Murray Hill-Queens
+		North Corona
+		Oakland Gardens
+		Old Astoria
+		Ozone Park
+		Queens Village
+		Queensboro Hill
+		Queensbridge/Ravenswood
+		Rego Park
+		Richmond Hill
+		Ridgewood
+		Rockaway Park
+		Rosedale
+		Saint Albans
+		Saint Michaels Cemetery/Woodside
+		South Jamaica
+		South Ozone Park
+		Springfield Gardens North
+		Springfield Gardens South
+		Steinway
+		Sunnyside
+		Whitestone
+		Willets Point
+		Woodhaven
+		Woodside
+	Bronx
+		Allerton/Pelham Gardens
+		Bedford Park
+		Belmont
+		Bronx Park
+		Bronxdale
+		City Island
+		Claremont/Bathgate
+		Co-Op City
+		Country Club
+		Crotona Park
+		Crotona Park East
+		East Concourse/Concourse Village
+		East Tremont
+		Eastchester
+		Fordham South
+		Highbridge
+		Hunts Point
+		Kingsbridge Heights
+		Longwood
+		Melrose South
+		Morrisania/Melrose
+		Mott Haven/Port Morris
+		Mount Hope
+		Norwood
+		Parkchester
+		Pelham Bay
+		Pelham Bay Park
+		Pelham Parkway
+		Rikers Island
+		Riverdale/North Riverdale/Fieldston
+		Schuylerville/Edgewater Park
+		Soundview/Bruckner
+		Soundview/Castle Hill
+		Spuyten Duyvil/Kingsbridge
+		University Heights/Morris Heights
+		Van Cortlandt Park
+		Van Cortlandt Village
+		Van Nest/Morris Park
+		West Concourse
+		West Farms/Bronx River
+		Westchester Village/Unionport
+		Williamsbridge/Olinville
+		Woodlawn/Wakefield
+	Manhattan
+		Alphabet City
+		Battery Park
+		Battery Park City
+		Bloomingdale
+		Central Harlem
+		Central Harlem North
+		Central Park
+		Chinatown
+		Clinton East
+		Clinton West
+		East Chelsea
+		East Harlem North
+		East Harlem South
+		East Village
+		Financial District North
+		Financial District South
+		Flatiron
+		Garment District
+		Governor's Island/Ellis Island/Liberty Island
+		Governor's Island/Ellis Island/Liberty Island
+		Governor's Island/Ellis Island/Liberty Island
+		Gramercy
+		Greenwich Village North
+		Greenwich Village South
+		Hamilton Heights
+		Highbridge Park
+		Hudson Sq
+		Inwood
+		Inwood Hill Park
+		Kips Bay
+		Lenox Hill East
+		Lenox Hill West
+		Lincoln Square East
+		Lincoln Square West
+		Little Italy/NoLiTa
+		Lower East Side
+		Manhattan Valley
+		Manhattanville
+		Marble Hill
+		Meatpacking/West Village West
+		Midtown Center
+		Midtown East
+		Midtown North
+		Midtown South
+		Morningside Heights
+		Murray Hill
+		Penn Station/Madison Sq West
+		Randalls Island
+		Roosevelt Island
+		Seaport
+		SoHo
+		Stuy Town/Peter Cooper Village
+		Sutton Place/Turtle Bay North
+		Times Sq/Theatre District
+		TriBeCa/Civic Center
+		Two Bridges/Seward Park
+		UN/Turtle Bay South
+		Union Sq
+		Upper East Side North
+		Upper East Side South
+		Upper West Side North
+		Upper West Side South
+		Washington Heights North
+		Washington Heights South
+		West Chelsea/Hudson Yards
+		West Village
+		World Trade Center
+		Yorkville East
+		Yorkville West
+	Staten Island
+		Arden Heights
+		Arrochar/Fort Wadsworth
+		Bloomfield/Emerson Hill
+		Charleston/Tottenville
+		Eltingville/Annadale/Prince's Bay
+		Freshkills Park
+		Great Kills
+		Great Kills Park
+		Grymes Hill/Clifton
+		Heartland Village/Todt Hill
+		Mariners Harbor
+		New Dorp/Midland Beach
+		Oakwood
+		Port Richmond
+		Rossville/Woodrow
+		Saint George/New Brighton
+		South Beach/Dongan Hills
+		Stapleton
+		West Brighton
+		Westerleigh
+	Brooklyn
+		Bath Beach
+		Bay Ridge
+		Bedford
+		Bensonhurst East
+		Bensonhurst West
+		Boerum Hill
+		Borough Park
+		Brighton Beach
+		Brooklyn Heights
+		Brooklyn Navy Yard
+		Brownsville
+		Bushwick North
+		Bushwick South
+		Canarsie
+		Carroll Gardens
+		Clinton Hill
+		Cobble Hill
+		Columbia Street
+		Coney Island
+		Crown Heights North
+		Crown Heights South
+		Cypress Hills
+		Downtown Brooklyn/MetroTech
+		DUMBO/Vinegar Hill
+		Dyker Heights
+		East Flatbush/Farragut
+		East Flatbush/Remsen Village
+		East New York
+		East New York/Pennsylvania Avenue
+		East Williamsburg
+		Erasmus
+		Flatbush/Ditmas Park
+		Flatlands
+		Fort Greene
+		Gowanus
+		Gravesend
+		Green-Wood Cemetery
+		Greenpoint
+		Homecrest
+		Kensington
+		Madison
+		Manhattan Beach
+		Marine Park/Floyd Bennett Field
+		Marine Park/Mill Basin
+		Midwood
+		Ocean Hill
+		Ocean Parkway South
+		Park Slope
+		Prospect-Lefferts Gardens
+		Prospect Heights
+		Prospect Park
+		Red Hook
+		Sheepshead Bay
+		South Williamsburg
+		Starrett City
+		Stuyvesant Heights
+		Sunset Park East
+		Sunset Park West
+		Williamsburg (North Side)
+		Williamsburg (South Side)
+		Windsor Terrace
+	Unknown
+		NV
+		NA
+$payment_type
+Any
+	Paid
+		Credit Card
+		Cash
+	Unpaid
+		No charge
+		Dispute
+		Voided trip
+	Unknown

@@ -31,7 +31,7 @@ public class CategoryGeneralisation extends Generalisation {
      * @return the calculated information loss
      */
     public float infoLoss() {
-        return (dgh.countNodes(localRoot) - 1) / (dgh.countNodes() - 1);
+        return (float) (dgh.countNodes(localRoot) - 1) / (dgh.countNodes() - 1);
     }
 
     /**
@@ -47,6 +47,12 @@ public class CategoryGeneralisation extends Generalisation {
         }
 
         localRoot = newLocalRoot;
+        return true;
+    }
+
+    public Boolean setGeneralisation(String gen) {
+        // TODO check gen exists
+        this.localRoot = gen;
         return true;
     }
 
