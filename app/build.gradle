@@ -47,42 +47,42 @@ task castle(type: Exec) {
     dependsOn jar
     group = "Execution"
     description = "Run the output executable jar with ExecTask"
-    commandLine "java", "-jar", jar.archiveFile.get(), ""
+    commandLine "java", "-jar", jar.archiveFile.get(), "-c 6"
 }
 
 task castlel(type: Exec) {
     dependsOn jar
     group = "Execution"
     description = "Run the output executable jar with ExecTask"
-    commandLine "java", "-jar", jar.archiveFile.get(), "1"
+    commandLine "java", "-jar", jar.archiveFile.get(), "-c 1"
 }
 
 task bcastle(type: Exec) {
     dependsOn jar
     group = "Execution"
     description = "Run the output executable jar with ExecTask"
-    commandLine "java", "-jar", jar.archiveFile.get(), "2"
+    commandLine "java", "-jar", jar.archiveFile.get(), "-c 2"
 }
 
 task fads(type: Exec) {
     dependsOn jar
     group = "Execution"
     description = "Run the output executable jar with ExecTask"
-    commandLine "java", "-jar", jar.archiveFile.get(), "3"
+    commandLine "java", "-jar", jar.archiveFile.get(), "-c 3"
 }
 
 task fadsl(type: Exec) {
     dependsOn jar
     group = "Execution"
     description = "Run the output executable jar with ExecTask"
-    commandLine "java", "-jar", jar.archiveFile.get(), "4"
+    commandLine "java", "-jar", jar.archiveFile.get(), "-c 4"
 }
 
 task xband(type: Exec) {
     dependsOn jar
     group = "Execution"
     description = "Run the output executable jar with ExecTask"
-    commandLine "java", "-jar", jar.archiveFile.get(), "5"
+    commandLine "java", "-jar", jar.archiveFile.get(), "-c 5"
 }
 
 
