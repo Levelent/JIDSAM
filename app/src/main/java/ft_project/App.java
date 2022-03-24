@@ -15,7 +15,7 @@ public class App {
         // predefine thresholds/constants
         int k = 3;
         int delta = 15;
-        int beta = 2;
+        int beta = 4;
         int omega = 100; // TODO refine this
         int expirationBand = 5;// Gamma
 
@@ -24,8 +24,8 @@ public class App {
         int a_s = 2;
 
         // create data stream
-        Constants.streamSize = 1000;
-        InStream dataStream = new InStream("./app/src/main/resources/1/adult-1000.csv");
+        Constants.streamSize = 10000;
+        InStream dataStream = new InStream("./app/src/main/resources/1/adult-10000.csv");
 
         // create data out stream
         OutStream outputStream = new OutStream("output.txt");

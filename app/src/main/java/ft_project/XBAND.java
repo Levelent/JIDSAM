@@ -69,6 +69,7 @@ public class XBAND extends Castle {
                 pocket_t.remove(p);
             }
         }
+        System.out.print('\n');
 
     }
 

@@ -267,6 +267,7 @@ public class Castle {
             // Select the cluster, which brings the minimum enlargement to C, and merges C
             // with it.
             c.merge(clusterWithSmallest);
+            clusterList.remove(clusterWithSmallest);
         }
 
         // Then, the resulting cluster is given in output
@@ -372,7 +373,8 @@ public class Castle {
             // tuple
             // and ensure that the closest bucket is at the head of our heap
             Iterator<String> BSKey = BS.keySet().iterator();
-            List<Tuple> sortedTuples = new ArrayList<Tuple>();
+            PriorityQueue<Tuple> sortedTuples = new PriorityQueue<>(
+                    (Tuple t1, Tuple t2) -> Float.compare(enlargement(t, t1), enlargement(t, t2)));
             while (BSKey.hasNext()) {
                 String pid = BSKey.next();
                 if (randomPID == pid) { // handles BS \ B... helps ensures k-anonymity
@@ -386,7 +388,6 @@ public class Castle {
                 sortedTuples.add(t2);
             }
             // the order of the comparison matters here
-            sortedTuples.sort((Tuple t1, Tuple t2) -> Float.compare(enlargement(t, t1), enlargement(t, t2)));
             System.arraycopy(sortedTuples.toArray(), 0, H, 0, H.length);
 
             // for each node in the heap
