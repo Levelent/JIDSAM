@@ -220,16 +220,16 @@ public class App {
                 castle.setDGHs(new DGHReader(String.format("%sdgh.txt", dataFolder)).DGHs);
 
                 castle.setOutputStream(outputStream);
-
+                long start = System.currentTimeMillis();
                 // run CASTLE
                 castle.run();
-
+                long elapsed = System.currentTimeMillis() - start;
                 // close file
                 dataStream.close();
                 outputStream.close();
 
                 // output comparison data
-                compareOutStream.out.println(version + "," + k + "," + castle.aveInfoLoss);
+                compareOutStream.out.println(version + "," + k + "," + castle.aveInfoLoss + "," + elapsed);
             }
         }
 
@@ -311,15 +311,18 @@ public class App {
 
                 castle.setOutputStream(outputStream);
 
+                long start = System.currentTimeMillis();
                 // run CASTLE
                 castle.run();
+                long elapsed = System.currentTimeMillis() - start;
+                System.out.println("Elapsed: " + elapsed);
 
                 // close file
                 dataStream.close();
                 outputStream.close();
 
                 // output comparison data
-                compareOutStream.out.println(version + "," + delta + "," + castle.aveInfoLoss);
+                compareOutStream.out.println(version + "," + delta + "," + castle.aveInfoLoss + "," + elapsed);
             }
         }
 
