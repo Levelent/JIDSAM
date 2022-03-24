@@ -11,7 +11,7 @@ public class App {
      * @param args provided by command line interface
      */
     public static void main(String[] args) {
-        Constants.setV(false);
+        Constants.setV(true);
         // predefine thresholds/constants
         int k = 3;
         int delta = 15;
@@ -31,7 +31,7 @@ public class App {
         OutStream outputStream = new OutStream("output.txt");
 
         // initialise CASTLE
-        Castle castle = new FADS(dataStream, k, delta, beta);
+        Castle castle = new Castle(dataStream, k, delta, beta);
 
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];

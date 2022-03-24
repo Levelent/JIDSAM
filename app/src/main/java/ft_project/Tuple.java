@@ -107,7 +107,7 @@ public class Tuple implements Cloneable {
 
         if (!this.beenOutputted) {
             Constants.incrementOut(1, c);
-            Constants.addInfoLoss(1);
+
             if (Constants.verbose) {
                 System.out.println(out);
             }
