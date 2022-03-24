@@ -454,37 +454,24 @@ public class Castle {
      * @return enlargement due to addition
      */
     public float enlargement(Cluster c, Tuple t) {
-        float initialLoss = 0;
-        float eLoss = 0;
+
+        float loss = 0;
         for (String h : baseGeneralisations.keySet()) {
             Generalisation g = c.generalisations.get(h);
             Generalisation bg = baseGeneralisations.get(h);
             if (g instanceof CategoryGeneralisation) {
                 bg.setGeneralisation((CategoryGeneralisation) g);
+                bg.updateGeneralisation(t.getValue(h));
+                loss += bg.infoLoss();
             } else {
                 bg.setGeneralisation((ContinuousGeneralisation) g);
-            }
-            initialLoss += bg.infoLoss();
-        }
-
-        for (String h : t.headings) {
-            Generalisation g = baseGeneralisations.get(h);
-            if (g == null) {
-                continue;
+                bg.updateGeneralisation(Float.parseFloat(t.getValue(h)));
+                loss += bg.infoLoss();
             }
 
-            if (g instanceof CategoryGeneralisation) {
-                CategoryGeneralisation cg = (CategoryGeneralisation) g;
-                cg.updateGeneralisation(t.getValue(h));
-                eLoss += cg.infoLoss();
-            } else {
-                ContinuousGeneralisation cg = (ContinuousGeneralisation) g;
-                cg.updateGeneralisation(Float.parseFloat(t.getValue(h)));
-                eLoss += cg.infoLoss();
-            }
         }
-        eLoss = eLoss / baseGeneralisations.size();
-        return eLoss - initialLoss;
+
+        return loss / baseGeneralisations.size();
         // try {
         // Cluster clone = (Cluster) c.clone();
         // clone.add(t);
@@ -573,35 +560,24 @@ public class Castle {
         // Cluster c2 = new Cluster(t2, DGHs);
         // return enlargement(c1, c2);
 
-        float initialLoss = 0;
+        float loss = 0;
         for (String h : baseGeneralisations.keySet()) {
             Generalisation bg = baseGeneralisations.get(h);
 
             if (bg instanceof CategoryGeneralisation) {
                 bg.setGeneralisation(t1.getValue(h));
+                bg.updateGeneralisation(t2.getValue(h));
+                loss += bg.infoLoss();
+
             } else {
                 bg.setGeneralisation(Float.parseFloat(t1.getValue(h)));
+                bg.updateGeneralisation(Float.parseFloat(t2.getValue(h)));
+                loss += bg.infoLoss();
             }
 
-            initialLoss += bg.infoLoss();
-
         }
-        initialLoss = initialLoss / baseGeneralisations.size();
+        loss = loss / baseGeneralisations.size();
 
-        float eLoss = 0;
-        for (String h : baseGeneralisations.keySet()) {
-            Generalisation bg = baseGeneralisations.get(h);
-
-            if (bg instanceof CategoryGeneralisation) {
-                bg.setGeneralisation(t2.getValue(h));
-            } else {
-                bg.setGeneralisation(Float.parseFloat(t2.getValue(h)));
-            }
-            eLoss += bg.infoLoss();
-
-        }
-        eLoss = eLoss / baseGeneralisations.size();
-
-        return eLoss - initialLoss;
+        return loss;
     }
 }

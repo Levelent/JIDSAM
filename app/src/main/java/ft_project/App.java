@@ -24,8 +24,8 @@ public class App {
         int a_s = 2;
 
         // create data stream
-        Constants.streamSize = 10000;
-        InStream dataStream = new InStream("./app/src/main/resources/1/adult-10000.csv");
+        Constants.streamSize = 1000;
+        InStream dataStream = new InStream("./app/src/main/resources/1/adult-1000.csv");
 
         // create data out stream
         OutStream outputStream = new OutStream("output.txt");
