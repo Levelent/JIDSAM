@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime
 
 # Get dictionary lookup of Pickup (PU) and Dropoff (DO) location IDs
-with open("taxi_zone_lookup.csv") as file:
+with open("zone_lookup.csv") as file:
     # get the info we actually want
     locations = [line.split(",")[:3] for line in file.read().replace('"', "").split("\n")[1:]]
 
@@ -60,12 +60,12 @@ df.sample(n=100).to_csv("taxi-100.csv", index=False)
 
 dgh_zones = ["New York"]
 for borough in borough_dict.keys():
-    dgh_zones.append(f"\t{borough}")
+    dgh_zones.append(f"    {borough}")
     for zone in borough_dict[borough]:
-        dgh_zones.append(f"\t\t{zone}")
+        dgh_zones.append(f"        {zone}")
 
 # Awkward, but no easy way to automate
-dgh_pay_type = "$payment_type\nAny\n\tPaid\n\t\tCredit Card\n\t\tCash\n\tUnpaid\n\t\tNo charge\n\t\tDispute\n\t\tVoided trip\n\tUnknown"
+dgh_pay_type = "$payment_type\nAny\n    Paid\n        Credit Card\n        Cash\n    Unpaid\n        No charge\n        Dispute\n        Voided trip\n    Unknown"
 
 with open("dgh.txt", "w") as file:
     file.writelines("\n".join(
