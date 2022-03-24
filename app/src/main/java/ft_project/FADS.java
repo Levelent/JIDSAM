@@ -43,7 +43,13 @@ public class FADS extends Castle {
 
             // Remove the k-anonymised clusters in Set_kc that exist longer than or equal to
             // T_kc;
-            set_kc.removeIf(c -> (c.size() >= beta));
+            // set_kc.removeIf(c -> (c.size() >= beta));
+            if (set_kc.size() > beta) {
+                Iterator<Cluster> set_kc_iterator = set_kc.iterator();
+                while (set_kc.size() > beta) {
+                    set_kc.remove(set_kc_iterator.next());
+                }
+            }
 
             if (set_tp.size() > delta) {
                 // Remove the earliest arrived tuple t from Set_tp;

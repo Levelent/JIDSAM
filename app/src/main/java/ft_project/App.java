@@ -33,7 +33,7 @@ public class App {
         OutStream outputStream = new OutStream("output.txt");
 
         // initialise CASTLE
-        Castle castle = new FADSL(dataStream, k, delta, beta, l, a_s);
+        Castle castle = new Castle(dataStream, k, delta, beta);// FADSL(dataStream, k, delta, beta, l, a_s);
 
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
