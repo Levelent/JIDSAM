@@ -11,7 +11,7 @@ public class App {
      * @param args provided by command line interface
      */
     public static void main(String[] args) {
-        Constants.setV(true);
+        Constants.setV(false);
         // predefine thresholds/constants
         int k = 3;
         int delta = 15;
@@ -31,7 +31,7 @@ public class App {
         OutStream outputStream = new OutStream("output.txt");
 
         // initialise CASTLE
-        Castle castle = new Castle(dataStream, k, delta, beta);
+        Castle castle = new FADSL(dataStream, k, delta, beta, l, a_s);
 
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
@@ -249,6 +249,7 @@ public class App {
         compareOutStream.out.println("version,delta,avgInfoLoss");
 
         // run each version
+        System.out.println("------ Vary Delta ----------");
         for (String version : versions) {
             int[] deltas = { 10, 50, 100, 200 };
             for (int delta : deltas) {
