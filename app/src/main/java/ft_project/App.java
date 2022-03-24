@@ -31,7 +31,7 @@ public class App {
         OutStream outputStream = new OutStream("output.txt");
 
         // initialise CASTLE
-        Castle castle = new Castle(dataStream, k, delta, beta);
+        Castle castle = new FADS(dataStream, k, delta, beta);
 
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];

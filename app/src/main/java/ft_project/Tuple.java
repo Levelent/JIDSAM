@@ -102,7 +102,7 @@ public class Tuple implements Cloneable {
 
         // output tuple;
         out += ANSI_CYAN + "Tuple" + ANSI_RESET + System.lineSeparator();
-        this.setAsBeenOutput();
+
         out += this.toString();
 
         if (!this.beenOutputted) {
@@ -114,6 +114,7 @@ public class Tuple implements Cloneable {
             // external output
             outputStream.out.println(generalisations);
         }
+        this.setAsBeenOutput();
     }
 
     /**

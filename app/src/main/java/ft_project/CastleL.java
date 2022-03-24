@@ -264,6 +264,9 @@ public class CastleL extends Castle {
         // the values for the sensitive attribute
         Map<String, List<Tuple>> BS = new HashMap<>();
         for (Tuple t : c.getTuples()) {
+            if (t.hasBeenOutput()) {
+                continue;
+            }
             if (!BS.containsKey(t.getValue(a_s))) {
                 BS.put(t.getValue(a_s), new ArrayList<Tuple>());
             }
