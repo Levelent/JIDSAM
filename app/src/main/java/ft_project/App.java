@@ -66,9 +66,6 @@ public class App {
                         beta = Integer.parseInt(arg);
                     }
                     break;
-                case "compare":
-                    compare();
-                    break;
 
                 case "-c":
 
@@ -108,6 +105,15 @@ public class App {
                             Constants.variant = "CASTLE";
                             castle = new Castle(dataStream, k, delta, beta);
                     }
+
+                    break;
+                case "compare":
+
+                    compare();
+                    break;
+
+                default:
+                    continue;
 
             }
         }
