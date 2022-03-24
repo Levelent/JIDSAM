@@ -65,7 +65,8 @@ for borough in borough_dict.keys():
         dgh_zones.append(f"        {zone}")
 
 # Awkward, but no easy way to automate
-dgh_pay_type = "$payment_type\nAny\n    Paid\n        Credit Card\n        Cash\n    Unpaid\n        No charge\n        Dispute\n        Voided trip\n    Unknown"
+s = "    "
+dgh_pay_type = f"$payment_type\nAny\n{s}Paid\n{s*2}Credit Card\n{s*2}Cash\n{s}Unpaid\n{s*2}No charge\n{s*2}Dispute\n{s*2}Voided trip\n{s}Unknown"
 
 with open("dgh.txt", "w") as file:
     file.writelines("\n".join(

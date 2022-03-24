@@ -3,8 +3,6 @@ package ft_project;
 import java.security.SecureRandom;
 import java.util.*;
 
-import javax.swing.text.EditorKit;
-
 public class Castle {
     protected int k, delta, beta;
     protected float aveInfoLoss;
