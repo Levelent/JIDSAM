@@ -109,12 +109,8 @@ public class DGH {
      * @return number of nodes
      */
     public int countNodes(String localRootName) {
-        // try {
-        // return find(localRootName).countNodes(0);
-        // } catch (NullPointerException e) {
-        // return find(root.data).countNodes(0);
-        // }
 
+        // Cache the node count to speed up repeated calls
         Integer count = this.countCache.get(localRootName);
         if (count == null) {
             count = find(localRootName).countNodes(0);
@@ -132,6 +128,7 @@ public class DGH {
      */
     public String findCommonAncestor(String rootA, String rootB) {
 
+        // Cache the common ancestor for repeated calls
         String key = rootA + rootB;
         String commonAncestor = commonAncestorCache.get(key);
         if (commonAncestor != null) {

@@ -64,14 +64,7 @@ public class FADS extends Castle {
             publishTuple(t);
         }
 
-        // calculate avgInfoLoss
-        float aveSum = 0;
-        HashSet<Cluster> cToAverage = new HashSet<Cluster>();
-        cToAverage.addAll(set_published);
-        for (Cluster cl : cToAverage) {
-            aveSum += cl.informationLoss();
-        }
-        this.aveInfoLoss = aveSum / cToAverage.size();
+        this.aveInfoLoss = Constants.aveInfoLoss() / Constants.tOutCount;
     }
 
     /**

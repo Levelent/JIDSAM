@@ -155,12 +155,12 @@ public class App {
         compareOutStream.out.println("version,k,avgInfoLoss");
 
         // run each version
+        System.out.println("--------- Varying k ---------");
         for (String version : versions) {
             int[] ks = { 10, 25, 50, 75, 100, 150, 200 };
-            int[] deltas = { 20, 50, 100, 150, 200, 300, 400 };
-            System.out.println("----------- New Version -----------");
+            int[] deltas = { 400, 400, 400, 400, 400, 400, 400 };
             for (int i = 0; i < ks.length; i++) {
-                System.out.println("");
+                System.out.format("K:%d delta:%d" + '\n', ks[i], deltas[i]);
                 Constants.tOutCount = 0;
                 Constants.infoLossSum = 0;
                 // predefine thresholds/constants
@@ -253,7 +253,7 @@ public class App {
         for (String version : versions) {
             int[] deltas = { 10, 25, 50, 75, 100, 150, 200 };
             for (int delta : deltas) {
-                System.out.println("");
+                System.out.format("delta:%d", delta);
 
                 Constants.tOutCount = 0;
                 Constants.infoLossSum = 0;

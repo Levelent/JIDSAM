@@ -3,7 +3,6 @@ package ft_project;
 import java.util.*;
 
 public class FADSL extends FADS {
-    protected float aveInfoLoss;
     protected int l, a_s;
 
     /**
