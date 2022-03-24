@@ -20,46 +20,92 @@ public class App {
         int a_s = 2;
 
         // create data stream
-        Constants.streamSize = 1000;
-        InStream dataStream = new InStream("./src/main/resources/adult-1000.csv");
+        Constants.streamSize = 10000;
+        InStream dataStream = new InStream("./src/main/resources/adult-10000.csv");
 
         // create data out stream
         OutStream outputStream = new OutStream("output.txt");
 
         // initialise CASTLE
-        Castle castle;
-        switch (args.length > 0 ? args[0] : "") {
-            case "1":
-                // run CASTLE with l diversity
-                Constants.variant = "CASTLE - L";
-                castle = new CastleL(dataStream, k, delta, beta, l, a_s);
-                break;
-            case "2":
-                // run B-CASTLE
-                Constants.variant = "B-CASTLE";
-                castle = new BCastle(dataStream, k, delta, beta);
-                break;
-            case "3":
-                // run FADS (note beta is t_kc)
-                Constants.variant = "FADS";
-                castle = new FADS(dataStream, k, delta, beta);
-                break;
-            case "4":
-                // run FADS with l diversity (note beta is t_kc)
-                Constants.variant = "FADSL";
-                castle = new FADSL(dataStream, k, delta, beta, l, a_s);
-                break;
-            case "5":
-                Constants.variant = "XBAND";
-                castle = new XBAND(dataStream, k, delta, beta, omega, expirationBand);
-                break;
-            case "compare":
-                compare();
-                return;
-            default:
-                // run normal castle
-                Constants.variant = "CASTLE";
-                castle = new Castle(dataStream, k, delta, beta);
+        Castle castle = new Castle(dataStream, k, delta, beta);
+
+        for (int i = 0; i < args.length; i++) {
+            String arg = args[i];
+
+            switch (arg) {
+                case "-k":
+                    if (i + 1 < args.length) {
+                        k = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-d":
+                    if (i + 1 < args.length) {
+                        delta = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-o":
+                    if (i + 1 < args.length) {
+                        omega = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-g":
+                    if (i + 1 < args.length) {
+                        expirationBand = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-b":
+                    if (i + 1 < args.length) {
+                        beta = Integer.parseInt(arg);
+                    }
+                    break;
+
+                case "-c":
+
+                    if (i + 1 >= args.length) {
+                        break;
+                    }
+
+                    switch (args[i + 1]) {
+                        case "1":
+                            // run CASTLE with l diversity
+                            Constants.variant = "CASTLE - L";
+                            castle = new CastleL(dataStream, k, delta, beta, l, a_s);
+                            break;
+                        case "2":
+                            // run B-CASTLE
+                            Constants.variant = "B-CASTLE";
+                            castle = new BCastle(dataStream, k, delta, beta);
+                            break;
+                        case "3":
+                            // run FADS (note beta is t_kc)
+                            Constants.variant = "FADS";
+                            castle = new FADS(dataStream, k, delta, beta);
+                            break;
+                        case "4":
+                            // run FADS with l diversity (note beta is t_kc)
+                            Constants.variant = "FADSL";
+                            castle = new FADSL(dataStream, k, delta, beta, l, a_s);
+                            break;
+                        case "5":
+                            Constants.variant = "XBAND";
+
+                            castle = new XBAND(dataStream, k, delta, beta, omega, expirationBand);
+                            break;
+                        case "compare":
+                            compare();
+                            break;
+                        default:
+                            // run normal castle
+
+                            Constants.variant = "CASTLE";
+                            castle = new Castle(dataStream, k, delta, beta);
+                    }
+
+            }
         }
 
         // set DGHs and output stream
