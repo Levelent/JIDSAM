@@ -106,17 +106,18 @@ public class DGH {
      * @return number of nodes
      */
     public int countNodes(String localRootName) {
-        try {
-            Integer count = this.countCache.get(localRootName);
-            if (count == null) {
-                count = find(localRootName).countNodes(0);
-                this.countCache.put(localRootName, count);
+        // try {
+        // return find(localRootName).countNodes(0);
+        // } catch (NullPointerException e) {
+        // return find(root.data).countNodes(0);
+        // }
 
-            }
-            return count;
-        } catch (NullPointerException e) {
-            return find(root.data).countNodes(0);
+        Integer count = this.countCache.get(localRootName);
+        if (count == null) {
+            count = find(localRootName).countNodes(0);
+            this.countCache.put(localRootName, count);
         }
+        return count;
     }
 
     /**
