@@ -56,6 +56,15 @@ public class CategoryGeneralisation extends Generalisation {
         return true;
     }
 
+    public Boolean setGeneralisation(CategoryGeneralisation g) {
+        this.localRoot = g.localRoot;
+        return true;
+    }
+
+    public Boolean setGeneralisation(ContinuousGeneralisation g) {
+        return false;
+    }
+
     /**
      * Return the string representation of the generalisation
      * 

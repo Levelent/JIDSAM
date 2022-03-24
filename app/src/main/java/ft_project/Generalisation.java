@@ -40,6 +40,14 @@ public class Generalisation implements Cloneable {
         return false;
     }
 
+    public Boolean setGeneralisation(CategoryGeneralisation g) {
+        return false;
+    }
+
+    public Boolean setGeneralisation(ContinuousGeneralisation g) {
+        return false;
+    }
+
     /**
      * Update the generalisation
      * 

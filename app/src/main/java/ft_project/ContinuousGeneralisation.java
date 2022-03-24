@@ -109,6 +109,18 @@ public class ContinuousGeneralisation extends Generalisation {
         return true;
     }
 
+    public Boolean setGeneralisation(CategoryGeneralisation g) {
+        return false;
+    }
+
+    public Boolean setGeneralisation(ContinuousGeneralisation g) {
+        this.LB = g.LB;
+        this.UB = g.UB;
+        this.lb = g.lb;
+        this.ub = g.ub;
+        return true;
+    }
+
     /**
      * Get the string representation of the generalisation
      * 

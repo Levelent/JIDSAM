@@ -8,7 +8,7 @@ public class Cluster implements Cloneable {
     private static final String ANSI_YELLOW = "\u001B[33m";
 
     private List<Tuple> tuples;
-    private Map<String, Generalisation> generalisations;
+    public Map<String, Generalisation> generalisations; // TODO shuldnt be public
     private Map<String, DGH> DGH;
 
     /**
