@@ -8,14 +8,14 @@ Uses gradle version 7.3.3 and java openjdk 11.0.14
 
 In the project's root run the command: `gradle run`
 
-| Version  | Execution command                   |
-| -------- | ----------------------------------- |
-| Castle   | `gradle run castle` or `gradle run` |
-| Castle-L | `gradle run castlel`                |
-| B-Castle | `gradle run bcastle`                |
-| FADS     | `gradle run fads`                   |
-| FADS-L   | `gradle run fadsl`                  |
-| XBAND    | `gradle run xband`                  |
+| Version  | Execution command               |
+| -------- | ------------------------------- |
+| Castle   | `gradle castle` or `gradle run` |
+| Castle-L | `gradle castlel`                |
+| B-Castle | `gradle bcastle`                |
+| FADS     | `gradle fads`                   |
+| FADS-L   | `gradle fadsl`                  |
+| XBAND    | `gradle xband`                  |
 
 ### Output
 
