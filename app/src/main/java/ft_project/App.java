@@ -160,7 +160,7 @@ public class App {
             System.out.println("----------- New Version -----------");
             for (int i = 0; i < ks.length; i++) {
                 System.out.println("");
-                Constants.streamSize = 1000;
+
                 Constants.tOutCount = 0;
                 Constants.infoLossSum = 0;
                 // predefine thresholds/constants
@@ -253,7 +253,7 @@ public class App {
             int[] deltas = { 10, 50, 100, 200 };
             for (int delta : deltas) {
                 System.out.println("");
-                Constants.streamSize = 1000;
+
                 Constants.tOutCount = 0;
                 Constants.infoLossSum = 0;
                 // predefine thresholds/constants
