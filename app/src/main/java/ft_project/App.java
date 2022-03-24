@@ -45,6 +45,7 @@ public class App {
                 break;
             case "5":
                 castle = new XBAND(dataStream, k, delta, beta, omega, expirationBand);
+                break;
             case "compare":
                 compare();
                 return;
