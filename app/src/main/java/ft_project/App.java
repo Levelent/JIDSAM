@@ -156,8 +156,8 @@ public class App {
 
         // run each version
         for (String version : versions) {
-            int[] ks = { 10, 50, 100, 200 };
-            int[] deltas = { 20, 100, 200, 400 };
+            int[] ks = { 10, 25, 50, 75, 100, 150, 200 };
+            int[] deltas = { 20, 50, 100, 150, 200, 300, 400 };
             System.out.println("----------- New Version -----------");
             for (int i = 0; i < ks.length; i++) {
                 System.out.println("");
@@ -250,7 +250,7 @@ public class App {
 
         // run each version
         for (String version : versions) {
-            int[] deltas = { 10, 50, 100, 200 };
+            int[] deltas = { 10, 25, 50, 75, 100, 150, 200 };
             for (int delta : deltas) {
                 System.out.println("");
 
