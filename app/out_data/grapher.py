@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-name = "delta-taxi-1000"
+name = "k-adult-1000"
 
 with open(f"compare-{name}.csv") as file:
     lines = [line.split(",") for line in file.read().split("\n")]
@@ -21,10 +21,11 @@ for i in range(len(labels)):
     x_only, y_only = zip(*coords)
     plt.plot(x_only, y_only, marker=markers[i], label=labels[i].upper(), color=colours[i])
 
-plt.axis([0, 200, 0, 0.65])
-plt.xlabel("Parameter $\delta$")
+# plt.axis([0, 200, 0, 0.65])
+plt.xlim(0, 200)
+plt.title("Vary $k$ with $\delta=2k$ on adult-1000")
+plt.xlabel("Parameter $k$")
 plt.ylabel("Information Loss")
 plt.legend(fontsize='small')
 
-print(plt.rcdefaults)
 plt.savefig(f"{name}.png", dpi=300)
