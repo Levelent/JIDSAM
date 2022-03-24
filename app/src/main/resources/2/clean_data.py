@@ -50,11 +50,13 @@ df["payment_type"] = df["payment_type"].map(pay_type_dict.get)
 
 # 1271413 available to sample
 
-df.sample(n=1000000).to_csv("taxi-1000000.csv", index=False)
-df.sample(n=100000).to_csv("taxi-100000.csv", index=False)
-df.sample(n=10000).to_csv("taxi-10000.csv", index=False)
-df.sample(n=1000).to_csv("taxi-1000.csv", index=False)
-df.sample(n=100).to_csv("taxi-100.csv", index=False)
+df.index.name = "pid"
+
+df.sample(n=1000000).to_csv("taxi-1000000.csv")
+df.sample(n=100000).to_csv("taxi-100000.csv")
+df.sample(n=10000).to_csv("taxi-10000.csv")
+df.sample(n=1000).to_csv("taxi-1000.csv")
+df.sample(n=100).to_csv("taxi-100.csv")
 
 # Create DGH file with correct format
 

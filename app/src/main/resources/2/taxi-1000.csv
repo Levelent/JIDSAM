@@ -1,1001 +1,1001 @@
-tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distance,PULocationID,DOLocationID,payment_type,fare_amount,tip_amount,total_amount
-1610547418,1610547656,1,0.93,Midtown East,Murray Hill,Credit Card,5.0,2.08,10.38
-1611598162,1611598785,1,1.3,East Harlem South,Central Harlem,Cash,8.0,0.0,9.8
-1610650158,1610652456,1,9.65,Clinton West,Prospect Heights,Credit Card,33.0,2.5,39.8
-1610038080,1610038755,1,2.11,West Village,Murray Hill,Credit Card,9.5,4.14,17.94
-1609684943,1609687304,2,21.03,JFK Airport,TriBeCa/Civic Center,Credit Card,52.0,12.28,73.7
-1610873780,1610873800,1,0.0,NV,NV,No charge,-2.5,0.0,-3.3
-1612086572,1612086712,1,1.0,East Chelsea,Lincoln Square East,Credit Card,5.0,2.05,10.35
-1610716064,1610716502,1,0.98,TriBeCa/Civic Center,Seaport,Credit Card,6.5,0.2,10.0
-1609917717,1609918439,1,2.21,Lincoln Square West,Lenox Hill West,Credit Card,10.5,1.2,15.0
-1611433460,1611434148,1,1.86,Greenwich Village North,East Chelsea,Credit Card,9.5,2.0,15.3
-1611909796,1611910479,1,3.36,TriBeCa/Civic Center,Times Sq/Theatre District,Credit Card,12.0,3.06,18.36
-1609832578,1609832886,1,0.89,Yorkville West,Upper East Side North,Credit Card,5.5,1.76,10.56
-1610322018,1610405206,1,11.42,Eastchester,Mott Haven/Port Morris,Cash,35.0,0.0,36.3
-1610743732,1610745004,1,10.3,LaGuardia Airport,Lincoln Square East,Credit Card,29.5,7.85,47.27
-1610284303,1610285626,1,5.0,Yorkville West,SoHo,Credit Card,18.5,4.36,26.16
-1610124669,1610124956,1,0.9,Upper West Side North,Morningside Heights,Cash,5.5,0.0,7.3
-1610550329,1610550827,1,1.13,Upper East Side North,Yorkville East,Credit Card,7.0,1.5,11.8
-1611229871,1611230233,4,1.01,Sutton Place/Turtle Bay North,Midtown Center,Cash,6.0,0.0,9.3
-1611226754,1611227775,2,7.48,JFK Airport,Cypress Hills,Cash,22.5,0.0,23.3
-1611044071,1611044379,1,1.4,Lincoln Square East,East Chelsea,Credit Card,6.5,1.96,11.76
-1610102432,1610102729,1,0.8,West Concourse,Central Harlem North,Credit Card,5.5,1.0,7.3
-1610389360,1610390000,1,2.06,Midtown East,Yorkville East,Credit Card,9.5,2.76,16.56
-1611924805,1611925086,1,0.93,Upper West Side South,Lincoln Square West,Credit Card,5.5,2.2,11.0
-1611254776,1611255043,1,0.8,Midtown North,Garment District,Cash,5.0,0.0,9.3
-1610461603,1610461805,2,0.88,East Village,Gramercy,Credit Card,5.0,1.66,9.96
-1611150581,1611151070,1,1.1,Morningside Heights,Central Harlem North,Credit Card,7.0,3.0,10.8
-1612046769,1612047054,1,1.01,Midtown North,Penn Station/Madison Sq West,Cash,5.5,0.0,9.3
-1610137045,1610138031,1,11.34,JFK Airport,Middle Village,Cash,31.0,0.0,32.3
-1610655383,1610656253,1,3.03,Midtown Center,Yorkville West,Cash,12.5,0.0,16.3
-1611133012,1611133507,1,0.95,Garment District,Midtown South,Cash,7.0,0.0,10.3
-1611935755,1611936603,1,2.1,Kips Bay,Clinton East,Cash,11.0,0.0,15.3
-1611686042,1611689514,2,19.5,JFK Airport,Williamsburg (South Side),Cash,62.0,0.0,63.8
-1610385047,1610385684,0,2.3,NV,NV,Credit Card,10.0,1.5,15.8
-1611759177,1611759851,1,2.64,West Village,Clinton East,Credit Card,10.5,4.14,17.94
-1609595221,1609596342,1,12.4,JFK Airport,Auburndale,Cash,34.0,0.0,34.8
-1610791867,1610792034,1,0.6,Upper West Side South,Lincoln Square West,Credit Card,4.5,1.17,8.97
-1611765307,1611765903,1,1.8,Midtown North,Penn Station/Madison Sq West,Credit Card,9.0,2.65,15.95
-1610066156,1610066700,1,2.0,Little Italy/NoLiTa,East Chelsea,Credit Card,9.0,2.55,15.35
-1609862225,1609862566,1,0.87,Central Harlem,Manhattanville,Cash,5.5,0.0,6.3
-1611346058,1611346304,3,0.87,Upper East Side South,Upper East Side North,Credit Card,5.0,1.76,10.56
-1612022955,1612023372,1,1.19,Clinton East,Upper West Side South,Credit Card,6.5,0.98,10.78
-1609778266,1609778708,1,1.2,UN/Turtle Bay South,Lenox Hill West,Credit Card,7.0,2.26,13.56
-1609939090,1609939507,1,1.4,Kips Bay,Sutton Place/Turtle Bay North,Credit Card,7.0,2.05,12.35
-1610202948,1610203679,1,2.0,Sutton Place/Turtle Bay North,Central Park,Credit Card,10.5,6.2,20.0
-1609617111,1609617695,1,1.75,Morningside Heights,Central Harlem North,Credit Card,8.5,2.94,12.74
-1611318265,1611318840,1,1.02,Upper East Side South,Lenox Hill East,Cash,7.5,0.0,10.8
-1612010535,1612011585,0,2.6,Murray Hill,Greenwich Village South,Credit Card,13.0,3.25,19.55
-1610037549,1610040572,1,18.89,JFK Airport,Clinton Hill,Credit Card,55.0,12.0,68.8
-1609628349,1609628748,2,1.45,Clinton East,Garment District,Cash,7.0,0.0,10.8
-1610021091,1610021377,1,1.14,Lenox Hill East,Yorkville West,Credit Card,5.5,1.76,10.56
-1611421229,1611421276,2,0.28,JFK Airport,JFK Airport,Cash,3.0,0.0,3.8
-1612111949,1612113261,2,4.55,Meatpacking/West Village West,Lenox Hill East,Cash,18.0,0.0,21.3
-1609840551,1609841802,1,4.28,Flatiron,Upper East Side North,Cash,17.0,0.0,20.3
-1611057650,1611058171,1,1.82,Central Park,Upper East Side North,Credit Card,8.5,3.54,15.34
-1610456882,1610457181,4,1.0,Flatiron,Gramercy,Cash,5.5,0.0,8.8
-1611663581,1611664019,1,1.2,Hudson Sq,World Trade Center,Cash,7.0,0.0,10.3
-1609839062,1609839680,1,1.49,Upper East Side South,Midtown Center,Credit Card,8.5,2.36,14.16
-1611911058,1611911410,1,1.8,Gramercy,Sutton Place/Turtle Bay North,Credit Card,7.5,2.15,12.95
-1610439732,1610440011,1,0.72,Murray Hill,Sutton Place/Turtle Bay North,Credit Card,5.0,1.66,9.96
-1609859511,1609860138,1,1.8,Midtown Center,Upper East Side South,Credit Card,9.0,2.0,14.3
-1609780880,1609781368,1,1.4,Murray Hill,Union Sq,Cash,7.5,0.0,11.8
-1610985931,1610986486,6,2.06,Lincoln Square West,Upper West Side North,Credit Card,8.5,2.36,14.16
-1609840437,1609840735,1,1.6,Upper East Side North,Midtown Center,Credit Card,6.5,1.96,11.76
-1609937125,1609937289,1,0.6,Sutton Place/Turtle Bay North,Midtown East,Cash,4.0,0.0,7.3
-1609769673,1609769890,1,0.73,East Village,Gramercy,Credit Card,5.0,5.0,13.3
-1610814020,1610815019,1,2.7,Manhattan Valley,Hamilton Heights,Credit Card,13.0,2.0,16.8
-1611240916,1611241354,1,1.71,SoHo,Union Sq,Credit Card,7.5,2.16,12.96
-1610389323,1610390318,1,3.0,Penn Station/Madison Sq West,Lower East Side,Credit Card,13.5,3.55,21.35
-1611756879,1611757339,1,2.09,East Chelsea,Battery Park City,Credit Card,9.0,2.46,14.76
-1609848244,1609848530,1,0.97,Upper East Side South,Upper East Side North,Credit Card,5.5,1.25,10.05
-1611135172,1611135849,1,1.5,Upper East Side North,Lenox Hill West,Credit Card,9.0,2.45,14.75
-1611431540,1611432022,1,1.6,West Village,TriBeCa/Civic Center,Credit Card,7.5,2.15,12.95
-1610703366,1610703646,1,0.91,Mott Haven/Port Morris,Central Harlem North,Cash,5.5,0.0,6.3
-1610537173,1610537641,5,1.06,Lenox Hill West,Yorkville East,Cash,7.0,0.0,10.3
-1611078084,1611078462,1,1.33,Flatiron,West Chelsea/Hudson Yards,Cash,7.0,0.0,11.3
-1610662076,1610663122,1,4.36,Upper West Side South,Gramercy,Credit Card,16.5,4.06,24.36
-1611647087,1611647990,1,3.95,Yorkville West,East Chelsea,Cash,14.0,0.0,17.3
-1609697129,1609697793,1,3.2,Midtown North,Central Harlem,Cash,11.5,0.0,14.8
-1611677555,1611679131,1,9.7,TriBeCa/Civic Center,Hamilton Heights,Cash,29.5,0.0,33.8
-1611748310,1611748674,2,1.6,Flatiron,Midtown North,Credit Card,7.0,2.55,12.85
-1612124492,1612125837,0,4.4,Penn Station/Madison Sq West,Yorkville West,Credit Card,17.0,4.15,24.95
-1612029342,1612030152,1,2.3,Sutton Place/Turtle Bay North,West Chelsea/Hudson Yards,Credit Card,10.5,2.75,16.55
-1609773240,1609773388,1,0.3,Midtown East,Lenox Hill West,Credit Card,3.5,1.35,8.15
-1610665316,1610666364,1,0.0,Midtown East,Spuyten Duyvil/Kingsbridge,Credit Card,30.2,0.0,31.0
-1610122414,1610123450,1,2.5,Flatiron,Sutton Place/Turtle Bay North,Credit Card,13.0,3.45,20.75
-1611732174,1611732424,1,1.0,Lenox Hill East,Sutton Place/Turtle Bay North,Cash,5.5,0.0,8.8
-1611231884,1611232153,6,1.21,UN/Turtle Bay South,Upper East Side South,Credit Card,6.0,2.32,11.62
-1611135258,1611135919,1,3.2,Upper West Side South,West Chelsea/Hudson Yards,Credit Card,12.0,3.05,18.35
-1610123342,1610126291,1,10.75,SoHo,Morningside Heights,Credit Card,39.5,6.57,50.37
-1611937137,1611939950,1,22.4,JFK Airport,Times Sq/Theatre District,Credit Card,52.0,9.89,75.81
-1610634323,1610634690,1,1.08,Lincoln Square East,Upper West Side South,Credit Card,6.0,1.86,11.16
-1611758599,1611759039,1,0.9,Garment District,Midtown Center,Credit Card,6.5,1.95,11.75
-1611482947,1611483267,1,1.14,Garment District,Midtown East,Cash,6.0,0.0,9.3
-1611670046,1611671116,1,3.59,Times Sq/Theatre District,World Trade Center,Credit Card,14.0,2.7,20.0
-1611574893,1611575892,1,3.86,World Trade Center,Murray Hill,Cash,15.0,0.0,18.3
-1610815365,1610815932,1,2.35,Upper East Side North,Midtown North,Credit Card,9.5,3.2,16.0
-1611870466,1611871173,1,1.8,West Village,Gramercy,Credit Card,9.0,2.55,15.35
-1610460378,1610461053,2,2.3,Midtown East,East Chelsea,Credit Card,10.0,3.32,16.62
-1611575217,1611575968,1,1.91,Upper East Side North,Upper East Side South,Cash,10.5,0.0,13.8
-1611699930,1611700153,1,1.0,Midtown East,Penn Station/Madison Sq West,Credit Card,5.5,2.75,12.05
-1611945800,1611946692,1,2.43,Morningside Heights,Yorkville West,Credit Card,12.0,3.26,19.56
-1610551829,1610552756,1,3.16,East Village,Seaport,Credit Card,14.5,4.45,22.25
-1609890423,1609890654,1,0.74,Yorkville West,Upper East Side North,Cash,5.0,0.0,8.8
-1610550994,1610551935,1,2.17,Manhattan Valley,Upper East Side South,Credit Card,11.5,2.96,17.76
-1610712095,1610712266,3,0.57,Yorkville East,Yorkville East,Credit Card,4.0,0.45,7.75
-1610046531,1610047295,1,1.6,Upper East Side South,UN/Turtle Bay South,Cash,9.5,0.0,13.8
-1611745088,1611745553,1,1.78,Central Park,Penn Station/Madison Sq West,Cash,8.0,0.0,11.3
-1612101456,1612102216,1,4.11,East Village,Lenox Hill West,Cash,14.0,0.0,17.3
-1610040443,1610040614,5,0.61,Murray Hill,Midtown Center,Credit Card,4.0,1.66,9.96
-1610191603,1610192086,1,1.5,Union Sq,East Village,Credit Card,7.5,2.15,12.95
-1611911253,1611911690,1,1.28,Yorkville West,Lenox Hill East,Credit Card,7.0,2.06,12.36
-1611078848,1611080063,1,3.8,Lenox Hill West,Greenwich Village North,Credit Card,16.5,2.0,22.8
-1609827589,1609828776,1,4.93,East Harlem South,East Chelsea,Credit Card,18.0,2.0,23.3
-1610891000,1610891570,6,3.58,Kips Bay,Yorkville West,Credit Card,11.5,2.96,17.76
-1611435828,1611436070,1,0.73,Upper East Side South,Upper East Side North,Credit Card,5.0,1.0,9.8
-1610788449,1610788671,1,0.68,Clinton East,East Chelsea,Credit Card,4.5,1.56,9.36
-1609504652,1609505271,1,2.35,Midtown Center,East Village,Credit Card,10.0,2.0,15.3
-1611912816,1611913201,1,1.4,Upper East Side North,East Harlem North,Cash,7.0,0.0,10.3
-1610107250,1610107594,2,1.0,Flatiron,Greenwich Village North,Credit Card,6.0,1.85,11.15
-1611062234,1611062739,1,1.2,Lenox Hill West,Yorkville West,Credit Card,7.0,2.55,12.85
-1610305416,1610305816,5,2.31,Upper East Side North,Central Harlem North,Credit Card,8.5,2.0,13.8
-1611153636,1611154434,1,1.55,Lenox Hill West,Upper East Side North,Credit Card,10.0,2.66,15.96
-1611587349,1611588039,2,0.8,Upper East Side South,Lenox Hill East,Credit Card,8.5,2.35,14.15
-1611585796,1611585848,1,0.0,Manhattan Valley,Manhattan Valley,No charge,2.5,0.0,3.3
-1611144672,1611144980,2,0.76,East Village,East Village,Credit Card,5.5,1.76,10.56
-1611564203,1611564765,1,3.5,Lincoln Square West,Morningside Heights,Credit Card,12.5,4.74,20.54
-1610028969,1610029308,2,0.9,Sutton Place/Turtle Bay North,Upper East Side South,Cash,5.5,0.0,8.8
-1610875942,1610876581,1,3.29,East Chelsea,Lenox Hill East,Credit Card,11.5,1.0,15.8
-1611241500,1611242611,2,1.66,Upper East Side North,Lenox Hill East,Credit Card,12.5,3.16,18.96
-1611584007,1611584320,1,0.36,Central Park,Lincoln Square East,Cash,5.0,0.0,8.3
-1611928100,1611928947,1,3.77,Yorkville West,Murray Hill,Credit Card,14.5,3.56,21.36
-1610532645,1610532746,1,0.54,Upper East Side North,Upper East Side North,Cash,3.5,0.0,6.8
-1609707130,1609708228,1,4.3,Midtown Center,Sunnyside,Credit Card,16.0,2.2,22.0
-1611493256,1611493799,1,1.4,Manhattan Valley,Upper West Side South,Credit Card,8.0,2.25,13.55
-1610431110,1610431509,5,1.67,East Harlem South,Upper West Side North,Cash,7.5,0.0,8.3
-1610989765,1610990131,1,0.7,Upper East Side North,Yorkville West,Cash,5.5,0.0,8.8
-1610704113,1610704377,1,0.77,Upper East Side North,Upper East Side North,Credit Card,5.0,0.0,8.3
-1610135311,1610135853,1,1.93,Midtown East,Gramercy,Credit Card,8.5,2.56,15.36
-1610710211,1610711085,1,3.0,Greenwich Village North,Upper East Side South,Credit Card,12.5,3.15,18.95
-1610697905,1610698229,1,1.01,Upper West Side South,Upper East Side North,Credit Card,6.0,1.86,11.16
-1610118604,1610119099,1,1.36,Midtown East,Midtown North,Credit Card,7.5,2.16,12.96
-1611922833,1611922932,1,0.0,Sutton Place/Turtle Bay North,Lenox Hill West,Cash,3.0,0.0,6.3
-1610106079,1610106681,1,2.35,Lincoln Square East,Midtown South,Credit Card,9.5,3.84,16.64
-1610974544,1610975136,1,1.02,Upper East Side South,Sutton Place/Turtle Bay North,Credit Card,7.5,1.62,12.42
-1611921451,1611921760,1,0.69,Upper East Side North,Upper East Side North,Cash,5.0,0.0,8.3
-1610084833,1610085612,3,2.88,Clinton East,Kips Bay,Credit Card,12.0,0.0,15.8
-1610889402,1610890716,1,9.23,LaGuardia Airport,Woodhaven,Cash,27.5,0.0,28.3
-1610792462,1610792731,1,0.5,Upper West Side South,Upper West Side North,Cash,5.0,0.0,8.3
-1609943468,1609944191,1,1.56,East Chelsea,Murray Hill,Credit Card,9.5,3.84,16.64
-1610699248,1610700194,5,2.54,Midtown Center,Upper East Side North,Credit Card,13.0,3.26,19.56
-1610729915,1610733308,2,18.93,JFK Airport,World Trade Center,Cash,52.0,0.0,59.8
-1610059630,1610060930,1,7.56,Upper East Side North,Financial District North,Cash,24.5,0.0,28.3
-1611839116,1611839535,1,1.55,TriBeCa/Civic Center,West Village,Cash,7.5,0.0,10.8
-1612007157,1612007618,1,1.1,Penn Station/Madison Sq West,West Chelsea/Hudson Yards,Credit Card,7.0,2.06,12.36
-1610034112,1610035126,2,4.6,Central Park,Gramercy,Credit Card,16.0,3.86,23.16
-1611599928,1611600119,1,0.5,West Chelsea/Hudson Yards,Garment District,Credit Card,4.5,2.2,11.0
-1611760112,1611760707,1,1.17,Midtown South,Kips Bay,Credit Card,8.0,2.26,13.56
-1610584827,1610585081,1,0.7,East Harlem South,East Harlem South,No charge,5.0,0.0,6.3
-1611232067,1611232788,5,2.05,Bloomingdale,Lincoln Square West,Credit Card,10.0,2.66,15.96
-1610743514,1610743830,1,1.24,West Village,East Chelsea,Credit Card,6.0,1.96,11.76
-1610828999,1610829611,1,1.6,Sutton Place/Turtle Bay North,Clinton East,Cash,8.0,0.0,11.8
-1609585395,1609585680,1,0.95,Penn Station/Madison Sq West,Clinton West,Credit Card,5.5,2.2,11.0
-1611516485,1611517259,1,6.0,Clinton East,Hamilton Heights,Cash,18.5,0.0,21.8
-1611996304,1611996471,1,0.88,Lincoln Square East,Upper East Side South,Credit Card,4.5,2.34,10.14
-1611575981,1611576580,1,0.87,Flatiron,Kips Bay,Credit Card,7.5,1.62,12.42
-1610202692,1610202840,1,0.87,East Harlem North,East Harlem South,Cash,4.5,0.0,5.3
-1611959298,1611959528,1,0.77,Midtown East,Sutton Place/Turtle Bay North,Cash,5.0,0.0,8.8
-1611519533,1611520010,1,1.77,Upper East Side South,Lincoln Square East,Credit Card,8.0,2.36,14.16
-1610128795,1610129950,1,2.76,Midtown Center,West Village,Credit Card,14.0,3.66,21.96
-1611490562,1611491922,1,9.15,Lower East Side,Central Harlem North,Cash,27.5,0.0,30.8
-1610292592,1610293710,1,4.99,Lenox Hill West,Central Harlem North,Credit Card,17.5,4.16,24.96
-1610478605,1610479384,1,3.4,Flatiron,Battery Park City,Credit Card,13.0,3.45,20.75
-1610451622,1610452056,1,0.68,Midtown Center,Upper East Side South,Cash,6.0,0.0,9.3
-1611258567,1611260614,2,11.09,Midtown East,Ocean Hill,Credit Card,34.0,7.66,45.96
-1610521898,1610522184,2,0.79,Penn Station/Madison Sq West,West Chelsea/Hudson Yards,Credit Card,5.5,1.76,10.56
-1609967878,1609968184,1,0.81,Upper East Side North,Yorkville West,Cash,5.5,0.0,9.3
-1610625872,1610626761,1,3.21,Upper West Side South,East Harlem North,Credit Card,13.0,4.08,20.38
-1610004273,1610004900,1,2.68,Yorkville West,Midtown Center,Credit Card,10.5,2.76,16.56
-1609883348,1609883954,1,1.6,Penn Station/Madison Sq West,UN/Turtle Bay South,Cash,8.5,0.0,12.3
-1610720873,1610722636,1,2.0,Kips Bay,East Chelsea,Cash,13.0,0.0,16.8
-1611595544,1611596084,1,1.78,Central Park,Upper East Side North,Credit Card,8.5,2.56,15.36
-1609578495,1609578683,1,0.8,Upper East Side South,Lenox Hill West,Credit Card,4.5,1.95,9.75
-1610038650,1610039735,1,2.7,Lenox Hill East,Stuy Town/Peter Cooper Village,Cash,14.0,0.0,18.3
-1609835791,1609836096,1,0.6,Garment District,Murray Hill,Credit Card,5.0,1.66,9.96
-1610975438,1610976119,1,1.87,Midtown Center,Upper East Side South,Credit Card,9.5,2.56,15.36
-1612032427,1612032703,1,1.31,Kips Bay,Sutton Place/Turtle Bay North,Cash,6.0,0.0,9.3
-1610460414,1610461357,1,3.39,Upper East Side South,Little Italy/NoLiTa,Credit Card,14.0,3.46,20.76
-1611330471,1611331534,1,7.61,TriBeCa/Civic Center,Midtown East,Credit Card,23.0,6.58,32.88
-1611225005,1611225738,1,2.21,Penn Station/Madison Sq West,Upper East Side South,Cash,10.5,0.0,13.8
-1611742150,1611744942,1,29.6,LaGuardia Airport,NA,Credit Card,96.5,22.9,137.57
-1611417034,1611417515,1,1.5,Sutton Place/Turtle Bay North,Times Sq/Theatre District,Credit Card,7.5,2.15,12.95
-1609869566,1609870221,1,2.01,Midtown South,Little Italy/NoLiTa,Credit Card,9.5,2.76,16.56
-1612030637,1612030868,1,0.7,Clinton West,Clinton East,Credit Card,5.0,0.0,8.3
-1611434791,1611435119,1,1.4,Financial District North,SoHo,Cash,6.5,0.0,10.3
-1610635764,1610636377,1,1.65,Upper West Side South,Manhattan Valley,Credit Card,8.5,2.36,14.16
-1611254631,1611255226,1,1.48,Upper West Side North,Lincoln Square West,Credit Card,8.5,3.2,16.0
-1610030327,1610031033,1,1.53,East Harlem North,Central Harlem North,Cash,9.0,0.0,9.8
-1609518362,1609518507,1,0.68,Upper East Side North,East Harlem South,Cash,4.0,0.0,7.3
-1610816464,1610817190,1,1.88,West Chelsea/Hudson Yards,Union Sq,Credit Card,9.5,2.56,15.36
-1609876788,1609877683,2,3.04,Union Sq,Lenox Hill West,Credit Card,13.0,3.46,20.76
-1609759024,1609761355,2,16.3,LaGuardia Airport,Borough Park,Credit Card,47.5,9.65,57.95
-1610737943,1610738695,1,2.9,Lenox Hill West,Union Sq,Credit Card,11.5,3.95,19.75
-1612092700,1612093022,1,1.0,Upper East Side South,Yorkville West,Credit Card,6.0,2.32,11.62
-1609473791,1609474352,1,2.4,Penn Station/Madison Sq West,Lincoln Square West,Credit Card,9.5,2.65,15.95
-1610660862,1610662279,1,18.56,JFK Airport,Downtown Brooklyn/MetroTech,Credit Card,49.5,5.0,55.8
-1611600536,1611601293,1,3.68,Upper East Side South,Astoria,Credit Card,13.0,4.33,21.63
-1611659040,1611659527,1,1.85,Midtown Center,West Chelsea/Hudson Yards,Credit Card,8.0,2.26,13.56
-1611737859,1611738599,1,2.17,Upper West Side North,Midtown North,Credit Card,10.5,2.0,15.8
-1610298218,1610298676,1,1.29,East Chelsea,Murray Hill,Credit Card,7.0,1.0,11.3
-1609936859,1609937464,1,1.67,East Chelsea,Greenwich Village North,Credit Card,8.5,2.36,14.16
-1610129582,1610131385,1,6.89,Union Sq,Astoria,Credit Card,24.5,3.0,31.8
-1611425477,1611426195,3,2.49,Lenox Hill West,Upper West Side North,Credit Card,10.0,1.0,14.3
-1611846870,1611847029,1,0.75,SoHo,West Village,Credit Card,4.0,0.72,5.52
-1611341150,1611341830,1,2.1,Central Harlem,Manhattanville,Cash,9.5,0.0,11.3
-1609516070,1609516550,1,1.1,Murray Hill,Penn Station/Madison Sq West,Credit Card,7.0,2.05,12.35
-1611086125,1611086652,1,3.36,Lenox Hill East,Alphabet City,Credit Card,11.5,1.0,16.8
-1611567397,1611568473,1,3.08,Clinton East,Upper East Side North,Credit Card,14.5,5.34,23.14
-1611588696,1611589790,1,3.0,Upper West Side North,Midtown East,Credit Card,14.5,0.0,17.8
-1611644265,1611644668,3,1.51,Penn Station/Madison Sq West,Midtown Center,Credit Card,7.5,2.0,12.8
-1611999177,1612001485,1,26.95,Bayside,Sheepshead Bay,Credit Card,72.5,0.0,73.3
-1609851582,1609851930,1,0.8,NV,Union Sq,Credit Card,5.5,1.25,10.05
-1610043071,1610043304,1,0.75,Yorkville West,Yorkville East,Credit Card,5.0,2.79,12.09
-1609867072,1609867702,1,6.39,JFK Airport,East New York,Credit Card,18.5,0.0,20.3
-1610891955,1610892978,2,3.97,Penn Station/Madison Sq West,Two Bridges/Seward Park,Cash,16.5,0.0,19.8
-1611353311,1611353848,2,2.6,Murray Hill,Yorkville West,Credit Card,10.0,2.75,16.55
-1609832980,1609833395,1,0.94,Upper East Side North,Upper East Side North,Credit Card,6.5,2.45,12.25
-1611508132,1611508345,1,0.53,Upper East Side South,Lenox Hill West,Cash,4.5,0.0,7.8
-1611595792,1611596196,1,1.04,Greenwich Village North,East Village,Credit Card,6.5,2.7,13.5
-1612021727,1612023068,1,5.7,Manhattan Valley,Midtown South,Credit Card,21.0,1.0,25.3
-1610453628,1610453857,1,0.7,Penn Station/Madison Sq West,East Chelsea,Credit Card,4.5,2.34,10.14
-1611051284,1611051928,1,2.4,Clinton West,Upper West Side South,Cash,11.0,0.0,14.3
-1609491869,1609492125,0,0.9,Upper West Side North,Morningside Heights,Cash,5.5,0.0,6.3
-1610278903,1610279179,1,1.16,Central Park,Upper West Side South,Credit Card,6.0,2.32,11.62
-1611659295,1611659977,1,2.16,Union Sq,Clinton East,Cash,9.5,0.0,12.8
-1609581761,1609582377,1,2.18,Gramercy,Meatpacking/West Village West,Credit Card,10.0,2.66,15.96
-1612006457,1612007110,1,2.92,Midtown East,Little Italy/NoLiTa,Credit Card,10.5,2.76,16.56
-1611149209,1611149491,1,0.66,Yorkville East,Yorkville West,Credit Card,5.0,1.66,9.96
-1610661667,1610661830,3,0.6,West Village,Flatiron,Credit Card,4.0,1.17,8.97
-1611408900,1611409043,1,0.85,East Harlem South,East Harlem North,Cash,4.5,0.0,5.3
-1609670232,1609670423,1,1.01,Upper East Side South,Midtown Center,Credit Card,5.0,2.08,10.38
-1610619193,1610619733,1,1.89,West Chelsea/Hudson Yards,West Village,Credit Card,8.5,2.95,14.75
-1611155008,1611156075,1,5.31,Lenox Hill West,Jackson Heights,Credit Card,17.0,5.08,25.38
-1611836380,1611837099,2,1.74,Murray Hill,West Chelsea/Hudson Yards,Credit Card,9.5,2.2,15.0
-1612012948,1612013277,1,1.4,Upper West Side South,Manhattan Valley,Credit Card,6.5,2.0,11.8
-1611239299,1611240399,1,3.23,East Harlem South,Central Harlem North,Cash,14.0,0.0,14.8
-1611838058,1611839471,3,9.04,World Trade Center,East Harlem South,Credit Card,29.0,6.46,38.76
-1612097986,1612098437,1,2.31,Yorkville West,East Harlem North,Credit Card,9.0,2.46,14.76
-1610633550,1610634551,1,2.4,Lenox Hill West,East Harlem South,Credit Card,12.5,3.15,18.95
-1610726300,1610729492,1,19.27,JFK Airport,Mount Hope,Cash,58.0,0.0,64.92
-1609915472,1609915725,5,1.0,Garment District,Midtown Center,Credit Card,5.0,1.66,9.96
-1610917435,1610917551,1,0.4,Upper East Side North,Upper East Side North,Credit Card,3.5,1.45,8.75
-1609762235,1609762482,1,0.8,Upper East Side South,Lincoln Square East,Credit Card,5.0,2.0,10.3
-1611309772,1611310794,1,3.44,Lincoln Square East,Gramercy,Credit Card,13.5,3.36,20.16
-1611223814,1611224114,1,0.9,Upper East Side South,Midtown East,Credit Card,5.5,1.76,10.56
-1611322332,1611322605,1,0.9,Upper East Side South,Lincoln Square East,Credit Card,5.5,1.75,10.55
-1609773436,1609774392,1,1.86,SoHo,Alphabet City,Credit Card,11.5,2.0,16.8
-1611180261,1611180542,1,1.12,Penn Station/Madison Sq West,Midtown East,Credit Card,5.5,2.33,11.63
-1612096062,1612096230,1,0.44,Upper West Side North,Upper West Side North,Credit Card,4.0,1.46,8.76
-1609841673,1609842240,1,2.2,Clinton East,Central Park,Credit Card,9.5,2.0,14.8
-1611413620,1611415394,1,4.7,Lenox Hill East,Manhattan Valley,Credit Card,21.5,0.0,24.8
-1609892580,1609893269,1,6.12,Upper East Side South,Longwood,Cash,18.5,0.0,22.3
-1610282451,1610282933,1,1.42,Penn Station/Madison Sq West,Gramercy,Credit Card,7.5,3.0,13.8
-1611419258,1611419482,1,0.49,Upper East Side South,Central Park,Cash,4.5,0.0,7.8
-1609834533,1609835401,2,2.5,Yorkville East,Lincoln Square East,Cash,11.5,0.0,14.8
-1611671705,1611671933,3,0.65,Gramercy,Midtown South,Credit Card,4.5,1.56,9.36
-1611852679,1611852996,5,0.96,Upper West Side South,Manhattan Valley,Cash,6.0,0.0,10.3
-1611080775,1611081339,5,0.99,Sutton Place/Turtle Bay North,Times Sq/Theatre District,Cash,7.5,0.0,11.8
-1610115665,1610116200,1,2.17,TriBeCa/Civic Center,Flatiron,Credit Card,9.0,2.46,14.76
-1611232632,1611233407,1,1.1,Upper East Side North,Lenox Hill East,Credit Card,9.0,2.45,14.75
-1611181948,1611182868,1,5.1,Lincoln Square East,Morningside Heights,Credit Card,17.5,4.25,25.55
-1609598270,1609598496,2,1.12,Sutton Place/Turtle Bay North,Upper East Side North,Credit Card,5.5,1.76,10.56
-1611071325,1611072680,1,6.91,Upper West Side South,Two Bridges/Seward Park,Credit Card,23.0,6.58,32.88
-1609937852,1609938575,2,2.14,Flatiron,Midtown Center,Cash,10.0,0.0,13.3
-1611150674,1611151041,1,1.32,Greenwich Village North,Midtown South,Credit Card,6.5,1.76,11.56
-1610434627,1610435213,1,5.56,Elmhurst,Flushing,Cash,17.0,0.0,17.8
-1609801998,1609802388,3,1.67,Yorkville West,Midtown North,Cash,7.5,0.0,11.3
-1610068205,1610068359,1,0.58,Flatiron,East Chelsea,Cash,4.0,0.0,7.8
-1611319178,1611319551,1,1.6,Murray Hill,Greenwich Village North,Credit Card,7.0,2.05,12.35
-1610734476,1610735858,1,4.23,East Harlem South,Clinton West,Cash,18.0,0.0,22.3
-1611824195,1611824461,1,1.0,Central Park,Upper West Side North,Credit Card,5.5,1.75,10.55
-1611585550,1611586492,1,2.2,Sutton Place/Turtle Bay North,Kips Bay,Credit Card,11.5,3.0,17.8
-1610281732,1610283229,1,7.3,Kips Bay,East Williamsburg,Credit Card,25.0,0.0,28.3
-1611681438,1611681859,2,1.4,Lincoln Square East,Penn Station/Madison Sq West,Credit Card,7.0,2.0,13.3
-1609868517,1609868820,4,0.95,Lincoln Square East,Upper West Side South,Credit Card,5.5,1.0,10.8
-1611779119,1611779569,4,1.9,Clinton East,Gramercy,Credit Card,8.0,2.36,14.16
-1609544972,1609545663,1,4.6,JFK Airport,Springfield Gardens South,Credit Card,15.0,4.0,20.3
-1611751502,1611751875,1,1.07,Central Park,Central Park,Credit Card,6.5,2.94,12.74
-1611038343,1611038553,1,0.85,Penn Station/Madison Sq West,Union Sq,Credit Card,5.0,2.08,10.38
-1610669860,1610669862,1,0.0,NV,NV,Credit Card,30.0,0.0,30.8
-1609774141,1609775373,1,4.18,Murray Hill,Upper West Side North,Credit Card,16.5,2.5,22.3
-1610929877,1610929900,1,0.15,Gramercy,Gramercy,Cash,2.5,0.0,6.3
-1610653359,1610653909,1,1.9,Upper West Side South,Morningside Heights,Credit Card,9.0,3.3,16.6
-1610033908,1610034326,1,1.0,Lincoln Square West,Clinton East,Credit Card,6.5,1.5,11.3
-1610991127,1610991955,1,2.6,Upper East Side North,Garment District,Credit Card,11.5,2.96,17.76
-1612028436,1612028614,5,0.73,Upper East Side North,Upper East Side South,Cash,4.5,0.0,7.8
-1612010255,1612010984,1,1.89,Meatpacking/West Village West,Greenwich Village North,Credit Card,9.5,1.0,13.8
-1611588967,1611589412,1,0.96,Upper East Side North,Yorkville East,Credit Card,6.5,1.96,11.76
-1611150918,1611151374,3,1.5,Upper East Side North,Lenox Hill West,Credit Card,7.5,2.16,12.96
-1611395327,1611396009,1,2.8,Upper West Side South,West Chelsea/Hudson Yards,Credit Card,11.5,2.95,17.75
-1611652781,1611653112,4,1.28,Upper East Side North,Upper East Side South,Credit Card,6.0,2.32,11.62
-1610105023,1610105850,2,2.44,Upper West Side North,Midtown North,Credit Card,11.0,3.58,17.88
-1610742281,1610742663,1,1.49,Midtown North,Murray Hill,Credit Card,7.0,2.16,12.96
-1611821436,1611821710,1,0.83,Stuy Town/Peter Cooper Village,East Village,Credit Card,5.0,3.0,11.3
-1609756301,1609756811,1,1.32,Upper West Side North,Upper East Side North,Cash,7.5,0.0,10.8
-1610351468,1610352072,1,1.87,Yorkville West,Upper East Side South,Credit Card,8.5,0.0,11.8
-1611914803,1611915257,1,1.0,Lenox Hill West,Upper East Side South,Credit Card,6.5,1.0,10.8
-1611041252,1611041658,2,0.86,Upper East Side North,Yorkville East,Credit Card,6.0,1.86,11.16
-1611921261,1611922452,1,4.47,Lenox Hill West,Astoria Park,Credit Card,17.5,4.16,24.96
-1611066298,1611066905,1,1.2,Central Harlem,East Harlem South,Cash,8.0,0.0,8.8
-1610032244,1610032873,1,1.5,Bloomingdale,Central Harlem,Cash,9.0,0.0,9.8
-1611232773,1611234694,1,12.97,LaGuardia Airport,East Village,Credit Card,38.5,8.36,50.16
-1609976670,1609977422,1,2.5,LaGuardia Airport,Jackson Heights,Credit Card,11.0,3.65,15.95
-1610705108,1610705649,1,1.73,Lincoln Square East,Upper East Side South,Cash,8.5,0.0,11.8
-1611426960,1611427247,4,0.81,Union Sq,Midtown South,Credit Card,5.5,1.0,9.8
-1610450556,1610451339,1,2.2,Manhattan Valley,East Harlem North,Credit Card,10.5,2.25,13.55
-1609701747,1609701769,1,0.2,South Ozone Park,South Ozone Park,Dispute,3.0,0.0,3.8
-1611666192,1611666418,1,0.99,Clinton East,East Chelsea,Cash,5.0,0.0,8.3
-1611147694,1611148462,1,2.5,Midtown Center,Yorkville East,Credit Card,10.5,2.0,15.8
-1610489309,1610489615,1,1.6,East Harlem South,Upper West Side North,Cash,7.0,0.0,8.3
-1611002115,1611003260,1,5.16,Murray Hill,Battery Park City,Credit Card,18.5,3.34,25.64
-1610818226,1610818955,0,2.6,Midtown East,East Village,Credit Card,10.5,2.75,16.55
-1610529401,1610529642,2,0.54,Upper East Side North,Upper East Side North,Cash,5.0,0.0,8.3
-1609603469,1609604479,6,5.65,Seaport,Lenox Hill West,Credit Card,19.5,3.42,26.22
-1612119668,1612120052,1,0.71,Gramercy,Union Sq,Cash,5.5,0.0,8.8
-1611008286,1611008861,1,2.5,Upper West Side South,East Harlem South,Credit Card,10.0,1.0,14.8
-1610831382,1610832027,4,2.15,Midtown South,East Village,Credit Card,9.0,2.56,15.36
-1610889386,1610889911,1,1.56,Union Sq,Clinton East,Credit Card,7.5,2.16,12.96
-1612050625,1612052264,1,9.1,Yorkville West,Carroll Gardens,Credit Card,28.5,8.05,40.35
-1610467612,1610468483,1,2.1,Financial District South,East Village,Credit Card,11.5,2.37,18.17
-1611588228,1611589455,1,3.6,Central Park,Hudson Sq,Credit Card,15.5,3.75,22.55
-1610560790,1610561094,1,0.8,Union Sq,Greenwich Village North,Credit Card,5.5,1.95,11.75
-1611753716,1611754498,1,2.6,Times Sq/Theatre District,Upper West Side South,Credit Card,11.0,3.55,17.85
-1611917737,1611918721,1,3.24,Little Italy/NoLiTa,Fort Greene,Credit Card,14.0,4.32,21.62
-1611756493,1611757001,1,1.75,Union Sq,SoHo,Credit Card,8.0,1.0,12.3
-1611069345,1611070746,4,3.12,Upper East Side North,Murray Hill,Credit Card,16.5,1.98,21.78
-1611761048,1611761846,1,1.84,Times Sq/Theatre District,Upper East Side North,Cash,10.5,0.0,13.8
-1611662065,1611662386,1,1.34,Manhattan Valley,Central Harlem,Cash,6.5,0.0,7.3
-1611944449,1611945235,2,3.46,Lenox Hill East,Gramercy,Credit Card,13.0,3.46,20.76
-1611410036,1611411627,1,4.64,Greenwich Village North,Upper East Side North,Credit Card,20.0,4.66,27.96
-1610821293,1610821749,1,0.93,Central Harlem,Manhattan Valley,Cash,6.5,0.0,7.3
-1611934145,1611934997,1,2.0,Upper West Side North,Morningside Heights,Credit Card,11.0,0.02,11.82
-1611655944,1611656594,1,1.59,Lenox Hill West,Midtown North,Credit Card,9.0,5.0,17.3
-1611342073,1611343166,1,5.8,East Chelsea,Yorkville West,Credit Card,19.5,4.75,28.55
-1610373131,1610373636,2,1.44,Morningside Heights,Central Harlem,Cash,8.0,0.0,8.8
-1610499869,1610500083,1,1.6,Yorkville West,Sutton Place/Turtle Bay North,Credit Card,6.0,1.95,11.75
-1611992935,1611993087,1,0.88,Upper East Side South,Midtown North,Credit Card,4.5,0.78,8.58
-1611345071,1611345900,1,3.31,NV,NV,Credit Card,12.5,5.04,21.84
-1610878502,1610878898,1,0.95,Midtown East,Clinton East,Cash,6.5,0.0,9.8
-1611772816,1611773316,3,1.48,Upper East Side South,Sutton Place/Turtle Bay North,Credit Card,7.5,2.36,14.16
-1610972355,1610972790,1,1.2,Upper East Side North,Upper East Side South,Credit Card,7.0,3.05,13.35
-1611867874,1611868088,1,0.5,West Village,Greenwich Village North,Cash,4.0,0.0,7.8
-1611997543,1611997818,1,0.72,Washington Heights South,Washington Heights South,Cash,5.5,0.0,6.3
-1610541071,1610541720,1,1.51,East Village,TriBeCa/Civic Center,Credit Card,8.5,1.0,12.8
-1611485852,1611486160,1,1.15,Central Park,Upper West Side South,Credit Card,6.0,2.32,11.62
-1611529280,1611529710,2,3.36,Two Bridges/Seward Park,Greenpoint,Cash,11.5,0.0,15.3
-1610359324,1610360126,1,2.3,Upper East Side South,Upper West Side North,Credit Card,11.0,2.85,17.15
-1610035949,1610036886,1,1.66,Gramercy,TriBeCa/Civic Center,Cash,11.5,0.0,15.8
-1611401667,1611401897,1,1.0,Yorkville West,Lenox Hill West,Cash,5.5,0.0,8.8
-1610122159,1610123281,1,3.45,Gramercy,DUMBO/Vinegar Hill,Credit Card,14.0,3.66,21.96
-1611579793,1611580261,1,1.04,UN/Turtle Bay South,Garment District,Credit Card,7.0,2.06,12.36
-1611823770,1611824282,1,1.72,Upper East Side North,Upper West Side South,Credit Card,8.0,2.26,13.56
-1611325682,1611326391,1,0.7,East Harlem South,East Harlem South,Credit Card,8.5,2.0,11.3
-1610890927,1610891376,2,1.59,Lenox Hill West,Yorkville East,Credit Card,7.5,2.0,12.8
-1611736912,1611737265,1,1.45,Penn Station/Madison Sq West,West Village,Cash,6.5,0.0,9.8
-1611154259,1611155470,1,2.78,Upper West Side North,Lenox Hill West,Cash,14.5,0.0,17.8
-1610979383,1610980247,1,1.47,Upper West Side South,Upper East Side North,Cash,7.5,0.0,10.8
-1610618905,1610619368,1,1.0,Gramercy,Greenwich Village North,Credit Card,7.0,2.05,12.35
-1609784612,1609785365,1,3.3,Penn Station/Madison Sq West,Upper West Side South,Credit Card,12.5,3.35,20.15
-1609786829,1609787245,1,1.81,Murray Hill,Greenwich Village North,Credit Card,7.5,2.36,14.16
-1609843203,1609843370,2,0.43,Clinton East,Clinton East,Cash,3.5,0.0,6.8
-1612024124,1612024575,1,1.1,Lincoln Square East,Clinton West,Credit Card,7.0,2.05,12.35
-1610354450,1610354876,2,0.59,Sutton Place/Turtle Bay North,Lenox Hill West,Credit Card,6.0,1.5,10.8
-1609920128,1609920541,1,1.35,East Harlem North,Central Harlem,Cash,6.5,0.0,7.3
-1611332227,1611332618,1,1.32,Lincoln Square West,Clinton East,Credit Card,6.5,1.5,12.3
-1610711675,1610712304,3,1.54,Lincoln Square East,Midtown East,Cash,8.5,0.0,11.8
-1611314397,1611314987,1,1.95,Kips Bay,Lenox Hill West,Cash,9.0,0.0,12.3
-1610619167,1610619899,6,1.65,Lenox Hill West,Midtown Center,Cash,9.5,0.0,12.8
-1610723525,1610723878,1,0.99,Upper East Side South,Midtown East,Credit Card,6.0,2.33,11.63
-1609670367,1609670639,2,1.21,East Harlem South,East Harlem North,Cash,6.0,0.0,6.8
-1611170131,1611170585,1,2.24,Kips Bay,Lenox Hill West,Credit Card,8.5,2.56,15.36
-1610461614,1610465226,1,7.78,Garment District,Clinton East,Credit Card,36.5,5.5,45.3
-1609692720,1609692998,2,0.82,Upper West Side South,Upper West Side North,Credit Card,5.0,0.83,9.13
-1610729663,1610730313,1,2.0,Midtown East,Yorkville West,Credit Card,10.0,2.86,17.16
-1609474706,1609475158,2,1.18,Central Harlem,East Harlem North,Credit Card,7.0,0.0,8.3
-1609577611,1609578265,1,2.59,Central Harlem,Lincoln Square East,Credit Card,11.0,2.0,16.3
-1611749034,1611749226,1,0.7,Yorkville East,Lenox Hill East,Credit Card,4.5,1.55,9.35
-1612122373,1612122788,1,1.65,Lincoln Square East,West Chelsea/Hudson Yards,Credit Card,7.5,3.24,14.04
-1611220498,1611220638,2,0.51,East Chelsea,Flatiron,Credit Card,4.0,1.46,8.76
-1611241975,1611242186,1,1.21,Upper East Side South,Lincoln Square East,Credit Card,5.5,1.76,10.56
-1611417796,1611418214,1,1.11,Upper East Side North,Yorkville East,Credit Card,6.5,5.0,14.8
-1611254424,1611254912,1,1.6,Garment District,Midtown East,Credit Card,7.5,1.0,12.8
-1611411969,1611412205,1,0.93,Lincoln Square West,Clinton West,Cash,5.0,0.0,8.3
-1609951883,1609952130,1,0.68,Upper East Side North,Upper East Side South,Credit Card,4.5,1.76,10.56
-1611670326,1611671198,4,2.6,Lincoln Square East,Upper East Side North,Credit Card,12.0,3.06,18.36
-1610114585,1610114811,1,0.75,Flatiron,Penn Station/Madison Sq West,Credit Card,5.0,1.66,9.96
-1610380137,1610380705,4,1.84,Midtown North,Upper West Side South,Credit Card,8.5,2.56,15.36
-1611217541,1611218098,1,1.8,Lenox Hill West,Midtown East,Cash,8.5,0.0,11.8
-1610132339,1610132643,4,1.62,Upper West Side South,Bloomingdale,Credit Card,6.5,1.0,11.8
-1609692026,1609692297,5,0.71,Lincoln Square East,Lincoln Square West,Credit Card,5.0,1.66,9.96
-1610731247,1610734558,1,9.3,Lower East Side,Flatbush/Ditmas Park,Credit Card,37.5,12.5,54.3
-1610031372,1610032712,1,4.09,Morningside Heights,Upper East Side South,Credit Card,18.0,4.26,25.56
-1610635766,1610636579,1,3.0,Times Sq/Theatre District,Yorkville West,Credit Card,12.0,4.0,19.3
-1611409279,1611410149,1,2.91,Upper West Side South,West Chelsea/Hudson Yards,Credit Card,12.5,3.16,18.96
-1611847566,1611848068,1,0.31,Clinton East,Clinton East,Credit Card,6.5,0.0,9.8
-1610349065,1610349297,1,0.8,Clinton East,Midtown Center,Cash,5.0,0.0,8.3
-1610525935,1610526604,1,2.62,Upper West Side North,Midtown Center,Credit Card,10.5,2.76,16.56
-1609956552,1609957272,1,2.1,Lincoln Square East,Clinton East,Cash,10.0,0.0,14.3
-1611835252,1611836051,1,1.9,Upper East Side North,Midtown East,Credit Card,10.5,3.45,17.25
-1611954120,1611955120,1,3.8,Midtown Center,TriBeCa/Civic Center,Credit Card,15.0,4.7,23.5
-1611425712,1611426021,5,0.84,Upper East Side South,Midtown North,No charge,-5.5,0.0,-8.8
-1611008053,1611008593,1,2.2,Murray Hill,East Village,Cash,9.0,0.0,12.8
-1611835932,1611836845,6,7.27,LaGuardia Airport,Fresh Meadows,Cash,21.5,0.0,22.3
-1611046239,1611047304,1,2.6,Lenox Hill West,Upper West Side North,Cash,13.5,0.0,16.8
-1610894020,1610894188,1,0.84,East Chelsea,Times Sq/Theatre District,Cash,4.5,0.0,7.8
-1611160965,1611161407,1,1.65,East Harlem South,Upper East Side North,Cash,7.5,0.0,11.8
-1611051036,1611051728,1,2.79,Hudson Sq,Midtown Center,Credit Card,11.0,2.86,17.16
-1610442978,1610443236,1,0.5,Flatiron,Union Sq,Credit Card,5.0,2.05,10.35
-1610127026,1610128180,1,4.68,Upper West Side South,Flatiron,Credit Card,18.0,4.46,26.76
-1609939023,1609939529,1,1.3,Garment District,Lincoln Square East,Credit Card,7.5,1.0,11.8
-1611146385,1611146980,1,1.3,East Village,Flatiron,Credit Card,8.0,3.35,14.65
-1611564517,1611565787,1,5.82,Lenox Hill West,SoHo,Credit Card,21.5,6.2,31.0
-1611915735,1611916181,1,1.4,West Village,Penn Station/Madison Sq West,Credit Card,7.0,2.06,12.36
-1610092802,1610093311,1,1.76,Lincoln Square East,Lenox Hill West,Credit Card,8.0,2.26,13.56
-1609597071,1609597464,1,1.0,Murray Hill,East Chelsea,Cash,6.5,0.0,9.8
-1609749359,1609749885,1,1.94,Midtown South,Lenox Hill West,Credit Card,8.5,2.95,14.75
-1610390538,1610392227,1,0.0,Flushing,Bedford Park,Credit Card,28.2,0.0,35.12
-1609767823,1609768281,1,1.3,Upper East Side South,Upper East Side North,Credit Card,7.5,1.0,11.8
-1611247317,1611248785,1,4.0,Upper East Side South,SoHo,Credit Card,18.0,4.46,26.76
-1612030604,1612031155,1,2.4,Penn Station/Madison Sq West,Lincoln Square East,Cash,9.5,0.0,12.8
-1611763211,1611763835,1,1.7,Upper East Side South,Upper East Side North,Credit Card,9.0,2.66,15.96
-1610349221,1610349525,1,0.8,Penn Station/Madison Sq West,Clinton East,Cash,5.5,0.0,8.8
-1611057962,1611058470,1,1.47,Upper East Side South,Midtown Center,Cash,8.0,0.0,11.3
-1610031769,1610032388,1,1.6,Flatiron,East Village,Cash,8.5,0.0,11.8
-1609681587,1609682129,1,2.49,Flatiron,World Trade Center,Credit Card,9.5,2.56,15.36
-1610444144,1610444751,2,1.77,Penn Station/Madison Sq West,West Village,Credit Card,8.5,3.54,15.34
-1612022450,1612022697,1,0.98,Yorkville East,Upper East Side North,Credit Card,5.5,1.32,10.12
-1611417528,1611418043,1,1.62,Upper East Side South,Clinton East,Credit Card,7.5,0.0,10.8
-1610539063,1610539626,1,0.99,Lenox Hill West,Upper East Side South,Credit Card,7.5,3.24,14.04
-1610800998,1610802448,1,10.5,Hudson Sq,Washington Heights North,Credit Card,31.5,6.95,41.75
-1610752888,1610753118,5,0.78,Little Italy/NoLiTa,SoHo,Credit Card,4.5,2.08,10.38
-1610814117,1610814444,1,1.2,Greenwich Village South,TriBeCa/Civic Center,Credit Card,6.0,1.55,11.85
-1610475237,1610476479,1,4.39,Yorkville West,Penn Station/Madison Sq West,Credit Card,16.5,5.2,26.0
-1611848363,1611849444,1,2.5,East Chelsea,Greenwich Village North,Credit Card,13.5,2.5,19.3
-1611420308,1611420698,2,1.19,Upper West Side South,Upper East Side North,Credit Card,6.5,1.96,11.76
-1611502619,1611503063,1,1.6,West Chelsea/Hudson Yards,Times Sq/Theatre District,Credit Card,7.5,2.16,12.96
-1611430000,1611431531,1,5.59,East Village,Lincoln Square West,Credit Card,21.0,1.7,26.0
-1610027178,1610027555,1,1.3,Times Sq/Theatre District,Penn Station/Madison Sq West,Credit Card,6.5,1.95,11.75
-1611842782,1611843587,2,3.69,Upper West Side South,West Chelsea/Hudson Yards,Credit Card,14.0,3.46,20.76
-1610971016,1610971438,1,0.7,Midtown South,Clinton East,Credit Card,6.0,1.85,11.15
-1609859262,1609859826,1,1.1,Mott Haven/Port Morris,East Concourse/Concourse Village,Cash,8.0,0.0,8.8
-1610116935,1610117256,1,1.0,Kips Bay,Murray Hill,Credit Card,5.5,1.9,10.7
-1611338920,1611339690,0,3.5,Penn Station/Madison Sq West,East Harlem South,Credit Card,12.5,3.35,20.15
-1610345535,1610346074,1,1.27,Penn Station/Madison Sq West,Kips Bay,Credit Card,8.0,3.39,14.69
-1611408976,1611409911,3,3.52,Union Sq,Upper East Side North,Credit Card,14.0,3.46,20.76
-1610535341,1610535731,1,2.13,Long Island City/Queens Plaza,Sutton Place/Turtle Bay North,Credit Card,8.0,2.0,13.3
-1611647459,1611647951,1,1.46,East Harlem South,East Harlem North,Cash,8.0,0.0,8.8
-1611680709,1611681078,1,1.22,Midtown East,Upper East Side South,Credit Card,7.0,1.0,12.3
-1611346450,1611347034,1,2.35,Yorkville East,Central Harlem,Credit Card,9.5,3.32,16.62
-1609867253,1609867653,1,0.97,Kips Bay,Midtown East,Credit Card,6.5,2.7,13.5
-1611241320,1611242262,1,1.82,Upper West Side North,Yorkville West,Credit Card,11.5,2.0,16.8
-1611234887,1611235651,1,2.2,West Chelsea/Hudson Yards,Union Sq,Cash,10.5,0.0,13.8
-1610215015,1610215342,1,1.5,Upper East Side South,Lincoln Square East,Credit Card,6.5,1.96,11.76
-1610316431,1610316779,6,1.09,Central Park,Lincoln Square West,Credit Card,6.5,2.58,12.88
-1610362414,1610362867,1,1.6,Midtown East,Upper East Side South,Credit Card,7.5,2.16,12.96
-1611075886,1611076535,5,2.55,Midtown East,Greenwich Village North,Credit Card,10.0,2.86,17.16
-1610134437,1610134994,1,2.62,Lenox Hill West,Union Sq,Credit Card,10.0,1.43,15.73
-1610708212,1610708653,1,1.63,Sutton Place/Turtle Bay North,Midtown South,Credit Card,7.5,1.0,11.8
-1611178461,1611179034,2,2.8,Union Sq,Lenox Hill West,Credit Card,10.5,1.43,15.73
-1610637202,1610638156,1,2.2,Upper West Side North,Upper East Side South,Cash,12.0,0.0,15.3
-1610183997,1610184536,1,2.07,Lenox Hill West,Clinton West,Credit Card,8.5,2.0,13.8
-1610095148,1610096537,1,3.24,Murray Hill,Yorkville East,Credit Card,16.5,3.96,23.76
-1610196082,1610196262,5,0.49,Yorkville East,Lenox Hill West,Credit Card,4.0,1.46,8.76
-1611149863,1611150246,1,1.1,Upper West Side North,Upper East Side North,Credit Card,6.5,1.45,8.75
-1611328760,1611329134,1,1.14,Upper West Side North,Manhattan Valley,Credit Card,6.5,1.2,11.0
-1611948445,1611949031,1,2.01,Midtown East,Upper East Side North,Credit Card,9.0,2.66,15.96
-1612088140,1612088575,1,1.4,East Chelsea,Meatpacking/West Village West,Credit Card,7.5,2.7,13.5
-1611362867,1611363975,1,0.0,Central Harlem North,Queensbridge/Ravenswood,Credit Card,24.2,0.0,31.12
-1611079548,1611081732,2,18.6,JFK Airport,Greenwich Village South,Credit Card,52.0,11.95,71.75
-1611765225,1611765929,1,1.47,Kips Bay,East Village,Credit Card,9.0,3.33,16.63
-1610895868,1610896407,1,1.3,Midtown North,Upper West Side South,Credit Card,8.0,2.5,13.8
-1610445001,1610446045,1,1.93,West Chelsea/Hudson Yards,Midtown North,Credit Card,12.0,3.06,18.36
-1611913233,1611913683,1,1.0,Flatiron,West Chelsea/Hudson Yards,Credit Card,7.0,2.55,12.85
-1610563766,1610564018,1,0.43,Central Harlem North,Central Harlem,Credit Card,4.5,1.7,8.0
-1610040521,1610041417,1,2.5,Upper East Side South,Penn Station/Madison Sq West,Credit Card,12.0,2.0,18.3
-1612118639,1612118993,1,1.59,Murray Hill,Union Sq,Credit Card,6.5,2.94,12.74
-1611646210,1611647094,1,5.31,UN/Turtle Bay South,Financial District South,Credit Card,17.5,4.16,24.96
-1610393935,1610394211,1,0.83,Midtown South,UN/Turtle Bay South,Credit Card,5.0,1.86,11.16
-1611408757,1611409106,1,0.67,Upper West Side North,Upper West Side South,Credit Card,5.5,1.76,10.56
-1611596216,1611597610,1,0.0,Union Sq,East Harlem South,Credit Card,17.2,0.0,18.0
-1611505370,1611505564,1,1.39,Kips Bay,Sutton Place/Turtle Bay North,Credit Card,5.5,1.76,10.56
-1610211765,1610212557,2,3.21,Murray Hill,Yorkville West,Credit Card,12.0,3.06,18.36
-1611439077,1611439573,2,1.58,Upper West Side South,Yorkville West,Credit Card,8.0,2.36,14.16
-1609603648,1609604246,1,1.34,Union Sq,Meatpacking/West Village West,Credit Card,8.0,2.26,13.56
-1609769875,1609770338,5,1.42,Midtown Center,Upper East Side South,Credit Card,7.5,2.36,14.16
-1611524626,1611525016,1,1.1,Lincoln Square West,Upper West Side South,Credit Card,6.5,3.09,13.39
-1610663765,1610663865,1,0.76,Upper East Side North,Central Park,Credit Card,4.0,1.0,8.8
-1611228499,1611229073,2,2.1,Penn Station/Madison Sq West,Greenwich Village South,Credit Card,9.0,2.45,14.75
-1609574306,1609574834,1,3.69,Yorkville East,Melrose South,Credit Card,12.0,3.06,18.36
-1611090057,1611090337,1,1.42,Midtown East,Gramercy,Credit Card,6.5,1.03,11.33
-1611221028,1611221183,1,0.41,Upper West Side South,Lincoln Square West,Credit Card,4.0,1.0,8.3
-1611935191,1611935652,1,1.3,Midtown East,Upper East Side South,Credit Card,7.5,2.5,14.3
-1609632413,1609632579,1,1.05,Lincoln Square East,Clinton East,Cash,5.0,0.0,8.8
-1610419115,1610419639,1,5.21,JFK Airport,Howard Beach,Cash,15.5,0.0,16.8
-1610099818,1610100215,1,2.77,Clinton West,Upper West Side North,Cash,10.0,0.0,13.3
-1611082467,1611083006,1,1.19,Midtown South,Sutton Place/Turtle Bay North,Credit Card,8.0,1.84,14.14
-1610992680,1610993656,1,3.33,East Village,Clinton East,Cash,13.5,0.0,17.8
-1610109003,1610110027,0,3.0,Morningside Heights,Midtown North,Credit Card,13.5,4.2,21.0
-1610125237,1610125879,1,5.97,LaGuardia Airport,East Harlem North,Cash,18.0,0.0,25.92
-1611327938,1611328394,1,1.1,Yorkville East,Upper East Side North,Credit Card,6.5,1.96,11.76
-1611077879,1611078365,1,1.7,Midtown East,Yorkville West,Credit Card,8.0,2.45,14.75
-1610542528,1610542772,2,0.5,Upper West Side South,Lincoln Square West,Credit Card,4.5,1.56,9.36
-1610834818,1610835280,1,1.2,Times Sq/Theatre District,Midtown East,Credit Card,7.0,2.15,12.95
-1610562111,1610562880,1,2.1,Murray Hill,Lenox Hill West,Credit Card,10.5,2.95,17.75
-1610358166,1610358882,1,1.3,Yorkville West,Upper East Side South,Credit Card,9.0,2.0,14.3
-1610571220,1610571317,1,0.64,East Harlem South,East Harlem South,Cash,4.0,0.0,5.3
-1609862370,1609864079,1,10.0,Financial District South,Hamilton Heights,Credit Card,31.0,7.06,42.36
-1609745640,1609745911,1,0.8,Lincoln Square East,Lincoln Square East,Cash,5.0,0.0,8.3
-1609779498,1609781526,1,17.43,JFK Airport,UN/Turtle Bay South,Credit Card,52.0,13.18,79.1
-1611672587,1611674639,3,5.7,Midtown Center,Bedford,Credit Card,25.5,0.0,28.8
-1610128309,1610128652,1,1.02,East Village,Alphabet City,Credit Card,6.0,2.06,12.36
-1611656304,1611657644,1,3.5,Bloomingdale,Lenox Hill West,Credit Card,16.5,4.95,24.75
-1610033567,1610034831,1,4.8,TriBeCa/Civic Center,Upper East Side South,Credit Card,17.0,4.05,24.35
-1611847009,1611847144,1,0.2,Yorkville West,Yorkville East,Credit Card,3.5,2.04,8.84
-1610103970,1610104395,6,3.29,Upper West Side North,Clinton West,Credit Card,11.5,3.7,18.5
-1610641855,1610642165,1,1.27,Yorkville East,East Harlem South,Credit Card,6.0,2.06,12.36
-1610020533,1610021455,1,3.16,Union Sq,Lincoln Square West,Credit Card,13.5,3.36,20.16
-1610893513,1610894468,1,4.38,Midtown North,East Harlem North,Credit Card,15.0,3.66,21.96
-1611668971,1611670246,1,2.9,East Harlem South,Central Harlem North,Cash,14.5,0.0,15.3
-1610209474,1610210446,1,3.61,East Village,Clinton West,Credit Card,14.5,3.56,21.36
-1611235736,1611236017,1,0.72,Union Sq,Greenwich Village North,Cash,5.0,0.0,8.3
-1610710340,1610710740,1,0.87,Yorkville West,Lenox Hill West,Credit Card,6.0,1.86,11.16
-1610314146,1610314799,1,1.9,Murray Hill,Lincoln Square East,Credit Card,9.5,1.0,14.3
-1609601531,1609602227,1,1.76,Greenwich Village North,Stuy Town/Peter Cooper Village,Credit Card,9.0,2.46,14.76
-1611145079,1611145616,1,1.9,Lenox Hill East,Midtown East,Cash,8.5,0.0,11.8
-1611397834,1611398878,1,3.86,Washington Heights South,Upper West Side North,Credit Card,15.5,3.76,22.56
-1610790928,1610792877,1,12.7,Midtown Center,Forest Hills,Credit Card,38.0,12.35,53.65
-1611241783,1611242086,1,0.6,Lincoln Square East,Lincoln Square East,Credit Card,5.0,1.0,9.3
-1610124981,1610125877,2,2.82,Midtown Center,Meatpacking/West Village West,Credit Card,12.0,3.26,19.56
-1611221045,1611222392,1,5.75,East Harlem North,Lincoln Square West,Cash,21.0,0.0,24.3
-1610128874,1610129674,1,2.31,Yorkville West,Times Sq/Theatre District,Credit Card,10.5,3.7,18.5
-1610125689,1610125917,1,0.72,Lincoln Square West,Lincoln Square West,Credit Card,5.0,1.86,11.16
-1611234074,1611234890,1,3.4,TriBeCa/Civic Center,Murray Hill,Credit Card,12.5,1.0,16.8
-1610460271,1610460659,1,1.17,Upper East Side South,Midtown East,Credit Card,6.5,2.0,11.8
-1612022027,1612022715,2,2.22,Kips Bay,Upper East Side South,Cash,10.5,0.0,13.8
-1610108428,1610109492,1,3.5,Upper West Side North,Midtown East,Credit Card,15.0,3.66,21.96
-1610477984,1610479017,1,4.42,Times Sq/Theatre District,Greenpoint,Credit Card,16.0,3.0,23.3
-1610578907,1610579159,2,0.74,East Harlem South,East Harlem South,Cash,5.0,0.0,6.3
-1611780504,1611780622,1,0.71,Flatiron,Penn Station/Madison Sq West,Credit Card,4.0,1.56,9.36
-1610375520,1610375841,1,1.2,Murray Hill,Midtown North,Credit Card,6.0,1.86,11.16
-1610118724,1610118750,1,0.0,West Chelsea/Hudson Yards,West Chelsea/Hudson Yards,Cash,2.5,0.0,5.8
-1611696329,1611696784,1,1.61,Greenwich Village North,Lower East Side,Credit Card,7.5,0.08,11.38
-1611592515,1611593726,1,4.78,Midtown Center,Upper West Side North,Credit Card,17.5,5.45,27.25
-1611732286,1611732684,6,1.37,Penn Station/Madison Sq West,Midtown Center,Credit Card,7.0,2.06,12.36
-1611217163,1611217825,1,1.78,Midtown North,Kips Bay,Credit Card,9.0,2.46,14.76
-1610378560,1610379347,1,2.76,Times Sq/Theatre District,Greenwich Village South,Credit Card,11.5,2.96,17.76
-1611125660,1611126438,3,2.77,Gramercy,Lenox Hill East,Credit Card,11.5,1.5,16.3
-1611175090,1611175509,1,2.03,Upper West Side South,Morningside Heights,Credit Card,8.0,5.0,16.8
-1610371010,1610371537,1,1.25,Central Park,Upper East Side South,Credit Card,8.0,1.0,12.3
-1610215884,1610216325,1,1.69,Randalls Island,East Harlem North,Credit Card,7.5,1.0,9.3
-1609837003,1609837415,1,1.56,Lower East Side,Kips Bay,Cash,7.0,0.0,10.3
-1610716842,1610717719,1,2.25,Midtown East,Penn Station/Madison Sq West,Credit Card,11.5,2.96,17.76
-1610907781,1610907968,1,0.49,Lenox Hill West,Midtown North,Credit Card,4.0,1.46,8.76
-1611496843,1611497328,1,1.57,Central Park,Manhattan Valley,Credit Card,7.5,2.16,12.96
-1612006501,1612007690,2,10.59,Gramercy,Soundview/Bruckner,Credit Card,30.5,6.76,40.56
-1611292443,1611292868,1,1.72,Sutton Place/Turtle Bay North,Penn Station/Madison Sq West,Credit Card,7.5,3.5,14.8
-1610705737,1610706036,1,0.91,Garment District,Midtown Center,Credit Card,5.5,1.0,9.8
-1611424581,1611424982,2,0.51,Greenwich Village South,Garment District,Credit Card,6.0,1.0,10.3
-1611324445,1611326811,1,4.97,Upper West Side North,Stuy Town/Peter Cooper Village,Cash,25.0,0.0,28.3
-1609780440,1609780634,5,0.59,Upper East Side North,Upper East Side North,Credit Card,4.5,2.2,11.0
-1611310687,1611311025,1,1.01,Upper West Side North,Lincoln Square West,Cash,6.0,0.0,9.3
-1611160661,1611160759,1,0.5,Gramercy,Kips Bay,Credit Card,3.5,1.0,8.8
-1610473785,1610474441,2,2.1,West Chelsea/Hudson Yards,Greenwich Village North,Credit Card,9.5,2.75,16.55
-1611395936,1611396596,2,3.1,Midtown South,Upper East Side North,Credit Card,11.5,2.95,17.75
-1610557962,1610561316,1,16.89,JFK Airport,Bedford,Credit Card,54.5,1.0,57.3
-1609581551,1609582132,6,4.21,East Harlem North,Midtown Center,Credit Card,13.5,3.36,20.16
-1611903470,1611903825,1,0.81,Upper East Side South,Lenox Hill East,Credit Card,5.5,1.76,10.56
-1611774943,1611775646,1,2.25,Upper East Side South,Midtown South,Cash,10.0,0.0,14.3
-1610704598,1610705688,1,5.9,Midtown Center,World Trade Center,Cash,20.0,0.0,23.3
-1611942290,1611942607,1,1.12,Garment District,Times Sq/Theatre District,Credit Card,6.0,2.06,12.36
-1610143303,1610143594,0,1.2,Upper East Side South,Upper East Side North,Cash,6.0,0.0,9.8
-1610466240,1610466593,1,1.54,Penn Station/Madison Sq West,Meatpacking/West Village West,Credit Card,6.5,1.47,11.27
-1611425906,1611426610,1,1.07,Upper East Side North,Upper East Side North,Credit Card,8.5,8.0,19.8
-1610344438,1610344626,0,0.5,East Harlem South,East Harlem South,Cash,4.0,0.0,4.8
-1611570943,1611571505,1,1.8,Upper West Side North,Upper East Side South,Credit Card,8.5,3.5,15.3
-1611653204,1611653936,1,2.56,Greenwich Village North,Midtown North,Cash,11.0,0.0,14.3
-1612027680,1612031022,1,13.16,JFK Airport,Park Slope,Cash,46.5,0.0,47.3
-1610812111,1610812985,1,2.44,Upper East Side South,Central Park,Credit Card,11.5,2.96,17.76
-1611929061,1611929760,3,0.98,Kips Bay,Gramercy,Credit Card,8.5,2.36,14.16
-1610054365,1610054932,1,2.1,Midtown North,Upper West Side North,Credit Card,9.5,2.66,15.96
-1611431171,1611432096,3,2.64,West Village,Kips Bay,Cash,11.0,0.0,14.3
-1611566195,1611566717,1,2.1,Yorkville East,Midtown East,Credit Card,9.0,3.65,15.95
-1610651524,1610651858,1,0.93,Upper West Side South,Lincoln Square West,Credit Card,6.0,1.5,11.8
-1609506657,1609507434,1,3.09,Midtown North,East Chelsea,Credit Card,12.0,3.82,19.12
-1611587292,1611587444,1,0.34,Midtown East,UN/Turtle Bay South,Credit Card,3.5,1.36,8.16
-1610566669,1610567323,1,2.63,East Harlem South,Midtown East,Credit Card,10.0,2.86,17.16
-1611240713,1611241094,3,0.9,Lenox Hill West,Yorkville East,Credit Card,6.0,1.86,11.16
-1611313893,1611314214,1,1.26,Stuy Town/Peter Cooper Village,Murray Hill,Cash,6.0,0.0,9.3
-1611848396,1611849062,1,2.49,Midtown Center,Lenox Hill East,Cash,10.0,0.0,13.3
-1611749527,1611749723,1,0.6,Upper East Side South,Upper East Side South,Credit Card,4.5,1.0,8.8
-1610396659,1610397007,1,1.49,Midtown South,West Village,Credit Card,6.5,2.06,12.36
-1611744348,1611744578,1,0.64,UN/Turtle Bay South,Kips Bay,Cash,4.5,0.0,7.8
-1610383146,1610383389,1,0.52,Yorkville West,Yorkville East,Credit Card,4.5,1.5,10.3
-1611507888,1611508120,1,0.95,Upper East Side South,Upper East Side South,Credit Card,5.0,1.66,9.96
-1611073217,1611075420,1,12.5,Kips Bay,Bensonhurst West,Dispute,37.5,0.0,47.92
-1610018292,1610018948,1,1.77,Midtown North,Murray Hill,Cash,9.0,0.0,12.3
-1611490418,1611490743,1,1.3,Upper East Side South,Lincoln Square East,Credit Card,6.5,2.9,12.7
-1610975566,1610976019,2,1.77,Upper West Side North,Morningside Heights,Credit Card,7.5,1.94,12.74
-1610011044,1610011780,1,1.77,Lenox Hill West,Midtown Center,Credit Card,9.5,1.0,13.8
-1610964922,1610965197,1,0.9,Yorkville West,Lenox Hill East,Credit Card,5.5,2.0,10.8
-1609786262,1609787186,2,3.71,Central Park,Meatpacking/West Village West,Credit Card,14.0,4.58,22.88
-1609701509,1609701877,1,1.9,Upper East Side South,Gramercy,Credit Card,7.5,2.15,12.95
-1610546123,1610546648,1,1.6,Times Sq/Theatre District,Lincoln Square East,Cash,8.0,0.0,11.3
-1611820291,1611820660,1,0.55,Murray Hill,Midtown South,Cash,5.5,0.0,8.8
-1610026122,1610026429,2,1.01,Upper West Side South,Upper East Side North,Cash,6.0,0.0,9.3
-1610701746,1610701996,1,0.5,Yorkville West,East Harlem South,Cash,5.0,0.0,8.3
-1611325786,1611329033,1,13.0,JFK Airport,Park Slope,Credit Card,46.0,7.02,53.82
-1610039998,1610041418,2,9.1,East Elmhurst,East Chelsea,Credit Card,28.5,3.89,42.81
-1610569206,1610569777,1,1.92,Midtown South,Meatpacking/West Village West,Credit Card,9.0,2.56,15.36
-1610806892,1610807397,1,1.5,East Chelsea,Meatpacking/West Village West,Credit Card,8.0,2.25,13.55
-1609594589,1609594872,3,1.3,Upper East Side North,Upper West Side North,Credit Card,6.0,2.32,11.62
-1610121833,1610122135,4,1.2,Murray Hill,Midtown East,Credit Card,6.0,1.5,11.8
-1611047322,1611048488,1,1.73,Times Sq/Theatre District,Upper East Side South,Credit Card,13.5,4.2,21.0
-1609497184,1609497861,1,7.2,Clinton West,Washington Heights South,Credit Card,21.0,6.08,30.38
-1611338757,1611339068,1,0.82,Central Harlem,Central Harlem North,Credit Card,5.0,1.7,8.5
-1611238263,1611239045,1,2.2,Clinton West,Upper West Side North,Credit Card,10.5,2.85,17.15
-1610605716,1610606045,1,1.3,East Harlem North,East Harlem South,Credit Card,6.0,0.0,6.8
-1610455657,1610456000,3,0.52,Midtown North,Lincoln Square East,Cash,5.0,0.0,8.3
-1611058125,1611058548,1,0.9,Times Sq/Theatre District,Midtown East,Credit Card,6.5,2.45,12.25
-1610301331,1610301847,1,1.8,Flatiron,Clinton East,Credit Card,8.5,0.0,11.8
-1611001239,1611001909,1,2.35,Lenox Hill West,Times Sq/Theatre District,Credit Card,10.5,2.86,17.16
-1611170321,1611170725,0,0.8,Midtown North,Sutton Place/Turtle Bay North,Credit Card,6.0,2.05,12.35
-1610030622,1610031049,1,1.12,Gramercy,Midtown East,Credit Card,6.5,1.47,11.27
-1611416725,1611416817,1,0.0,Murray Hill,Murray Hill,Credit Card,7.8,0.0,8.1
-1610161280,1610161522,1,1.7,Lower East Side,Williamsburg (South Side),Credit Card,7.0,11.0,21.8
-1610980201,1610980632,1,1.13,Kips Bay,Union Sq,Credit Card,7.0,2.06,12.36
-1611412268,1611412511,1,0.55,Greenwich Village North,SoHo,Credit Card,4.5,1.56,9.36
-1611483575,1611483595,0,0.0,Garment District,Garment District,Credit Card,2.5,5.0,10.8
-1610642212,1610643170,2,3.6,Midtown North,Central Harlem,Cash,13.5,0.0,17.8
-1609875646,1609876219,1,2.03,Upper West Side South,Lenox Hill West,Credit Card,9.0,2.0,15.3
-1609677033,1609677319,1,1.33,NV,Upper East Side South,Credit Card,6.0,1.86,11.16
-1610550980,1610551868,1,1.7,Yorkville East,East Harlem South,Credit Card,11.0,2.85,17.15
-1609773298,1609773640,1,0.54,Lenox Hill West,Lenox Hill East,Credit Card,5.0,1.86,11.16
-1610659020,1610659659,1,3.0,TriBeCa/Civic Center,East Chelsea,Cash,11.0,0.0,14.8
-1610196584,1610197079,1,1.57,Upper West Side North,Lincoln Square West,Cash,8.0,0.0,11.3
-1610103228,1610103622,2,1.3,Upper East Side South,Midtown East,Credit Card,6.5,2.45,12.25
-1609598077,1609599367,1,3.0,Flatiron,Chinatown,Cash,15.0,0.0,18.3
-1610898701,1610899134,6,0.81,West Village,Greenwich Village North,Credit Card,5.5,1.5,10.3
-1611065989,1611066415,2,1.39,Central Park,Murray Hill,Credit Card,7.0,2.06,12.36
-1611585538,1611585742,1,0.5,Greenwich Village South,Greenwich Village South,Credit Card,4.0,1.45,8.75
-1610373801,1610374261,1,1.32,East Harlem South,Lenox Hill West,Credit Card,7.0,2.06,12.36
-1610130956,1610133509,2,19.86,JFK Airport,Morningside Heights,Cash,52.0,0.0,63.42
-1610533850,1610534156,1,0.7,Upper West Side North,Upper West Side South,Credit Card,5.5,2.2,11.0
-1611824678,1611825293,1,1.6,Upper East Side South,UN/Turtle Bay South,Cash,8.5,0.0,11.8
-1610432258,1610432265,1,0.0,Midtown East,Midtown Center,Cash,2.5,0.0,5.8
-1611940640,1611941449,2,2.4,Lincoln Square East,Upper East Side North,Credit Card,11.0,4.55,19.85
-1610388428,1610389382,2,2.57,Hamilton Heights,East Harlem North,Credit Card,12.5,1.0,15.3
-1610717557,1610718173,1,2.2,UN/Turtle Bay South,Greenwich Village North,Credit Card,9.5,2.55,15.35
-1610427934,1610428626,1,3.41,Bloomingdale,Washington Heights South,Credit Card,12.5,2.76,16.56
-1611844350,1611844977,1,1.39,Upper East Side North,Upper East Side South,Credit Card,8.5,2.36,14.16
-1609870180,1609871163,2,3.3,Lincoln Square East,East Harlem South,Credit Card,13.0,3.46,20.76
-1611042935,1611043208,1,0.74,Clinton East,Midtown Center,Cash,5.0,0.0,8.3
-1611827381,1611828476,5,6.51,JFK Airport,Jamaica,Cash,21.5,0.0,22.3
-1609865442,1609865652,6,0.6,Upper East Side North,Upper East Side North,Credit Card,4.5,2.64,11.44
-1610023381,1610024376,1,4.76,Union Sq,Lincoln Square West,Cash,17.0,0.0,20.3
-1610736372,1610736754,1,1.07,Union Sq,East Village,Credit Card,6.0,2.06,12.36
-1609601657,1609602577,2,3.78,Seaport,West Chelsea/Hudson Yards,Cash,14.5,0.0,17.8
-1610470010,1610470323,1,0.8,Clinton East,Clinton East,Credit Card,5.5,2.9,12.7
-1611734026,1611735569,1,2.94,Manhattan Valley,Yorkville East,Credit Card,17.0,3.0,23.3
-1609578397,1609578668,1,0.77,Upper West Side South,Lincoln Square East,Credit Card,5.5,1.0,9.8
-1610378383,1610379894,1,5.51,Kips Bay,East Harlem South,Credit Card,20.0,4.66,27.96
-1610888611,1610888782,2,1.1,East Village,Kips Bay,Credit Card,5.0,1.65,9.95
-1611067044,1611067538,1,1.46,Upper East Side South,Clinton West,Credit Card,7.5,4.0,14.8
-1609956896,1609957917,2,3.6,UN/Turtle Bay South,Upper West Side North,Credit Card,14.0,3.66,21.96
-1609943371,1609943880,1,2.23,Penn Station/Madison Sq West,Little Italy/NoLiTa,Credit Card,8.5,2.0,13.8
-1611239912,1611240578,3,1.8,Upper East Side North,Lenox Hill West,Credit Card,9.0,3.08,15.38
-1610438794,1610438835,4,0.24,Central Harlem,Central Harlem,Credit Card,3.0,0.76,4.56
-1611250238,1611250530,1,1.0,Garment District,Union Sq,Credit Card,5.5,2.45,12.25
-1610285693,1610286020,1,1.55,Midtown East,Gramercy,Credit Card,6.5,1.96,11.76
-1610111241,1610111640,1,1.6,Midtown Center,Gramercy,Credit Card,7.0,2.05,12.35
-1611041112,1611042208,1,3.6,Greenwich Village North,Lenox Hill East,Credit Card,15.5,3.0,21.8
-1611509606,1611510589,2,2.13,Union Sq,SoHo,Cash,11.5,0.0,14.8
-1612098149,1612098455,1,0.6,Lenox Hill West,Upper East Side South,Cash,5.0,0.0,8.3
-1611320278,1611321134,1,3.2,Lenox Hill East,Murray Hill,Credit Card,13.0,3.25,19.55
-1611698151,1611698542,1,1.29,Upper West Side South,Yorkville West,Cash,7.0,0.0,10.8
-1611426384,1611426795,1,0.8,Lincoln Square East,Midtown North,Credit Card,6.0,1.85,11.15
-1610224574,1610225062,1,1.3,Upper East Side South,Times Sq/Theatre District,No charge,7.5,0.0,11.3
-1611081357,1611082178,1,3.02,Garment District,Lenox Hill East,Credit Card,12.0,1.6,17.9
-1609513013,1609513556,1,1.7,Sutton Place/Turtle Bay North,Central Park,Credit Card,8.0,2.26,13.56
-1610829767,1610830120,1,1.43,Upper East Side South,Upper East Side North,Credit Card,6.5,2.06,12.36
-1610516016,1610516376,1,1.3,Penn Station/Madison Sq West,Midtown Center,Cash,6.5,0.0,10.3
-1610899721,1610900109,2,0.9,Central Park,Upper East Side North,Credit Card,6.0,2.3,11.6
-1610700796,1610700919,1,0.71,Yorkville West,Lenox Hill West,Credit Card,4.0,1.46,8.76
-1611662347,1611662767,1,1.1,Murray Hill,UN/Turtle Bay South,Credit Card,6.5,2.5,12.3
-1612044497,1612045884,1,5.4,Garment District,Astoria,Cash,19.5,0.0,23.3
-1609658989,1609659327,1,1.45,Penn Station/Madison Sq West,Midtown Center,Credit Card,6.5,2.94,12.74
-1609776858,1609777722,1,1.8,Upper East Side North,Lenox Hill East,Credit Card,11.0,3.06,18.36
-1610816694,1610816980,1,1.1,Morningside Heights,Manhattan Valley,Credit Card,6.0,1.0,7.8
-1610479847,1610480197,1,1.05,Gramercy,East Chelsea,Credit Card,6.0,2.06,12.36
-1610160405,1610160761,5,1.29,Upper East Side North,Lenox Hill West,Credit Card,6.5,1.08,11.38
-1612050091,1612051370,1,8.34,Yorkville West,Williamsburg (South Side),Credit Card,26.0,1.49,31.29
-1611248117,1611248697,2,2.69,Midtown Center,Hudson Sq,Credit Card,10.0,2.0,16.3
-1611816095,1611816817,1,2.5,Lenox Hill West,UN/Turtle Bay South,Credit Card,11.5,1.0,15.8
-1610441926,1610443445,1,3.9,Greenwich Village North,Upper East Side North,Credit Card,18.5,2.0,23.8
-1611913690,1611914298,1,1.14,Lenox Hill East,Upper East Side North,Credit Card,8.0,2.26,13.56
-1609711912,1609712581,0,6.1,JFK Airport,East New York,Cash,18.5,0.0,19.8
-1611338174,1611338451,0,1.2,Manhattan Valley,Upper West Side South,Credit Card,6.0,3.05,13.35
-1610114366,1610120883,1,0.11,Central Harlem,Bedford Park,Cash,2.5,0.0,3.3
-1611150193,1611150483,1,0.85,Upper East Side South,Upper East Side North,Credit Card,5.5,1.32,10.12
-1611749339,1611750591,1,2.4,Lincoln Square West,Lenox Hill East,Credit Card,14.5,4.45,22.25
-1611661542,1611661787,1,0.72,Upper West Side North,Upper West Side South,Credit Card,5.0,1.66,9.96
-1610834764,1610835217,1,1.17,Clinton East,East Chelsea,Credit Card,7.0,0.0,10.8
-1611063577,1611063889,1,0.58,Upper East Side South,Midtown Center,Credit Card,5.5,1.76,10.56
-1611137003,1611137502,1,2.93,Brooklyn Heights,Financial District South,Credit Card,10.5,2.76,16.56
-1611998463,1611998978,1,2.21,Lincoln Square East,West Chelsea/Hudson Yards,Credit Card,9.0,2.0,14.3
-1611929340,1611930393,1,3.54,Lincoln Square East,Gramercy,Credit Card,14.0,3.46,20.76
-1610197849,1610198751,2,2.3,Midtown East,Lincoln Square East,Credit Card,9.0,2.45,14.75
-1611557830,1611558386,2,2.14,Midtown South,East Village,Cash,9.5,0.0,12.8
-1609422242,1609422823,1,3.76,Murray Hill,Sunnyside,Credit Card,12.5,4.08,20.38
-1611658986,1611659394,1,1.3,Clinton West,Midtown East,Credit Card,6.5,1.95,11.75
-1610104810,1610105482,1,1.6,Sutton Place/Turtle Bay North,Upper East Side North,Credit Card,9.0,3.69,15.99
-1611856231,1611856651,1,1.39,Lincoln Square East,Lenox Hill West,Credit Card,7.0,2.26,13.56
-1611568670,1611569161,1,1.32,Midtown North,Lenox Hill West,Cash,7.5,0.0,10.8
-1609685143,1609686901,1,13.67,Baisley Park,Clinton Hill,Credit Card,37.5,8.0,46.3
-1611764851,1611765115,1,0.79,Lenox Hill West,Upper East Side North,Cash,5.0,0.0,9.3
-1611572990,1611573657,1,2.38,Flatiron,Little Italy/NoLiTa,Credit Card,9.5,3.2,16.0
-1610900269,1610900567,1,1.8,East Harlem North,Yorkville West,Credit Card,7.0,1.0,11.3
-1612116067,1612116585,2,1.24,Gramercy,West Village,Credit Card,7.0,2.06,12.36
-1611561657,1611563214,1,6.18,East Harlem North,Kips Bay,Cash,22.5,0.0,25.8
-1610451158,1610452719,1,0.0,Central Harlem,Murray Hill,Credit Card,28.98,0.0,29.78
-1610700997,1610701354,3,1.28,Upper East Side North,Lenox Hill East,Credit Card,6.5,1.47,11.27
-1611307484,1611391721,5,3.33,Flatlands,Crown Heights North,Credit Card,17.0,0.0,18.8
-1611918471,1611919190,1,1.9,Manhattan Valley,Lincoln Square East,Credit Card,10.0,3.95,17.25
-1612092858,1612093129,1,0.7,Clinton East,Times Sq/Theatre District,Credit Card,5.0,0.0,8.3
-1612020052,1612020191,2,0.5,Financial District North,Chinatown,Cash,4.0,0.0,7.3
-1612043645,1612044293,3,2.52,Sutton Place/Turtle Bay North,Upper West Side South,Credit Card,10.5,2.86,17.16
-1610458533,1610459375,1,5.78,Upper West Side South,Washington Heights South,Credit Card,18.5,4.36,26.16
-1611746072,1611746256,1,0.38,Midtown East,Upper East Side South,Cash,4.0,0.0,7.3
-1611093356,1611094434,0,5.2,Little Italy/NoLiTa,Bushwick North,Cash,18.0,0.0,21.8
-1610178923,1610179099,1,0.63,Morningside Heights,Morningside Heights,Credit Card,4.5,2.0,7.3
-1611043405,1611043678,1,1.0,Lincoln Square East,Midtown North,Cash,5.5,0.0,8.8
-1611333206,1611333417,1,0.99,Lenox Hill East,Upper East Side North,Credit Card,5.0,1.0,10.3
-1611346964,1611347493,1,1.54,Upper West Side South,Manhattan Valley,Cash,6.0,0.0,9.8
-1609779996,1609783621,1,0.0,Flatiron,Canarsie,Credit Card,52.2,0.0,59.12
-1610477291,1610478347,1,5.43,Upper East Side North,Gramercy,Credit Card,19.0,2.33,25.63
-1610921679,1610922024,1,1.3,West Village,TriBeCa/Civic Center,Credit Card,6.5,2.05,12.35
-1611773472,1611773675,1,0.8,Upper West Side North,Manhattan Valley,Credit Card,4.5,1.55,9.35
-1611495886,1611496434,6,1.9,East Village,Union Sq,Credit Card,8.5,1.0,12.8
-1610116386,1610116754,2,0.0,Central Park,Upper West Side South,Credit Card,6.5,1.95,11.75
-1611502733,1611503449,1,1.45,TriBeCa/Civic Center,East Village,Credit Card,9.0,2.46,14.76
-1610456937,1610457618,5,1.99,Times Sq/Theatre District,Lenox Hill West,Credit Card,9.5,2.56,15.36
-1610922140,1610922712,2,2.57,Times Sq/Theatre District,Lenox Hill East,Credit Card,10.0,0.0,13.8
-1610049740,1610050572,1,5.62,Yorkville East,East Village,Credit Card,18.0,4.36,26.16
-1611431084,1611431510,1,1.04,Gramercy,Stuy Town/Peter Cooper Village,Credit Card,6.5,1.96,11.76
-1611912735,1611913512,1,1.8,Upper East Side North,Manhattan Valley,Credit Card,10.5,2.76,16.56
-1609611005,1609611593,1,1.4,Upper West Side South,Times Sq/Theatre District,Credit Card,8.5,2.35,14.15
-1611777102,1611777277,1,0.72,Sutton Place/Turtle Bay North,UN/Turtle Bay South,Credit Card,4.5,1.76,10.56
-1610609938,1610610945,1,3.2,Midtown East,Upper West Side North,Cash,14.0,0.0,17.3
-1611853752,1611854632,1,3.05,Upper East Side South,Union Sq,Credit Card,12.5,3.36,20.16
-1610362130,1610363116,1,2.46,Flatiron,Midtown East,Credit Card,12.0,3.82,19.12
-1610097972,1610099110,1,3.0,Lenox Hill East,Union Sq,Credit Card,14.5,3.55,21.35
-1611942920,1611943768,1,2.86,Upper West Side North,Upper East Side South,Credit Card,12.5,3.36,20.16
-1610720866,1610721393,1,1.08,Upper East Side North,East Harlem South,Credit Card,7.0,1.0,11.3
-1609927120,1609927328,1,0.97,Yorkville West,East Harlem North,Cash,5.0,0.0,8.3
-1611682137,1611682620,1,1.4,Midtown Center,Union Sq,Credit Card,7.5,0.0,11.8
-1611084378,1611084745,1,0.9,Upper East Side North,Upper East Side South,Credit Card,6.0,2.55,12.85
-1610357398,1610358356,1,2.66,Murray Hill,Lincoln Square East,Credit Card,13.0,3.26,19.56
-1609836571,1609837426,1,3.08,Lincoln Square East,Morningside Heights,Cash,13.0,0.0,16.3
-1610463984,1610464289,1,0.32,Upper East Side North,Upper East Side North,Cash,4.5,0.0,7.8
-1609743406,1609743862,1,1.5,Upper West Side North,East Harlem South,Credit Card,7.5,2.0,10.3
-1612003557,1612004420,2,2.72,Times Sq/Theatre District,Lenox Hill East,Credit Card,12.0,3.82,19.12
-1611298708,1611298927,1,0.5,West Chelsea/Hudson Yards,West Chelsea/Hudson Yards,Credit Card,4.5,1.55,9.35
-1612076326,1612076923,5,2.63,East Village,UN/Turtle Bay South,Credit Card,10.0,2.0,15.3
-1611670997,1611671970,1,3.55,Murray Hill,Upper West Side North,Credit Card,14.0,3.46,20.76
-1611695114,1611695621,2,2.26,Manhattan Valley,East Harlem North,Credit Card,9.0,2.06,12.36
-1611289514,1611289678,3,1.21,East Chelsea,Garment District,Credit Card,5.5,0.0,9.3
-1611684971,1611685888,1,0.0,Sheepshead Bay,Canarsie,Credit Card,20.2,0.0,21.0
-1611390476,1611390761,5,1.38,Lenox Hill West,Sutton Place/Turtle Bay North,Credit Card,6.0,1.45,10.75
-1610537282,1610540350,1,21.7,LaGuardia Airport,Madison,Cash,63.0,0.0,63.8
-1612109998,1612110954,5,3.83,Seaport,South Williamsburg,Credit Card,15.0,3.66,21.96
-1610876303,1610876452,1,0.71,Lenox Hill West,Lenox Hill East,Credit Card,4.5,1.56,9.36
-1610991224,1610991683,1,1.33,Lenox Hill West,Midtown Center,Credit Card,7.0,1.5,11.8
-1610347284,1610347481,1,0.9,Lincoln Square East,Upper West Side North,Credit Card,5.0,2.05,10.35
-1610388005,1610388247,1,0.95,Upper East Side South,Midtown East,Credit Card,5.5,0.0,9.8
-1611847778,1611848121,2,0.5,Lenox Hill West,Lenox Hill East,Credit Card,5.0,1.65,9.95
-1609674287,1609674740,1,1.45,East Chelsea,Flatiron,Cash,7.5,0.0,10.8
-1610382783,1610383562,1,3.33,East Elmhurst,Sunnyside,Cash,13.0,0.0,14.8
-1610553529,1610553936,1,1.42,Upper East Side South,Lincoln Square East,Cash,7.0,0.0,10.3
-1610114699,1610114725,1,0.0,Yorkville West,Yorkville West,Credit Card,2.5,4.0,9.8
-1609843959,1609844851,1,2.8,East Harlem South,Midtown East,Credit Card,12.0,0.0,15.3
-1611222060,1611222614,1,1.94,Upper East Side South,Yorkville East,Credit Card,8.5,3.54,15.34
-1611743680,1611744755,1,7.51,Morningside Heights,Meatpacking/West Village West,Credit Card,23.0,4.0,30.3
-1609953897,1609954154,2,1.34,East Chelsea,Clinton East,Credit Card,6.0,3.09,13.39
-1609941075,1609942607,1,13.5,JFK Airport,Flatlands,Cash,38.5,0.0,39.3
-1610452630,1610453254,2,1.49,Upper East Side South,Upper East Side North,Cash,8.5,0.0,11.8
-1610443037,1610443575,1,1.53,Morningside Heights,Manhattan Valley,Cash,7.5,0.0,8.3
-1611686786,1611687291,1,1.76,Midtown Center,Lincoln Square East,Credit Card,8.0,1.0,13.3
-1609575890,1609576107,1,0.6,Lenox Hill East,Lenox Hill East,Credit Card,4.5,1.55,9.35
-1611964702,1611965262,1,2.87,West Village,Midtown North,Credit Card,10.5,1.43,15.73
-1610122293,1610123165,1,2.64,Midtown Center,Meatpacking/West Village West,Credit Card,11.5,1.58,17.38
-1610060112,1610060359,1,0.89,Kips Bay,Midtown East,Credit Card,5.0,1.76,10.56
-1610846372,1610846539,1,0.71,East Village,East Village,Credit Card,4.5,1.66,9.96
-1611843563,1611844794,6,4.88,Yorkville West,Gramercy,Credit Card,18.5,4.36,26.16
-1610383062,1610383677,1,2.2,West Village,West Chelsea/Hudson Yards,Credit Card,10.0,2.66,15.96
-1610374967,1610375545,1,1.48,Lincoln Square West,Clinton East,Credit Card,8.0,2.26,13.56
-1609770828,1609771354,2,0.5,Penn Station/Madison Sq West,Midtown South,Credit Card,6.5,0.0,9.8
-1610015205,1610015740,2,1.49,Times Sq/Theatre District,Sutton Place/Turtle Bay North,Credit Card,8.0,2.26,13.56
-1611051692,1611052000,1,0.65,Flatiron,Greenwich Village North,Dispute,-5.0,0.0,-8.3
-1611359605,1611359663,1,0.1,West Village,West Village,Dispute,3.0,0.0,6.8
-1610702732,1610703721,1,4.29,Central Harlem,Midtown East,Credit Card,15.0,1.0,19.3
-1610621984,1610622207,2,0.5,Yorkville East,Lenox Hill East,Credit Card,4.5,1.55,9.35
-1609670418,1609670678,1,0.9,Midtown South,UN/Turtle Bay South,Credit Card,5.0,2.05,10.35
-1610574452,1610574881,4,2.1,Upper East Side North,Midtown East,Credit Card,8.5,2.45,14.75
-1610622383,1610623027,1,1.6,Upper East Side South,Sutton Place/Turtle Bay North,Credit Card,9.0,2.0,14.3
-1612060241,1612060582,3,1.49,Greenwich Village North,Murray Hill,Credit Card,7.0,1.62,12.42
-1610547799,1610548032,6,1.08,Union Sq,Greenwich Village South,Cash,5.5,0.0,8.8
-1610577058,1610577600,1,1.38,East Village,Meatpacking/West Village West,Credit Card,7.5,1.13,12.43
-1611832757,1611833652,2,4.56,East Harlem South,Queensbridge/Ravenswood,Credit Card,16.0,0.0,19.3
-1610726857,1610726933,1,0.41,Lincoln Square West,Upper West Side South,Credit Card,3.5,1.95,9.75
-1609788104,1609790335,1,14.2,Midtown East,Ocean Parkway South,Credit Card,43.0,7.0,60.42
-1610359649,1610359838,1,0.5,Upper West Side North,Upper West Side North,Credit Card,4.0,2.15,9.45
-1610649325,1610649782,1,0.99,Gramercy,Penn Station/Madison Sq West,Cash,6.5,0.0,10.8
-1610649642,1610651455,1,17.79,JFK Airport,Union Sq,Credit Card,52.0,8.0,73.92
-1609879632,1609880555,1,2.63,Manhattan Valley,Central Harlem North,Credit Card,12.5,0.0,13.8
-1611072402,1611072825,1,1.76,Sutton Place/Turtle Bay North,Yorkville East,Credit Card,7.5,2.36,14.16
-1611501670,1611502571,1,3.22,Central Park,Kips Bay,Cash,13.0,0.0,16.3
-1611157816,1611158263,5,1.14,Upper East Side North,Yorkville West,Credit Card,7.0,1.03,11.33
-1611436141,1611436582,1,1.29,East Village,Hudson Sq,Credit Card,7.0,2.7,13.5
-1611921269,1611921827,6,1.54,Murray Hill,Upper East Side South,Credit Card,8.0,2.03,13.33
-1610209665,1610210493,1,2.19,Lenox Hill West,Upper West Side South,Credit Card,11.0,0.7,15.0
-1611233348,1611234650,2,3.94,Lincoln Square West,Gramercy,Credit Card,17.5,4.16,24.96
-1610281506,1610282158,2,1.7,Lincoln Square West,Midtown Center,Cash,9.0,0.0,12.3
-1611924111,1611925525,1,4.4,Union Sq,Fort Greene,Credit Card,18.5,2.18,23.98
-1610720366,1610720758,4,1.1,Lenox Hill West,Upper East Side South,Credit Card,6.0,1.86,11.16
-1611012434,1611013248,1,8.34,LaGuardia Airport,Lenox Hill West,Credit Card,24.0,6.78,40.7
-1610546596,1610546602,1,0.0,Queensbridge/Ravenswood,Queensbridge/Ravenswood,Credit Card,2.5,0.0,3.3
-1611167049,1611167562,1,2.24,Upper East Side North,Central Harlem North,Credit Card,8.5,0.0,12.8
-1611136211,1611136597,1,1.0,East Village,Union Sq,Credit Card,6.5,1.47,11.27
-1611853614,1611856093,1,4.9,South Williamsburg,Ocean Hill,Cash,26.0,0.0,27.8
-1611441867,1611442127,1,1.01,West Village,Meatpacking/West Village West,Credit Card,5.0,1.76,10.56
-1611943905,1611944518,1,1.83,Upper East Side North,East Harlem South,Credit Card,9.0,2.66,15.96
-1611317106,1611317506,2,1.3,Midtown East,Upper East Side North,Credit Card,7.0,1.5,11.8
-1609705018,1609705358,1,2.26,Lenox Hill West,Gramercy,Credit Card,8.0,2.95,14.75
-1610708736,1610708922,1,0.52,Flatiron,East Chelsea,Cash,4.0,0.0,7.3
-1610360814,1610361649,2,2.36,Upper West Side South,Midtown East,Credit Card,11.5,2.96,17.76
-1610871150,1610871797,1,4.18,East Village,East Harlem South,Credit Card,13.0,3.26,19.56
-1609893865,1609895802,2,13.49,Upper East Side North,East Flatbush/Farragut,Cash,39.5,0.0,43.3
-1609776206,1609776300,0,0.4,West Village,East Chelsea,Credit Card,3.5,1.55,9.35
-1609933116,1609933730,1,1.8,Garment District,Upper East Side South,Credit Card,9.0,1.0,13.3
-1610042595,1610042875,1,0.56,Upper West Side South,Upper West Side South,Credit Card,5.0,1.0,10.3
-1611412886,1611413218,2,0.8,Upper West Side South,Lincoln Square East,Credit Card,6.0,1.85,11.15
-1610290175,1610290379,1,0.69,Clinton East,Clinton East,Cash,4.5,0.0,7.8
-1611160102,1611160679,1,2.31,Upper East Side South,Upper West Side North,Cash,9.5,0.0,13.8
-1611581976,1611584087,2,14.46,TriBeCa/Civic Center,NA,Cash,70.0,0.0,84.55
-1612096681,1612096999,1,1.14,Union Sq,West Village,Credit Card,6.0,0.93,10.23
-1611841920,1611844201,1,10.36,Pelham Bay,West Concourse,Credit Card,35.0,0.0,35.8
-1610629364,1610630044,1,1.14,Lincoln Square East,Upper East Side South,Cash,8.5,0.0,11.8
-1610981458,1610982208,1,3.24,Manhattan Valley,Washington Heights South,Cash,12.5,0.0,13.3
-1610216270,1610216711,1,1.4,Midtown North,Upper East Side North,Credit Card,7.5,2.15,12.95
-1611215586,1611215985,1,1.4,Upper West Side North,Lincoln Square East,Credit Card,7.0,2.05,12.35
-1610890500,1610891869,1,5.53,Meatpacking/West Village West,Yorkville East,Cash,20.0,0.0,23.3
-1610964530,1610964885,5,1.07,Manhattan Valley,Upper West Side North,Cash,6.0,0.0,9.3
-1611215666,1611216050,1,0.8,Lenox Hill East,Upper East Side North,Credit Card,6.0,2.33,11.63
-1611590578,1611591214,1,1.35,Upper East Side North,Lenox Hill West,Credit Card,8.5,2.0,14.8
-1610273546,1610273779,1,0.74,Yorkville East,Upper East Side North,Cash,5.0,0.0,8.3
-1610876774,1610878227,1,13.04,Upper East Side South,NA,Cash,36.5,0.0,39.8
-1611745372,1611745750,1,1.28,Bloomingdale,Central Harlem,Cash,6.5,0.0,7.3
-1610640048,1610640600,1,1.54,East Harlem South,Yorkville East,Cash,8.0,0.0,12.3
-1610355060,1610355607,0,1.5,Midtown East,Clinton East,Cash,7.5,0.0,10.8
-1610095473,1610095825,2,1.1,Yorkville West,East Harlem South,Cash,6.0,0.0,9.3
-1610035975,1610036336,1,0.7,Sutton Place/Turtle Bay North,Midtown East,Credit Card,5.5,0.0,9.8
-1610923051,1610923927,1,3.86,Greenwich Village North,Lincoln Square East,Credit Card,14.0,3.56,21.36
-1611503257,1611503624,1,2.0,Kips Bay,Lenox Hill East,Credit Card,8.0,2.25,13.55
-1610807754,1610808147,1,1.5,Upper West Side South,Upper East Side South,Credit Card,7.5,2.15,12.95
-1611607586,1611609025,1,5.7,East Chelsea,Crown Heights South,Credit Card,21.0,6.2,31.0
-1611960574,1611961130,1,2.92,Lenox Hill East,East Harlem North,Credit Card,10.0,3.45,17.25
-1611426501,1611427335,2,1.95,Murray Hill,East Chelsea,Credit Card,10.5,2.0,15.8
-1610638990,1610639579,1,1.65,Upper West Side North,Lincoln Square East,Credit Card,8.5,2.95,14.75
-1612091359,1612091832,1,1.6,Upper West Side South,Manhattan Valley,Credit Card,8.0,2.26,13.56
-1611841518,1611841956,1,1.64,Upper East Side North,Lincoln Square West,Credit Card,7.5,2.16,12.96
-1609508741,1609509489,1,3.2,Greenwich Village South,Clinton East,Credit Card,12.0,2.0,17.3
-1609603112,1609603675,1,2.03,Clinton East,Upper West Side North,Credit Card,9.0,2.0,14.3
-1611785901,1611786366,1,1.2,West Village,TriBeCa/Civic Center,Dispute,7.0,0.0,10.8
-1611669047,1611670713,1,5.23,East Harlem South,Astoria,Credit Card,21.0,5.0,29.3
-1610644863,1610648298,1,0.0,World Trade Center,Jamaica Estates,Credit Card,46.2,0.0,53.12
-1610810298,1610810516,2,0.74,Upper East Side North,Upper East Side North,Credit Card,4.5,0.78,8.58
-1611616886,1611618287,2,9.91,LaGuardia Airport,Clinton East,Credit Card,30.0,9.98,49.9
-1609860846,1609861113,1,0.95,Times Sq/Theatre District,Penn Station/Madison Sq West,Credit Card,5.5,2.2,11.0
-1611856676,1611857119,1,1.2,Union Sq,Stuy Town/Peter Cooper Village,Cash,6.5,0.0,10.8
-1609667531,1609668041,1,2.19,Upper West Side North,Midtown North,Credit Card,9.0,1.0,13.3
-1611601014,1611601480,1,3.16,East Chelsea,Upper West Side South,Credit Card,10.5,2.96,17.76
-1610096410,1610096682,1,0.8,Murray Hill,Midtown Center,Cash,5.0,0.0,8.3
-1610111853,1610112159,1,0.57,Yorkville West,Yorkville East,Credit Card,5.0,2.08,10.38
-1611153237,1611153798,6,1.12,Manhattan Valley,Upper West Side North,Credit Card,7.5,2.16,12.96
-1611147569,1611148274,1,1.9,Midtown Center,Kips Bay,Credit Card,9.5,0.0,12.8
-1611315243,1611315471,2,0.54,Lenox Hill West,Central Park,Credit Card,4.5,1.56,9.36
-1611158099,1611158713,1,1.5,Midtown East,Yorkville West,Credit Card,9.0,2.46,14.76
-1609593173,1609593893,3,2.65,Lenox Hill East,Midtown Center,Credit Card,11.5,1.0,15.8
-1611236076,1611237047,1,2.35,Kips Bay,Meatpacking/West Village West,Credit Card,12.0,4.59,19.89
-1611590545,1611591320,1,3.11,Penn Station/Madison Sq West,World Trade Center,Credit Card,11.5,3.16,18.96
-1610803030,1610803206,1,0.74,Upper West Side South,Lincoln Square East,Credit Card,4.5,1.56,9.36
-1611249587,1611250127,1,2.13,Lincoln Square West,Manhattan Valley,Credit Card,8.5,3.84,16.64
-1610888008,1610888489,2,1.35,Penn Station/Madison Sq West,Midtown Center,Credit Card,7.0,2.06,12.36
-1610644609,1610645158,1,1.95,Upper East Side South,Union Sq,Credit Card,8.5,2.56,15.36
-1611686593,1611686858,1,0.84,Upper West Side North,Manhattan Valley,Credit Card,5.0,1.86,11.16
-1611417687,1611418409,1,2.7,West Chelsea/Hudson Yards,TriBeCa/Civic Center,Credit Card,12.0,3.05,18.35
-1609613931,1609616104,1,12.36,Hudson Sq,Washington Heights South,Credit Card,40.0,8.66,51.96
-1611321776,1611322043,2,0.66,Upper East Side North,Lenox Hill West,Credit Card,5.0,1.66,9.96
-1611938659,1611940658,6,4.39,Lincoln Square West,Little Italy/NoLiTa,Credit Card,22.0,0.0,26.3
-1609759134,1609759855,2,2.08,Midtown East,Lincoln Square West,Credit Card,10.0,1.0,14.3
-1611046389,1611046958,1,1.1,Yorkville West,Lenox Hill East,Credit Card,8.0,2.26,13.56
-1610922084,1610922392,1,0.88,Times Sq/Theatre District,Midtown South,Credit Card,5.5,1.86,11.16
-1609971372,1609972176,2,4.17,SoHo,Lincoln Square East,Credit Card,14.0,5.34,23.14
-1612107582,1612108556,1,4.84,World Trade Center,Lincoln Square East,Credit Card,15.5,3.76,22.56
-1611246314,1611247081,1,2.05,Flatiron,Midtown Center,Credit Card,10.0,3.0,17.3
-1611854661,1611855777,1,3.37,Greenwich Village North,Upper East Side South,Credit Card,14.0,3.66,21.96
-1611219029,1611219397,2,1.4,Upper West Side North,Central Park,Credit Card,6.5,2.9,12.7
-1611851726,1611851813,1,0.23,Upper East Side South,Upper East Side South,Cash,3.0,0.0,7.3
-1610725921,1610726957,1,1.73,Morningside Heights,Hamilton Heights,Cash,12.0,0.0,12.8
-1610703083,1610703455,1,1.14,Clinton West,Upper West Side South,Credit Card,6.5,1.96,11.76
-1609766026,1609767001,1,3.1,Stuy Town/Peter Cooper Village,West Village,Credit Card,14.0,3.45,20.75
-1610532015,1610532309,1,0.5,Midtown South,Murray Hill,Credit Card,5.0,1.65,9.95
-1609920284,1609921135,1,3.17,Upper East Side North,West Chelsea/Hudson Yards,Credit Card,13.5,2.0,18.8
-1609744867,1609747158,1,19.2,JFK Airport,Central Harlem,Credit Card,52.0,0.0,58.92
-1611689924,1611690366,5,1.28,Upper East Side South,Upper East Side North,Credit Card,7.5,2.0,13.8
-1611515222,1611516074,2,0.93,Bloomingdale,Manhattan Valley,Credit Card,10.0,1.5,12.3
-1610639497,1610639636,1,0.4,Yorkville East,Yorkville East,Credit Card,4.0,1.65,9.95
-1610051159,1610051364,1,0.8,Upper East Side South,Yorkville West,Credit Card,5.0,1.76,10.56
-1611588093,1611588310,1,0.63,Upper East Side South,Upper East Side South,Credit Card,4.5,1.56,9.36
-1610992731,1610992912,5,0.56,Yorkville West,East Harlem South,Credit Card,4.5,1.95,9.75
-1611825594,1611825991,1,0.55,Gramercy,Gramercy,Cash,5.5,0.0,8.8
-1611938080,1611938456,6,1.07,East Chelsea,Clinton West,Credit Card,6.5,2.16,12.96
-1610985995,1610987025,1,5.3,Little Italy/NoLiTa,Upper West Side South,Credit Card,18.5,4.35,26.15
-1611051172,1611051854,1,4.59,Seaport,Midtown East,Credit Card,15.0,5.49,23.79
-1611308731,1611309945,1,2.8,Murray Hill,Upper West Side South,Credit Card,14.5,4.45,22.25
-1610632900,1610633602,1,1.4,Yorkville West,East Harlem South,No charge,9.0,0.0,12.3
-1611150244,1611150972,3,2.11,Lincoln Square East,Yorkville West,Cash,10.5,0.0,13.8
-1612111367,1612112198,0,2.7,Penn Station/Madison Sq West,Upper East Side South,Credit Card,11.0,2.85,17.15
-1611845322,1611845427,1,0.2,Upper West Side South,Upper West Side South,Credit Card,3.0,1.0,7.3
-1609914110,1609914865,1,5.47,Manhattan Valley,West Chelsea/Hudson Yards,Credit Card,16.5,2.0,21.8
-1610563482,1610563974,1,1.6,East Harlem North,Yorkville West,Credit Card,8.0,0.0,12.3
-1611782713,1611783955,2,6.43,World Trade Center,Upper West Side South,Credit Card,22.0,4.0,29.8
-1611256447,1611256673,2,0.65,Central Harlem,Manhattan Valley,Cash,4.5,0.0,6.3
-1611254323,1611255085,1,3.07,Yorkville East,Clinton East,Dispute,-12.0,0.0,-16.3
-1611850399,1611851428,1,1.67,Upper East Side South,Lenox Hill West,Credit Card,11.5,3.16,18.96
-1609597800,1609598457,1,2.37,Lenox Hill East,Garment District,Cash,10.0,0.0,13.3
-1611061635,1611062439,1,2.6,Midtown Center,Upper West Side North,Credit Card,11.5,2.95,17.75
-1611337532,1611337713,1,0.48,Yorkville East,Yorkville East,Credit Card,4.5,1.76,10.56
-1611072952,1611073941,2,2.8,Morningside Heights,Washington Heights South,Credit Card,13.5,3.05,18.35
-1611360364,1611360895,2,3.41,East Village,East Williamsburg,Credit Card,12.0,3.16,18.96
-1611346091,1611346856,1,2.35,Little Italy/NoLiTa,Kips Bay,Credit Card,10.5,2.86,17.16
-1612022987,1612023106,1,0.3,Midtown East,Garment District,Cash,3.5,0.0,6.8
-1609609349,1609609793,1,1.6,Midtown South,Midtown East,Credit Card,7.0,1.54,11.84
-1611944127,1611944464,2,0.6,Bloomingdale,Manhattan Valley,Cash,5.5,0.0,7.3
-1609596907,1609596941,1,0.0,Upper West Side North,Upper West Side North,Dispute,2.5,0.0,3.3
-1611842857,1611843196,1,0.61,Yorkville West,Upper East Side North,Dispute,-5.5,0.0,-8.8
-1609500217,1609500501,1,0.78,Midtown East,Garment District,Cash,5.5,0.0,8.8
-1611450025,1611451014,1,7.6,Lincoln Square East,Financial District North,Credit Card,23.0,2.0,28.8
-1611792096,1611793804,1,19.41,JFK Airport,Central Harlem,Credit Card,52.0,5.0,63.92
-1609709456,1609710434,1,9.3,Kew Gardens Hills,Springfield Gardens North,Credit Card,26.5,6.95,34.75
-1611942797,1611943626,4,4.43,Battery Park City,Clinton West,Credit Card,15.5,4.95,24.75
-1610808473,1610809176,1,3.0,Battery Park,Brooklyn Heights,Cash,11.5,0.0,14.8
-1611047935,1611048501,3,1.84,Sutton Place/Turtle Bay North,Times Sq/Theatre District,Credit Card,8.5,2.0,13.8
-1611647400,1611648125,1,1.7,Morningside Heights,Hamilton Heights,Credit Card,10.0,1.0,11.8
-1611766198,1611766647,1,1.26,Midtown Center,Upper East Side South,Credit Card,7.0,2.26,13.56
-1609741291,1609741463,1,0.6,Penn Station/Madison Sq West,Union Sq,Credit Card,4.5,1.55,9.35
-1610802880,1610803561,1,1.6,East Village,West Chelsea/Hudson Yards,Credit Card,9.0,2.45,14.75
-1609760776,1609761946,1,3.9,East Chelsea,Upper East Side North,Cash,16.0,0.0,19.3
-1611944016,1611944194,1,0.8,Lenox Hill West,UN/Turtle Bay South,Credit Card,4.5,1.0,9.8
-1610042246,1610042576,5,1.24,East Village,Flatiron,Credit Card,6.0,2.06,12.36
-1609691249,1609691587,1,1.0,Central Harlem,East Harlem South,Cash,6.0,0.0,6.8
-1611502949,1611503288,1,1.05,Upper East Side South,Midtown North,Credit Card,6.0,2.33,11.63
-1611842340,1611842946,1,1.94,Murray Hill,East Village,Credit Card,9.0,2.46,14.76
-1610977902,1610979919,1,19.07,JFK Airport,Greenwich Village North,Credit Card,52.0,15.36,76.78
-1612100168,1612100412,5,0.8,Upper West Side South,Manhattan Valley,Credit Card,5.0,1.66,9.96
-1611651709,1611652852,1,3.61,Central Park,Clinton East,Cash,15.0,0.0,18.3
-1611040688,1611041087,1,0.86,Yorkville East,East Harlem South,Credit Card,6.0,2.79,12.09
-1611313805,1611315184,1,4.62,Lenox Hill West,East Village,Credit Card,20.0,6.99,30.29
-1610735475,1610735982,1,1.46,Murray Hill,Greenwich Village North,Credit Card,8.0,1.0,13.3
-1610010663,1610011204,1,1.54,Clinton East,Murray Hill,Credit Card,8.0,2.26,13.56
-1610644252,1610645023,1,1.45,Kips Bay,Penn Station/Madison Sq West,Credit Card,9.5,2.76,16.56
-1611081165,1611081607,1,2.3,Lincoln Square East,Central Harlem,Cash,8.5,0.0,12.8
-1610631137,1610631946,2,2.08,East Harlem South,Lenox Hill East,Credit Card,11.0,1.5,15.8
-1610462861,1610463778,1,2.8,Midtown Center,Meatpacking/West Village West,Cash,12.0,0.0,15.3
-1610546718,1610546837,1,0.36,East Harlem South,Upper East Side North,Credit Card,3.5,1.36,8.16
-1611506454,1611506641,1,0.6,Midtown East,Murray Hill,Credit Card,4.5,1.55,9.35
-1610379757,1610380062,1,0.7,Yorkville West,East Harlem South,Credit Card,5.5,1.32,10.12
-1610788154,1610788443,1,1.3,Midtown North,Penn Station/Madison Sq West,Credit Card,6.5,1.95,11.75
-1612095831,1612096646,1,5.46,Gramercy,East Harlem North,Credit Card,17.5,4.16,24.96
-1611033337,1611033571,2,1.0,Penn Station/Madison Sq West,Midtown Center,Credit Card,5.5,1.0,10.3
-1609490971,1609491417,1,1.58,Old Astoria,Astoria,Cash,7.5,0.0,8.3
-1609870878,1609871521,1,1.93,Greenwich Village South,East Chelsea,Credit Card,9.0,1.0,14.3
-1610516170,1610516911,1,6.7,Clinton East,Washington Heights South,Credit Card,20.0,1.0,24.3
-1611227097,1611227298,1,0.56,Manhattan Valley,Upper West Side North,Credit Card,4.0,0.96,5.76
-1609965876,1609967057,1,5.27,Clinton West,Financial District North,Credit Card,19.0,4.56,27.36
-1611322494,1611323095,1,3.27,Lenox Hill West,Sunnyside,Cash,12.0,0.0,15.3
-1610218880,1610219497,1,2.34,Midtown Center,Lincoln Square West,Cash,9.5,0.0,12.8
-1611352482,1611353006,2,1.81,Clinton East,Upper West Side North,Credit Card,8.5,3.08,15.38
-1612004598,1612004947,1,1.18,Upper West Side North,Central Park,Credit Card,6.5,0.98,10.78
-1609623745,1609624048,1,1.1,LaGuardia Airport,East Elmhurst,Credit Card,6.0,1.45,8.75
-1612010138,1612010643,1,1.7,Upper East Side North,Midtown Center,Cash,8.5,0.0,11.8
+pid,tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distance,PULocationID,DOLocationID,payment_type,fare_amount,tip_amount,total_amount
+48009,1609612055,1609612538,5,1.55,East Chelsea,Clinton East,Credit Card,7.5,2.7,13.5
+59266,1609669988,1609670797,1,3.48,Sunnyside,Midtown North,Cash,14.0,0.0,17.3
+230773,1610026688,1610027049,1,0.5,Lenox Hill East,Lenox Hill West,Cash,5.5,0.0,8.8
+1226437,1612025135,1612025762,1,2.0,Upper West Side North,Yorkville West,Credit Card,9.0,2.65,15.95
+873737,1611328569,1611328756,1,0.6,Times Sq/Theatre District,Midtown North,Cash,4.0,0.0,7.3
+798433,1611215069,1611216662,1,4.4,Yorkville East,Gramercy,Credit Card,21.0,4.86,29.16
+221413,1610020422,1610020904,1,1.6,Battery Park City,West Village,Credit Card,7.0,2.0,12.3
+312027,1610195543,1610196862,1,4.67,Upper West Side North,Murray Hill,Credit Card,18.0,4.26,25.56
+1002522,1611600538,1611601349,1,2.21,Upper West Side South,Midtown Center,Credit Card,10.5,2.96,17.76
+414495,1610435287,1610437515,1,8.26,Murray Hill,Stuyvesant Heights,Cash,30.5,0.0,33.8
+664450,1610910515,1610911012,1,2.83,Gramercy,Lenox Hill East,Cash,10.0,0.0,13.3
+1076733,1611757993,1611758363,1,0.7,Lenox Hill West,Upper East Side North,Credit Card,5.5,1.75,10.55
+1067061,1611748652,1611748801,1,0.51,Upper West Side North,Upper West Side South,Cash,4.0,0.0,7.3
+946425,1611496590,1611497144,1,1.46,Upper East Side North,Upper West Side South,Credit Card,8.5,2.36,14.16
+1253594,1612099109,1612099452,2,1.1,Little Italy/NoLiTa,Union Sq,Credit Card,6.0,1.7,11.0
+722539,1611062922,1611062980,1,0.11,Murray Hill,Murray Hill,Credit Card,2.5,0.87,6.67
+838812,1611258136,1611258509,2,0.85,Midtown North,Midtown East,Credit Card,6.0,1.7,12.0
+1246653,1612090292,1612090530,1,0.47,Upper West Side North,Upper West Side South,Credit Card,4.5,2.34,10.14
+760622,1611140341,1611140983,2,3.41,East Harlem North,Lenox Hill West,Cash,12.0,0.0,15.3
+25845,1609580946,1609581317,1,1.55,Lincoln Square West,Midtown North,Credit Card,7.0,2.06,12.36
+550978,1610657665,1610658329,1,2.9,Midtown East,West Village,Cash,11.0,0.0,14.8
+324318,1610209973,1610210234,2,0.7,Lincoln Square East,Lincoln Square East,Credit Card,5.0,2.05,10.35
+702171,1611008763,1611010928,1,14.64,LaGuardia Airport,Meatpacking/West Village West,Credit Card,43.0,9.36,56.16
+760787,1611140291,1611140655,1,1.06,Upper East Side North,Upper West Side South,Cash,6.5,0.0,9.8
+1118060,1611832246,1611832595,1,0.98,Upper East Side South,Midtown East,Credit Card,6.0,2.32,11.62
+1262006,1612111151,1612112505,5,7.08,Greenwich Village South,Upper West Side North,Credit Card,23.5,5.36,32.16
+523056,1610627414,1610628012,1,1.8,Midtown East,Yorkville East,Credit Card,8.5,2.35,14.15
+1188788,1611938517,1611939422,6,2.84,Central Park,Clinton East,Cash,12.5,0.0,16.8
+571685,1610717088,1610717333,1,0.6,Upper East Side South,Midtown East,Credit Card,5.0,1.25,9.55
+957709,1611511160,1611511853,1,2.55,Upper West Side South,Sutton Place/Turtle Bay North,Credit Card,11.0,2.14,16.44
+837272,1611251986,1611252806,3,2.16,Midtown Center,Upper East Side North,Credit Card,11.0,3.06,18.36
+524857,1610629362,1610629519,1,0.92,Murray Hill,Sutton Place/Turtle Bay North,Credit Card,4.5,1.0,8.8
+5,1609460189,1609460670,1,1.6,Stuy Town/Peter Cooper Village,East Chelsea,Credit Card,8.0,2.35,14.15
+212885,1610003425,1610003939,1,2.5,Garment District,Lenox Hill West,Credit Card,9.5,2.0,14.8
+1074976,1611754698,1611755293,1,1.52,Upper East Side South,Yorkville West,Credit Card,8.5,2.36,14.16
+1014150,1611649770,1611650199,1,0.7,Central Harlem,Manhattanville,Cash,6.5,0.0,7.3
+871259,1611326399,1611327165,1,2.5,Flatiron,Clinton East,Credit Card,11.0,3.55,17.85
+215689,1610011668,1610012956,2,3.1,Penn Station/Madison Sq West,Upper East Side North,Cash,15.5,0.0,18.8
+1066829,1611748141,1611748878,1,1.2,Lenox Hill East,Upper East Side North,Cash,9.0,0.0,12.3
+753287,1611126431,1611127292,1,3.41,West Village,UN/Turtle Bay South,Credit Card,13.0,1.0,17.3
+1102475,1611804027,1611804172,2,0.5,Clinton West,West Chelsea/Hudson Yards,Credit Card,4.0,0.0,7.8
+642763,1610879168,1610880127,1,3.75,Upper West Side South,Hamilton Heights,Credit Card,14.5,3.56,21.36
+427396,1610455848,1610456346,1,1.08,Yorkville East,Lenox Hill East,Cash,7.5,0.0,10.8
+689732,1610984827,1610985174,1,0.8,Murray Hill,Murray Hill,Credit Card,5.5,1.32,10.12
+14564,1609520134,1609520576,1,1.7,Upper East Side North,Upper East Side South,Cash,8.0,0.0,11.3
+285685,1610122347,1610124177,5,8.89,SoHo,Yorkville West,Credit Card,29.0,6.66,39.96
+1184253,1611934087,1611934648,1,1.69,UN/Turtle Bay South,Penn Station/Madison Sq West,Cash,8.0,0.0,11.3
+757711,1611134782,1611135024,1,0.77,Lenox Hill West,Yorkville East,Credit Card,5.0,0.0,8.3
+236828,1610034166,1610035196,1,3.37,Garment District,Kips Bay,Cash,12.0,0.0,15.3
+560593,1610703549,1610703941,1,1.1,Greenwich Village North,TriBeCa/Civic Center,Credit Card,6.0,1.49,10.79
+984247,1611581199,1611581472,1,0.68,Upper East Side South,Sutton Place/Turtle Bay North,Credit Card,5.0,1.5,9.8
+1068100,1611747159,1611747952,1,1.88,Upper East Side South,Upper West Side South,Cash,10.5,0.0,13.8
+162919,1609887200,1609887396,1,1.1,Upper East Side South,Murray Hill,Cash,5.0,0.0,8.8
+85268,1609750522,1609751160,3,1.63,Yorkville West,Lenox Hill East,Credit Card,8.5,1.7,13.5
+1091644,1611771007,1611771502,1,1.77,West Village,Kips Bay,Cash,8.0,0.0,12.3
+1114069,1611830457,1611831199,1,1.65,East Harlem South,Yorkville East,Cash,9.0,0.0,12.3
+1090071,1611768115,1611769202,1,2.7,Midtown South,Yorkville West,Credit Card,13.5,3.55,21.35
+423454,1610451056,1610452143,1,3.59,Upper West Side North,Washington Heights South,Cash,15.0,0.0,18.3
+1135609,1611849606,1611850684,1,3.44,Flatiron,Lenox Hill West,Credit Card,14.5,3.76,22.56
+995801,1611593496,1611594156,1,2.15,Lenox Hill East,East Harlem North,Cash,9.0,0.0,13.3
+673894,1610964270,1610965394,0,2.9,Hamilton Heights,Mott Haven/Port Morris,Credit Card,14.0,1.0,15.8
+1058147,1611734907,1611735599,1,2.2,Union Sq,TriBeCa/Civic Center,Credit Card,10.0,2.66,15.96
+557129,1610698844,1610699155,1,0.7,Gramercy,Union Sq,Credit Card,5.0,1.66,9.96
+399396,1610387191,1610387490,2,0.51,Midtown Center,Sutton Place/Turtle Bay North,Credit Card,5.0,0.93,10.23
+204757,1609962563,1609963134,1,3.21,Clinton East,Manhattan Valley,Credit Card,12.0,3.0,19.3
+1197939,1611948803,1611950127,1,5.1,Manhattan Valley,Midtown South,Credit Card,19.5,2.5,26.3
+617787,1610808046,1610808895,1,3.04,Hudson Sq,Clinton East,Credit Card,13.0,3.26,19.56
+515318,1610621363,1610621949,1,1.2,Garment District,Midtown Center,Credit Card,8.0,2.82,14.12
+143667,1609858293,1609859715,1,12.34,JFK Airport,Jackson Heights,Cash,34.0,0.0,34.8
+534076,1610637082,1610637243,1,0.51,Upper West Side South,Upper West Side South,Credit Card,4.0,1.82,9.12
+203837,1609960735,1609961401,2,2.3,Lenox Hill East,Times Sq/Theatre District,Credit Card,10.0,1.7,16.0
+196133,1609949651,1609950033,1,1.09,Murray Hill,East Chelsea,Credit Card,6.5,2.7,13.5
+421138,1610447934,1610448156,1,1.0,Yorkville West,East Harlem North,Cash,5.0,0.0,5.8
+7189,1609500048,1609500550,1,1.49,Clinton East,West Chelsea/Hudson Yards,Credit Card,8.0,2.26,13.56
+693832,1610990307,1610990803,3,2.3,Lincoln Square East,Upper East Side North,Credit Card,8.5,5.0,16.8
+1220085,1612018173,1612019395,2,2.85,Lenox Hill West,Upper West Side North,Credit Card,15.5,1.2,20.0
+563858,1610708102,1610708497,1,1.0,Upper East Side North,Lenox Hill West,Cash,6.0,0.0,9.3
+364181,1610308169,1610308705,1,5.0,Upper West Side North,Washington Heights South,Credit Card,15.5,5.6,24.4
+727318,1611065629,1611066402,1,1.38,Greenwich Village North,Little Italy/NoLiTa,Cash,9.5,0.0,12.8
+115677,1609788591,1609788884,1,1.78,Jackson Heights,Astoria,Cash,7.0,0.0,8.8
+159075,1609873925,1609874645,2,2.98,Lenox Hill East,Manhattan Valley,Credit Card,11.5,3.16,18.96
+1120488,1611837696,1611838022,1,0.8,Upper West Side North,Upper West Side North,Credit Card,5.5,4.0,12.8
+644509,1610883895,1610884478,1,3.16,Penn Station/Madison Sq West,Yorkville West,Credit Card,11.0,1.5,15.8
+88598,1609754718,1609755853,1,4.0,Bloomingdale,Midtown East,Credit Card,16.0,2.7,22.0
+1011026,1611646932,1611647098,1,0.5,Sutton Place/Turtle Bay North,UN/Turtle Bay South,Cash,4.0,0.0,7.3
+309444,1610193409,1610194284,2,4.19,East Chelsea,Upper East Side North,Credit Card,14.5,3.56,21.36
+964712,1611528924,1611529515,5,2.92,Lenox Hill East,Upper West Side North,Credit Card,10.5,2.86,17.16
+850225,1611302726,1611302989,1,0.9,Lenox Hill West,Upper East Side South,Credit Card,5.5,1.76,10.56
+529196,1610636237,1610636401,1,0.6,Central Harlem,Central Harlem,Credit Card,4.0,3.0,7.8
+1129467,1611845511,1611846472,2,2.4,Manhattan Valley,Lenox Hill West,Credit Card,12.0,2.0,17.3
+593838,1610740039,1610740358,2,0.8,East Village,Two Bridges/Seward Park,Cash,5.5,0.0,9.8
+238585,1610037201,1610037803,1,1.2,West Chelsea/Hudson Yards,Union Sq,Credit Card,8.0,1.0,13.3
+367355,1610319507,1610319733,1,1.0,Union Sq,Greenwich Village North,Credit Card,5.5,1.85,11.15
+21790,1609537212,1609537724,1,1.79,Clinton East,Murray Hill,Cash,8.5,0.0,12.3
+88421,1609757054,1609757454,1,1.3,Upper East Side North,Lenox Hill East,Credit Card,7.0,2.05,12.35
+1179332,1611931161,1611931694,1,1.6,Lincoln Square East,Midtown East,Cash,8.0,0.0,11.3
+946741,1611496547,1611497055,1,2.74,Lenox Hill East,Kips Bay,Credit Card,10.0,2.66,15.96
+1006478,1611605602,1611606254,3,2.96,East Chelsea,Lincoln Square West,Credit Card,11.0,3.7,18.5
+1151510,1611867965,1611868296,3,1.1,West Village,Penn Station/Madison Sq West,Credit Card,6.0,0.0,9.8
+382889,1610369347,1610369969,1,1.7,Union Sq,Hudson Sq,Credit Card,8.5,3.5,15.3
+605290,1610791146,1610791499,2,0.9,Upper West Side South,Manhattan Valley,Credit Card,6.5,1.47,11.27
+673596,1610961826,1610962125,1,1.32,East Chelsea,Midtown Center,Credit Card,6.0,1.86,11.16
+1062502,1611740635,1611742298,2,4.8,Clinton East,Lower East Side,Cash,21.0,0.0,24.3
+438611,1610466016,1610466568,4,1.41,Murray Hill,Midtown East,Credit Card,8.0,2.26,13.56
+712224,1611049517,1611050066,1,1.23,Greenwich Village North,Union Sq,Credit Card,7.5,1.62,12.42
+865547,1611321535,1611322065,1,1.0,Upper East Side North,Upper East Side South,Credit Card,7.5,2.16,12.96
+713833,1611052798,1611052953,1,0.49,Midtown Center,Midtown North,Cash,4.0,0.0,7.3
+95620,1609763620,1609763740,1,0.2,Upper East Side South,Upper East Side South,Credit Card,3.5,1.35,8.15
+532014,1610636443,1610636975,1,1.2,Midtown North,Sutton Place/Turtle Bay North,Credit Card,7.5,2.7,13.5
+321702,1610205385,1610205710,1,0.98,West Chelsea/Hudson Yards,East Chelsea,Cash,6.0,0.0,9.3
+1025514,1611664971,1611665324,2,0.58,Upper East Side North,Upper East Side South,Credit Card,5.5,1.76,10.56
+762649,1611142843,1611144042,1,4.2,Lenox Hill East,Manhattanville,Credit Card,16.5,4.95,24.75
+40715,1609606087,1609606372,3,1.4,LaGuardia Airport,Steinway,Cash,6.0,0.0,6.8
+1003401,1611599888,1611600626,1,2.49,Greenwich Village North,Garment District,Cash,10.5,0.0,14.8
+1005996,1611607268,1611607752,1,1.93,Union Sq,Times Sq/Theatre District,Cash,8.5,0.0,12.3
+1105378,1611818877,1611819332,1,1.48,Clinton West,Midtown Center,Credit Card,7.0,2.06,12.36
+796835,1611198165,1611198527,1,0.97,Kips Bay,Union Sq,Credit Card,6.0,1.96,11.76
+651716,1610895311,1610895615,2,1.0,West Village,Flatiron,Credit Card,5.5,2.6,11.4
+1190691,1611940220,1611941854,5,9.86,Central Harlem,East Williamsburg,Cash,30.5,0.0,38.42
+35268,1609598166,1609598400,1,1.05,Lenox Hill East,Upper East Side North,Cash,5.5,0.0,8.8
+84339,1609748690,1609748804,2,0.7,East Harlem North,Yorkville West,Credit Card,4.0,1.0,5.8
+958882,1611509877,1611510072,1,0.59,Upper East Side South,Lenox Hill West,Cash,4.5,0.0,7.8
+902292,1611397339,1611399411,1,18.76,JFK Airport,Clinton East,Credit Card,52.0,15.35,76.77
+691285,1610985597,1610986687,2,5.48,Lower East Side,Lenox Hill East,Credit Card,19.5,4.56,27.36
+583687,1610728974,1610729792,1,2.4,Midtown Center,Upper West Side North,Credit Card,11.5,4.7,20.5
+1245696,1612086121,1612086382,1,0.78,Kips Bay,Murray Hill,Cash,5.5,0.0,8.8
+1151988,1611869789,1611870294,1,2.1,Union Sq,SoHo,Credit Card,8.5,2.45,14.75
+195524,1609951214,1609951858,2,1.32,Gramercy,Murray Hill,Credit Card,8.5,1.0,13.8
+916725,1611416309,1611417153,3,2.2,Lincoln Square East,Lenox Hill East,Credit Card,11.0,2.85,17.15
+1249673,1612093022,1612093650,1,3.26,Midtown North,Hudson Sq,Credit Card,11.5,2.96,17.76
+724736,1611061368,1611062664,1,2.69,Lenox Hill East,Garment District,Credit Card,14.5,3.56,21.36
+1229099,1612025978,1612026475,1,1.05,Upper East Side North,Yorkville East,Cash,7.0,0.0,10.3
+310316,1610192767,1610193304,1,2.08,Sutton Place/Turtle Bay North,Central Park,Credit Card,9.0,1.5,13.8
+688285,1610984109,1610984733,1,1.81,Lenox Hill West,Times Sq/Theatre District,Credit Card,8.5,2.36,14.16
+1271077,1612134550,1612136174,1,4.4,Manhattan Valley,East Concourse/Concourse Village,Cash,19.5,0.0,20.8
+925182,1611424128,1611425126,1,3.44,Lenox Hill West,Greenwich Village North,Credit Card,13.5,3.36,20.16
+52935,1609623687,1609624524,2,10.6,LaGuardia Airport,Lower East Side,Credit Card,29.5,5.0,38.3
+11472,1609512560,1609512801,5,1.4,Meatpacking/West Village West,East Chelsea,Credit Card,6.0,1.86,11.16
+492586,1610559453,1610559946,1,2.06,Lincoln Square West,Penn Station/Madison Sq West,Credit Card,8.0,2.46,14.76
+1238602,1612038531,1612038798,1,0.86,TriBeCa/Civic Center,Battery Park City,Credit Card,5.5,1.4,10.7
+789984,1611170554,1611170733,6,0.96,Midtown North,Central Park,Credit Card,5.0,2.0,11.3
+760264,1611137762,1611138515,6,2.3,Sutton Place/Turtle Bay North,Penn Station/Madison Sq West,Cash,10.5,0.0,13.8
+500789,1610569857,1610570617,1,4.28,Midtown East,Central Harlem,Credit Card,14.0,1.0,18.8
+643561,1610879339,1610879737,1,1.6,Midtown Center,Lenox Hill West,Cash,7.0,0.0,10.3
+538634,1610644118,1610644406,3,0.86,Upper East Side North,Upper East Side North,Credit Card,5.5,2.45,12.25
+175916,1609931311,1609931847,2,1.27,Lenox Hill West,Upper East Side South,Cash,7.5,0.0,10.8
+360989,1610298115,1610299180,3,3.21,Gramercy,Upper East Side North,Cash,14.5,0.0,17.8
+112696,1609781318,1609781702,2,1.0,TriBeCa/Civic Center,World Trade Center,Credit Card,6.5,0.0,10.8
+801421,1611217425,1611217621,1,0.5,Midtown Center,Midtown Center,Cash,4.0,0.0,7.3
+580956,1610725812,1610726714,1,2.2,Clinton East,Lenox Hill West,Credit Card,11.5,2.0,16.8
+941274,1611484802,1611486174,1,7.46,Upper East Side North,Seaport,Credit Card,25.0,4.0,32.3
+489651,1610554710,1610555092,1,0.71,Upper East Side North,East Harlem South,Cash,6.0,0.0,10.3
+1192971,1611943155,1611943389,1,0.8,East Harlem South,Manhattan Valley,Credit Card,5.0,1.02,7.82
+780029,1611160964,1611161558,1,1.05,Central Harlem,East Harlem North,Credit Card,8.0,1.96,11.76
+941500,1611482598,1611483388,1,3.2,UN/Turtle Bay South,Long Island City/Hunters Point,Credit Card,12.5,3.15,18.95
+890739,1611347555,1611347796,1,0.9,East Chelsea,Flatiron,Credit Card,5.0,1.76,10.56
+466942,1610523076,1610606385,2,1.59,Murray Hill,Midtown North,Cash,8.0,0.0,11.3
+473163,1610539455,1610540468,1,3.68,West Chelsea/Hudson Yards,Upper East Side South,Credit Card,14.0,3.46,20.76
+786075,1611163696,1611165070,1,5.39,Murray Hill,Astoria,Cash,19.5,0.0,23.8
+1091560,1611772642,1611773532,2,2.88,Upper East Side North,Garment District,Credit Card,12.5,2.0,18.8
+131148,1609843132,1609844813,1,4.5,SoHo,Upper East Side North,Credit Card,20.5,2.86,26.66
+1075812,1611752427,1611753237,2,2.0,Gramercy,East Chelsea,Credit Card,10.5,3.45,17.25
+588384,1610730323,1610731429,2,3.37,Midtown East,SoHo,Credit Card,14.5,3.76,22.56
+507258,1610610280,1610610912,1,1.7,Upper West Side North,Central Park,Credit Card,9.0,1.84,14.14
+1159935,1611907317,1611907821,1,1.36,Greenwich Village South,Lower East Side,Credit Card,8.0,3.0,14.3
+737785,1611075676,1611079150,1,11.69,Upper West Side North,Williamsbridge/Olinville,Cash,42.0,0.0,43.8
+1248319,1612090839,1612091163,1,1.23,Upper East Side North,Lenox Hill West,Credit Card,6.0,1.0,10.3
+156788,1609870915,1609871716,1,2.74,Stuy Town/Peter Cooper Village,Midtown Center,Credit Card,11.5,3.16,18.96
+1140000,1611855764,1611856529,1,2.8,Midtown North,Central Harlem,Cash,11.0,0.0,15.3
+1068595,1611748711,1611750026,1,5.2,Astoria,East Harlem North,Cash,19.5,0.0,22.8
+711915,1611048194,1611048350,1,0.7,East Harlem North,East Harlem South,Cash,4.0,0.0,4.8
+514413,1610620909,1610621763,1,2.5,Upper West Side North,Midtown Center,Credit Card,12.0,1.0,16.3
+152056,1609866240,1609866568,1,1.01,Upper West Side South,Upper East Side South,Credit Card,6.0,2.06,12.36
+33201,1609592736,1609593808,1,7.68,Midtown East,Brooklyn Heights,Credit Card,23.5,8.04,34.84
+72324,1609690364,1609690681,5,1.38,Upper East Side South,Upper East Side North,Credit Card,6.5,2.45,12.25
+470740,1610536261,1610537151,5,2.68,Greenwich Village South,Sutton Place/Turtle Bay North,Credit Card,12.0,3.06,18.36
+354639,1610291683,1610292164,2,1.3,Lenox Hill West,UN/Turtle Bay South,Cash,7.5,0.0,10.8
+1203128,1611957230,1611957367,1,0.35,Upper East Side South,Upper East Side South,Credit Card,3.5,1.46,8.76
+392199,1610374958,1610375777,1,2.13,Midtown Center,West Chelsea/Hudson Yards,Credit Card,10.5,2.76,16.56
+1071471,1611749508,1611749740,1,1.08,Upper West Side North,Upper West Side South,Cash,5.5,0.0,8.8
+182320,1609940712,1609941346,1,1.53,Central Park,Lenox Hill West,Credit Card,8.5,1.77,13.57
+235418,1610031884,1610032815,1,2.1,Upper East Side North,Midtown North,Credit Card,11.5,1.0,15.8
+270813,1610109833,1610110245,1,1.04,UN/Turtle Bay South,Gramercy,Credit Card,6.5,1.96,11.76
+795895,1611184565,1611184950,2,2.48,Kips Bay,Two Bridges/Seward Park,Cash,9.0,0.0,12.8
+1080917,1611763077,1611763876,1,1.8,Upper East Side North,Midtown East,Credit Card,10.5,2.75,16.55
+802867,1611215641,1611216236,6,0.99,Lenox Hill West,Midtown North,Credit Card,7.5,1.75,12.55
+1127816,1611843490,1611844481,1,2.3,Midtown Center,Upper East Side North,Credit Card,12.0,3.05,18.35
+396683,1610383041,1610383749,1,1.93,Flatiron,SoHo,Cash,9.5,0.0,13.8
+264827,1610103087,1610103326,3,0.6,Central Harlem,Manhattan Valley,No charge,-4.5,0.0,-5.3
+187625,1609941833,1609942489,1,1.95,Flatiron,East Chelsea,Credit Card,9.5,3.2,16.0
+479626,1610548858,1610549622,1,2.29,East Harlem South,Central Park,Credit Card,11.0,3.58,17.88
+210175,1609997841,1609998087,1,0.61,Clinton East,Clinton East,Cash,4.5,0.0,8.3
+668793,1610928370,1610928950,5,3.27,Upper East Side North,Penn Station/Madison Sq West,Credit Card,11.5,5.0,20.3
+1161952,1611913736,1611914414,3,3.93,Yorkville West,Murray Hill,Credit Card,13.5,2.0,18.8
+1270247,1612129361,1612130239,1,2.68,Upper East Side South,Stuy Town/Peter Cooper Village,Cash,12.0,0.0,15.8
+919285,1611414365,1611414371,0,2.0,East Williamsburg,East Williamsburg,No charge,2.5,0.0,5.8
+1086337,1611766746,1611766979,1,0.8,Times Sq/Theatre District,Clinton East,Credit Card,5.0,1.85,11.15
+77863,1609705505,1609706211,1,2.8,Gramercy,Lenox Hill West,Cash,11.5,0.0,15.3
+1078198,1611758609,1611759036,1,1.8,Battery Park City,Meatpacking/West Village West,Credit Card,8.0,2.25,13.55
+999433,1611596798,1611598247,1,3.9,Penn Station/Madison Sq West,Yorkville East,Credit Card,18.0,4.45,26.75
+456734,1610493853,1610494382,1,3.0,Yorkville West,Mott Haven/Port Morris,Cash,11.5,0.0,15.3
+145081,1609856223,1609857086,4,1.43,Central Harlem,NV,Cash,8.5,0.0,9.3
+1033156,1611671491,1611671854,5,0.69,Lenox Hill West,Upper East Side South,Cash,5.5,0.0,8.8
+203252,1609956841,1609958659,1,8.96,Midtown South,Washington Heights North,Cash,29.0,0.0,33.3
+235361,1610034549,1610036834,1,18.4,JFK Airport,Flatiron,Cash,52.0,0.0,61.42
+369969,1610349393,1610349860,1,1.26,Yorkville West,East Harlem South,Credit Card,7.0,0.0,10.3
+957454,1611509224,1611509641,1,2.74,Downtown Brooklyn/MetroTech,Williamsburg (South Side),Cash,10.0,0.0,10.8
+270046,1610109628,1610109966,1,0.84,Washington Heights South,Washington Heights South,Cash,5.5,0.0,6.3
+156853,1609870099,1609870350,1,0.6,Kips Bay,Midtown South,Credit Card,4.5,2.0,10.8
+161881,1609882236,1609883345,1,7.93,LaGuardia Airport,Greenpoint,Credit Card,23.5,7.44,32.24
+82656,1609745562,1609746152,1,2.9,Lower East Side,Garment District,Cash,10.5,0.0,13.8
+203741,1609960168,1609960543,1,1.3,Upper East Side North,Upper East Side South,Credit Card,7.0,2.26,13.56
+352640,1610289955,1610290353,1,0.84,Garment District,West Chelsea/Hudson Yards,Cash,6.0,0.0,6.8
+324416,1610208297,1610208631,1,1.54,Union Sq,Midtown North,Credit Card,7.0,1.0,11.3
+65134,1609685734,1609685954,1,0.7,Yorkville West,Upper East Side South,Credit Card,5.0,2.45,10.75
+136624,1609847906,1609848375,5,1.28,East Village,Kips Bay,Cash,7.0,0.0,10.3
+682969,1610977942,1610978538,1,1.28,Gramercy,Greenwich Village North,Cash,8.0,0.0,11.3
+997261,1611595361,1611595578,1,1.0,Sutton Place/Turtle Bay North,Murray Hill,Cash,5.0,0.0,9.3
+744887,1611084311,1611084532,1,0.9,SoHo,TriBeCa/Civic Center,Credit Card,5.0,1.85,11.15
+1186561,1611937901,1611938416,1,1.46,Lenox Hill East,Yorkville West,Credit Card,7.5,2.36,14.16
+520634,1610627445,1610628865,1,0.0,Upper East Side North,Hamilton Heights,Credit Card,20.2,0.0,21.0
+673647,1610967444,1610967543,1,0.64,Sutton Place/Turtle Bay North,Lenox Hill East,Credit Card,4.0,1.46,8.76
+424140,1610451105,1610452241,2,3.31,Manhattan Valley,Midtown Center,Cash,15.0,0.0,18.3
+708056,1611042911,1611043224,3,0.88,East Chelsea,West Village,Credit Card,5.5,2.64,11.44
+991375,1611587447,1611588610,1,2.8,Midtown Center,Central Park,Credit Card,14.0,3.45,20.75
+660641,1610906166,1610906405,1,1.01,Gramercy,Greenwich Village North,Credit Card,5.5,1.0,9.8
+1036979,1611674791,1611675451,1,1.64,Lenox Hill West,Upper East Side North,Credit Card,8.5,1.77,13.57
+1143902,1611859112,1611859713,0,2.5,Flatiron,Clinton West,Credit Card,10.0,2.85,17.15
+354807,1610293607,1610294071,1,1.82,Midtown North,East Chelsea,Credit Card,8.0,2.26,13.56
+5903,1609497229,1609499880,1,19.73,JFK Airport,Clinton East,Cash,52.0,0.0,55.3
+975178,1611569443,1611569800,1,0.5,Upper East Side South,Midtown East,Cash,6.5,0.0,9.8
+401045,1610385688,1610386084,6,1.08,East Village,Little Italy/NoLiTa,Credit Card,6.5,2.16,12.96
+577261,1610721652,1610721879,1,0.29,Yorkville East,Yorkville East,Credit Card,4.5,1.56,9.36
+606808,1610792335,1610792833,6,1.19,UN/Turtle Bay South,Clinton East,Cash,7.5,0.0,10.8
+696670,1610993231,1610993608,1,1.26,Midtown Center,Union Sq,Credit Card,6.5,2.16,12.96
+1015588,1611653421,1611654594,1,3.59,Upper West Side South,Murray Hill,Credit Card,15.5,3.76,22.56
+1197633,1611948723,1611949345,1,3.2,West Chelsea/Hudson Yards,Upper West Side North,Credit Card,11.0,3.05,18.35
+264931,1610102568,1610102841,1,1.0,Midtown East,Upper East Side North,Credit Card,5.5,2.2,11.0
+700209,1611002654,1611004557,2,6.15,Midtown East,TriBeCa/Civic Center,Cash,24.0,0.0,27.8
+557829,1610700960,1610701422,1,1.72,Lenox Hill West,Midtown South,Cash,8.0,0.0,11.3
+1098729,1611779251,1611779698,1,1.72,Midtown East,Union Sq,Credit Card,8.0,1.77,13.57
+1223757,1612018962,1612019436,1,1.67,Lincoln Square West,Upper West Side North,Credit Card,8.0,1.7,13.0
+1211627,1612001956,1612002319,0,1.5,Central Park,Upper East Side South,Credit Card,7.0,1.7,12.0
+504809,1610595442,1610596024,1,2.33,Lenox Hill West,Clinton West,Credit Card,10.0,2.0,15.8
+592141,1610736625,1610737444,1,1.29,Garment District,West Chelsea/Hudson Yards,Credit Card,10.0,0.72,15.02
+1161844,1611914241,1611915006,2,1.0,Midtown South,Kips Bay,Cash,9.0,0.0,12.3
+504833,1610599959,1610600593,4,2.71,Gramercy,Midtown North,Credit Card,10.5,2.0,16.3
+638492,1610840237,1610840350,1,0.36,Woodside,Sunnyside,Cash,3.5,0.0,4.8
+1041814,1611682510,1611683527,1,3.7,Greenwich Village North,Upper East Side North,Credit Card,15.0,3.85,23.15
+315625,1610199824,1610200758,1,3.12,Sutton Place/Turtle Bay North,Greenwich Village North,Credit Card,13.0,3.26,19.56
+91752,1609758521,1609758969,6,0.99,Midtown East,Midtown Center,Credit Card,7.0,1.0,11.3
+1102286,1611796123,1611796362,1,1.48,Flatiron,Times Sq/Theatre District,Credit Card,6.0,2.45,12.25
+79532,1609715586,1609718231,1,0.0,Springfield Gardens North,Mott Haven/Port Morris,Credit Card,40.2,0.0,47.12
+442268,1610470663,1610470983,2,1.4,Manhattan Valley,Upper West Side South,Credit Card,6.5,2.15,12.95
+446432,1610471161,1610471285,1,0.57,East Harlem South,Upper East Side North,Credit Card,4.0,1.0,9.3
+822380,1611238695,1611239098,1,1.1,Hudson Sq,Greenwich Village North,Credit Card,6.5,2.45,12.25
+42675,1609605116,1609605611,1,1.42,Times Sq/Theatre District,Lincoln Square West,Credit Card,7.5,2.16,12.96
+208005,1609969878,1609970605,2,3.61,East Village,Midtown North,Credit Card,12.5,3.26,19.56
+637579,1610836575,1610837087,2,1.96,Lenox Hill West,Upper West Side South,Credit Card,9.0,3.84,16.64
+116717,1609787323,1609787754,1,2.0,Sutton Place/Turtle Bay North,Stuy Town/Peter Cooper Village,Credit Card,8.0,2.2,14.5
+1142535,1611858659,1611859618,1,2.5,Upper East Side North,Lincoln Square West,No charge,12.5,0.0,16.8
+580065,1610724562,1610725116,1,1.74,Upper East Side North,Central Park,Credit Card,9.0,1.5,13.8
+353107,1610290771,1610291025,1,1.3,West Village,SoHo,Credit Card,6.0,2.3,11.6
+383800,1610369020,1610370050,1,5.87,NV,NV,Credit Card,19.5,10.0,32.8
+626536,1610819534,1610822062,1,17.12,Lenox Hill West,Saint Albans,Credit Card,50.5,10.76,64.56
+379367,1610362646,1610363035,1,0.86,Upper East Side South,Midtown Center,Credit Card,6.0,1.86,11.16
+1137826,1611857573,1611858497,1,2.51,Lenox Hill West,Upper West Side North,Credit Card,12.0,3.26,19.56
+269784,1610103794,1610104573,1,3.25,Yorkville East,Mott Haven/Port Morris,Cash,12.5,0.0,15.8
+123776,1609832986,1609833389,1,1.2,Penn Station/Madison Sq West,Kips Bay,Credit Card,7.0,1.0,11.3
+770437,1611148243,1611148718,1,1.1,Central Harlem,Manhattan Valley,Credit Card,7.0,1.2,9.0
+723212,1611062464,1611063073,3,1.15,Little Italy/NoLiTa,TriBeCa/Civic Center,Credit Card,8.0,2.26,13.56
+99461,1609765948,1609766743,1,1.9,Lenox Hill West,Midtown Center,Credit Card,10.5,2.75,16.55
+1166215,1611914753,1611916959,1,26.85,Auburndale,Madison,Credit Card,71.5,0.0,72.3
+145820,1609861439,1609861979,1,1.6,Flatiron,Murray Hill,Cash,8.5,0.0,11.8
+1319,1609462652,1609463322,1,2.11,Manhattan Valley,East Harlem South,Cash,10.0,0.0,11.3
+967209,1611561263,1611561832,1,1.84,Flatiron,Midtown Center,Credit Card,8.5,1.0,12.8
+1173635,1611923576,1611924257,1,2.16,Upper East Side North,Midtown Center,Credit Card,10.5,2.76,16.56
+318392,1610203002,1610203919,1,0.0,Richmond Hill,Baisley Park,Credit Card,19.78,0.0,20.58
+9831,1609507715,1609507790,1,0.4,Upper East Side North,Upper East Side North,Credit Card,3.5,1.0,7.8
+178382,1609932088,1609933352,1,4.5,Lincoln Square West,SoHo,Credit Card,16.5,3.95,23.75
+51931,1609619868,1609620730,1,1.2,East Chelsea,West Village,Cash,6.5,0.0,10.3
+311758,1610196058,1610197068,1,2.59,Sutton Place/Turtle Bay North,Lincoln Square West,Credit Card,13.0,1.5,17.8
+22502,1609538574,1609538870,1,0.99,Clinton East,Lincoln Square East,Credit Card,5.0,1.76,10.56
+245035,1610038947,1610039286,1,0.68,Penn Station/Madison Sq West,Union Sq,Credit Card,5.5,2.45,12.25
+14708,1609518063,1609518536,1,1.93,Yorkville East,Upper West Side North,Credit Card,8.5,2.36,14.16
+21449,1609537881,1609538737,1,2.0,Lenox Hill East,Lincoln Square East,Cash,11.0,0.0,14.8
+1064114,1611741831,1611742731,1,2.2,Times Sq/Theatre District,Upper East Side North,Credit Card,11.5,4.4,19.2
+197443,1609955073,1609955445,1,0.86,Midtown Center,Midtown East,Credit Card,6.0,2.06,12.36
+1196251,1611944484,1611945906,1,4.8,TriBeCa/Civic Center,Lenox Hill West,Credit Card,19.0,4.65,27.95
+1035429,1611676166,1611676359,1,0.59,Upper West Side South,Upper West Side South,No charge,-4.5,0.0,-7.8
+54227,1609628234,1609628279,1,0.3,Yorkville West,East Harlem South,Credit Card,3.0,0.68,7.48
+1063788,1611744985,1611745588,1,1.8,Upper East Side North,Lincoln Square East,Credit Card,9.0,1.0,13.3
+1254143,1612099538,1612099622,1,0.4,Upper West Side South,Upper West Side North,Cash,3.5,0.0,6.8
+1226134,1612021772,1612022154,1,0.9,Union Sq,Flatiron,Credit Card,6.0,1.85,11.15
+229081,1610027795,1610028105,1,0.7,Bloomingdale,Upper West Side North,Cash,5.5,0.0,6.3
+198600,1609954772,1609955621,2,2.52,Midtown Center,Upper West Side South,Credit Card,11.5,3.95,19.75
+99497,1609765411,1609765885,1,1.4,Yorkville West,Upper East Side South,Cash,7.5,0.0,10.8
+834203,1611248557,1611249218,1,1.47,Flatiron,UN/Turtle Bay South,Credit Card,9.0,3.99,17.29
+622579,1610815517,1610816116,1,1.5,Greenwich Village North,Little Italy/NoLiTa,Cash,8.0,0.0,11.3
+347618,1610280947,1610281472,1,2.02,Central Park,Lincoln Square East,Credit Card,9.0,2.46,14.76
+563829,1610706647,1610706880,1,0.5,Upper East Side North,Upper East Side North,Credit Card,4.5,1.56,9.36
+896497,1611360227,1611360528,1,1.32,Clinton West,East Chelsea,Cash,6.5,0.0,10.3
+876387,1611333243,1611333762,2,1.1,Morningside Heights,Upper West Side North,Credit Card,7.5,0.1,11.9
+363993,1610305742,1610306221,1,1.3,East Village,Greenwich Village South,Credit Card,7.5,1.0,11.8
+950853,1611499438,1611499896,2,1.7,Garment District,Midtown North,Cash,8.0,0.0,11.3
+56338,1609650016,1609650688,3,4.3,East Chelsea,Morningside Heights,Credit Card,13.5,3.46,20.76
+351243,1610284714,1610285954,1,9.65,LaGuardia Airport,Flatiron,Credit Card,28.0,5.0,42.42
+830214,1611248230,1611249323,1,3.4,Garment District,TriBeCa/Civic Center,Credit Card,14.5,1.0,19.8
+826775,1611244408,1611244716,1,0.9,East Harlem South,Central Harlem,Credit Card,5.5,3.0,9.3
+67191,1609684633,1609684892,1,0.6,Yorkville West,East Harlem South,Credit Card,5.0,0.83,9.13
+491259,1610558943,1610559491,1,1.5,Times Sq/Theatre District,Lenox Hill West,Credit Card,8.0,2.45,14.75
+111340,1609782490,1609783053,2,1.6,Midtown North,Murray Hill,Credit Card,8.0,3.65,15.95
+819800,1611239507,1611239880,1,1.11,Washington Heights South,Washington Heights North,Credit Card,6.5,1.46,8.76
+430161,1610459750,1610460675,1,2.6,Flatiron,Lenox Hill West,Credit Card,12.0,3.8,19.1
+518408,1610624051,1610624891,1,2.55,Murray Hill,Yorkville West,Credit Card,11.5,2.22,17.02
+136781,1609851572,1609851751,1,0.31,East Chelsea,East Chelsea,Cash,4.0,0.0,7.3
+655582,1610896424,1610897498,0,4.6,Upper West Side North,Washington Heights South,Credit Card,18.0,0.0,21.3
+816550,1611237212,1611237258,2,15.23,Baisley Park,Long Island City/Queens Plaza,Credit Card,58.0,8.74,67.04
+262788,1610097248,1610099634,1,6.2,Lenox Hill East,Lenox Hill East,Credit Card,27.0,6.05,36.35
+954196,1611507298,1611507793,6,1.54,Manhattan Valley,Upper West Side South,Credit Card,7.5,2.0,12.8
+1175214,1611928444,1611930717,2,8.23,Central Park,Maspeth,Cash,31.0,0.0,34.3
+350079,1610286786,1610286980,2,0.61,East Harlem South,East Harlem South,Cash,4.5,0.0,5.3
+1167384,1611916589,1611916973,1,1.75,Flatiron,TriBeCa/Civic Center,Credit Card,7.0,2.06,12.36
+931769,1611435194,1611435437,6,0.9,Lincoln Square East,Lincoln Square West,Credit Card,5.0,2.0,10.8
+789865,1611170878,1611171216,4,0.34,Boerum Hill,Downtown Brooklyn/MetroTech,Cash,4.0,0.0,5.8
+329525,1610213959,1610214193,1,0.49,East Harlem North,East Harlem North,Credit Card,4.5,1.06,6.36
+1092700,1611771065,1611771580,1,1.95,SoHo,Flatiron,Credit Card,8.5,2.56,15.36
+431334,1610459404,1610459575,1,0.63,Murray Hill,Midtown East,Credit Card,4.0,1.46,8.76
+1055350,1611732409,1611732894,1,1.9,Kips Bay,Lenox Hill East,Credit Card,8.5,1.0,12.8
+1126748,1611843103,1611843603,1,1.4,Gramercy,Sutton Place/Turtle Bay North,Cash,7.5,0.0,10.8
+300160,1610139958,1610140364,2,1.85,Clinton East,East Chelsea,Credit Card,7.5,2.26,13.56
+422006,1610448255,1610448576,1,1.01,Upper West Side North,Upper East Side North,Cash,6.0,0.0,9.3
+999775,1611596156,1611596603,1,1.4,Lenox Hill West,UN/Turtle Bay South,Credit Card,7.5,2.35,14.15
+755124,1611132516,1611132828,1,0.95,Union Sq,Midtown South,Credit Card,5.5,1.1,9.9
+901389,1611394324,1611394793,1,1.73,Hamilton Heights,Bloomingdale,Credit Card,8.0,1.76,10.56
+184537,1609939205,1609939859,0,2.1,Gramercy,Upper East Side South,Cash,10.0,0.0,13.3
+617777,1610806806,1610807174,1,1.09,Union Sq,Greenwich Village South,Credit Card,6.0,1.86,11.16
+891540,1611347310,1611347796,5,2.15,UN/Turtle Bay South,East Village,Credit Card,8.5,2.0,14.3
+678719,1610971970,1610973616,1,12.47,LaGuardia Airport,Springfield Gardens South,Credit Card,37.0,9.45,47.25
+74484,1609698883,1609699218,1,1.0,West Chelsea/Hudson Yards,Midtown South,Cash,6.0,0.0,9.3
+896279,1611357137,1611357844,1,2.7,Upper East Side North,Lincoln Square West,Cash,11.0,0.0,14.8
+1078140,1611756748,1611757483,1,1.54,Upper East Side North,East Harlem South,Credit Card,10.0,5.0,18.3
+773259,1611153310,1611153433,1,0.7,Yorkville West,East Harlem South,Credit Card,4.0,2.15,9.45
+1158908,1611909778,1611910450,4,1.91,Sutton Place/Turtle Bay North,Garment District,Cash,9.5,0.0,12.8
+255035,1610059102,1610060040,3,3.23,West Concourse,East Harlem South,Cash,13.5,0.0,14.8
+909750,1611408033,1611408765,1,1.79,Lenox Hill West,Midtown Center,Cash,10.0,0.0,13.3
+1112770,1611831022,1611831574,1,1.6,Penn Station/Madison Sq West,Clinton West,Cash,8.0,0.0,11.3
+1168581,1611920040,1611920156,1,0.51,UN/Turtle Bay South,Kips Bay,Credit Card,3.5,1.0,7.8
+980052,1611573784,1611574517,1,2.7,Murray Hill,Upper East Side North,Credit Card,11.0,0.0,14.3
+705972,1611040151,1611040421,1,0.8,Midtown East,Kips Bay,Credit Card,5.0,1.65,9.95
+883933,1611338770,1611339101,1,1.0,Murray Hill,Stuy Town/Peter Cooper Village,Credit Card,5.5,0.5,10.3
+56211,1609645273,1609646250,1,7.32,Times Sq/Theatre District,Washington Heights South,Cash,22.5,0.0,26.3
+554132,1610689254,1610689999,2,3.71,Midtown Center,Manhattan Valley,Credit Card,13.5,3.46,20.76
+89688,1609754771,1609755383,1,1.6,Midtown Center,Kips Bay,Cash,8.5,0.0,11.8
+468813,1610532331,1610533522,1,3.2,Yorkville West,Midtown South,Credit Card,14.5,1.5,19.3
+757548,1611135802,1611136670,1,2.86,Upper East Side North,Lincoln Square West,Credit Card,12.0,3.06,18.36
+649824,1610889375,1610889638,2,0.97,Upper East Side South,Upper East Side North,Credit Card,5.5,1.76,10.56
+147502,1609859086,1609861409,1,9.81,Hammels/Arverne,Hammels/Arverne,Credit Card,35.0,2.75,38.55
+502201,1610575019,1610575220,1,0.75,Lenox Hill East,Yorkville East,Credit Card,5.0,1.0,9.8
+865223,1611322226,1611323421,1,2.57,Greenwich Village South,Midtown South,Credit Card,14.5,3.56,21.36
+37306,1609600822,1609602088,1,5.15,Yorkville West,East Village,Cash,19.0,0.0,22.3
+661257,1610905592,1610906364,1,1.27,Murray Hill,Clinton East,Credit Card,52.0,12.28,73.7
+116930,1609786976,1609788018,1,7.0,Financial District South,Yorkville West,Credit Card,22.0,5.25,31.55
+81673,1609743113,1609745735,2,21.28,JFK Airport,East Harlem North,Credit Card,52.0,11.78,70.7
+412069,1610433228,1610433606,1,2.3,Yorkville West,UN/Turtle Bay South,Cash,8.0,0.0,11.3
+238358,1610033395,1610034150,2,2.73,Central Park,Yorkville East,Credit Card,11.5,1.3,16.1
+1221860,1612018382,1612018807,1,1.06,Manhattan Valley,Morningside Heights,Credit Card,6.5,1.82,9.12
+762157,1611136913,1611137715,3,2.24,Upper East Side South,Upper West Side South,Credit Card,11.0,2.86,17.16
+251972,1610053136,1610055048,1,9.3,Fort Greene,Elmhurst,Cash,32.0,0.0,33.3
+999549,1611594559,1611595632,1,3.58,NV,Upper East Side North,Credit Card,15.5,2.97,22.77
+472096,1610538435,1610539045,1,1.41,East Chelsea,UN/Turtle Bay South,Cash,8.5,0.0,11.8
+209900,1609983494,1609998780,1,3.6,Garment District,East Harlem South,Credit Card,13.0,1.0,17.8
+263086,1610098563,1610099442,1,4.79,Upper West Side North,Washington Heights South,Credit Card,17.0,4.06,24.36
+747545,1611087688,1611088267,1,0.0,UN/Turtle Bay South,Flatiron,Credit Card,9.2,0.0,10.0
+8594,1609504416,1609506030,1,17.5,Midtown North,JFK Airport,Cash,52.0,0.0,61.42
+334403,1610220191,1610221272,1,3.37,Greenwich Village North,Sutton Place/Turtle Bay North,Credit Card,13.5,4.2,21.0
+607697,1610794055,1610794888,1,4.53,Upper West Side South,Flatiron,Credit Card,15.5,1.88,20.68
+1217869,1612011867,1612012234,1,1.1,Clinton East,West Chelsea/Hudson Yards,Credit Card,6.0,1.0,10.3
+1259203,1612105740,1612106073,2,1.1,Lenox Hill West,Upper East Side North,Credit Card,6.0,1.85,11.15
+694896,1610989917,1610990374,1,1.71,Upper West Side South,Clinton East,Credit Card,8.0,2.26,13.56
+688396,1610983046,1610983531,1,1.4,Yorkville West,Lenox Hill East,Cash,7.5,0.0,10.8
+1217805,1612012077,1612012306,2,0.67,Financial District South,Battery Park City,Cash,4.5,0.0,7.8
+1125219,1611839643,1611840311,1,1.9,Garment District,Greenwich Village North,Credit Card,9.5,3.8,16.6
+141881,1609857540,1609857823,1,0.79,Yorkville East,Upper East Side North,Credit Card,5.5,1.76,10.56
+418036,1610444731,1610446239,6,9.24,Park Slope,Upper East Side South,Credit Card,29.0,3.5,35.8
+1226541,1612025786,1612026348,2,2.34,Upper West Side South,Clinton West,Cash,9.5,0.0,12.8
+642562,1610880733,1610881521,2,3.82,Upper East Side South,SoHo,Credit Card,13.0,3.26,19.56
+1219881,1612014700,1612014742,1,0.0,Queensbridge/Ravenswood,Queensbridge/Ravenswood,Credit Card,0.0,0.0,0.0
+112442,1609780068,1609780230,1,0.38,Yorkville West,Yorkville West,Cash,4.0,0.0,8.3
+312691,1610195719,1610196201,1,2.89,West Chelsea/Hudson Yards,Upper West Side North,Credit Card,10.0,1.7,15.0
+1126336,1611842582,1611842850,1,0.5,Union Sq,Kips Bay,Credit Card,5.0,1.0,9.3
+1233354,1612032054,1612032305,1,1.12,Upper West Side South,Manhattan Valley,Cash,5.5,0.0,8.8
+856129,1611311694,1611312592,1,2.74,Penn Station/Madison Sq West,East Village,Credit Card,12.0,3.06,18.36
+715802,1611055829,1611056529,1,1.6,Upper East Side South,Midtown Center,Credit Card,9.5,1.0,13.8
+575708,1610722349,1610722915,0,1.5,Midtown Center,Upper East Side North,Credit Card,8.5,2.35,14.15
+19110,1609524291,1609524440,2,0.2,Upper West Side South,Central Park,Credit Card,3.5,2.0,8.8
+715669,1611050578,1611050872,1,1.02,Midtown East,Clinton East,Credit Card,5.5,2.2,11.0
+85025,1609747389,1609748621,1,3.78,Manhattan Valley,Lenox Hill East,Credit Card,16.0,4.82,24.12
+1015112,1611650839,1611651138,1,1.1,Garment District,Midtown North,Credit Card,6.0,2.75,12.05
+437159,1610466717,1610467141,1,1.2,Upper West Side South,Upper East Side South,Credit Card,7.0,2.06,12.36
+768492,1611146983,1611147517,1,1.75,Upper East Side South,Kips Bay,Cash,8.0,0.0,11.3
+999301,1611594808,1611595076,1,0.7,Lincoln Square East,Clinton East,Credit Card,5.0,2.0,10.8
+1198269,1611949333,1611949753,1,1.0,East Village,Greenwich Village South,Cash,6.5,0.0,10.8
+1155539,1611903081,1611903899,2,4.79,Manhattan Valley,Washington Heights South,Credit Card,16.0,3.0,19.8
+327284,1610214799,1610215100,0,0.8,Central Harlem,Central Harlem,Cash,5.5,0.0,6.3
+357143,1610296678,1610296959,4,1.47,UN/Turtle Bay South,Lenox Hill West,Credit Card,6.0,1.86,11.16
+1234384,1612029935,1612030315,1,1.48,Lower East Side,Gramercy,Credit Card,7.0,2.06,12.36
+616718,1610808358,1610808819,1,1.64,Upper East Side North,Sutton Place/Turtle Bay North,Credit Card,8.0,1.13,12.43
+1007643,1611608598,1611608803,1,0.59,West Village,Greenwich Village South,Credit Card,4.5,2.08,10.38
+632999,1610825484,1610825961,1,1.01,Midtown East,UN/Turtle Bay South,Credit Card,7.0,2.06,12.36
+695305,1610992422,1610992427,1,1.8,Greenwich Village North,Greenwich Village North,Credit Card,2.5,20.0,25.8
+211416,1610006139,1610006570,1,1.08,Upper East Side South,Midtown North,Credit Card,6.5,2.94,12.74
+476013,1610544240,1610545633,1,5.0,Union Sq,Upper West Side North,Credit Card,20.0,3.5,26.8
+941889,1611489263,1611489434,1,0.6,Penn Station/Madison Sq West,Flatiron,Credit Card,4.0,2.15,9.45
+203405,1609960964,1609961334,1,1.07,Upper West Side South,Upper East Side South,Credit Card,5.5,2.94,12.74
+1252167,1612095339,1612095764,1,1.99,Sutton Place/Turtle Bay North,Central Park,Credit Card,8.0,1.7,13.0
+161914,1609881574,1609883149,2,17.03,JFK Airport,Bushwick South,Cash,46.0,0.0,47.3
+702684,1611012211,1611013116,1,5.71,Lenox Hill East,Central Harlem North,Cash,18.5,0.0,22.3
+54617,1609629638,1609629928,2,1.9,Yorkville West,Lenox Hill East,Credit Card,7.0,2.15,12.95
+586521,1610730974,1610732424,1,7.5,Morningside Heights,TriBeCa/Civic Center,Credit Card,25.0,5.27,34.57
+510366,1610612897,1610613395,1,1.4,NV,Upper East Side North,Cash,8.0,0.0,11.3
+15599,1609518408,1609518967,1,1.8,Upper West Side South,Yorkville East,Credit Card,9.0,2.46,14.76
+703019,1611013046,1611013746,1,3.6,East Harlem South,UN/Turtle Bay South,Cash,12.0,0.0,15.8
+60993,1609672308,1609672608,1,0.87,Lower East Side,Alphabet City,Credit Card,5.5,1.0,9.8
+1103369,1611814131,1611814748,1,2.54,Garment District,Lenox Hill East,Credit Card,10.0,3.99,17.29
+650651,1610889109,1610889636,1,1.98,Bloomingdale,Lincoln Square East,Credit Card,9.0,3.08,15.38
+1061405,1611739418,1611740281,2,1.63,Lincoln Square East,Upper East Side South,Cash,9.0,0.0,12.3
+344595,1610273967,1610274956,1,10.6,LaGuardia Airport,JFK Airport,Credit Card,47.5,9.55,57.35
+236222,1610032324,1610033045,1,1.8,Murray Hill,Union Sq,Credit Card,10.0,1.5,14.8
+593316,1610735907,1610736302,1,1.15,Lenox Hill West,Upper East Side North,Credit Card,6.5,1.62,12.42
+211870,1610005477,1610005987,1,1.4,Yorkville West,Upper East Side South,Credit Card,7.5,2.16,12.96
+554667,1610691588,1610691871,1,0.8,Penn Station/Madison Sq West,West Chelsea/Hudson Yards,Credit Card,5.0,2.49,10.79
+49166,1609616713,1609618219,1,4.71,Lincoln Square East,Central Harlem North,Credit Card,21.0,3.0,27.3
+556687,1610694481,1610694746,1,0.76,Midtown East,Kips Bay,Credit Card,5.0,1.66,9.96
+1215556,1612010219,1612010597,1,1.79,Upper West Side North,Clinton East,Credit Card,7.5,2.16,12.96
+1100567,1611784811,1611785031,1,0.9,Hudson Sq,West Village,Credit Card,5.0,1.0,9.8
+586530,1610731124,1610731766,2,1.4,Upper East Side South,Lincoln Square West,Credit Card,8.5,3.2,16.0
+1227478,1612024976,1612025512,1,4.11,Financial District North,Kips Bay,Credit Card,13.5,3.36,20.16
+814373,1611230446,1611230776,1,2.34,Lenox Hill East,UN/Turtle Bay South,Credit Card,8.5,2.36,14.16
+954357,1611505527,1611507120,1,14.08,JFK Airport,Sunnyside,Credit Card,39.5,8.06,48.36
+918313,1611417393,1611418234,3,3.06,Union Sq,Lincoln Square East,Credit Card,12.5,3.16,18.96
+1131664,1611847990,1611848541,2,1.48,Upper East Side North,Upper West Side South,Credit Card,8.0,5.0,16.3
+225673,1610023460,1610023933,1,1.1,Midtown Center,Upper East Side South,Credit Card,6.5,2.94,12.74
+709119,1611044669,1611045150,1,1.5,Upper East Side North,Upper East Side South,Cash,7.5,0.0,10.8
+1082377,1611761935,1611762203,1,0.82,Upper West Side South,Lincoln Square West,Credit Card,5.0,1.0,9.3
+387376,1610371564,1610371979,1,1.0,Murray Hill,Penn Station/Madison Sq West,Credit Card,6.5,1.0,10.8
+553600,1610671462,1610672588,1,5.97,Kips Bay,Jackson Heights,Credit Card,19.5,1.0,24.3
+180889,1609936824,1609937196,6,0.95,Yorkville East,Upper East Side North,Credit Card,6.0,1.86,11.16
+30787,1609589898,1609590284,1,1.2,Upper West Side South,Upper East Side North,Credit Card,6.5,1.95,11.75
+415518,1610439576,1610440259,1,1.96,Upper East Side North,Midtown Center,Credit Card,9.5,2.56,15.36
+632054,1610823762,1610823921,2,0.42,Upper East Side South,Upper East Side South,Credit Card,4.0,1.24,8.54
+140662,1609854048,1609854549,2,1.23,East Chelsea,Murray Hill,Cash,7.0,0.0,10.3
+460884,1610527730,1610528279,1,2.06,Lenox Hill East,Central Park,Cash,8.5,0.0,11.8
+1134706,1611850740,1611851992,1,3.0,Midtown North,Kips Bay,Credit Card,15.0,2.0,21.3
+901255,1611392805,1611393168,6,0.68,Penn Station/Madison Sq West,Midtown South,Credit Card,5.5,0.0,8.8
+1259028,1612108459,1612109775,1,16.2,JFK Airport,Schuylerville/Edgewater Park,Cash,44.0,0.0,50.92
+1112976,1611829857,1611829919,1,0.3,Sutton Place/Turtle Bay North,Lenox Hill East,Cash,3.0,0.0,6.3
+1039727,1611679616,1611680597,2,2.18,Lenox Hill East,Clinton East,Credit Card,12.0,2.0,18.3
+588047,1610730962,1610731904,1,1.6,Manhattan Valley,Central Harlem,Cash,11.0,0.0,12.8
+106795,1609776615,1609777426,1,3.2,Upper West Side North,Clinton West,Credit Card,13.0,2.0,19.3
+566873,1610710177,1610710688,1,2.2,Long Island City/Queens Plaza,Upper East Side South,Credit Card,9.5,3.8,16.6
+643460,1610877791,1610879649,1,17.27,LaGuardia Airport,Borough Park,Cash,48.5,0.0,49.3
+341747,1610265108,1610265778,2,3.96,East Harlem North,Clinton East,Cash,13.0,0.0,16.3
+375929,1610355721,1610356540,1,3.0,Yorkville West,Murray Hill,Cash,12.0,0.0,15.3
+484765,1610552884,1610553493,1,1.81,Upper East Side South,Garment District,Cash,9.0,0.0,12.3
+29474,1609591048,1609591597,1,1.37,Upper East Side North,Midtown North,Cash,8.0,0.0,11.3
+349003,1610284575,1610285891,1,5.52,Upper East Side South,Meatpacking/West Village West,Credit Card,20.0,4.66,27.96
+1158058,1611906969,1611907325,1,1.36,Midtown East,Penn Station/Madison Sq West,Credit Card,6.5,1.96,11.76
+178732,1609935651,1609936244,1,1.43,Lenox Hill West,Murray Hill,Credit Card,8.5,3.54,15.34
+164740,1609911113,1609911485,0,2.6,Gramercy,Lenox Hill East,Cash,9.0,0.0,12.8
+718861,1611057930,1611058405,3,1.4,Central Park,Upper West Side South,Credit Card,7.5,2.16,12.96
+853271,1611308884,1611309190,1,0.53,Upper East Side North,Lenox Hill West,Credit Card,5.0,1.66,9.96
+1022218,1611659512,1611660410,1,2.82,Upper West Side North,Upper East Side South,Credit Card,12.5,4.74,20.54
+860527,1611315085,1611315601,1,1.0,Penn Station/Madison Sq West,UN/Turtle Bay South,Cash,7.0,0.0,10.3
+1005882,1611607917,1611608610,3,3.35,SoHo,Sutton Place/Turtle Bay North,Dispute,-12.5,0.0,-16.3
+10590,1609509425,1609510298,1,2.61,Lincoln Square West,NV,Cash,12.0,0.0,15.3
+460355,1610522121,1610522743,1,2.8,Kips Bay,Yorkville West,Credit Card,10.5,2.76,16.56
+1265289,1612114832,1612115492,1,2.25,Midtown Center,Upper East Side North,Credit Card,10.0,2.66,15.96
+1104466,1611819414,1611820351,1,3.36,Fort Greene,Greenwich Village North,Credit Card,14.0,5.19,22.49
+1226842,1612022854,1612023771,1,2.64,Flatiron,Financial District North,Credit Card,12.0,0.0,15.3
+1085965,1611765490,1611766488,5,3.4,Lincoln Square East,Greenwich Village North,Cash,13.5,0.0,17.8
+323828,1610208902,1610210057,1,3.0,Midtown East,West Village,Credit Card,14.0,3.45,20.75
+624456,1610814563,1610814800,1,0.66,Gramercy,Greenwich Village North,Cash,4.5,0.0,7.8
+685796,1610979026,1610979422,1,1.2,Greenwich Village North,SoHo,Cash,6.5,0.0,9.8
+222191,1610017658,1610018022,1,0.9,Murray Hill,East Chelsea,Cash,6.0,0.0,9.3
+611976,1610798491,1610798819,1,1.24,Central Harlem,Upper West Side North,Credit Card,6.5,1.96,11.76
+332909,1610222217,1610223451,1,7.08,Lincoln Square East,Washington Heights North,Credit Card,22.5,6.45,32.25
+882410,1611336983,1611337363,2,1.02,Upper East Side South,Lenox Hill West,Credit Card,6.0,2.06,12.36
+536378,1610640314,1610640640,1,1.3,Kips Bay,Sutton Place/Turtle Bay North,Credit Card,6.0,2.05,12.35
+484997,1610553033,1610553679,3,2.0,Upper East Side South,East Harlem South,Cash,9.5,0.0,12.8
+1241093,1612044727,1612045276,1,1.6,West Village,Little Italy/NoLiTa,Credit Card,8.0,2.35,14.15
+642830,1610880387,1610880581,1,1.44,Central Park,Central Park,Credit Card,6.0,0.93,10.23
+657665,1610902119,1610902752,2,3.05,Upper East Side North,Union Sq,Cash,11.5,0.0,14.8
+1132367,1611847638,1611848387,1,2.86,Midtown South,Lincoln Square West,Credit Card,11.5,2.96,17.76
+217176,1610013183,1610013480,2,0.7,Upper East Side North,Upper East Side North,Cash,5.0,0.0,8.3
+227260,1610024350,1610025635,1,9.0,LaGuardia Airport,Gramercy,Credit Card,27.0,7.25,43.67
+528034,1610633738,1610635246,2,5.68,UN/Turtle Bay South,Steinway,Credit Card,20.5,4.26,25.56
+672034,1610961244,1610961641,1,3.2,Kips Bay,Two Bridges/Seward Park,Cash,10.5,0.0,13.8
+697045,1610994671,1610995414,1,2.42,Greenwich Village North,Battery Park City,Credit Card,10.5,2.76,16.56
+168134,1609923133,1609923812,1,2.03,Gramercy,Upper East Side South,Credit Card,10.0,2.66,15.96
+289699,1610127880,1610128827,1,0.0,Gramercy,Yorkville East,Credit Card,17.2,0.0,18.0
+1138119,1611855636,1611855841,1,0.6,Yorkville West,Upper East Side North,Credit Card,4.5,1.75,10.55
+1161080,1611907853,1611908413,1,2.31,Upper East Side North,Lincoln Square East,Credit Card,9.0,4.0,16.3
+898711,1611387669,1611388202,1,1.4,Penn Station/Madison Sq West,Gramercy,Credit Card,8.0,2.26,13.56
+565449,1610711632,1610712322,2,1.8,Midtown South,Clinton East,Credit Card,9.5,3.84,16.64
+413124,1610436397,1610436874,0,0.9,Garment District,Midtown East,Cash,7.0,0.0,10.3
+461783,1610528257,1610529371,1,6.08,Clinton East,Central Harlem,Credit Card,21.0,0.0,24.3
+51490,1609764120,1609764582,1,1.8,Midtown South,SoHo,Credit Card,8.0,2.36,14.16
+800024,1611214984,1611215391,1,1.28,Murray Hill,Midtown Center,Credit Card,6.5,1.96,11.76
+1229968,1612027339,1612027814,3,1.76,Upper West Side North,Upper East Side South,Credit Card,8.0,1.0,12.3
+357399,1610295619,1610297657,1,19.68,JFK Airport,Washington Heights South,Cash,52.0,0.0,58.92
+980482,1611575494,1611576194,1,2.25,Morningside Heights,Upper East Side North,Credit Card,10.5,3.45,17.25
+1005413,1611604040,1611606106,0,17.7,Garment District,Coney Island,Credit Card,49.5,2.0,55.8
+613574,1610802253,1610803014,1,2.34,Central Harlem,Manhattan Valley,Cash,11.0,0.0,11.8
+764231,1611142293,1611143924,1,4.86,Kips Bay,Brooklyn Navy Yard,Credit Card,21.0,4.86,29.16
+1255190,1612103864,1612105451,1,6.88,Manhattan Valley,SoHo,Credit Card,24.5,5.56,33.36
+316265,1610197703,1610198523,1,1.35,Meatpacking/West Village West,SoHo,Credit Card,9.5,2.56,15.36
+891997,1611347919,1611348560,1,1.9,Lenox Hill East,Times Sq/Theatre District,Credit Card,9.5,2.65,15.95
+390605,1610377035,1610377238,1,0.74,Yorkville West,Yorkville East,Credit Card,4.5,2.34,10.14
+1125244,1611842052,1611842475,1,1.95,UN/Turtle Bay South,Lenox Hill West,Cash,8.0,0.0,11.3
+95007,1609762795,1609763529,1,2.7,Manhattan Valley,Yorkville East,Credit Card,11.0,2.85,17.15
+602043,1610756048,1610758250,1,0.0,Union Sq,Woodlawn/Wakefield,Credit Card,40.2,0.0,41.0
+771901,1611152933,1611153637,1,2.69,Financial District North,Flatiron,Credit Card,11.0,2.86,17.16
+595301,1610737702,1610738048,2,0.97,NV,NV,Credit Card,6.0,2.06,12.36
+1185313,1611935331,1611935510,1,0.6,Midtown Center,Midtown South,Credit Card,4.5,0.0,7.8
+325663,1610211256,1610211698,1,1.6,Upper East Side South,Lincoln Square East,Credit Card,8.0,3.35,14.65
+131210,1609841009,1609841571,1,1.9,Gramercy,Upper East Side South,Credit Card,9.0,2.45,14.75
+244048,1610039155,1610039956,1,2.7,Midtown South,Lenox Hill East,Cash,12.0,0.0,16.3
+618979,1610808014,1610808586,1,1.65,Flatiron,Clinton East,Credit Card,8.5,1.18,12.98
+1045211,1611685167,1611685410,1,0.96,Upper East Side South,Upper East Side North,Credit Card,5.5,1.96,11.76
+1026872,1611663302,1611663930,5,0.8,Yorkville East,Lenox Hill East,Credit Card,8.0,2.26,13.56
+878963,1611331810,1611332471,1,1.8,Midtown East,Yorkville West,Credit Card,9.5,5.0,18.8
+1161742,1611914089,1611914806,2,1.61,Central Park,Lenox Hill East,Cash,9.5,0.0,12.8
+930010,1611429454,1611429649,5,0.71,Yorkville West,Upper East Side North,Credit Card,4.5,1.0,8.8
+122493,1609826447,1609826899,1,1.64,Penn Station/Madison Sq West,Midtown East,Cash,7.5,0.0,11.3
+1201848,1611953355,1611954389,1,4.8,Upper West Side South,Long Island City/Queens Plaza,Credit Card,17.0,3.0,23.8
+463382,1610531411,1610531725,1,1.1,Yorkville East,Lenox Hill East,Credit Card,6.0,1.86,11.16
+906435,1611406253,1611406623,1,0.9,Midtown East,Midtown South,Credit Card,6.0,1.0,10.3
+810577,1611228318,1611228810,1,1.65,Lincoln Square East,Upper West Side North,Cash,7.5,0.0,10.8
+1086721,1611765252,1611766029,1,2.0,Upper East Side North,Midtown North,Credit Card,10.5,2.22,17.02
+210581,1610002004,1610002315,1,1.0,UN/Turtle Bay South,Union Sq,Credit Card,6.0,1.5,10.8
+906042,1611400166,1611400654,2,1.64,Lenox Hill West,Midtown North,Credit Card,8.0,2.26,13.56
+751946,1611124554,1611124846,1,1.39,Yorkville West,Lenox Hill West,Credit Card,6.0,1.86,11.16
+822604,1611238429,1611238746,1,0.8,Lincoln Square East,Upper West Side South,Credit Card,5.5,1.0,9.8
+967902,1611558502,1611559164,2,4.29,Lenox Hill West,Two Bridges/Seward Park,Credit Card,15.0,2.0,20.3
+328038,1610212261,1610212829,1,3.67,Upper West Side North,Clinton West,Credit Card,12.5,1.0,16.8
+792402,1611174766,1611175928,1,5.54,Clinton East,Astoria,Cash,18.5,0.0,22.3
+366768,1610318458,1610318786,1,1.4,East Chelsea,East Chelsea,Cash,6.5,0.0,10.3
+1051920,1611695398,1611696365,2,9.91,JFK Airport,Forest Hills,Cash,28.0,0.0,29.3
+68810,1609686286,1609687097,1,3.73,Midtown Center,East Harlem North,Credit Card,13.0,3.26,19.56
+778283,1611155674,1611157306,1,7.6,Yorkville West,South Williamsburg,No charge,26.0,0.0,29.3
+957133,1611509126,1611509658,1,2.49,Lenox Hill West,Midtown South,Credit Card,9.5,2.56,15.36
+1127942,1611845836,1611847002,1,3.4,Hudson Sq,Upper East Side South,Credit Card,15.0,3.65,21.95
+158693,1609874180,1609874740,1,1.75,East Harlem South,Morningside Heights,Credit Card,8.5,3.09,13.39
+1142864,1611857996,1611858794,1,2.4,Clinton East,Lenox Hill East,Credit Card,11.0,3.06,18.36
+1134468,1611851820,1611852481,1,2.71,East Village,Sutton Place/Turtle Bay North,Credit Card,10.5,2.0,16.8
+1260964,1612110725,1612111277,1,1.6,Manhattan Valley,East Harlem South,Credit Card,8.5,0.7,11.0
+1228524,1612024897,1612026282,1,4.9,Meatpacking/West Village West,Upper East Side North,Credit Card,19.0,3.7,26.0
+862195,1611319661,1611320076,1,1.63,Lenox Hill East,East Harlem South,Credit Card,7.5,3.24,14.04
+702253,1611010370,1611010994,1,5.4,JFK Airport,South Jamaica,Cash,16.0,0.0,17.3
+854897,1611308052,1611309292,1,4.07,TriBeCa/Civic Center,Sutton Place/Turtle Bay North,Credit Card,16.0,3.86,23.16
+503694,1610575381,1610575897,1,1.61,Greenwich Village North,Murray Hill,Credit Card,8.0,1.77,13.57
+433529,1610460611,1610462127,1,6.6,East Harlem South,Meatpacking/West Village West,Credit Card,23.5,4.0,30.8
+491784,1610558239,1610559107,2,2.5,Upper West Side North,Upper East Side South,Credit Card,12.5,3.35,20.15
+662993,1610907339,1610908276,1,3.28,Upper East Side South,East Chelsea,Credit Card,13.0,3.26,19.56
+284262,1610125067,1610126904,1,15.8,JFK Airport,East Williamsburg,Credit Card,43.5,10.0,55.3
+754939,1611131673,1611132341,1,2.35,West Village,UN/Turtle Bay South,Credit Card,10.0,1.33,14.63
+807437,1611223566,1611224579,1,3.0,Greenwich Village South,Midtown North,Credit Card,13.5,4.2,21.0
+1100263,1611782409,1611782747,1,0.74,Central Park,Lenox Hill West,Credit Card,6.0,0.0,9.8
+1151820,1611870152,1611870558,1,1.61,Midtown East,Union Sq,Credit Card,7.5,1.7,13.0
+540377,1610643967,1610645015,1,5.26,Yorkville West,Two Bridges/Seward Park,Credit Card,18.5,5.2,28.0
+883753,1611340584,1611341305,2,2.93,Midtown North,Long Island City/Hunters Point,Credit Card,11.5,3.16,18.96
+116486,1609789701,1609790075,1,1.13,Midtown North,Lincoln Square West,Credit Card,6.5,1.2,12.0
+92221,1609758345,1609758510,1,0.4,World Trade Center,Financial District North,Credit Card,4.0,0.32,7.62
+981047,1611579202,1611579727,1,1.0,Union Sq,Kips Bay,Credit Card,7.0,2.58,12.88
+796319,1611189988,1611190456,1,1.2,West Village,TriBeCa/Civic Center,Cash,7.0,0.0,10.8
+513806,1610618568,1610619566,1,4.28,Lenox Hill West,Mott Haven/Port Morris,Credit Card,15.5,2.5,21.3
+769715,1611148108,1611148680,1,2.99,Lenox Hill East,Kips Bay,Credit Card,11.0,2.86,17.16
+678439,1610973571,1610974224,1,2.13,Gramercy,Upper East Side South,Credit Card,9.5,2.56,15.36
+849854,1611302627,1611303043,1,1.0,Upper East Side North,Upper West Side North,Credit Card,8.0,1.0,12.3
+379082,1610359403,1610359906,1,1.58,Greenwich Village North,Gramercy,Cash,7.5,0.0,10.8
+953008,1611502175,1611502422,1,0.7,Lincoln Square West,Upper West Side South,Credit Card,5.0,2.3,11.6
+881845,1611336020,1611336661,1,1.83,Yorkville West,Midtown North,Credit Card,9.0,1.5,14.8
+1112146,1611831543,1611832730,1,3.4,Midtown North,Manhattan Valley,Credit Card,16.0,3.85,23.15
+1053689,1611722211,1611723072,1,4.2,Manhattan Valley,UN/Turtle Bay South,Credit Card,15.0,5.6,24.4
+1196760,1611946005,1611946569,1,1.59,East Harlem South,Upper West Side North,Credit Card,8.5,2.56,15.36
+745762,1611083941,1611084208,1,0.96,Garment District,West Chelsea/Hudson Yards,Credit Card,5.5,1.47,11.27
+131446,1609843496,1609843810,1,0.6,Upper East Side South,Lenox Hill East,Cash,5.0,0.0,8.3
+1064284,1611744076,1611744790,1,2.0,East Chelsea,Gramercy,Cash,9.5,0.0,12.8
+875093,1611329901,1611330569,1,1.79,Sutton Place/Turtle Bay North,Garment District,Credit Card,9.0,3.08,15.38
+613450,1610803907,1610804494,1,3.06,East Chelsea,Upper West Side South,Credit Card,11.0,2.86,17.16
+400793,1610385038,1610385592,1,1.98,Central Park,Upper West Side North,Credit Card,9.0,2.0,15.3
+34602,1609597297,1609598813,1,9.5,LaGuardia Airport,Prospect Heights,Credit Card,29.0,5.96,35.76
+206879,1609965950,1609966179,1,1.1,Upper West Side North,Manhattan Valley,Credit Card,5.5,1.85,11.15
+1094904,1611775777,1611776697,1,3.4,Gramercy,Upper East Side North,Credit Card,14.0,4.55,22.85
+691463,1610985753,1610985904,1,1.08,NV,NV,Credit Card,5.0,1.86,11.16
+834872,1611251864,1611254172,1,18.12,JFK Airport,Fort Greene,Credit Card,52.0,8.07,61.87
+477215,1610544154,1610544318,1,0.6,East Chelsea,Flatiron,Credit Card,4.0,1.8,9.1
+945838,1611491568,1611492664,1,4.7,Flatiron,Bloomingdale,Credit Card,16.5,3.96,23.76
+360725,1610300559,1610300976,1,2.45,World Trade Center,Flatiron,Cash,9.0,0.0,12.3
+343295,1610270239,1610270577,1,0.85,Upper West Side South,Manhattan Valley,Cash,6.0,0.0,9.3
+1188962,1611938953,1611939489,1,1.44,UN/Turtle Bay South,Stuy Town/Peter Cooper Village,Cash,7.5,0.0,11.8
+1094491,1611773986,1611774926,2,3.8,Midtown South,Yorkville West,Credit Card,14.0,4.55,22.85
+900649,1611395117,1611395714,1,2.29,East Chelsea,TriBeCa/Civic Center,Credit Card,9.5,1.28,14.08
+466662,1610533898,1610534827,1,2.9,Kips Bay,Clinton East,Cash,12.5,0.0,15.8
+484071,1610550125,1610552046,1,5.53,East Chelsea,Central Harlem North,Credit Card,23.5,8.04,34.84
+757345,1611135590,1611136422,1,2.27,Murray Hill,Upper East Side North,Cash,11.0,0.0,14.3
+859137,1611316331,1611317585,1,2.67,Sutton Place/Turtle Bay North,East Harlem South,Cash,14.0,0.0,17.3
+612215,1610800583,1610801509,1,3.28,Midtown Center,SoHo,Credit Card,13.5,5.04,21.84
+301444,1610144238,1610144573,2,1.1,Times Sq/Theatre District,Clinton East,Credit Card,6.0,2.45,12.25
+744331,1611084435,1611084773,1,1.46,Yorkville East,Lenox Hill West,Cash,7.0,0.0,11.3
+283191,1610118181,1610119671,1,4.5,Washington Heights South,Lincoln Square West,Credit Card,20.0,1.7,25.0
+488211,1610556356,1610556620,2,1.0,Lenox Hill West,Upper East Side North,Credit Card,5.5,1.95,11.75
+423509,1610452598,1610452612,1,0.11,Murray Hill,Murray Hill,Cash,2.5,0.0,5.8
+129295,1609838277,1609838329,1,0.24,Manhattanville,Manhattanville,Credit Card,3.0,0.5,4.3
+761670,1611139242,1611140127,1,2.57,Midtown South,Lenox Hill West,Credit Card,12.0,1.0,16.3
+841066,1611257397,1611257713,1,1.4,Midtown South,Times Sq/Theatre District,Credit Card,6.5,0.0,10.8
+1127876,1611844069,1611844435,1,1.08,East Village,Lower East Side,Credit Card,6.0,2.0,11.3
+774320,1611153037,1611153576,1,1.9,Lincoln Square East,Lenox Hill West,Credit Card,8.0,1.7,13.0
+1203936,1611959409,1611960287,1,3.56,Union Sq,Upper West Side North,Credit Card,13.5,3.46,20.76
+401847,1610387086,1610387487,1,1.54,Upper East Side South,Midtown East,Credit Card,7.0,2.26,13.56
+1081932,1611760749,1611761007,1,0.97,Union Sq,West Village,Credit Card,5.0,1.66,9.96
+575387,1610719296,1610719583,2,1.07,Upper East Side South,Sutton Place/Turtle Bay North,Credit Card,5.5,2.2,11.0
+511717,1610616858,1610617591,2,2.11,Meatpacking/West Village West,World Trade Center,Credit Card,10.0,3.33,16.63
+357882,1610295462,1610297464,1,19.4,JFK Airport,Bay Ridge,Cash,52.0,0.0,52.8
+420927,1610447089,1610447674,1,1.95,Clinton West,Union Sq,Credit Card,8.5,2.95,14.75
+1230588,1612026958,1612027658,4,2.6,Upper East Side South,Manhattan Valley,Cash,10.5,0.0,13.8
+1260272,1612106840,1612107561,2,3.3,West Village,Clinton East,Credit Card,12.0,0.0,15.3
+481622,1610547294,1610547797,2,2.25,Kips Bay,Upper East Side South,Credit Card,9.0,1.0,13.3
+499301,1610565309,1610565821,1,1.91,Murray Hill,Lenox Hill West,Credit Card,8.5,2.56,15.36
+38227,1609600861,1609601187,1,0.57,Yorkville East,Upper East Side North,Cash,5.5,0.0,8.8
+249733,1610049401,1610049862,1,1.94,Upper West Side South,Bloomingdale,Cash,7.5,0.0,11.8
+1089111,1611767266,1611768094,2,3.76,SoHo,Clinton West,Credit Card,14.0,1.83,20.13
+528543,1610634571,1610634837,1,0.72,Lenox Hill West,Upper East Side South,Credit Card,5.0,1.66,9.96
+840053,1611258405,1611258702,1,1.74,Upper West Side South,Bloomingdale,Credit Card,6.5,4.0,14.8
+942116,1611488653,1611489752,1,4.38,Lenox Hill West,West Village,Credit Card,16.0,1.7,21.0
+876669,1611334670,1611334897,1,0.9,Upper East Side South,Midtown North,Credit Card,5.0,2.75,12.05
+489906,1610553683,1610555142,1,5.4,East Harlem South,Washington Heights South,Credit Card,19.5,4.26,25.56
+997393,1611594943,1611595622,1,2.21,Clinton East,Gramercy,Credit Card,10.0,2.14,16.44
+1035487,1611676483,1611677123,5,1.31,Lenox Hill East,Upper East Side South,Credit Card,8.5,3.54,15.34
+212589,1610004094,1610004426,1,1.2,Penn Station/Madison Sq West,Murray Hill,Cash,6.0,0.0,9.3
+990395,1611585943,1611588278,1,9.2,Penn Station/Madison Sq West,Gowanus,Cash,32.5,0.0,35.8
+1225910,1612021717,1612022446,1,2.0,Clinton East,Union Sq,Credit Card,10.0,2.66,15.96
+927488,1611427820,1611428224,1,1.5,Lincoln Square East,Upper West Side North,Credit Card,7.5,1.62,12.42
+149595,1609863347,1609863877,1,1.4,Lenox Hill East,Upper East Side South,Credit Card,8.0,2.45,14.75
+80488,1609876447,1609876773,1,2.25,UN/Turtle Bay South,Lenox Hill East,Credit Card,8.0,2.36,14.16
+1149544,1611865045,1611865415,1,0.83,West Village,East Chelsea,Credit Card,6.0,1.86,11.16
+999497,1611594606,1611594934,6,0.86,Midtown Center,Garment District,Cash,5.5,0.0,9.8
+776641,1611157925,1611158128,1,0.7,Lincoln Square West,Lincoln Square East,Credit Card,4.5,1.55,9.35
+890128,1611343730,1611344506,1,2.71,Upper West Side North,East Harlem North,Credit Card,11.5,3.95,19.75
+584334,1610729949,1610730196,1,0.5,Gramercy,Kips Bay,Credit Card,4.5,2.2,11.0
+1076990,1611759473,1611759944,3,1.27,Lenox Hill East,Upper East Side North,Credit Card,7.0,2.58,12.88
+1049895,1611691575,1611692124,1,2.96,Lenox Hill West,East Harlem South,Credit Card,10.5,1.75,16.05
+16988,1609520282,1609520960,1,2.13,Manhattan Valley,Upper East Side South,Credit Card,10.0,2.14,16.44
+558077,1610698077,1610698345,1,0.86,Central Harlem,East Harlem North,Credit Card,5.0,0.0,5.8
+1264758,1612114989,1612115445,1,1.1,Lincoln Square East,Upper East Side South,Credit Card,7.0,1.7,12.0
+527139,1610635996,1610636450,0,1.5,Murray Hill,Greenwich Village North,Cash,7.5,0.0,10.8
+633066,1610825466,1610826165,1,2.93,Upper West Side South,Clinton East,Credit Card,11.0,2.86,17.16
+187747,1609943589,1609943845,1,1.26,TriBeCa/Civic Center,Greenwich Village North,Credit Card,6.0,1.0,10.3
+1111131,1611828029,1611828526,5,1.51,Lincoln Square East,Upper East Side North,Credit Card,8.0,1.5,12.8
+533380,1610636725,1610637501,1,2.3,East Chelsea,Murray Hill,Cash,11.0,0.0,14.3
+570944,1610714433,1610716934,1,8.35,Murray Hill-Queens,Pelham Bay,Credit Card,34.5,2.75,56.41
+1026825,1611663219,1611663618,1,0.84,Sutton Place/Turtle Bay North,Lenox Hill West,Cash,6.0,0.0,9.3
+164344,1609899434,1609899958,1,2.45,UN/Turtle Bay South,Lower East Side,Cash,9.5,0.0,13.3
+244685,1610042218,1610042708,0,1.2,Murray Hill,Flatiron,Credit Card,7.5,2.0,13.8
+442356,1610470216,1610470780,1,1.3,Times Sq/Theatre District,West Chelsea/Hudson Yards,Credit Card,8.0,2.45,14.75
+798694,1611213773,1611214544,1,3.9,Central Harlem,Midtown Center,Credit Card,13.5,1.0,17.8
+270290,1610107620,1610108685,1,2.4,West Chelsea/Hudson Yards,Greenwich Village North,Cash,13.0,0.0,16.3
+775579,1611158010,1611159099,1,5.1,Upper West Side South,Stuy Town/Peter Cooper Village,Credit Card,18.0,5.3,26.6
+128139,1609840355,1609841136,1,1.54,Lenox Hill West,UN/Turtle Bay South,Credit Card,10.0,2.39,15.69
+829885,1611244900,1611247360,6,5.99,Lenox Hill East,Central Harlem North,Cash,26.0,0.0,30.3
+770612,1611150375,1611150795,1,0.96,Union Sq,Stuy Town/Peter Cooper Village,Credit Card,6.5,1.96,11.76
+625942,1610817146,1610817149,2,0.0,NV,NV,Credit Card,65.62,13.18,79.1
+148212,1609860408,1609861254,1,1.4,East Village,Two Bridges/Seward Park,Cash,10.0,0.0,13.3
+493688,1610558990,1610560097,1,5.5,Flatiron,Manhattan Valley,Credit Card,19.0,4.65,27.95
+532243,1610637030,1610637311,1,1.04,East Village,East Village,Credit Card,5.5,1.76,10.56
+692085,1610988046,1610988352,1,1.05,West Chelsea/Hudson Yards,Garment District,Credit Card,6.0,2.32,11.62
+474446,1610539658,1610539905,2,0.87,Upper West Side North,Bloomingdale,Credit Card,5.0,1.66,9.96
+1119417,1611837021,1611837649,1,0.92,Upper East Side North,Upper East Side South,Credit Card,8.0,2.26,13.56
+455745,1610489022,1610489795,1,3.17,Manhattan Valley,Clinton West,Credit Card,12.5,0.0,16.3
+130918,1609843312,1609844092,1,2.11,Lincoln Square East,Lenox Hill East,Credit Card,11.0,1.5,15.8
+137924,1609851480,1609852390,2,2.38,Midtown East,Upper West Side South,Cash,11.5,0.0,14.8
+48990,1609615400,1609616275,1,2.5,Clinton East,Lenox Hill East,Credit Card,11.5,3.0,17.8
+1191695,1611942105,1611942658,1,1.6,UN/Turtle Bay South,Greenwich Village North,Credit Card,8.0,2.45,14.75
+367234,1610316174,1610317270,2,6.84,LaGuardia Airport,Long Island City/Hunters Point,Credit Card,21.5,5.7,28.5
+181788,1609940789,1609941070,1,0.7,Battery Park City,TriBeCa/Civic Center,Credit Card,5.5,1.75,10.55
+644457,1610883171,1610883660,1,1.67,Union Sq,SoHo,Credit Card,8.0,2.26,13.56
+983671,1611578173,1611578814,1,1.75,Central Park,Upper East Side North,Credit Card,9.5,1.0,13.8
+958525,1611510349,1611510629,1,0.7,Lenox Hill West,Lenox Hill West,Credit Card,5.0,1.65,9.95
+442870,1610469706,1610470047,1,0.88,Upper West Side North,Upper West Side South,Credit Card,6.0,2.06,12.36
+519372,1610624083,1610625721,1,8.01,Upper East Side South,Brooklyn Heights,Cash,28.0,0.0,31.3
+285044,1610124999,1610125075,1,0.42,Clinton East,Lincoln Square East,Credit Card,3.5,0.7,8.5
+1157396,1611905796,1611905993,1,0.8,Midtown South,Penn Station/Madison Sq West,Cash,5.0,0.0,8.3
+964187,1611527131,1611527346,1,0.7,Murray Hill,UN/Turtle Bay South,Credit Card,4.5,1.65,9.95
+480738,1610547971,1610548414,1,1.2,East Village,Gramercy,Credit Card,6.5,2.9,12.7
+921968,1611418884,1611418997,4,0.4,Midtown South,Midtown Center,Credit Card,3.5,0.0,7.8
+452091,1610480121,1610480392,1,0.7,Manhattan Valley,Upper West Side North,Credit Card,5.5,0.5,10.3
+445886,1610473168,1610473578,1,1.03,Upper West Side South,Clinton East,Credit Card,6.5,1.0,11.8
+303321,1610161795,1610162052,1,1.0,Penn Station/Madison Sq West,Clinton East,Cash,5.5,0.0,9.3
+1031187,1611669881,1611671898,2,7.47,Upper East Side South,Washington Heights South,Credit Card,29.0,8.08,40.38
+674958,1610966549,1610967017,1,1.38,Upper East Side South,Upper East Side North,Cash,7.5,0.0,10.8
+1152226,1611868235,1611868793,5,2.11,Midtown North,Yorkville East,Credit Card,9.0,2.56,15.36
+996894,1611590268,1611592611,3,6.1,Upper East Side North,Mount Hope,Cash,26.5,0.0,30.8
+1100026,1611782404,1611782543,0,0.7,Times Sq/Theatre District,Penn Station/Madison Sq West,Credit Card,4.0,1.55,9.35
+421380,1610449123,1610449503,1,1.3,Kips Bay,East Village,Credit Card,6.5,1.96,11.76
+384785,1610367485,1610368201,5,2.18,Midtown South,Lenox Hill East,Credit Card,10.0,2.66,15.96
+737133,1611073581,1611073829,1,0.5,Upper East Side North,Upper East Side North,Credit Card,4.5,1.32,10.12
+404693,1610389531,1610390691,1,4.95,Upper East Side North,Meatpacking/West Village West,Credit Card,17.5,3.0,24.8
+558893,1610698395,1610699506,5,3.76,Lincoln Square East,Kips Bay,Cash,15.5,0.0,18.8
+359867,1610298760,1610299336,1,1.39,Midtown Center,Clinton West,Credit Card,8.0,2.83,14.13
+345429,1610278948,1610279325,1,1.72,Kips Bay,Midtown East,Cash,7.5,0.0,10.8
+409572,1610398606,1610399026,3,1.5,Upper East Side South,Lincoln Square East,Credit Card,7.5,2.26,13.56
+4407,1609486102,1609486364,1,1.0,Upper East Side North,East Harlem South,Credit Card,5.5,1.7,10.5
+807182,1611224167,1611225693,1,2.7,Gramercy,Lenox Hill East,Cash,17.0,0.0,20.3
+495571,1610564182,1610564483,1,0.7,Flatiron,Union Sq,Cash,5.0,0.0,9.3
+699404,1610999704,1610999911,1,0.45,NV,NV,Credit Card,4.0,1.46,8.76
+264836,1610099834,1610100188,1,0.92,Central Park,East Harlem South,Credit Card,6.0,1.0,7.8
+185720,1609942176,1609942961,1,1.2,Upper East Side North,Upper East Side South,Credit Card,9.0,1.23,13.53
+297160,1610137388,1610138443,1,4.9,Upper East Side South,Manhattanville,Credit Card,16.5,2.0,22.3
+823742,1611238468,1611238760,2,0.8,Astoria,Long Island City/Queens Plaza,Cash,5.5,0.0,6.3
+942420,1611488771,1611489269,3,1.8,East Chelsea,Lincoln Square East,Cash,7.5,0.0,10.8
+141585,1609856309,1609858807,1,3.96,Upper East Side North,Yorkville West,Cash,24.5,0.0,27.8
+640550,1610869373,1610870079,1,6.61,East Williamsburg,Jackson Heights,Credit Card,19.5,2.0,22.3
+935553,1611443580,1611444862,1,6.12,Chinatown,East Williamsburg,Credit Card,21.0,6.2,31.0
+295415,1610134539,1610135176,1,2.12,Garment District,West Village,Credit Card,9.5,2.76,16.56
+55688,1609634082,1609634787,1,1.93,East Harlem North,Bloomingdale,Cash,10.0,0.0,11.3
+370470,1610348666,1610348911,3,1.33,East Harlem South,East Harlem North,Credit Card,6.0,1.36,8.16
+385612,1610369696,1610370196,1,1.27,Lincoln Square East,Upper East Side South,Credit Card,7.5,2.16,12.96
+702658,1611014237,1611014755,1,2.6,East Harlem North,Upper West Side North,Cash,9.5,0.0,13.3
+427194,1610455721,1610456551,2,1.8,East Harlem North,Manhattan Valley,Credit Card,10.0,1.0,11.8
+171526,1609924111,1609924415,1,1.25,Long Island City/Queens Plaza,Astoria,Cash,6.0,0.0,6.8
+89221,1609755392,1609756046,5,2.27,SoHo,Midtown South,Cash,10.0,0.0,13.3
+353233,1610288839,1610289440,1,1.53,Yorkville West,Central Park,Credit Card,8.5,2.36,14.16
+1165084,1611915220,1611915565,1,0.58,Hudson Sq,Meatpacking/West Village West,Credit Card,5.5,2.2,11.0
+161927,1609883645,1609883714,1,0.5,Upper West Side North,Central Park,Cash,3.5,0.0,4.8
+1267289,1612116409,1612117000,1,2.4,Union Sq,Central Park,Credit Card,10.0,2.65,15.95
+455002,1610487062,1610487286,1,0.65,Greenwich Village South,Greenwich Village North,Credit Card,4.5,2.49,10.79
+1174178,1611922575,1611923611,1,3.4,Lenox Hill East,Long Island City/Hunters Point,Credit Card,14.5,4.45,22.25
+712608,1611048070,1611049105,1,2.37,Murray Hill,Lincoln Square East,Cash,12.5,0.0,15.8
+576245,1610719300,1610720190,1,2.65,Midtown East,Hudson Sq,Credit Card,12.0,10.0,25.3
+1009342,1611623425,1611624088,1,7.05,Midtown North,Washington Heights North,Credit Card,20.5,4.86,29.16
+803244,1611221176,1611221763,1,1.9,Manhattan Valley,Lincoln Square East,Credit Card,9.0,1.7,14.0
+2517,1609468351,1609468725,1,2.08,Upper East Side South,East Harlem North,Credit Card,8.0,2.95,14.75
+196191,1609950562,1609951197,3,1.59,Central Park,Sutton Place/Turtle Bay North,Credit Card,9.0,2.66,15.96
+299594,1610141733,1610142116,1,2.23,Lenox Hill West,Gramercy,Cash,8.0,0.0,11.8
+1158404,1611909623,1611910068,1,1.1,Lincoln Square East,Times Sq/Theatre District,Credit Card,7.0,2.05,12.35
+744162,1611079443,1611079837,6,1.52,Lower East Side,Kips Bay,Credit Card,7.0,1.0,12.3
+255997,1610066994,1610067329,1,1.67,Lincoln Square East,West Chelsea/Hudson Yards,Credit Card,7.0,2.7,13.5
+1041838,1611680549,1611680986,1,1.43,Midtown South,Greenwich Village North,Credit Card,7.0,2.26,13.56
+440754,1610445676,1610447068,1,4.23,Upper East Side North,Greenwich Village North,Credit Card,17.5,1.0,22.8
+102976,1609771772,1609771989,1,0.64,Sutton Place/Turtle Bay North,Midtown Center,Cash,4.5,0.0,7.8
+138584,1609852167,1609852419,6,0.53,Upper East Side South,Midtown East,Credit Card,4.5,1.17,8.97
+1113725,1611829784,1611830683,1,3.1,Gramercy,Upper East Side North,Credit Card,12.5,0.2,16.0
+159105,1609875039,1609875517,1,2.67,Union Sq,Lincoln Square East,Credit Card,9.5,2.25,16.05
+832902,1611251255,1611251722,1,0.9,Upper West Side South,Lincoln Square West,Credit Card,7.0,2.0,13.3
+808279,1611223455,1611223793,1,1.2,Upper East Side South,Murray Hill,Credit Card,6.5,0.98,10.78
+949983,1611500085,1611500356,3,0.66,Upper West Side South,Upper West Side South,Credit Card,5.0,1.66,9.96
+966355,1611557975,1611558454,1,2.1,Flatiron,Midtown Center,Credit Card,8.5,2.36,14.16
+113732,1609786175,1609786540,1,1.29,Upper East Side South,Murray Hill,Credit Card,6.5,0.0,10.8
+473241,1610541543,1610542337,1,1.36,Lenox Hill East,Upper East Side North,Credit Card,9.0,2.46,14.76
+1195458,1611945725,1611947794,2,6.19,Union Sq,Bedford,Credit Card,25.5,5.96,35.76
+628753,1610821783,1610822130,1,1.3,Manhattan Valley,Upper West Side South,Credit Card,6.5,1.69,11.49
+382284,1610365689,1610366094,4,1.64,Sutton Place/Turtle Bay North,Yorkville East,Credit Card,7.0,2.58,12.88
+42416,1609605334,1609605469,1,0.47,Morningside Heights,Morningside Heights,Credit Card,4.0,1.2,6.0
+149059,1609864661,1609865118,2,1.26,Greenwich Village South,TriBeCa/Civic Center,Cash,7.0,0.0,11.3
+676917,1610967944,1610968196,1,1.28,NV,NV,Credit Card,5.5,2.2,11.0
+394088,1610379576,1610380424,1,2.55,Lenox Hill East,Lincoln Square West,Credit Card,11.5,2.96,17.76
+601026,1610748608,1610749159,1,2.5,Upper East Side South,Penn Station/Madison Sq West,Credit Card,9.5,3.95,17.25
+518532,1610623456,1610624762,2,3.49,Garment District,Manhattan Valley,Cash,16.0,0.0,19.3
+222121,1610017347,1610017862,1,1.62,Upper East Side North,Lenox Hill West,Credit Card,8.0,2.26,13.56
+952084,1611503583,1611504351,1,3.13,Union Sq,Lincoln Square East,Credit Card,12.0,3.06,18.36
+940874,1611483487,1611483797,1,1.01,East Harlem North,East Harlem North,Cash,5.5,0.0,6.3
+392539,1610377574,1610377792,1,0.72,Flatiron,East Chelsea,Cash,5.0,0.0,8.3
+217295,1610011124,1610011534,1,1.64,Murray Hill,Greenwich Village North,Cash,7.5,0.0,10.8
+771074,1611148361,1611148570,1,0.53,Yorkville West,Upper East Side North,Credit Card,4.0,1.1,8.4
+259320,1610094264,1610095007,1,2.13,East Chelsea,Midtown Center,Credit Card,10.5,2.76,16.56
+42892,1609603937,1609604265,1,1.12,UN/Turtle Bay South,Lenox Hill East,Cash,6.0,0.0,9.3
+222764,1610019273,1610019674,1,2.02,UN/Turtle Bay South,Lenox Hill East,Credit Card,8.0,2.26,13.56
+677074,1610967649,1610967877,1,0.95,Midtown East,Lenox Hill West,Cash,5.0,0.0,8.3
+558461,1610699443,1610699991,1,2.18,Midtown East,Greenwich Village South,Credit Card,9.0,3.69,15.99
+427337,1610454029,1610454654,1,2.17,East Chelsea,Lincoln Square West,Cash,9.5,0.0,12.8
+498780,1610565321,1610566133,1,3.11,Midtown South,Lincoln Square West,Cash,12.0,0.0,16.3
+52599,1609624204,1609624650,1,1.3,Clinton East,Flatiron,Cash,7.0,0.0,10.8
+523991,1610630875,1610632972,1,19.4,JFK Airport,South Williamsburg,Cash,52.0,0.0,52.8
+540682,1610645080,1610646696,1,10.92,LaGuardia Airport,Midtown North,Cash,-32.5,0.0,-42.92
+733861,1611074068,1611074969,1,3.43,Midtown North,Central Harlem,Credit Card,13.0,3.46,20.76
+656270,1610895855,1610896546,1,2.5,NV,Upper East Side South,Credit Card,10.5,1.5,15.3
+265863,1610100694,1610101074,1,0.6,Gramercy,Stuy Town/Peter Cooper Village,Credit Card,6.0,2.2,11.5
+571269,1610715142,1610715349,5,1.37,East Harlem North,East Harlem South,Cash,5.5,0.0,6.3
+213537,1610008266,1610008616,1,1.4,Upper East Side South,Midtown South,Credit Card,6.5,1.0,10.8
+311976,1610195373,1610195869,1,1.2,Sunnyside,Sunnyside,Dispute,7.5,0.0,8.3
+187412,1609942688,1609943850,2,4.23,Upper West Side South,Greenwich Village North,Credit Card,16.5,4.95,24.75
+1236694,1612036421,1612036880,2,1.95,Clinton East,East Chelsea,Credit Card,8.0,2.26,13.56
+1226076,1612020178,1612020635,1,1.26,Murray Hill,Greenwich Village North,Credit Card,7.0,2.06,12.36
+1082313,1611760788,1611761519,1,1.68,Kips Bay,Garment District,Credit Card,9.5,2.56,15.36
+1000277,1611594014,1611594249,3,0.51,Midtown East,Sutton Place/Turtle Bay North,Credit Card,5.0,1.86,11.16
+286147,1610123892,1610124490,1,3.01,Clinton West,Manhattan Valley,Cash,11.0,0.0,15.3
+351023,1610285163,1610285521,1,1.5,Midtown East,Garment District,Credit Card,6.5,1.0,10.8
+1169158,1611918511,1611920352,1,8.25,East Village,Central Harlem,Credit Card,28.0,3.13,34.43
+747104,1611089800,1611090413,1,1.7,Gramercy,East Chelsea,Cash,9.0,0.0,12.8
+295143,1610133683,1610133750,3,0.26,East Harlem North,East Harlem North,Cash,3.0,0.0,4.8
+1037508,1611674796,1611675360,4,1.12,Midtown Center,UN/Turtle Bay South,Cash,7.0,0.0,10.3
+1244094,1612078636,1612079829,1,10.79,Kips Bay,Parkchester,Credit Card,31.0,0.0,34.3
+72250,1609695666,1609697691,1,20.99,JFK Airport,Financial District South,Credit Card,52.0,11.06,66.36
+1205933,1611969187,1611969437,1,0.71,Midtown East,Clinton East,Cash,5.0,0.0,8.8
+1249224,1612093669,1612094372,1,3.5,Yorkville East,Murray Hill,Credit Card,12.5,2.0,17.8
+845820,1611270207,1611272028,0,15.7,JFK Airport,Sunnyside,Credit Card,45.5,4.68,51.48
+143503,1609857400,1609858363,2,2.27,Times Sq/Theatre District,Lenox Hill East,Credit Card,12.0,3.06,18.36
+1047996,1611688098,1611688512,1,0.9,Midtown North,Sutton Place/Turtle Bay North,Credit Card,6.0,2.05,12.35
+1083793,1611765712,1611766151,1,1.0,Bloomingdale,Upper West Side North,Credit Card,6.5,0.0,8.3
+1042670,1611682802,1611683616,1,2.84,Midtown Center,Greenwich Village North,Credit Card,12.0,3.26,19.56
+763258,1611141983,1611142323,1,1.2,Upper West Side North,East Harlem South,Credit Card,6.5,1.45,8.75
+935985,1611443467,1611443918,1,1.34,East Village,Midtown South,Credit Card,7.5,1.0,12.3
+238485,1610036475,1610036666,1,0.0,Long Island City/Hunters Point,Long Island City/Hunters Point,Cash,4.0,0.0,5.8
+1118115,1611834184,1611834609,1,1.14,Gramercy,Greenwich Village South,Credit Card,6.5,1.96,11.76
+832703,1611251462,1611251768,1,0.68,Upper West Side South,Lincoln Square West,Credit Card,5.5,1.47,11.27
+231015,1610024998,1610025336,1,1.0,Midtown Center,Sutton Place/Turtle Bay North,Credit Card,6.0,1.86,11.16
+643270,1610879563,1610879737,1,0.6,Manhattan Valley,Upper West Side North,Credit Card,4.0,1.46,8.76
+954978,1611506699,1611506900,1,0.8,Lenox Hill West,Upper East Side North,Credit Card,4.5,1.0,9.8
+1142741,1611859218,1611860584,1,6.43,Upper West Side North,TriBeCa/Civic Center,Credit Card,22.0,6.58,32.88
+273618,1610111869,1610112057,2,0.58,Times Sq/Theatre District,Midtown Center,Cash,4.5,0.0,7.8
+512172,1610617786,1610618083,1,0.86,UN/Turtle Bay South,Murray Hill,Credit Card,5.5,1.76,10.56
+296715,1610133665,1610134584,1,2.86,Midtown South,Lenox Hill West,Credit Card,12.5,3.36,20.16
+380100,1610364275,1610365031,0,1.6,Upper East Side South,Kips Bay,Credit Card,9.5,2.55,15.35
+549445,1610653108,1610653972,1,4.59,East Harlem North,Washington Heights South,Credit Card,16.0,5.19,22.49
+998415,1611596082,1611596390,1,1.3,TriBeCa/Civic Center,Meatpacking/West Village West,Credit Card,6.5,2.15,12.95
+1151361,1611861818,1611863095,1,11.15,Financial District North,Central Harlem North,Credit Card,31.5,4.7,40.0
+216618,1610010426,1610011465,1,2.68,Upper West Side North,Lenox Hill East,Credit Card,13.0,3.26,19.56
+60300,1609671505,1609672030,1,2.16,Little Italy/NoLiTa,Kips Bay,Credit Card,9.0,2.46,14.76
+69233,1609687827,1609688925,1,0.0,Central Harlem North,University Heights/Morris Heights,Credit Card,19.2,0.0,20.0
+818986,1611235082,1611235519,1,0.87,Upper East Side North,Upper East Side South,Credit Card,6.5,1.96,11.76
+696801,1610995195,1610995379,1,0.6,Upper West Side South,Upper West Side North,Credit Card,4.5,1.56,9.36
+354024,1610292853,1610293407,1,1.89,Upper East Side North,UN/Turtle Bay South,Cash,9.0,0.0,12.3
+679103,1610972253,1610973103,1,2.91,Lincoln Square West,Yorkville East,Credit Card,12.5,3.16,18.96
+1267281,1612119500,1612120039,1,1.64,Yorkville West,Upper West Side North,Credit Card,8.5,3.54,15.34
+324316,1610210748,1610211351,1,1.55,Upper West Side South,Upper East Side North,Credit Card,9.0,2.46,14.76
+312093,1610196558,1610197188,1,3.0,Midtown East,East Harlem South,Credit Card,11.0,4.25,18.55
+258022,1610090667,1610091043,1,1.99,Upper West Side North,Midtown North,Credit Card,8.0,3.39,14.69
+1020164,1611655674,1611656423,1,1.6,Lenox Hill East,Midtown East,Credit Card,9.5,3.8,16.6
+672224,1610963171,1610963648,1,2.1,Upper East Side North,Midtown East,Cash,8.5,0.0,11.8
+1213275,1612007337,1612007393,1,0.16,Woodside,Woodside,Cash,3.0,0.0,3.8
+674480,1610966236,1610966946,1,2.8,Clinton East,Meatpacking/West Village West,Credit Card,11.5,2.8,17.6
+206140,1609964773,1609965243,1,1.17,Upper East Side North,Upper East Side South,Credit Card,7.5,1.0,12.3
+1132077,1611848775,1611849028,1,0.8,Upper West Side South,Upper West Side North,Credit Card,5.0,1.5,9.8
+753305,1611127680,1611128111,1,1.42,East Harlem South,Central Harlem,Cash,7.5,0.0,8.3
+381441,1610364873,1610365634,1,1.22,Yorkville East,Lenox Hill East,Cash,9.5,0.0,12.8
+989779,1611586734,1611588071,6,3.49,Upper East Side North,Central Harlem North,Cash,16.5,0.0,19.8
+1054246,1611729080,1611729424,2,1.18,Penn Station/Madison Sq West,Murray Hill,Cash,6.0,0.0,9.3
+618138,1610805916,1610806276,1,1.54,Hudson Sq,Flatiron,Cash,7.0,0.0,10.3
+1193572,1611941525,1611941687,1,0.47,Murray Hill,Murray Hill,Credit Card,4.0,0.7,9.0
+1146925,1611863305,1611863556,1,1.16,Upper West Side North,East Harlem South,Dispute,-5.5,0.0,-7.3
+7525,1609502073,1609502343,1,1.08,Clinton East,Sutton Place/Turtle Bay North,Cash,5.5,0.0,8.8
+907507,1611406463,1611406778,1,1.4,Sutton Place/Turtle Bay North,Kips Bay,Credit Card,6.0,0.93,10.23
+831668,1611249061,1611250362,1,4.17,Hudson Sq,Upper East Side South,Cash,16.5,0.0,20.8
+972647,1611568248,1611568828,1,2.28,Sutton Place/Turtle Bay North,Yorkville West,Credit Card,9.5,2.56,15.36
+49353,1609617012,1609619677,1,13.9,Clinton East,Richmond Hill,Credit Card,44.5,1.0,48.8
+487457,1610555353,1610555570,1,0.5,Lenox Hill West,Lenox Hill East,Credit Card,4.5,2.2,11.0
+766117,1611147580,1611148191,1,1.9,Manhattan Valley,Central Park,Cash,9.0,0.0,12.3
+339739,1610235056,1610235615,1,4.48,Kips Bay,Williamsburg (South Side),Cash,14.0,0.0,17.8
+1099956,1611782488,1611782947,1,1.47,Manhattan Valley,Central Harlem,Credit Card,7.5,2.64,11.44
+626557,1610818704,1610819740,1,3.6,SoHo,Kips Bay,Credit Card,15.0,3.65,21.95
+603418,1610777104,1610777494,1,3.0,Lenox Hill West,Long Island City/Queens Plaza,Cash,10.0,0.0,13.3
+527797,1610635589,1610636394,1,1.7,Upper West Side South,Midtown North,Cash,10.5,0.0,13.8
+409442,1610401639,1610401916,1,0.92,Penn Station/Madison Sq West,Murray Hill,Credit Card,5.0,1.76,10.56
+159556,1609874997,1609875444,1,1.46,Midtown North,Penn Station/Madison Sq West,Credit Card,7.0,2.26,13.56
+938912,1611477886,1611478669,1,3.48,Midtown East,West Village,Cash,12.0,0.0,15.3
+597209,1610741356,1610742152,1,2.4,Greenwich Village South,East Chelsea,Cash,11.0,0.0,14.8
+343536,1610274278,1610275701,1,6.79,Lincoln Square East,Middle Village,Cash,23.0,0.0,26.3
+320893,1610205234,1610205584,1,1.95,Lincoln Square East,Manhattan Valley,Credit Card,7.5,2.7,13.5
+543852,1610648006,1610648531,1,1.29,Murray Hill,West Chelsea/Hudson Yards,Credit Card,7.5,1.5,13.3
+318756,1610203678,1610204191,1,1.17,Murray Hill,Union Sq,Credit Card,7.5,2.16,12.96
+363409,1610307127,1610307962,6,1.93,Lenox Hill East,Central Park,Cash,11.0,0.0,14.3
+1125647,1611843959,1611844874,1,2.1,UN/Turtle Bay South,Greenwich Village North,Cash,11.5,0.0,14.8
+825840,1611243308,1611243999,5,1.72,Greenwich Village South,West Chelsea/Hudson Yards,Credit Card,9.0,2.46,14.76
+575735,1610719628,1610719882,1,0.66,Penn Station/Madison Sq West,Midtown South,Credit Card,4.5,1.56,9.36
+653399,1610894700,1610896814,6,11.72,LaGuardia Airport,Crown Heights North,Credit Card,36.0,7.36,44.16
+1118600,1611837291,1611838041,1,2.6,Greenwich Village North,Sutton Place/Turtle Bay North,Cash,11.0,0.0,14.3
+1246466,1612088430,1612088905,1,1.24,Upper East Side North,Lenox Hill East,Cash,7.0,0.0,10.3
+1006951,1611608942,1611609666,1,2.83,Penn Station/Madison Sq West,Little Italy/NoLiTa,Cash,11.5,0.0,15.3
+117412,1609793174,1609793567,4,1.48,Upper West Side North,Upper West Side South,Credit Card,7.0,1.0,11.8
+1182042,1611935618,1611935869,0,0.7,Union Sq,West Village,Credit Card,5.0,1.65,9.95
+218490,1610017042,1610017219,1,0.4,Lincoln Square West,Upper West Side South,Cash,4.0,0.0,7.3
+253508,1610056705,1610057064,1,1.8,Yorkville West,Sutton Place/Turtle Bay North,Credit Card,7.5,2.25,13.55
+829207,1611248062,1611248786,2,2.6,West Chelsea/Hudson Yards,SoHo,Credit Card,11.0,1.0,16.3
+52652,1609622535,1609623011,1,1.25,Upper East Side South,Midtown North,Credit Card,7.0,3.24,14.04
+380575,1610365151,1610365426,1,1.0,Clinton East,Garment District,Credit Card,5.5,2.2,11.0
+1171077,1611923478,1611924916,1,9.75,Upper East Side North,Fort Greene,Credit Card,30.0,1.0,34.3
+850412,1611304683,1611305300,1,0.94,Yorkville East,Upper East Side North,Cash,7.5,0.0,10.8
+1128825,1611845284,1611845487,1,0.37,Upper East Side North,Upper East Side North,Cash,4.0,0.0,7.3
+705841,1611042570,1611043026,2,1.6,West Village,West Chelsea/Hudson Yards,Credit Card,8.0,2.8,14.1
+864084,1611320105,1611320500,1,0.79,Chinatown,World Trade Center,Cash,6.0,0.0,9.3
+479290,1610548033,1610548556,1,2.8,Murray Hill,Lower East Side,Cash,10.5,0.0,13.8
+20462,1609531510,1609532674,1,4.8,Kips Bay,Roosevelt Island,Credit Card,16.0,4.8,24.1
+238014,1610034418,1610034698,1,0.68,Times Sq/Theatre District,Lincoln Square East,Credit Card,5.0,1.66,9.96
+1089631,1611767101,1611767116,1,0.0,East Village,East Village,No charge,-2.5,0.0,-6.8
+743855,1611079461,1611080015,1,2.1,Upper West Side South,Central Harlem,Cash,9.0,0.0,13.3
+711536,1611049291,1611049530,1,0.5,Union Sq,Midtown South,Credit Card,4.5,1.55,9.35
+704684,1611039410,1611039766,1,0.9,Murray Hill,Penn Station/Madison Sq West,Credit Card,6.0,0.0,9.3
+449652,1610475927,1610476568,1,2.28,Upper East Side South,Penn Station/Madison Sq West,Credit Card,10.0,2.0,16.3
+1103149,1611814465,1611815161,1,3.1,Garment District,Upper East Side North,Cash,12.0,0.0,15.3
+211966,1610005498,1610006313,5,4.0,Clinton East,East Harlem North,Credit Card,14.0,5.19,22.49
+216117,1610010059,1610010699,2,2.42,Penn Station/Madison Sq West,Upper East Side South,Cash,10.0,0.0,13.3
+1231383,1612027958,1612028384,1,1.21,Lincoln Square West,Clinton East,Cash,6.5,0.0,9.8
+652372,1610894986,1610896025,1,5.2,Upper West Side North,Washington Heights South,Credit Card,18.5,6.5,28.3
+224202,1610018423,1610019252,1,3.25,East Harlem South,Midtown Center,Credit Card,13.5,3.36,20.16
+466817,1610533093,1610533388,1,1.09,West Chelsea/Hudson Yards,Clinton East,Credit Card,5.5,1.76,10.56
+627807,1610816743,1610817405,1,2.09,Midtown Center,Greenwich Village North,Credit Card,9.5,2.56,15.36
+211505,1610004639,1610004944,1,1.61,East Village,Midtown South,Credit Card,6.5,1.96,11.76
+943558,1611486080,1611486310,1,0.94,Upper East Side North,Central Park,Credit Card,5.0,1.0,9.3
+480110,1610546861,1610547389,1,1.8,Upper West Side South,Manhattan Valley,Credit Card,8.5,2.35,14.15
+578009,1610722081,1610722587,2,1.1,East Village,Little Italy/NoLiTa,Cash,7.5,0.0,10.8
+75007,1609699186,1609699536,2,2.87,Kips Bay,Two Bridges/Seward Park,Cash,10.0,0.0,13.3
+832238,1611251900,1611252807,1,2.8,Midtown South,Upper West Side South,Credit Card,12.5,3.36,20.16
+864623,1611320941,1611321243,1,0.8,UN/Turtle Bay South,Midtown Center,Credit Card,5.5,0.75,9.55
+288720,1610126165,1610126725,1,1.3,Midtown East,Midtown South,Credit Card,7.5,0.0,11.8
+750276,1611097636,1611098036,1,2.0,Lincoln Square East,UN/Turtle Bay South,Credit Card,8.0,2.35,14.15
+262105,1610096410,1610096682,1,0.8,Murray Hill,Midtown Center,Cash,5.0,0.0,8.3
+274717,1610110919,1610111940,1,1.7,Lincoln Square East,Lenox Hill West,Credit Card,12.0,2.7,18.0
+624464,1610813786,1610814545,1,4.61,LaGuardia Airport,Queensboro Hill,Cash,15.0,0.0,15.8
+185960,1609942515,1609942642,1,0.31,Midtown East,Midtown East,Credit Card,3.5,2.0,8.8
+715444,1611051861,1611051986,1,0.5,Midtown Center,Midtown South,Credit Card,4.0,1.45,8.75
+812871,1611230967,1611233830,2,17.76,JFK Airport,Clinton East,Credit Card,52.0,0.0,61.42
+938671,1611476505,1611476511,1,0.0,Upper West Side South,Upper West Side South,Cash,2.5,0.0,5.8
+600205,1610748271,1610748620,1,0.88,Manhattanville,Central Harlem,Credit Card,5.5,1.36,8.16
+631915,1610827215,1610828444,6,4.53,Clinton East,Lower East Side,Credit Card,16.5,3.96,23.76
+1025447,1611664153,1611664806,2,1.5,East Chelsea,Kips Bay,Credit Card,9.0,0.0,12.3
+936273,1611447038,1611448618,1,16.3,JFK Airport,East Williamsburg,Credit Card,45.0,9.25,55.55
+704092,1611037938,1611038211,1,0.87,Yorkville East,Upper East Side North,Cash,5.5,0.0,8.8
+1119365,1611838420,1611839469,1,3.19,Upper East Side South,East Village,Cash,13.5,0.0,16.8
+1231861,1612028559,1612029023,1,1.59,Yorkville West,Central Park,Credit Card,7.5,2.16,12.96
+373787,1610354577,1610355129,1,1.41,Lincoln Square East,Midtown Center,Credit Card,8.0,1.2,12.5
+759472,1611134589,1611135068,1,1.55,Yorkville West,NV,Credit Card,7.5,2.16,12.96
+957872,1611510122,1611510412,3,1.23,Kips Bay,Sutton Place/Turtle Bay North,Credit Card,5.5,2.64,11.44
+1242306,1612053775,1612054291,1,2.5,Times Sq/Theatre District,Gramercy,Credit Card,9.5,1.0,14.3
+1117090,1611835089,1611835553,1,1.1,East Chelsea,Midtown Center,Credit Card,7.0,1.03,11.33
+757581,1611136573,1611137038,2,1.08,Penn Station/Madison Sq West,Murray Hill,Credit Card,6.5,4.0,13.8
+503710,1610574886,1610575207,1,1.57,Murray Hill,Flatiron,Credit Card,6.5,2.06,12.36
+1239379,1612041628,1612041844,1,1.14,SoHo,Flatiron,Credit Card,5.5,0.55,9.85
+885483,1611341184,1611341776,1,1.5,Battery Park City,SoHo,Credit Card,8.5,3.2,16.0
+901295,1611393857,1611394634,1,2.68,East Village,Penn Station/Madison Sq West,Credit Card,11.5,1.0,15.8
+1050874,1611694576,1611695081,1,1.49,Greenwich Village North,Little Italy/NoLiTa,Credit Card,7.5,2.26,13.56
+166867,1609919952,1609920604,1,5.46,JFK Airport,Springfield Gardens South,Cash,16.0,0.0,16.8
+548513,1610654618,1610654720,1,0.7,Central Park,Lincoln Square East,Credit Card,4.0,1.56,9.36
+298189,1610136085,1610136797,1,3.3,Penn Station/Madison Sq West,Upper West Side South,Cash,12.5,0.0,16.3
+441805,1610467385,1610468013,1,2.19,Little Italy/NoLiTa,Midtown South,Credit Card,9.5,1.38,15.18
+597966,1610742766,1610743379,1,1.6,Midtown South,East Village,Credit Card,9.0,2.55,15.35
+44755,1609609418,1609609796,1,1.2,Greenwich Village North,East Chelsea,Credit Card,6.5,2.9,12.7
+1035376,1611676230,1611677063,2,2.19,Yorkville West,Upper West Side North,Credit Card,11.0,2.86,17.16
+161978,1609883289,1609884149,2,3.0,Sutton Place/Turtle Bay North,East Chelsea,Credit Card,13.0,2.52,19.32
+282936,1610119698,1610119915,1,1.24,Upper East Side North,East Harlem South,Credit Card,5.5,1.76,10.56
+749198,1611094012,1611094588,1,1.89,Penn Station/Madison Sq West,Kips Bay,Credit Card,9.0,1.5,14.3
+212288,1610003936,1610004956,1,7.58,JFK Airport,Kew Gardens Hills,Credit Card,22.5,4.66,27.96
+673765,1610965334,1610965651,1,1.31,Midtown Center,Garment District,Credit Card,6.0,2.79,12.09
+1253472,1612101144,1612101441,1,1.0,East Chelsea,Midtown South,Cash,5.5,0.0,8.8
+717757,1611056808,1611057758,1,2.1,Upper West Side South,Yorkville East,Credit Card,12.0,4.55,19.85
+498297,1610567154,1610568424,0,4.9,Central Park,Hamilton Heights,Credit Card,18.0,4.45,26.75
+121762,1609825077,1609825948,1,6.75,JFK Airport,NA,Cash,22.5,0.0,23.8
+275887,1610111549,1610111927,1,0.6,Upper East Side South,Upper East Side North,Credit Card,6.0,1.0,10.3
+566158,1610708520,1610708683,1,0.56,Murray Hill,Murray Hill,Credit Card,4.5,1.0,8.8
+358223,1610295648,1610295972,1,1.15,Van Cortlandt Village,Van Cortlandt Village,Cash,6.0,0.0,6.8
+121232,1609809281,1609810211,1,10.71,JFK Airport,Hillcrest/Pomonok,Credit Card,29.5,6.16,36.96
+823048,1611239947,1611239962,1,0.01,Central Park,Central Park,Cash,52.0,0.0,55.3
+452479,1610478945,1610479125,5,1.22,Midtown East,Lenox Hill West,Credit Card,5.5,1.96,11.76
+502084,1610572832,1610573043,1,0.8,West Village,TriBeCa/Civic Center,Credit Card,5.0,1.75,10.55
+20083,1609527737,1609528804,1,7.91,LaGuardia Airport,East Concourse/Concourse Village,Credit Card,24.0,6.18,37.1
+1207811,1611993912,1611994540,1,2.3,Clinton East,Upper East Side South,Credit Card,9.5,2.55,15.35
+138610,1609854147,1609855769,1,3.9,Midtown East,East Harlem South,Credit Card,19.0,5.55,27.85
+229737,1610024711,1610025001,3,0.57,Sutton Place/Turtle Bay North,Upper East Side South,Credit Card,5.0,1.66,9.96
+897261,1611364537,1611364889,1,1.81,Lenox Hill East,East Harlem South,Cash,7.0,0.0,10.8
+630761,1610820617,1610820800,1,0.5,Lenox Hill East,Sutton Place/Turtle Bay North,Credit Card,4.0,1.82,9.12
+35459,1609597441,1609598328,1,3.5,Upper West Side North,Midtown East,Credit Card,13.5,5.0,21.8
+602600,1610759741,1610760193,1,1.5,East Chelsea,Greenwich Village South,Cash,7.0,0.0,10.8
+580542,1610724854,1610725083,2,0.9,Upper West Side North,Bloomingdale,Credit Card,5.0,1.65,9.95
+796851,1611203138,1611203852,1,2.11,Kips Bay,West Chelsea/Hudson Yards,Cash,10.5,0.0,14.3
+988569,1611586466,1611586979,4,1.33,Upper East Side North,Lenox Hill East,Credit Card,7.5,1.0,11.8
+257764,1610090339,1610090485,1,0.5,Penn Station/Madison Sq West,Flatiron,Credit Card,4.0,1.46,8.76
+588696,1610731917,1610732714,5,2.93,Midtown Center,Little Italy/NoLiTa,Credit Card,12.0,2.93,19.23
+1207793,1611994872,1611995090,1,0.75,Sutton Place/Turtle Bay North,Midtown East,Credit Card,5.0,2.49,10.79
+88366,1609753537,1609753848,1,1.9,Seaport,Downtown Brooklyn/MetroTech,Credit Card,7.5,3.24,14.04
+52377,1609623240,1609624066,1,2.3,Murray Hill,UN/Turtle Bay South,Credit Card,11.5,1.53,16.83
+1012854,1611649411,1611649612,1,0.6,Murray Hill,Midtown East,Credit Card,4.5,1.55,9.35
+1233490,1612030982,1612031402,1,1.2,Gramercy,UN/Turtle Bay South,Credit Card,7.0,1.03,11.33
+205521,1609960316,1609960771,1,2.03,Kips Bay,Lenox Hill West,Credit Card,8.0,2.46,14.76
+575748,1610719902,1610720425,1,1.3,Upper West Side North,Morningside Heights,Credit Card,7.5,4.0,12.3
+456717,1610492479,1610492992,1,3.05,Gramercy,Upper East Side North,Credit Card,10.0,2.76,16.56
+1184448,1611933814,1611934487,1,1.41,East Harlem South,Yorkville East,Credit Card,8.5,2.36,14.16
+664933,1610914749,1610915617,1,5.0,Kips Bay,East Harlem North,Credit Card,16.0,5.9,25.7
+1174269,1611923291,1611924263,1,2.94,Yorkville West,Central Harlem North,Cash,13.0,0.0,16.3
+891387,1611346964,1611347493,1,1.54,Upper West Side South,Manhattan Valley,Cash,6.0,0.0,9.8
+817331,1611236036,1611236252,6,0.48,Penn Station/Madison Sq West,Clinton East,Cash,4.5,0.0,7.8
+788729,1611166975,1611167482,2,1.26,Upper East Side South,Yorkville East,Credit Card,7.5,2.36,14.16
+92997,1609759128,1609760306,1,3.1,Times Sq/Theatre District,Manhattan Valley,Cash,15.0,0.0,18.3
+738542,1611079265,1611079856,1,1.69,Upper East Side South,Midtown Center,Credit Card,9.0,2.66,15.96
+345207,1610279636,1610280608,1,4.41,Greenwich Village North,Upper East Side North,Credit Card,15.0,3.66,21.96
+274157,1610113134,1610113451,1,0.95,Lincoln Square West,Upper West Side South,Credit Card,6.0,1.86,11.16
+10358,1609509454,1609510372,1,3.2,Gramercy,Lincoln Square East,Credit Card,13.0,1.5,17.8
+919806,1611417768,1611418023,1,0.57,Lenox Hill East,Yorkville West,Credit Card,5.0,1.24,9.54
+980093,1611573160,1611573844,2,1.74,Yorkville West,Upper West Side South,Cash,9.5,0.0,12.8
+798243,1611214377,1611215291,3,4.05,Upper East Side North,Union Sq,Credit Card,14.5,3.56,21.36
+1113435,1611831294,1611831839,3,1.4,TriBeCa/Civic Center,Greenwich Village South,Credit Card,7.5,2.16,12.96
