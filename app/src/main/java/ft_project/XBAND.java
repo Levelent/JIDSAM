@@ -70,6 +70,7 @@ public class XBAND extends Castle {
             }
         }
         System.out.print('\n');
+        aveInfoLoss = (float) Constants.infoLossSum / Constants.tOutCount;
 
     }
 

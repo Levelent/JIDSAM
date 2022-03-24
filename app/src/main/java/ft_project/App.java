@@ -2,8 +2,8 @@ package ft_project;
 
 public class App {
 
-    static String dataFolder = "./src/main/resources/2/";
-    static String dataName = "taxi-100.csv";
+    static String dataFolder = "./src/main/resources/1/";
+    static String dataName = "adult-10000.csv";
 
     /**
      * App main function
@@ -25,7 +25,7 @@ public class App {
 
         // create data stream
         Constants.streamSize = 10000;
-        InStream dataStream = new InStream("./app/src/main/resources/1/adult-10000.csv");
+        InStream dataStream = new InStream("./src/main/resources/1/adult-10000.csv");
 
         // create data out stream
         OutStream outputStream = new OutStream("output.txt");
@@ -66,6 +66,9 @@ public class App {
                         beta = Integer.parseInt(arg);
                     }
                     break;
+                case "compare":
+                    compare();
+                    break;
 
                 case "-c":
 
@@ -99,9 +102,6 @@ public class App {
 
                             castle = new XBAND(dataStream, k, delta, beta, omega, expirationBand);
                             break;
-                        case "compare":
-                            compare();
-                            break;
                         default:
                             // run normal castle
 
@@ -113,7 +113,7 @@ public class App {
         }
 
         // set DGHs and output stream
-        castle.setDGHs(new DGHReader("./app/src/main/resources/1/dgh.txt").DGHs);
+        castle.setDGHs(new DGHReader("./src/main/resources/1/dgh.txt").DGHs);
 
         castle.setOutputStream(outputStream);
 
@@ -129,8 +129,8 @@ public class App {
      * Helper function to run all comparison tasks
      */
     public static void compare() {
-
-        String dataSet = "./src/main/resources/adult-1000.csv";
+        Constants.streamSize = 10000;
+        String dataSet = "./src/main/resources/1/adult-10000.csv";
         varyK(dataSet);
         varyDelta(dataSet);
     }
@@ -236,7 +236,7 @@ public class App {
      * @param dataSet to use for running tests
      */
     public static void varyDelta(String dataSet) {
-        String[] versions = { "castle", "castlel", "bcastle", "FADS", "FADSl" };
+        String[] versions = { "castle", "castlel", "bcastle", "FADS", "FADSl", "XBAND" };
 
         // create comparison output
         OutStream compareOutStream = new OutStream("compare-delta.csv");
@@ -253,6 +253,8 @@ public class App {
                 // predefine thresholds/constants
                 int k = 10;
                 int beta = 2;
+                int omega = 100; // TODO refine this
+                int expirationBand = 5;// Gamma
 
                 // l diversity thresholds/constants
                 int l = 2;
@@ -287,6 +289,11 @@ public class App {
                         Constants.variant = "FADSL";
                         castle = new FADSL(dataStream, k, delta, beta, l, a_s);
                         break;
+                    case "XBAND":
+                        Constants.variant = "XBAND";
+                        castle = new XBAND(dataStream, k, delta, beta, omega, expirationBand);
+                        break;
+
                     default:
                         // run normal castle
                         castle = new Castle(dataStream, k, delta, beta);
