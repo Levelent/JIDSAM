@@ -471,17 +471,6 @@ public class Castle {
         }
 
         return loss / baseGeneralisations.size();
-        // try {
-        // Cluster clone = (Cluster) c.clone();
-        // clone.add(t);
-        //
-        // return clone.informationLoss() - c.informationLoss();
-        //
-        // } catch (CloneNotSupportedException e) {
-        // e.printStackTrace();
-        // }
-        //
-        // return 0;
     }
 
     /**
@@ -531,16 +520,7 @@ public class Castle {
         }
         eLoss = eLoss / baseGeneralisations.size();
         return eLoss - initialLoss;
-        // try {
-        // Cluster clone = (Cluster) c1.clone();
-        // clone.add(c2.getTuples());
-        // return clone.informationLoss() - c1.informationLoss();
-        //
-        // } catch (CloneNotSupportedException e) {
-        // e.printStackTrace();
-        // }
-        //
-        // return 0;
+
     }
 
     /**
@@ -554,10 +534,6 @@ public class Castle {
         if (t1 == null || t2 == null) {
             return 0;
         }
-
-        // Cluster c1 = new Cluster(t1, DGHs);
-        // Cluster c2 = new Cluster(t2, DGHs);
-        // return enlargement(c1, c2);
 
         float loss = 0;
         for (String h : baseGeneralisations.keySet()) {

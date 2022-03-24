@@ -17,6 +17,22 @@ In the project's root run the command: `gradle run`
 | FADS-L   | `gradle fadsl`                  |
 | XBAND    | `gradle xband`                  |
 
+Command Line Arguments are also supported if the source code is compiled
+| option|Description                     |
+|-------|--------------------------------|
+|    -c | Castle Variant:                |
+|       | 1: Castle l                    |
+|       | 2: B-Castle                    |
+|       | 3: FADS                        |
+|       | 4: FADSL                       |
+|       | 5: XBAND                       |
+|       | 6: CASTLE                      |
+|    -k | k-anonymity value              |
+|    -d | delta tuple expiration value   |
+|    -b | beta cluster persistance value |
+|    -o | XBAND Omega                    |
+|    -g | XBAND Gamma                    |
+
 ### Output
 
 Development/Internal output occurs to the terminal where you can see the cluster generalisations and the tuples included.

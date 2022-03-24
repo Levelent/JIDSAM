@@ -2,7 +2,6 @@ package ft_project;
 
 import java.util.*;
 
-//TODO add proper comments
 public class XBAND extends Castle {
     protected Set<Pair<Tuple, Integer>> set_t;
     protected Set<Cluster> set_k;
