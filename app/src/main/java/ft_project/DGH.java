@@ -5,6 +5,7 @@ import java.util.*;
 public class DGH {
     private Node root;
     private AbstractSet<String> nodeValues;
+    private AbstractMap<String, Integer> countCache;
     public final String name;
 
     /**
@@ -17,6 +18,7 @@ public class DGH {
         this.root = new Node(rootData);
         this.root.children = new ArrayList<Node>();
         this.nodeValues = new HashSet<String>();
+        this.countCache = new HashMap<>();
         nodeValues.add(rootData);
         this.name = name;
     }
@@ -30,6 +32,7 @@ public class DGH {
         this.root = null;
         this.nodeValues = new HashSet<String>();
         this.name = name;
+        this.countCache = new HashMap<>();
     }
 
     /**
@@ -104,7 +107,13 @@ public class DGH {
      */
     public int countNodes(String localRootName) {
         try {
-            return find(localRootName).countNodes(0);
+            Integer count = this.countCache.get(localRootName);
+            if (count == null) {
+                count = find(localRootName).countNodes(0);
+                this.countCache.put(localRootName, count);
+
+            }
+            return count;
         } catch (NullPointerException e) {
             return find(root.data).countNodes(0);
         }
